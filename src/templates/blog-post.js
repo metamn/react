@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
           <li>
             {
               previous &&
-              <Link to={previous.fields.slug} rel="prev">
+              <Link style={{ boxShadow: 'none', color: '#4916DA' }} to={previous.fields.slug} rel="prev">
                 ← {previous.frontmatter.title}
               </Link>
             }
@@ -54,7 +54,7 @@ class BlogPostTemplate extends React.Component {
           <li>
             {
               next &&
-              <Link to={next.fields.slug} rel="next">
+              <Link style={{ boxShadow: 'none', color: '#4916DA' }} to={next.fields.slug} rel="next">
                 {next.frontmatter.title} →
               </Link>
             }
