@@ -28,10 +28,14 @@ function Bio() {
               }}
             />
             <p>
-              {description}{' '}
-			  <Link style={{ boxShadow: 'none', color: '#4916DA' }} to={`https://twitter.com/${social.twitter}`}>
-				Follow @metamn on Twitter
-			  </Link>
+              {description}{' Written by '}
+			  <a style={{color: '#4916DA'}} href={`https://twitter.com/${social.twitter_metamn}`} title="@metamn">
+				@metamn
+			  </a>
+			  {' and '}
+			  <a style={{color: '#4916DA'}} href={`https://twitter.com/${social.twitter_mo}`} title="@MoThemesBaby">
+				@MoThemesBaby
+			  </a>
             </p>
           </div>
         )
@@ -54,7 +58,8 @@ const bioQuery = graphql`
         author
 		description
         social {
-          twitter
+          twitter_metamn
+		  twitter_mo
         }
       }
     }

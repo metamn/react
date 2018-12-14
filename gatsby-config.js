@@ -2,10 +2,11 @@ module.exports = {
   siteMetadata: {
     title: ':heart: React',
     author: 'Metamn',
-    description: 'Learning React. Re-learning web design and development best practices.',
+    description: 'To React with best practices.',
     siteUrl: 'http://metamn.io/react',
     social: {
-      twitter: 'metamn'
+      twitter_metamn: 'metamn',
+	  twitter_mo: 'MoThemesBaby'
     }
   },
   plugins: [
