@@ -1,3 +1,4 @@
-# metamn-react-blog
+# The Metamn React blog
 
-Blogging about React with Gatsby
+Blogging about React with Gatsby.
+Focus on best practices.
