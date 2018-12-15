@@ -18,6 +18,4 @@ With these frameworks you don't write vanilla JS code. You write strange markup 
 
 With Vue I was enthusiastic. It was the best and fastest way to get connected with the reactive UI world.
 
-After a year, now, I'm on React. I really love it. In a week I've managed to set up [a complete Storybook](http://metamn.io/mr-ui/), create [new components](https://github.com/metamn/new-component) the way I want, and now put together this blog in an afternoon.
-
-So far I find Storybook the most interesting part of the React ecosystem. I can't imagine designing and developing without it in the future.
+After a year, now, I'm on React. I really love it. In a week I've managed to set up [a complete Storybook](http://metamn.io/mr-ui/), create [new components](https://github.com/metamn/new-component) the way I want, and now put together this blog in an afternoon. Thanks [Gatsby!](https://www.gatsbyjs.org/)

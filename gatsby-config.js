@@ -9,6 +9,7 @@ module.exports = {
 	  twitter_mo: 'MoThemesBaby'
     }
   },
+  pathPrefix: `/react`,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
