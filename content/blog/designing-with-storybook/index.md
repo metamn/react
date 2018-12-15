@@ -29,14 +29,18 @@ After I've sketched up the first version the direction suddenly went to minimal,
 
 ![That button!](./lynx-button.png)
 
-After creating my style still the result was not good enough, so I've created a third variant.
+After creating *my style* ...
 
 ![My style](./lynx-my-style.png)
+
+... still the result was not good enough, so I've created a third variant.
 
 ![I don't know who's style!](./lynx-5b.png)
 
 I wish I had Storybook at design time. Now all my work would be nicely cataloged, documented, buttons would stick together with other buttons, fonts in the same way, color schemes with another colors schemes,
 and in plus I would have live all those variations I have now only as screenshoots somewhere on my hard drive.
+
+A variant on red:
 
 ![The last variant in red](./lynx-5b-red.png)
 
@@ -44,10 +48,20 @@ This one with a Canvas background and particles moving with the cursor.
 
 ![The last variant with canvas gradient](./lynx-5b-gradient.png)
 
-Or these, a competely new set with setting type on a dynamic cell matrix.
+Or these, a competely new iteration with type set on a dynamic cell matrix.
 
 ![Type on a matrix](./lynx-4a.png)
 
+On gray background:
+
 ![Type on a matrix, gray](./lynx-4a-gray.png)
 
-Now I've [saved the project to Storybook](http://metamn.io/mr-ui/?selectedKind=Framework%2FResponsiveness%2FDemo&selectedStory=Lynx%20%26%20Hare&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook-addon-background%2Fbackground-panel&background=beige), at least the layout, and I'll use as a demo project across the entire UI library. Just to remind me to be thankful for Storybook every time I use.
+... and the underlying cell matrix. I don't have the rotated and skewed screenshoots &mdash; they are neat!
+
+![The cell matrix](./lynx-matrix.png)
+
+
+
+Now I've [saved the project to Storybook](http://metamn.io/mr-ui/?selectedKind=Framework%2FResponsiveness%2FDemo&selectedStory=Lynx%20%26%20Hare&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook-addon-background%2Fbackground-panel&background=beige), at least the layout. You can play with live. And I'll use it as a demo project across the entire UI library in the future.
+
+Just to remind me to be thankful for Storybook every time I use.
