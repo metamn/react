@@ -62,6 +62,6 @@ On gray background:
 
 
 
-Now I've [saved the project to Storybook](http://metamn.io/mr-ui/?selectedKind=Framework%2FResponsiveness%2FDemo&selectedStory=Lynx%20%26%20Hare&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook-addon-background%2Fbackground-panel&background=beige), at least the layout. You can play with live. And I'll use it as a demo project across the entire UI library in the future.
+Now I've [saved the project to Storybook](http://metamn.io/mr-ui/?selectedKind=Playground&selectedStory=Lynx%20%26%20Hare&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook-addon-background%2Fbackground-panel&background=beige), at least the layout. You can play with live. And I'll use it as a demo project across the entire UI library in the future.
 
 Just to remind me to be thankful for Storybook every time I use.
