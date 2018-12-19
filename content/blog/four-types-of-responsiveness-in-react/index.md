@@ -1,5 +1,5 @@
 ---
-title: Four types of responsiveness in React
+title: "Four types of responsiveness in React"
 date: "2018-12-14"
 ---
 

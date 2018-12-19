@@ -1,5 +1,5 @@
 ---
-title: To React with best practices
+title: "To React with best practices"
 date: "2018-12-13"
 ---
 

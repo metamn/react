@@ -1,5 +1,5 @@
 ---
-title: Designing with Storybook
+title: "Designing with Storybook"
 date: "2018-12-14"
 ---
 
