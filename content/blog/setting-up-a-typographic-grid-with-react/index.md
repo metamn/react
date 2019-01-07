@@ -102,6 +102,8 @@ const TypographicGrid = {
 ```javascript
 /**
  * The responsive container
+ *
+ * Note: breakpoints don't follow best practices, just avoid them for now ...
  */
 const ResponsiveContainer = styled.div`
 	@media (max-width: 767px) {
@@ -135,9 +137,11 @@ const Container = styled(ResponsiveContainer)`
 	h3 { font-size:1.16667em; padding:1.51785em 0; }
 
 	// --lem in action
+	// Note: this kind of padding is just for demo purposes ...
 	p {
 		+ p {
 			margin-top: calc(var(--lem) * 2);
+			margin-left: calc(var(--lem) * 2);
 		}
 	}
 `
@@ -157,17 +161,20 @@ class TypographyClassic extends React.Component {
 
 ## What breaks the grid?
 
-1. `overflow-x` adds a horizontal scrollbar which breaks the grid.
-2. Multiline headings.
+To have an ideal grid where all elements are both vertically and horizontally aligned is possible but difficult. One should consider the worth of the effort.
 
-This list will grow as we add new elements to the grid.
+If you have a code block (`<pre><code>...`) which has `overflow-x` set the horizontal scrollbar will break the grid.
+
+If you have a multiline heading ... it will break the grid. Iain's calculator works for single line headings.
+
+This list will grow as one adds new elements to the grid.
 
 
 ## Caveats
 
 Classical typography is useful in certain conditions, namely when everything is sized only with `em`, and, every item is aligned to the top / left on a grid cell.
 
-Combined with modern techniques like `justify-content: center` the grid breaks. Or when elements are sized and positioned with units like `vw` or `vh`.
+Combined with modern techniques like Flexbox's `justify-content: center` the grid breaks. Or when elements are sized and positioned with units like `vw` or `vh`.
 
 
 ## When to use?
@@ -178,11 +185,7 @@ For everything else &mdash; layout, navigation, etc &mdash; there are more liber
 
 However if one follows [Frank Chimero's approach](https://frankchimero.com/writing/the-webs-grain/) and wants to assemble layouts in David Hockney's style then this technique can be highly powerful.
 
-## To do
 
-To further refine this technique one should:
+## Live demo
 
-1. Create a function to calculate the padding and size of the headings in a free-form manner. Currently Iain's calculator has opinions baked in. Perhaps a Modular Scale support should be added.
-
-
-123456789 10 123456789 20 123456789 30 123456789 40 123456789 50 123456789 60
+[MR-UI Storybook](https://tinyurl.com/y85a7dh5) with source code on [Github](https://github.com/metamn/mr-ui)
