@@ -192,7 +192,7 @@ However if one follows [Frank Chimero's approach](https://frankchimero.com/writi
 
 ## Live demo and source code
 
-[MR-UI Storybook](https://tinyurl.com/y85a7dh5) with source code on [Github](https://github.com/metamn/mr-ui)
+[MR-UI Storybook](https://tinyurl.com/y85a7dh5) with source code on [Github(https://github.com/metamn/mr-ui/tree/master/src/basics/TypographyClassic)
 
 ## Resources
 
