@@ -4,6 +4,7 @@ date: "2019-01-07"
 ---
 
 Classical typography sets up a typographic grid and lays text &mdash; foremost &mdash; and other objects &mdash; images, decorations &mdash; upon that grid.
+<!--more-->
 
 The typographic grid is set in such way to help readers consume long form text. The font is set to a size which is highly readable; the lines of the text are set to 60-80 characters in a row; the vertical distance between the text lines are set to make the long form text enjoyable.
 

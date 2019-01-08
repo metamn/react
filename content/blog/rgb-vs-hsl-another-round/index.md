@@ -2,8 +2,10 @@
 title: "RGB vs. HSL: another round"
 date: "2019-01-08T02:00:00.284Z"
 ---
+Which one makes colors better computable?
+<!--more-->
 
-To make colors quantifiable and computable color models and color spaces like RGB or CMYK are used.
+To make colors quantifiable and computable color models and color spaces like RGB, HSL or CMYK are used.
 
 CMYK is specific for print. RGB, HSL is specific for computer monitors.
 

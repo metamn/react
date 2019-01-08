@@ -3,9 +3,8 @@ title: "Four types of responsiveness in React"
 date: "2018-12-14"
 ---
 
-> This text is taken as is from the [MR-UI Storybook](http://metamn.io/mr-ui/?selectedKind=Basics%2FResponsiveness%20%E2%9C%93&selectedStory=Overview&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybook-addon-background%2Fbackground-panel&background=beige). One advantage of Storybook is to *force* you to document your research not just the end result. Take this as a good example.
-
 With React, a reactive / responsive framework, it's time to rethink the responsiveness of a website.
+<!--more-->
 
 In most cases, on the large web, responsiveness means the site is adapting to the device screen size using media queries.
 

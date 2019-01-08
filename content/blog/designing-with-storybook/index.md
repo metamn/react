@@ -3,7 +3,8 @@ title: "Designing with Storybook"
 date: "2018-12-14"
 ---
 
-I can't imagine how much creativity gone lost when we had no [Storybook](https://storybook.js.org/) or an alternative.
+I can't imagine how much creativity gone lost when we had no Storybook or an alternative.
+<!--more-->
 
 Storybook ([live on metamn](http://metamn.io/mr-ui/)) is an user interface development environment. Up until now we had integrated development environments (IDE) for any kind of development *but* UI.
 

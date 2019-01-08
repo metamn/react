@@ -4,6 +4,7 @@ date: "2018-12-13"
 ---
 
 WordPress is here with Gutenberg &mdash; it's time to learn React.
+<!--more-->
 
 The last two years I've spent with working on projects far from the edge having no time to catch up with
 web design and development best practices &mdash; it's time to re-learn them.

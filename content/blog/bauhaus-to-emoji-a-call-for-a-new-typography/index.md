@@ -4,6 +4,7 @@ date: "2018-12-19"
 ---
 
 Typography has to be completely rethinked.
+<!--more-->
 
 The old, standard way — Bauhaus, Swiss, minimal — was perfect in a static environment like print. Now we have animated type, dynamic CSS units, variable fonts and viewports, spatial AR / VR typography.
 
