@@ -190,6 +190,12 @@ For everything else &mdash; layout, navigation, etc &mdash; there are more liber
 However if one follows [Frank Chimero's approach](https://frankchimero.com/writing/the-webs-grain/) and wants to assemble layouts in David Hockney's style then this technique can be highly powerful.
 
 
-## Live demo
+## Live demo and source code
 
 [MR-UI Storybook](https://tinyurl.com/y85a7dh5) with source code on [Github](https://github.com/metamn/mr-ui)
+
+## Resources
+
+- [Iain Lamb's Typograph](http://lamb.cc/typograph/)
+- [EM vs. REM](https://css-tricks.com/confused-rem-em/)
+- [Pixels don't scale](https://stackoverflow.com/questions/609517/why-em-instead-of-px)
