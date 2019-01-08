@@ -2,14 +2,18 @@
 title: "RGB vs. HSL: another round"
 date: "2019-01-08T02:00:00.284Z"
 ---
-Which one makes colors better computable?
+One should be able to use code to work with colors, and think about colors in the same way thinks about other programming artifacts like data and algorithms.
 <!--more-->
+
+## Color models and spaces
 
 To make colors quantifiable and computable color models and color spaces like RGB, HSL or CMYK are used.
 
 CMYK is specific for print. RGB, HSL is specific for computer monitors.
 
-### RGB
+Each model represents colors in a specific way. Sometimes this makes colors computable, in other cases not.
+
+## RGB
 
 RGB is a color model where each color has three main properties: the amount of `red`, `green` and `blue` present in each color. Colors in RGB are created by adding / mixing these three basic colors / properties.
 
@@ -37,7 +41,7 @@ In CSS notation:
 --white: rgba(255, 255, 255, 1);
 ```
 
-### HSL
+## HSL
 
 HSL is a color model based on RGB. It is an enhancement of RGB to provide a more intuitive framework to think in colors, to mimic an age old best practice of how painters create and use colors.
 

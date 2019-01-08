@@ -3,7 +3,7 @@ title: "Four types of responsiveness in React"
 date: "2018-12-14"
 ---
 
-With React, a reactive / responsive framework, it's time to rethink the responsiveness of a website.
+With React &mdash; a reactive / responsive framework &mdash; it's time to rethink the responsiveness of a website.
 <!--more-->
 
 In most cases, on the large web, responsiveness means the site is adapting to the device screen size using media queries.
