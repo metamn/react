@@ -1,6 +1,6 @@
 ---
 title: "Four types of responsiveness in React"
-date: "2018-12-14"
+date: "2018-12-14T02:00:00.284Z"
 ---
 
 With React &mdash; a reactive / responsive framework &mdash; it's time to rethink the responsiveness of a website.
