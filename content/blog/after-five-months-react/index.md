@@ -1,6 +1,6 @@
 ---
 title: 'After five months — React'
-date: '2019-05-10T03:00:00.284Z'
+date: '2019-05-09T03:00:00.284Z'
 ---
 
 We couldn't have better news. Lean code. Official stack. Strong leader.

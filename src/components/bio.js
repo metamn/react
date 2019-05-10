@@ -14,6 +14,7 @@ function Bio() {
           <div
             style={{
               display: 'flex',
+              alignItems: 'center',
               marginBottom: rhythm(2.5),
             }}
           >
@@ -24,18 +25,23 @@ function Bio() {
                 marginRight: rhythm(1 / 2),
                 marginBottom: 0,
                 minWidth: 50,
-                borderRadius: '100%'
+                borderRadius: '100%',
               }}
             />
-            <p>
-              {description}{' Written by '}
-			  <a style={{color: '#4916DA'}} href={`https://twitter.com/${social.twitter_metamn}`} title="@metamn">
-				@metamn
-			  </a>
-			  {' and '}
-			  <a style={{color: '#4916DA'}} href={`https://twitter.com/${social.twitter_mo}`} title="@MoThemesBaby">
-				@MoThemesBaby
-			  </a>
+            <p
+              style={{
+                marginBottom: 0,
+              }}
+            >
+              {description}
+              {' Written by '}
+              <a
+                style={{ color: '#4916DA' }}
+                href={`http://metamn.io/`}
+                title="Metamn"
+              >
+                Metamn.
+              </a>
             </p>
           </div>
         )
@@ -46,7 +52,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar:file(absolutePath: { regex: "/avatar-blue.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/avatar-blue.jpg/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
@@ -56,10 +62,10 @@ const bioQuery = graphql`
     site {
       siteMetadata {
         author
-		description
+        description
         social {
           twitter_metamn
-		  twitter_mo
+          twitter_mo
         }
       }
     }
