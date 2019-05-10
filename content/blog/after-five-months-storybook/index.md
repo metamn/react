@@ -1,19 +1,27 @@
 ---
-title: 'After five months'
+title: 'After five months — Storybook'
 date: '2019-05-08T03:00:00.284Z'
 ---
 
-A hiatus can introduce pain in restarting work on old projects. Frameworks change quickly. Now let's see how the React ecosystem handles this.
+Shiny new features on the way!
 
 <!--more-->
 
 ---
 
+_This is the first post in a series of three._
+
+---
+
+A hiatus can introduce pain in restarting work on old projects. Frameworks change quickly. Now let's see how the React ecosystem handles this.
+
 One attraction of oldish frameworks is that hey are stable. I can fire up a decade old WordPress project with no problem.
 
-With new frameworks a (five month) hiatus takes a toll. I have React, Gatsby and Storybook projects to update and work on them again.
+With new frameworks a (five month) hiatus takes a toll. I have [React](/after-five-months-react), [Gatsby](/after-five-months-gatsby) and Storybook projects to update and work on them again.
 
-## Storybook
+---
+
+### Storybook
 
 It had a major update from `v4.x` to `v5.0`. Updates ending in 0 are usually unstable. I rather would wait for let's say `v5.0.12` or `v5.1`.
 
@@ -31,7 +39,7 @@ The new Storybook officially supports theming which is more restrictive. Less tw
 
 Which is not a problem. With major upgrades no one can expect unofficial tweaks will be supported. And probably the strength of Storybook doesn't lie in it's theming support.
 
-What really pleased me is [Storybook Docs](https://medium.com/storybookjs/storybook-docs-sneak-peak-5be78445094a). Which is still in ... `v0.0`. With little patience, however, we will probably have a proper Design System tool based on stories. Wow!
+What really pleased me is [Storybook Docs](https://medium.com/storybookjs/storybook-docs-sneak-peak-5be78445094a). Which is still in ... `v0.0`. With little patience, however, we will probably have a proper Design System tool based on stories. Wow! I'll wait for it.
 
 **Verdict**
 
