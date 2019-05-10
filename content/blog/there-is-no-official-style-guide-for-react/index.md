@@ -1,8 +1,10 @@
 ---
-title: "There is no official style guide for React"
-date: "2019-01-08T04:00:00.284Z"
+title: 'There is no official style guide for React'
+date: '2019-01-08T04:00:00.284Z'
 ---
+
 And we clearly miss it.
+
 <!--more-->
 
 ## Style guides
@@ -17,27 +19,27 @@ React, unfortunately, has no official style guide provided by Facebook. This rol
 
 Just some bits:
 
-- Use `.jsx` as file extension instead of `.js` &mdash; a suggestion with *doubt*, against the gut, at least for me personally.
+- Use `.jsx` as file extension instead of `.js` &mdash; a suggestion with _doubt_, against the gut, at least for me personally.
 - Pass params as list instead of array, which contradicts the [loose coupling](https://alistapart.com/article/coding-with-clarity#section3) general coding principle.
 
 ```javascript
 // bad
 function getFullName(user) {
-  const firstName = user.firstName;
-  const lastName = user.lastName;
+  const firstName = user.firstName
+  const lastName = user.lastName
 
-  return `${firstName} ${lastName}`;
+  return `${firstName} ${lastName}`
 }
 
 // good
 function getFullName(user) {
-  const { firstName, lastName } = user;
-  return `${firstName} ${lastName}`;
+  const { firstName, lastName } = user
+  return `${firstName} ${lastName}`
 }
 
 // best
 function getFullName({ firstName, lastName }) {
-  return `${firstName} ${lastName}`;
+  return `${firstName} ${lastName}`
 }
 ```
 
@@ -45,7 +47,11 @@ As a conclusion I do not use any styleguide for now. I rather wait for the offic
 
 It's not that the AirBnb styleguide is wrong. The fact is that even React itself doesn't stick to it.
 
+### Update
+
+- [Dan Abramov](https://overreacted.io/writing-resilient-components/) explains why React has no official style guide.
+
 ### Resources
 
 - [The AirBnb style guide with a contradictory best practice suggestion](https://github.com/airbnb/javascript#destructuring)
-- [Coding with clarity](https://alistapart.com/article/coding-with-clarity#section3)   
+- [Coding with clarity](https://alistapart.com/article/coding-with-clarity#section3)
