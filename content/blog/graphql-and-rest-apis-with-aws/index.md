@@ -30,7 +30,7 @@ While in a few days it was possible to set up AppSync with React and play though
 ![The REST API on AWS](rest-api-aws.jpeg)
 _Image credits: [https://iotdemos.wordpress.com](https://iotdemos.wordpress.com/2017/04/24/building-simple-back-end-using-aws-dynamodb-lambda-api-gateway/)_
 
-To catch the glimpse of the REST on AWS complexity one should watch these two official videos. The first deals with [the difficulty to create an API](https://www.youtube.com/watch?v=xkDcBssNd1g) and the second with [the difficulty of ensuring best practices](https://www.youtube.com/watch?v=9ElpSPXk-g8).
+To catch the glimpse of the REST on AWS complexity one should watch these official videos. The first deals with [the difficulty to create an API](https://www.youtube.com/watch?v=xkDcBssNd1g) and the second with [the difficulty of ensuring best practices](https://www.youtube.com/watch?v=9ElpSPXk-g8).
 
 Following the advice from the videos one should use the recommended tools to achieve better results faster:
 [Swagger](https://swagger.io/), [Serverless](https://serverless.com/), [Claudia.js](https://www.claudiajs.com/) &mdash; or even try Amazon's own [Amplify](https://aws.amazon.com/amplify/).
@@ -90,13 +90,13 @@ With AppSync and Amplify one can have a mobile-friendly API server and client in
 			<td>API Gateway, AWS Lambda, DynamoDB</td>
 		</tr>
 		<tr>
-			<td>Code generators</td>
-			<td>Functions, Data, Storage, Authorziation, Hosting</td>
+			<td>Official toolchain</td>
+			<td>AWS Amplify</td>
 			<td>none</td>
 		</tr>
 		<tr>
-			<td>Official toolchain</td>
-			<td>AWS Amplify</td>
+			<td>Code generators</td>
+			<td>Functions, Data, Storage, Authorziation, Hosting</td>
 			<td>none</td>
 		</tr>
 		<tr>
