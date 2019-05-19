@@ -25,13 +25,16 @@ Instead of one service REST ends up with three. Three times more work? Nope. Mor
 
 There are third party generators, tools and frameworks to help. In fact there is an entire industry built around making REST APIs work on Amazon &mdash; it is that complicated.
 
-I've tried all: [Swagger](https://swagger.io/), [Serverless](https://serverless.com/), [Claudia.js](https://www.claudiajs.com/) &mdash; even Amazon's own Amplify. No success. Bugs, outdated code and documentation, undocumented features, [frightened](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb) by the amount of work needs to be done.
-
-While in a weekend I've set up AppSync with React and played with Relay and Apollo thoughtfully &mdash; spending the same time with the REST API was enough only to create the schema but couldn't really integrate automatically with AWS Lamdba functions.
+While in a few days it was possible to set up AppSync with React and play thoughtfully with optimizations and experience (Relay vs. Apollo) &mdash; spending the same time with the REST API was enough only to create and manage the schema; Adding the necessary Lamdba functions and data backend was unsuccessful with generators.
 
 ## REST
 
-I've created a REST API with Amplify;
+Official videos:
+
+- How difficult to create: https://www.youtube.com/watch?v=xkDcBssNd1g
+- How difficult to add best practices: https://www.youtube.com/watch?v=9ElpSPXk-g8
+
+I've tried all: [Swagger](https://swagger.io/), [Serverless](https://serverless.com/), [Claudia.js](https://www.claudiajs.com/) &mdash; even Amazon's own Amplify. No success. Bugs, outdated code and documentation, undocumented features, [frightened](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb) by the amount of work needs to be done.
 
 ## GraphQL
 
