@@ -1,5 +1,5 @@
 ---
-title: 'GraphQL and REST APIs in AWS'
+title: 'GraphQL and REST APIs with AWS'
 date: '2019-05-19T03:00:00.284Z'
 ---
 
@@ -14,6 +14,24 @@ Which will be consumed by native mobile clients.
 The landscape is pretty simple. For a classic REST API one can go the [Amazon API Gateway](https://aws.amazon.com/api-gateway/) way. For GraphQL the [AWS AppSync](https://aws.amazon.com/appsync/) way.
 
 At the first sight everything is easy: choose a service. After digging in all gets complicated for REST. GraphQL stays clean.
+
+## The reason
+
+**AppSync / GraphQL** has better automation. All supporting services (functions, data, storage, authorization) are integrated, made quasi-invisible, or configurable with a click. One has to manage a single umbrella service. That's all.
+
+**The REST API Gateway** turns out it's just one piece of the puzzle. Unlike AppSync it is not enough to provide an API alone. It needs to be connected manually at least with AWS Lambda and DynamoDB &mdash; functions and data.
+
+Instead of one service REST ends up with three. Three times more work? Nope. More. Since it has no code generators like GraphQL all code has to be written manually first. That results in _more work by a magnitude_.
+
+There are third party generators, tools and frameworks to help. In fact there is an entire industry built around making REST APIs work on Amazon &mdash; it is that complicated.
+
+I've tried all: [Swagger](https://swagger.io/), [Serverless](https://serverless.com/), [Claudia.js](https://www.claudiajs.com/) &mdash; even Amazon's own Amplify. No success. Bugs, outdated code and documentation, undocumented features, [frightened](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb) by the amount of work needs to be done.
+
+While in a weekend I've set up AppSync with React and played with Relay and Apollo thoughtfully &mdash; spending the same time with the REST API was enough only to create the schema but couldn't really integrate automatically with AWS Lamdba functions.
+
+## REST
+
+I've created a REST API with Amplify;
 
 ## GraphQL
 
@@ -52,3 +70,7 @@ With AppSync and Amplify one can have a mobile-friendly API server and client in
 - [The Amazon API Gateway](https://aws.amazon.com/api-gateway/)
 - [AWS AppSync](https://aws.amazon.com/appsync/)
 - [The AWS Amplify Framework](https://aws.amazon.com/amplify/)
+- [Building a REST API in Node.js with Lambda, API Gateway, DynamoDB, and Serverless framework](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb/)
+- [Swagger](https://swagger.io/)
+- [Serverless](https://serverless.com/)
+- [Claudia.js](https://www.claudiajs.com/)
