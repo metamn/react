@@ -15,7 +15,7 @@ The landscape is pretty simple. For a classic REST API one can go the [Amazon AP
 
 At the first sight everything is easy: choose a service. After digging in all gets complicated for REST. GraphQL stays clean.
 
-## The reason
+The reason?
 
 **AppSync / GraphQL** has better automation. All supporting services (functions, data, storage, authorization) are integrated, made quasi-invisible, or configurable with a click. One has to manage a single umbrella service. That's all.
 
@@ -25,16 +25,18 @@ Instead of one service REST ends up with three. Three times more work? Nope. Mor
 
 There are third party generators, tools and frameworks to help. In fact there is an entire industry built around making REST APIs work on Amazon &mdash; it is that complicated.
 
-While in a few days it was possible to set up AppSync with React and play thoughtfully with optimizations and experience (Relay vs. Apollo) &mdash; spending the same time with the REST API was enough only to create and manage the schema; Adding the necessary Lamdba functions and data backend was unsuccessful with generators.
+While in a few days it was possible to set up AppSync with React and play thoughtfully with optimizations and experience (Relay vs. Apollo) &mdash; spending the same time with the REST API was enough only to create and manage the schema; Adding the necessary Lamdba functions and data backend was unsuccessful with generators and tools provided by the ecosystem.
 
 ## REST
 
-Official videos:
+To catch the glimpse of the REST on AWS complexity one should watch these two handpicked official videos. The first deals with [the difficulty to create an API](https://www.youtube.com/watch?v=xkDcBssNd1g) and the second with the difficulty of [ensuring best practices](https://www.youtube.com/watch?v=9ElpSPXk-g8).
 
-- How difficult to create: https://www.youtube.com/watch?v=xkDcBssNd1g
-- How difficult to add best practices: https://www.youtube.com/watch?v=9ElpSPXk-g8
+Following the advice from the videos one should use the recommended tools to achieve better results faster:
+[Swagger](https://swagger.io/), [Serverless](https://serverless.com/), [Claudia.js](https://www.claudiajs.com/) &mdash; even Amazon's own [Amplify](https://aws.amazon.com/amplify/).
 
-I've tried all: [Swagger](https://swagger.io/), [Serverless](https://serverless.com/), [Claudia.js](https://www.claudiajs.com/) &mdash; even Amazon's own Amplify. No success. Bugs, outdated code and documentation, undocumented features, [frightened](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb) by the amount of work needs to be done.
+My personal experience: No success. Bugs, outdated code and documentation, undocumented features, [frightening](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb) amount of code to be written.
+
+The conclusion I've left with is: AWS REST APIs are complicated, and expensive compared to their GraphQL / AppSync alternative.
 
 ## GraphQL
 
@@ -74,6 +76,8 @@ With AppSync and Amplify one can have a mobile-friendly API server and client in
 - [AWS AppSync](https://aws.amazon.com/appsync/)
 - [The AWS Amplify Framework](https://aws.amazon.com/amplify/)
 - [Building a REST API in Node.js with Lambda, API Gateway, DynamoDB, and Serverless framework](https://serverless.com/blog/node-rest-api-with-serverless-lambda-and-dynamodb/)
+- [Building API-Driven Microservices with Amazon API Gateway - AWS Online Tech Talks](https://www.youtube.com/watch?v=xkDcBssNd1g)
+- [Best Practices for Building Enterprise Grade APIs with Amazon API Gateway - AWS Online Tech Talks](https://www.youtube.com/watch?v=9ElpSPXk-g8)
 - [Swagger](https://swagger.io/)
 - [Serverless](https://serverless.com/)
 - [Claudia.js](https://www.claudiajs.com/)
