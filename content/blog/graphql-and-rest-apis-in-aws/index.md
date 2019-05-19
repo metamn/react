@@ -13,7 +13,7 @@ Which will be consumed by native mobile clients.
 
 The landscape is pretty simple. For a classic REST API one can go the [Amazon API Gateway](https://aws.amazon.com/api-gateway/) way. For GraphQL the [AWS AppSync](https://aws.amazon.com/appsync/) way.
 
-At the first sight everything is easy: choose a service. When you dig in all gets complicated for REST. GraphQL stays clean.
+At the first sight everything is easy: choose a service. After digging in all gets complicated for REST. GraphQL stays clean.
 
 ## GraphQL
 
@@ -43,7 +43,7 @@ The great thing, the magic of AppSync is that one has to work only on the schema
 
 After defining the schema &mdash; with a single click! &mdash; you'll get all GraphQL queries, mutations and subscriptions automatically generated. In other words you get a public, working API out of the box. An URL anyone can access and play with your API.
 
-Next, by using the [AWS Amplify Framework](https://aws.amazon.com/amplify/) &mdash; a command line tool to create, manage and implement Amazon web services &mdash; with a few simple commands everything else is can be set up, again, like data, authentication, storage, hosting and even various clients to consume the API.
+Next, by using the [AWS Amplify Framework](https://aws.amazon.com/amplify/) &mdash; a command line tool to create, manage and implement Amazon web services &mdash; with a few simple commands everything else can be set up again, like data, authentication, storage, hosting and even various clients to consume the API.
 
 With AppSync and Amplify one can have a mobile-friendly API server and client in ... minutes. Once a schema is done the rest is done by AWS.
 
@@ -51,4 +51,4 @@ With AppSync and Amplify one can have a mobile-friendly API server and client in
 
 - [The Amazon API Gateway](https://aws.amazon.com/api-gateway/)
 - [AWS AppSync](https://aws.amazon.com/appsync/)
-- [The AWS Amplify Framework] https://aws.amazon.com/amplify/
+- [The AWS Amplify Framework](https://aws.amazon.com/amplify/)
