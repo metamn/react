@@ -11,9 +11,9 @@ Shiny new features on the way!
 
 **This is the first post in a series of three.**
 
-I have [React](/after-five-months-react), [Gatsby](/after-five-months-gatsby) and Storybook projects to update and work on them again.
-
 A hiatus can introduce pain in restarting work on old projects. Frameworks change quickly. Now let's see how the React ecosystem handles this.
+
+I have [React](/after-five-months-react), [Gatsby](/after-five-months-gatsby) and Storybook projects to update and work on them again.
 
 ---
 
