@@ -3,9 +3,11 @@ title: 'Thoughts on React after the first commercial project'
 date: '2019-07-31'
 ---
 
-WordPress is here with Gutenberg &mdash; it's time to react.
+It's the future. It's expensive. It's unstable. Hopefully all these manageable.
 
 <!--more-->
+
+## Intro
 
 I was commissioned to redesign and rewrite a photo portfolio site by an old client. One of the [requirements](https://github.com/metamn/inu-v2-b#requirements) was to update the old stack and make it future friendly.
 
@@ -50,7 +52,7 @@ And so on. I feel suddenly all the shit was cut and it's the first time when I r
 
 Good things come at cost.
 
-### Learning
+### 2.1 Learning
 
 React is famous about its steep learning curve. And controversies. No wonder &mdash; there are lots of things to learn and many of them are revolutionary.
 
@@ -62,7 +64,7 @@ React is famous about its steep learning curve. And controversies. No wonder &md
 
 These are for starters. If you dare please check out the current state of the art, the [Facebook 2019 redesign and rewrite](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/).
 
-### Ecosystem
+### 2.2 Ecosystem
 
 Every framework / paradigm shift is so huge it lefts room for interpretation, deviation, experimentation. This is called the ecosystem around the new thing.
 
@@ -86,7 +88,7 @@ This lead to:
 - Data driving applications with Relay is again not supported at all which gave Apollo a perfect opportunity to build upon a strong business.
 - CSS-in-JS is a complete stepchild and the community had to take over and give back the enjoyment of styling UI. At least I've tried 6-7 frameworks and [only one single survived](https://www.styled-components.com/). What a waste of resources.
 
-## Costs
+### 2.3 Costs
 
 Combing the learning and ecosystem difficulties we can affirm React will be costly.
 
@@ -106,7 +108,7 @@ strange bugs:
 - disappearing console warnings
 - nightmares of debugging stories
 
-## TLDR;
+## Summary
 
 Will the future be expensive and unstable? It sounds like the current global affairs, so it might be.
 
