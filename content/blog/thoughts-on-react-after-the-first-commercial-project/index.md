@@ -60,7 +60,7 @@ React is famous about its steep learning curve. And controversies. No wonder &md
 4. [CSS-in-JS](https://www.styled-components.com/).
 5. [Hooks](https://reactjs.org/docs/hooks-intro.html) and the async data flow.
 
-These are for starters. If you dare please check the state of the art, the [Facebook 2019 redesign and rewrite](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/).
+These are for starters. If you dare please check out the current state of the art, the [Facebook 2019 redesign and rewrite](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/).
 
 ### Ecosystem
 
@@ -78,11 +78,11 @@ What I've learnt for life is: _Stick to the standards_.
 
 The twist is React has [no official way](http://metamn.io/react/there-is-no-official-style-guide-for-react/). In fact it has ("[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)", "[Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)") but it keeps calling itself _unopinionated_.
 
-I don't know the motivation behind this but I understand. Facebook gave free to the world the fantastic React, it supports heavily, and nurtures it to be the best tool for UI development.
+I don't know the motivation behind but I understand it. Facebook gave free the world the fantastic React, supports it heavily, nurtures it to be the best tool for UI development. And that's enough. A real bravery and we can't expect more, like the same treatment for all the other parts of the ecosystem.
 
-However it does not the same for the other parts of the ecosystem.
+This lead to:
 
-- Typechecking with Flow was so badly supported opportunists like Microsoft took over with Typescript.
+- Typechecking with Flow was so badly supported opportunists like Microsoft took over with Typescript / VSCode.
 - Data driving applications with Relay is again not supported at all which gave Apollo a perfect opportunity to build upon a strong business.
 - CSS-in-JS is a complete stepchild and the community had to take over and give back the enjoyment of styling UI. At least I've tried 6-7 frameworks and [only one single survived](https://www.styled-components.com/). What a waste of resources.
 
@@ -94,9 +94,9 @@ I've re-written three times my current project to reach a level of confidence. T
 
 There will be many like me re-writing until it fits all, and there will be others who won't. In the latter case the cost will be immense for the company paying the bills. The benefactor will get something particular, not following the React way, and if by chance the dev team is changed, perhaps the whole codebase has to be rewritten.
 
-React is all about (costly) rewrites and migrations, anyway. Currently in the direction of [away from the Facebook stack](https://duckduckgo.com/?q=migrating+code+from+flow+to+typescript&t=canonical&atb=v92-1&ia=web) &mdash; but after the (potentially highly successful) 2019 Facebook rewrite/redesign and Facebook's [wake up](https://medium.com/flow-type/what-the-flow-team-has-been-up-to-54239c62004f) &mdash; back to the Facebook stack.
+React is all about rewrites and migrations, anyway. Currently in the direction of [away from the Facebook stack](https://duckduckgo.com/?q=migrating+code+from+flow+to+typescript&t=canonical&atb=v92-1&ia=web) &mdash; but after the (potentially highly successful) 2019 Facebook rewrite/redesign and Facebook's [wake up](https://medium.com/flow-type/what-the-flow-team-has-been-up-to-54239c62004f) &mdash; back to the Facebook stack.
 
-Not to mention the [Hooks controversy](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy). After five years the core of the language was changed in a way that it makes the old approach unrecognizable for those who started learning React the new way, with function components and hooks.
+Not to mention the [Hooks controversy](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy). After five years the core of the language was changed in a way that it makes the old approach unrecognizable for those who started learning React the new way, with function components and hooks. Billions and billions lines of old code can be thrown out.
 
 ## 3. React is not stable
 
