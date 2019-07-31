@@ -106,9 +106,12 @@ strange bugs:
 - disappearing console warnings
 - nightmares of debugging stories
 
-## Sum up:
+## TLDR;
 
-- first time one can do anything UI
-- following best practices (React, CRA, FB stack) and avoiding the hype + build your own reusable component framework which is (first time really possible)
-- maturization of the ecosystem
-  => total satisfaction
+Will the future be expensive and unstable? It sounds like the current global affairs, so it might be.
+
+Personally I believe the opposite.
+
+1. I've found in React a real tool for user interface design and development at scale.
+2. Clearing the waters and sticking to the upcoming official Facebook stack (React, Relay, Flow) will make code re-usable across projects and teams.
+3. Building up personal experience distilled into a framework of re-usable components will cut project execution time back to normal.
