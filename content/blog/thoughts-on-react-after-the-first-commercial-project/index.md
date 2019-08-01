@@ -3,11 +3,11 @@ title: 'Thoughts on React after the first commercial project'
 date: '2019-07-31'
 ---
 
-It's the future. It's expensive. It's unstable. And all these manageable.
+It's the future. It's expensive. It's unstable. And all these (will be) manageable.
 
 <!--more-->
 
-## Intro
+## The project
 
 I was commissioned to redesign and rewrite a photo portfolio site by an old client. One of the [requirements](https://github.com/metamn/inu-v2-b#requirements) was to update the old stack and make it future friendly.
 
@@ -23,7 +23,7 @@ I've built my own stack and learnt frameworks, languages and paradigms like MVC,
 
 Among all React is the first paradigm which felt truly _complete_.
 
-By ditching the concept of _web_ in favor of _user interface_ it's the first time:
+By ditching the concept of _web_ in favor of _user interface_ and betting all on a real programming language it's the first time:
 
 1. I do programming instead of hacking and tweaking.
 2. I do think visually about a design instead of using some abstract things like `url`.
@@ -108,7 +108,7 @@ It was really scary to feel again something is not right inside the core of a sy
 
 The last time I felt the same was long time ago during MS-DOS times and BASIC, maybe the first years of Windows. Since then all went smooth with PHP, WordPress, Ruby, Rails, and co.
 
-If there was an error message it didn't disappeared suddenly next time &mdash; like [it does now](https://github.com/metamn/inu-v2-b/issues/28) in my current project created with the official Create React App.
+If there was an error message it didn't disappeared suddenly next time &mdash; like [it does now](https://github.com/metamn/inu-v2-b/issues/28) in my current project built with the official Create React App.
 
 An error message could be easily googled and perhaps solved. Now one gets [different messages for different browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) making error fixing a bit surreal.
 
@@ -123,7 +123,7 @@ Will the future be expensive and unstable? It sounds like the current global aff
 Personally I believe the opposite.
 
 1. I've found in React and the ecosystem around a real tool for user interface design and development at scale.
-2. Clearing the waters and sticking to the upcoming official [Facebook stack](https://opensource.facebook.com/#frontend) (React, Redux, Relay, Flow, ReasonML) will make code re-usable across projects and teams.
+2. Clearing the waters and sticking to the upcoming official [Facebook stack](https://opensource.facebook.com/#frontend) (React, Redux, Relay, Flow, ReasonML) will make code re-usable across projects and teams. And stable, perhaps, too.
 3. Building up personal experience distilled into a framework of re-usable components will cut project execution time back to normal.
 
 ## Resources
