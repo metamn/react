@@ -121,3 +121,11 @@ Personally I believe the opposite.
 3. Building up personal experience distilled into a framework of re-usable components will cut project execution time back to normal.
 
 ## Resources
+
+- [The project](https://github.com/metamn/inu-v2-b)
+- [The old stack](http://metamn.io/beat/on-old-and-new-stacks/)
+- [The 2019 Facebook.com redesign and rewrite](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/)
+- [There is no official style guide for React](http://metamn.io/react/there-is-no-official-style-guide-for-react/)
+- [Now or Never: Migrating 300k LOC from Flow to TypeScript at Quizlet](https://medium.com/tech-quizlet/now-or-never-migrating-300k-loc-from-flow-to-typescript-at-quizlet-d3bae5830a1)
+- [What the Flow team has been up to](https://medium.com/flow-type/what-the-flow-team-has-been-up-to-54239c62004f)
+- [The Facebook stack](https://opensource.facebook.com/#frontend)
