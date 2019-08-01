@@ -104,11 +104,17 @@ Billions and billions lines of old code already thrown out.
 
 ## 3. React is not stable
 
-strange bugs:
+It was really scary to feel again something is not right inside the core of a system.
 
-- Storybook broke
-- disappearing console warnings
-- nightmares of debugging stories
+The last time I felt the same was long time ago during MS-DOS times and BASIC, maybe the first years of Windows. Since then all went smooth with PHP, WordPress, Ruby, Rails, and co.
+
+If there was an error message it didn't disappeared suddenly next time &mdash; like [it does now](https://github.com/metamn/inu-v2-b/issues/28) in my current project created with the official Create React App.
+
+An error message could be easily googled and perhaps solved. Now one gets [different messages for different browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) making error fixing a bit surreal.
+
+Like a current experience with Storybook where again [errors come and go without explanation](https://github.com/storybookjs/storybook/issues/7583).
+
+These flicks were spotted in mature and even official React projects making the warning stronger against React. The good news is the solution might be on the way and perhaps is called [Reason](https://reasonml.github.io/).
 
 ## Summary
 
