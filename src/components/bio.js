@@ -36,7 +36,7 @@ function Bio() {
               {description}
               {' Written by '}
               <a
-                style={{ color: '#4916DA' }}
+                style={{ color: '#333' }}
                 href={`http://metamn.io/`}
                 title="Metamn"
               >
@@ -52,7 +52,7 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/avatar-blue.jpg/" }) {
+    avatar: file(absolutePath: { regex: "/avatar-green-circle-tiny.png/" }) {
       childImageSharp {
         fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed

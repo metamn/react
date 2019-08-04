@@ -26,7 +26,14 @@ class BlogPostTemplate extends React.Component {
         >
           {post.frontmatter.date}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          style={{
+            '& a': {
+              color: '#333',
+            },
+          }}
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr
           style={{
             marginBottom: rhythm(1),
@@ -44,20 +51,26 @@ class BlogPostTemplate extends React.Component {
           }}
         >
           <li>
-            {
-              previous &&
-              <Link style={{ boxShadow: 'none', color: '#4916DA' }} to={previous.fields.slug} rel="prev">
+            {previous && (
+              <Link
+                style={{ boxShadow: 'none', color: '#333' }}
+                to={previous.fields.slug}
+                rel="prev"
+              >
                 ← {previous.frontmatter.title}
               </Link>
-            }
+            )}
           </li>
           <li>
-            {
-              next &&
-              <Link style={{ boxShadow: 'none', color: '#4916DA' }} to={next.fields.slug} rel="next">
+            {next && (
+              <Link
+                style={{ boxShadow: 'none', color: '#333' }}
+                to={next.fields.slug}
+                rel="next"
+              >
                 {next.frontmatter.title} →
               </Link>
-            }
+            )}
           </li>
         </ul>
       </Layout>

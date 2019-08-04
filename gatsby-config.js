@@ -69,9 +69,9 @@ module.exports = {
         short_name: `MetamnReactBlog`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#4916DA`,
+        theme_color: `#333`,
         display: `minimal-ui`,
-        icon: `content/assets/avatar-blue.png`,
+        icon: `content/assets/avatar-green-circle-tiny.png`, // needs to be changed also in bio.js
       },
     },
     `gatsby-plugin-offline`,
