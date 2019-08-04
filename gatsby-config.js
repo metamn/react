@@ -71,7 +71,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#333`,
         display: `minimal-ui`,
-        icon: `content/assets/avatar-green-circle-tiny.png`, // needs to be changed also in bio.js
+        icon: `content/assets/avatar-green-tiny.png`, // needs to be changed also in bio.js
       },
     },
     `gatsby-plugin-offline`,
