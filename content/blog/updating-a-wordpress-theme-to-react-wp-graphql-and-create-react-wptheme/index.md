@@ -17,12 +17,11 @@ What left is [create-react-app](https://create-react-app.dev/) which builds a Si
 
 ## create-react-wptheme
 
-`create-react-wptheme` replaces the Webpack dev server coming with `create-react-app` with a WordPress server. That makes you easily develop React themes like developing any other React application.
+`create-react-wptheme` replaces the Webpack dev server coming with `create-react-app` with a WordPress dev server. That makes developing React themes as easy as developing any other React applications.
 
-Deploying the theme is also a breeze: you just build it and upload it to WordPress. That's all.
+Deploying the theme is also made easy: you just build it and upload it to WordPress. That's all.
 
-The overall experience is very smooth. So smooth there is nothing to learn about. You can use the same commands to develop and deploy like you use with regular React apps.
-
+The overall experience is very smooth. So smooth there is nothing to learn about.
 Big kudos to [@devloco](https://github.com/devloco), the unknown code artist.
 
 ## WPGraphQL
@@ -82,3 +81,4 @@ All existing React and WPGraphQL code stays the same and it can be reused.
 - [create-react-wptheme](https://github.com/devloco/create-react-wptheme)
 - [WPGraphQL](https://www.wpgraphql.com/)
 - [Jason Bahl Joins the Gatsby Team to Work on WPGraphQL Full-Time](https://wptavern.com/jason-bahl-joins-the-gatsby-team-to-work-on-wpgraphql-full-time)
+- [Sample project](https://github.com/metamn/inu-v2-b)
