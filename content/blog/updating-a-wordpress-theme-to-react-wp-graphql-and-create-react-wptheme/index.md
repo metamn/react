@@ -76,3 +76,9 @@ SPAs don't [really](https://github.com/metamn/inu-v2-b/issues/32) support multip
 When more needed &mdash; real URLS, server side rendering, static site generation &mdash; one has to simply replace `create-react-wptheme` with another service like Gatsby or Next.
 
 All existing React and WPGraphQL code stays the same and it can be reused.
+
+## Resources
+
+- [create-react-wptheme](https://github.com/devloco/create-react-wptheme)
+- [WPGraphQL](https://www.wpgraphql.com/)
+- [Jason Bahl Joins the Gatsby Team to Work on WPGraphQL Full-Time](https://wptavern.com/jason-bahl-joins-the-gatsby-team-to-work-on-wpgraphql-full-time)
