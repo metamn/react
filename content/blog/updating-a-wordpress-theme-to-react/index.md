@@ -1,5 +1,5 @@
 ---
-title: 'Updating a WordPress theme to React, WPGraphQL and create-react-wptheme'
+title: 'Updating a WordPress theme to React'
 date: '2019-08-14T03:00:00.284Z'
 ---
 
@@ -30,7 +30,7 @@ Big kudos to [@devloco](https://github.com/devloco), the unknown code artist.
 
 They replace [WordPress template files and tags](https://developer.wordpress.org/themes/basics/template-hierarchy/) and the most part of the [WordPress API](https://developer.wordpress.org/reference/). You won't need none of these old artifacts.
 
-You won't write PHP code anymore and all theme files will be generated for you except `functions.php` in case you'll want to extend `WPGraphQL` by any chance.
+You won't write PHP code anymore and all theme files will be generated for you except `functions.php` in case you'll want to extend `WPGraphQL`.
 
 ### Documentation
 
@@ -62,7 +62,7 @@ That makes to feel how light the app is compared to the old approach when no one
 
 It's amazing how fast WPGraphQL managed to become the _headless_ part of WordPress.
 
-Integrations with [Advanced Custom Fields](https://www.wpgraphql.com/acf/), [Gutenberg](https://docs.wpgraphql.com/extensions/wpgraphql-gutenberg), [WooCommerce](https://docs.wpgraphql.com/extensions/wpgraphql-woocommerce) shows the community is taking care of migrating all interesting parts of the old ecosystem to the new one.
+Integrations with [Advanced Custom Fields](https://www.wpgraphql.com/acf/), [WooCommerce](https://docs.wpgraphql.com/extensions/wpgraphql-woocommerce) and [Gutenberg](https://docs.wpgraphql.com/extensions/wpgraphql-gutenberg) shows the community is taking care of migrating all interesting parts of the old ecosystem to the new one.
 
 Recently the WPGraphQL creator was [backed up by Gatsby](https://wptavern.com/jason-bahl-joins-the-gatsby-team-to-work-on-wpgraphql-full-time) to support further developments. These are signs of a healthy direction for the project.
 
