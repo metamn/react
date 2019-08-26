@@ -37,10 +37,10 @@ function Bio() {
               {' Written by '}
               <a
                 style={{ color: '#333' }}
-                href={`http://metamn.io/`}
-                title="Metamn"
+                href={`https://twitter.com/metamn`}
+                title="@metamn"
               >
-                Metamn.
+                @metamn.
               </a>
             </p>
           </div>
