@@ -1,9 +1,10 @@
 ---
-title: "An ideal color tool"
-date: "2019-01-08T01:00:00.284Z"
+title: 'An ideal color tool'
+date: '2019-01-08T01:00:00.284Z'
 ---
 
 A tool to generate color palette for sites and apps is always welcome. Yet one perfectly tailored to web is missing.
+
 <!--more-->
 
 ## The basic need
@@ -39,7 +40,7 @@ Theory says warm colors dominate, cool colors sink. On the classic color wheel w
 
 ## Color properties
 
-To pick the perfect red for an existing monochromatic color scheme we might need math. There are tons of reds &mdash; based on which criteria one can affirm *that* red is the perfect red for this scheme?
+To pick the perfect red for an existing monochromatic color scheme we might need math. There are tons of reds &mdash; based on which criteria one can affirm _that_ red is the perfect red for this scheme?
 
 To make colors quantifiable color models and color spaces like RGB or CMYK are used.
 
@@ -51,7 +52,7 @@ Each model describes every color with certain properties like:
 - Lightness - a relative property describing how many `white` and `black` is in the color
 - Contrast - a relative property to a third color
 
-With these properties the *perfect red* can be reformulated to *a red with the same saturation and lightness as the current color scheme, and, with a 4.5 contrast to the background color*.
+With these properties the _perfect red_ can be reformulated to _a red with the same saturation and lightness as the current color scheme, and, with a 4.5 contrast to the background color_.
 
 Color models can be specially tailored to mediums like print (Pantone, CMYK) or monitor screens (RGB, HSL). And they might present surprises. In CMYK `blue` mixed with `yellow` gives `green`, in RGB gives `gray`.
 
@@ -79,7 +80,7 @@ Graphic artists have their own tools like [Adobe Color Wheel](https://color.adob
 
 ### 3&mdash;Monochromatic palette generator
 
-Once we've picked up the two primary colors we should be able to see how many additional color pairs we've get with these colors.
+Once we've picked up the two primary colors we should be able to see how many additional color pairs we've got with these colors.
 
 Google's Color Tool gives us two hints (Light, Dark) but there is more play here.
 
@@ -88,7 +89,6 @@ Google's Color Tool gives us two hints (Light, Dark) but there is more play here
 Finally we need a color wheel to help us choose warm and cold colors additional to our existing monochromatic scheme.
 
 Paletton has such a fine tune mechanism for the generated palette but not to set the color wheel into a state where only corresponding new colors can be picked up.
-
 
 ## Resources
 

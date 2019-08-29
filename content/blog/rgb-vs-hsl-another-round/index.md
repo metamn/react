@@ -1,8 +1,10 @@
 ---
-title: "RGB vs. HSL: another round"
-date: "2019-01-08T02:00:00.284Z"
+title: 'RGB vs. HSL: another round'
+date: '2019-01-08T02:00:00.284Z'
 ---
+
 One should be able to use code to work with colors, and think about colors in the same way thinks about other programming artifacts like data and algorithms.
+
 <!--more-->
 
 ## Color models and spaces
@@ -43,7 +45,7 @@ In CSS notation:
 
 ## HSL
 
-HSL is a color model based on RGB. It is an enhancement of RGB to provide a more intuitive framework to think in colors, to mimic an age old best practice of how painters create and use colors.
+HSL is a color model based on RGB. It is an enhancement of RGB to provide a more intuitive framework to think in colors, to mimic an age-old best practice of how painters create and use colors.
 
 In HSL a color has again three main properties as hue, saturation and luminosity. Colors in HSL are created by choosing a basic color (hue) and adding grey (saturation) and white or black (luminosity) to it.
 
@@ -82,7 +84,6 @@ With the HSL notation it's easy to form a palette. Choose two colors with the sa
 It's an easy, intuitive and programmable method.
 
 With the RGB notation we don't have such an intuitive way to iterate over colors and still keep them in the same family.
-
 
 ## Resources
 

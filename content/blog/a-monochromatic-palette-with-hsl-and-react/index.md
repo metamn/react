@@ -1,8 +1,10 @@
 ---
-title: "A monochromatic palette with HSL and React"
-date: "2019-01-08T03:00:00.284Z"
+title: 'A monochromatic palette with HSL and React'
+date: '2019-01-08T03:00:00.284Z'
 ---
+
 Pick two colors ... and voila!
+
 <!--more-->
 
 ![A monochromatic palette](monochromatic-palette.png)
@@ -16,7 +18,7 @@ Pick two colors ... and voila!
 
 ## Pick a Text color
 
-1. Start form black, which is set the same as the background color but with 0% lightnes.
+1. Start form black, which is set the same as the background color but with 0% lightness.
 2. You can increase / decrease lightness up to a level where the text color is still eligible on the background, ie. the color contrast ratio is bigger than 4.5
 
 ## Auto generated monochrome palette
@@ -27,8 +29,8 @@ Pick two colors ... and voila!
 ## To do
 
 1. We need real use cases like a blog, a landing page, or a marketing site to better adjust the algorithm.
-2. These real use cases must be semantic, themeable. Picking up two colors should be enough to completely style these use cases. For example the hero should be automatically have the inverted color scheme where a call-to-action button is highlighted through the original color scheme. Later, a less important section must have a dominated color scheme. And so on.
+2. These real use cases must be semantic, themeable. Picking up two colors should be enough to completely style these use cases. For example the hero should automatically have the inverted color scheme where a call-to-action button is highlighted through the original color scheme. Later, a less important section must have a dominated color scheme. And so on.
 
 ## Live example and code
 
-In the [Storybook](https://tinyurl.com/y7mftg53) and on [Github](https://github.com/metamn/mr-ui/tree/master/src/basics/ColorsHSL) 
+In the [Storybook](https://tinyurl.com/y7mftg53) and on [Github](https://github.com/metamn/mr-ui/tree/master/src/basics/ColorsHSL)

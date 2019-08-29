@@ -1,9 +1,10 @@
 ---
-title: "Bauhaus to emoji: A call for a new typography"
-date: "2018-12-19"
+title: 'Bauhaus to emoji: A call for a new typography'
+date: '2018-12-19'
 ---
 
-Typography has to be completely rethinked.
+Typography has to be completely rethought.
+
 <!--more-->
 
 The old, standard way — Bauhaus, Swiss, minimal — was perfect in a static environment like print. Now we have animated type, dynamic CSS units, variable fonts and viewports, spatial AR / VR typography.
@@ -17,7 +18,6 @@ We need both a classic and an experimental typographic system.
 Classic used to style old-form content like long text — we can't avoid this type of content. It will be always present.
 
 Experimental used to style presentational content like landing pages, storytelling, and whatever needs a short span of attention.
-
 
 ## Classic typography
 
