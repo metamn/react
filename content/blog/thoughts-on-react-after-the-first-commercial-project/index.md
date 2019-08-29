@@ -11,7 +11,7 @@ It's the future. It's expensive. It's unstable. And all these (will be) manageab
 
 I was commissioned to redesign and rewrite a photo portfolio site by an old client. One of the [requirements](https://github.com/metamn/inu-v2-b#requirements) was to update the old stack and make it future friendly.
 
-I choose React and used the relaxed timeline to get the most out of it.
+I choose to go with React and used the relaxed timeline to get the most out of it.
 
 Up until now I was just playing with small projects to learn parts of the ecosystem &mdash; and I've really enjoyed. Diving seriously into React taught me some interesting lessons.
 
@@ -19,7 +19,7 @@ Up until now I was just playing with small projects to learn parts of the ecosys
 
 I've been working with the web in the last decade [pretty extensively](http://metamn.io/beat/on-old-and-new-stacks/).
 
-I've built my own stack and learnt frameworks, languages and paradigms like MVC, Ruby, Ruby on Rails, PHP, WordPress, Yii, BEM, Compass, SASS, Bootstrap, Javascript, jQuery, Foundation, Jekyll, Grunt / Gulp / WebPack, Semantic HTML &mdash; you name it.
+I've built my own stack and learned frameworks, languages and paradigms like MVC, Ruby, Ruby on Rails, PHP, WordPress, Yii, BEM, Compass, SASS, Bootstrap, Javascript, jQuery, Foundation, Jekyll, Grunt / Gulp / WebPack, Semantic HTML &mdash; you name it.
 
 Among all React is the first paradigm which felt truly _complete_.
 
@@ -48,7 +48,7 @@ Overall I feel all the shit was cut and it's the first time when I really do use
 
 ## 2. React is expensive
 
-Good things come at cost. Learning and running React was so far the most time consuming adventure in frameworks.
+Good things come at cost. Learning and running React was so far the most time-consuming adventure in frameworks.
 
 ### 2.1 Learning
 
@@ -74,11 +74,11 @@ Even if there is an _official way_ it is skipped, many times, unfortunately.
 
 I've been actively involved in two such ecosystems, one around WordPress the other around Ruby and Rails. Even if these frameworks are strongly opinionated I've seen many strange cases when people thought themselves smarter than the original creators.
 
-I've heard things like "We can't follow the official guidelines because our company has special needs" &mdash; and saw the wheel reinvented then the result burrying entire teams, products and carriers.
+I've heard things like "We can't follow the official guidelines because our company has special needs" &mdash; and saw the wheel reinvented then the result burying entire teams, products and carriers.
 
-What I've learnt for life is: _Stick to the standards_.
+What I've learned for life is: _Stick to the standards_.
 
-The twist is React has [no official way](http://metamn.io/react/there-is-no-official-style-guide-for-react/). In fact it has ("[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)", "[Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)") but it keeps calling itself _unopinionated_.
+The twist is React has [no official way](http://metamn.io/react/there-is-no-official-style-guide-for-react/). In fact it has ("[Thinking in React](https://reactjs.org/docs/thinking-in-react.html)", "[Rules of Hooks](https://reactjs.org/docs/hooks-rules.html)") but it keeps calling itself _opinionated_.
 
 I don't know the motivation behind but I understand it. Facebook gave free to the world the fantastic React, supports it heavily, nurtures it to be the best tool for UI development. That should be enough. It's already a real bravery and we can't expect more &mdash; the same treatment for all other parts of the ecosystem.
 
@@ -94,21 +94,21 @@ Combing the learning and ecosystem difficulties we can affirm React will be cost
 
 I've re-written three times my current project to reach a level of confidence. The first two versions were working perfectly, no doubt, but somehow at the end I felt something is missing, something is wrong. _I knew_ the result might work now but it's not sustainable on the long run, it's not done the React way.
 
-There will be many like me re-writing a project until it fits all, and there will be others who won't. In the latter case the cost will be immense for the company paying the bills. The benefactor will get something particular, not following _standards_, and if by chance the dev team is changed, perhaps the whole codebase has to be rewritten.
+There will be many like me re-writing a project until it fits all, and there will be others who won't. In the latter case the cost will be immense for the company paying the bills. The beneficiary will get something particular, not following _standards_, and if by chance the dev team is changed, perhaps the whole codebase has to be rewritten.
 
 React is all about rewrites and migrations, anyway. Currently in the direction of [away from the Facebook stack](https://duckduckgo.com/?q=migrating+code+from+flow+to+typescript&t=canonical&atb=v92-1&ia=web) &mdash; but after the (potentially highly successful) 2019 Facebook rewrite/redesign and Facebook's [wake up](https://medium.com/flow-type/what-the-flow-team-has-been-up-to-54239c62004f) &mdash; back to the Facebook stack.
 
-I have to mention the [Hooks controversy](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy). After five years the core of the language was changed in a way that it makes the old approach &mdash; classes with boilerplate &mdash; unrecognizable for those who learnt React the new way &mdash; with hooks and function components.
+I have to mention the [Hooks controversy](https://reactjs.org/docs/hooks-intro.html#gradual-adoption-strategy). After five years the core of the language was changed in a way that it makes the old approach &mdash; classes with boilerplate &mdash; unrecognizable for those who learned React the new way &mdash; with hooks and function components.
 
 Billions and billions lines of old code to be thrown out.
 
 ## 3. React is not stable
 
-It was really scary to feel again something is not right inside the core of a system.
+It was terrifying to feel again something is not right inside the core of a system.
 
 The last time I felt the same was long time ago during MS-DOS times and BASIC, maybe the first years of Windows. Since then all went smooth with PHP, WordPress, Ruby, Rails, and co.
 
-If there was an error message it didn't disappeared suddenly next time &mdash; like [it does now](https://github.com/metamn/inu-v2-b/issues/28) in my current project built with the official Create React App.
+If there was an error message it didn't disappear suddenly next time &mdash; like [it does now](https://github.com/metamn/inu-v2-b/issues/28) in my current project built with the official Create React App.
 
 An error message could be easily googled and perhaps solved. Now one gets [different messages for different browsers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Errors/Cant_access_lexical_declaration_before_init) making error fixing a bit surreal.
 
