@@ -11,7 +11,7 @@ A deep dive into the language and the ecosystem around.
 
 After deploying my first commercial React app I've started to learn more about the nuts and bolts of the language, the new way of thinking it employs, and how the ecosystem helps to make it all happen.
 
-The process is ongoing and is far from being finished. The journey is pure joy. Learning new paradigms, talking with core members, contributing to libraries, putting it all together.
+The process is ongoing and is far from being finished. The journey is pure joy. Learning new paradigms, talking with core members, contributing to libraries, putting it all together, deep dive into details, write prototypes and live documentation.
 
 Just to get a glimpse about how vast the React context is &mdash; please allow me to present the main concepts.
 
@@ -66,7 +66,7 @@ Just to get a glimpse about how vast the React context is &mdash; please allow m
 	</tr>
 	<tr>
 		<td>Rapid prototyping</td>
-		<td>Front-end and back-end</td>
+		<td>Both on front and back-end</td>
 		<td>Material UI, Headless CMS services</td>
 	</tr>
 	<tr>
@@ -82,7 +82,7 @@ Just to get a glimpse about how vast the React context is &mdash; please allow m
 	<tr>
 		<td>Tricks and tips</td>
 		<td>Speeding up the development process</td>
-		<td>Prettify conditions, Conditional props, Logging, ESXX / JavaScript for React</td>
+		<td>Prettify conditions, Conditional props, Logging, ESxx / JavaScript for React</td>
 	</tr>
 	<tr>
 		<td>DevOps</td>
@@ -91,3 +91,5 @@ Just to get a glimpse about how vast the React context is &mdash; please allow m
 	</tr>
 </tbody>
 </table>
+
+Stay tuned, details are on the way.
