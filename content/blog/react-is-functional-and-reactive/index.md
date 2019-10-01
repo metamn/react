@@ -11,7 +11,7 @@ React follows the reactive, functional programming paradigm. That's a shift from
 
 Both paradigms solve the same problem — to build modular, interactive applications — in different ways.
 
-The old way implemented modularity through tight-coupling and interaction in a synchronous way. The new way implements modularity with loose-coupling and interaction in an asynchrounous way.
+The old way implemented modularity through tight-coupling and interaction synchronously. The new way implements modularity with loose-coupling and interaction asynchronously
 
 Modularity and interaction can be expressed with other terms like composition and coupling — to further clear up the picture. Composition is about how the components of the system can add up to form a whole, while coupling is about how they communicate with each other.
 
@@ -21,12 +21,12 @@ Modularity and interaction can be expressed with other terms like composition an
 
 Composing up a system from smaller parts is best possible when the underlying components behave predictably:
 
-1. They have clear and stable interfaces — input params and return values — which can be easily combined.
-2. During execution, while input params are transformed into return values
+1. They have clear and stable interfaces — input parameters and return values — which can be easily combined.
+2. During execution, while input parameters are transformed into return values
 
-    2.1. The process doesn't modify the input params
+    2.1. The process doesn't modify the input parameters
 
-    2.2. No external information is used beside input params to produce the return value
+    2.2. No external information is used beside input parameters to produce the return value
     
 	2.3. No additional operations are performed beside the planned functionality
 
@@ -160,7 +160,7 @@ Reactive programming achieves this through:
 	
 	2.2 They react when an event happens
 	
-	2.3 They return observables &mdash; events other components can subscribe to.
+	2.3 They return an observable &mdash; emitting events other components can subscribe to.
 
 ### Isolation 
 
@@ -168,7 +168,7 @@ In React isolation is about the local state &mdash; components can update only t
 
 ### Asynchronous communication
 
-In React async communication is all about hooks. Components communicate with each other and the surrounding ecosystem &mdash; the local data store, the local cache store, the database &mdash; via the hooks mechanism.
+In React asynchronous communication is all about hooks. Components communicate with each other and the surrounding ecosystem &mdash; the local data store, the local cache store, the database &mdash; via the hooks mechanism.
 
 ```
 |-----------------|-------------------|
@@ -198,7 +198,7 @@ Using reactive and functional programming concepts React and its parts &mdash; p
 |-----------------------------------------|
 ```
 
-Once a general context is present a big picture can be mapped.
+A general context is a great help when mapping up the big picture.
 
 ```
 |================|                            |================|
