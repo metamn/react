@@ -3,4 +3,5 @@ import 'typeface-montserrat'
 import 'typeface-merriweather'
 
 // prismjs code syntax
-require('prismjs/themes/prism-coy.css')
+// - https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-prismjs
+require('prismjs/themes/prism.css')

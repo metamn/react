@@ -3,7 +3,7 @@ title: React is functional and reactive
 date: '2019-10-01'
 ---
 
-React follows the reactive, functional programming paradigm. A shift from the old proactive, imperative approach.
+React follows the reactive, functional programming paradigm. That's a shift from the old proactive, imperative approach.
 
 <!--more-->
 
@@ -141,6 +141,34 @@ const SideEffectsWithUseEffect = props => {
   );
 };
 ```
+
+## Coupling
+
+Coupling deals with the communication between the components of a system. To make a system scale communication has to be in the same effective as composition.
+
+Reactive programming achieves this through:
+
+1. Isolation:
+
+	1.1 Components are aware of, and care about their own problems only
+
+	1.2 Components does not interfere with each other's inner workings
+
+2. Asynchronous communication:
+
+	2.1 Components subscribe to events
+	
+	2.2 They react when an event happens
+	
+	2.3 They return observables &mdash; events other components can subscribe to.
+
+### Isolation 
+
+In React isolation is about state &mdash; components can update only their own state and can't modify other component's state
+
+### Asynchronous communication
+
+In React async communication is all about hooks: 
 
 ## Resources
 
