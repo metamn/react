@@ -11,32 +11,36 @@ A quick investigation is necessary. At least one can understand better these new
 
 ## A short history
 
-GraphQL was developed by Facebook at the same time when React was created. Perhaps they are perfect running mates.
+GraphQL was developed by Facebook at the same time when React was created. Perhaps they were meant to be perfect running mates.
 
-As React defined a new era in web frameworks so GraphQL does it with APIs. The list of features on [GraphQL.org](https://graphql.org/) clearly points to a paradigm shift:
+Both of them define a new era in their own domain: React in web frameworks and GraphQL in APIs. 
+
+The list of features on [GraphQL.org](https://graphql.org/) clearly points to a paradigm shift:
 
 - Ask for what you need, get exactly that
 - Get many resources in a single request
 - Describe what’s possible with a type system
 - Evolve your API without versions
 
-Since React is [built on functional reactive programming](http://metamn.io/react/react-is-functional-and-reactive/) one might wonder if this is also true for GraphQL.
+React [managed](http://metamn.io/react/react-is-functional-and-reactive/) to change the status quo by sticking to functional reactive programming. One might wonder if this is also true for GraphQL.
 
 ## Functional reactive programming
 
 What makes a system functional and reactive is extracted in the list below from Daniel Lew's excellent article [An Introduction to Functional Reactive Programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/).
 
+Acronyms R stand for reactive, F for functional programming.
+
 ```
-|-------------
-| Acronym | Feature     | Description
-|---------|-------------|-------------
-| R-1     | Isolation   | Components are aware of, and care about their own problems only
-| R-2     | Isolation   | Components does not interfere with each other’s inner workings
-| R-3     | Async       | Components communicate in an asynchronous way
-| F-1     | Composition | Components have clear and stable interfaces
-| F-2     | Composition | During execution a component doesn't modify its input parameters
-| F-3     | Composition | No external information is used to produce the return value
-| F-4     | Composition | No additional operations are performed beside the planned functionality
+|---------|-------------|-------------------------------------------------------------------------|
+| Acronym | Feature     | Description                                                             |
+|---------|-------------|-------------------------------------------------------------------------|
+| R-1     | Isolation   | Components are aware of, and care about their own problems only         |
+| R-2     | Isolation   | Components does not interfere with each other’s inner workings          |
+| R-3     | Async       | Components communicate in an asynchronous way                           |
+| F-1     | Composition | Components have clear and stable interfaces                             |
+| F-2     | Composition | During execution a component doesn't modify its input parameters        |
+| F-3     | Composition | No external information is used to produce the return value             |
+| F-4     | Composition | No additional operations are performed beside the planned functionality |
 ```
 
 If GraphQL meets these features it can be considered functional and reactive.
@@ -45,17 +49,20 @@ If GraphQL meets these features it can be considered functional and reactive.
 
 Like every API &mdash; GraphQL is built on three main concepts:
 
-- Client: makes data requests to a backend
-- Endpoint: One or more URLs where requests are sent and from where the results are received
-- Backend: Processes the requests and returns data
+- **Client**: makes data requests to a backend
+- **Endpoint**: One or more URLs where requests are sent and from where the results are received
+- **Backend**: Processes the requests and returns data
 
-Speaking code:
+Speaking in GraphQL code:
 
 ```bash
 # The client sends a data request to the backend
 #
 # `/graphql` is an endpoint which receives the request ...
 # ... and forwards to the backend
+#
+# `{ title, author { firstName } }` is the shape of data ...
+# ... the clients wants to receive
 #
 GET /graphql?query={ book(id: "1") { title, author { firstName } } }
 ```
@@ -89,19 +96,15 @@ const resolvers = {
 }
 ```
 
-Abstracting the client, the endpoint and the backend as _components_ they can be verified if fulfill the traits of a functional reactive system. 
+Calling the client, the endpoint and the backend as _components_ of the GraphQL system it can be verified if they fulfill the traits of a functional reactive system. 
 
 ## Isolation
 
-GraphQL components are clearly decoupled. They all work in isolation and don't interfere in each other's inner workings.
+GraphQL components are (clearly) decoupled. They all work in isolation and don't interfere in each other's inner workings.
 
-- The client is free to make requests of any shape to the backend. It is not constrained by expectations coming from the backend. 
-- The client needs to know a single URL endpoint. It is not constrained by a list of URL endpoints which can receive requests.
-- The client doesn't needs to know about the resolvers and how they work on the backend.
+These statements can be further articulated by comparing GraphQL to REST &mdash; another paradigm, the predecessor of GraphQL. 
 
-These statements can be further articulated by comparing them to REST APIs &mdash; a paradigm more tightly coupled than GraphQL.
-
-Speaking code the example from the previous chapter can be replicated with REST in the following way:
+Speaking code the example above can be replicated with REST in the following way:
 
 ```bash
 # The client sends a data request to the backend
@@ -114,9 +117,10 @@ Speaking code the example from the previous chapter can be replicated with REST 
 # - GET /authors/1
 # - GET /comments/1
 # - GET /authors/1/comments
-# - ... and lots of others for POST, DELETE and co.
+# - ... and lots of others for POST, DELETE and REST verbs.
 #
-# In REST the client is tightly coupled to the URL endpoints
+# 🢥 In REST the client is tightly coupled ...
+# ... to the URL endpoints
 #
 # `/books` is an endpoint which receives the request
 #
@@ -127,21 +131,25 @@ GET /books/1
 /**
  * The backend processes the request using URL handlers
  * 
- * For every resource (`book`) and operation (`get`) ...
- * ... there should be a coresponding URL handler
+ * For every resource (`book`, `author`, ...) and 
+ * operation (`get`, `delete') there should be 
+ * a coresponding URL handler
+ * 
  * Like:
+ *  - app.get('books', ...)
  *  - app.get('authors', ...)
  *  - app.get('comments', ...)
  *  - ... and lots of others for `put`, `delete`, `post`, `patch`
  * 
- * In REST the URL endpoints are tightly coupled to ...
+ * 🢥 In REST the URL endpoints are tightly coupled to ...
  * ... the URL handlers on the backend
  * 
  * More, in REST the backend doesn't knows the shape of the results ...
  * ... the client needs.
- * It returns an arbitrary shape the client has to be aware of apriori. 
+ * So it returns an arbitrary shape the client ...
+ * ... has to be aware of apriori. 
  * 
- * In REST the client is tightly coupled to the backend.
+ * 🢥 In REST the client is tightly coupled to the backend.
  * 
  */  
 app.get('/books', function (req, res) {
@@ -164,7 +172,8 @@ app.get('/books', function (req, res) {
  * Finally the client receives the result.
  * 
  * The result has a shape defined by the backend ...
- * ... which can be either too few or too many.
+ * ... which can be either too few or too many ...
+ * ... for the client's need.
  * 
  * In REST the client is tightly coupled to the backend.
  */ 
