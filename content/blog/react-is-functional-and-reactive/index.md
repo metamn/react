@@ -164,11 +164,68 @@ Reactive programming achieves this through:
 
 ### Isolation 
 
-In React isolation is about state &mdash; components can update only their own state and can't modify other component's state
+In React isolation is about the local state &mdash; components can update only their own state and can't modify other component's state.
 
 ### Asynchronous communication
 
-In React async communication is all about hooks: 
+In React async communication is all about hooks. Components communicate with each other and the surrounding ecosystem &mdash; the local data store, the local cache store, the database &mdash; via the hooks mechanism.
+
+```
+|-----------------|-------------------|
+| Hook            | Ecosystem         |
+|-----------------| ------------------|
+| useContext      | Local data store  |
+| useMemo         | Local cache store |
+| useCallback     | Child components  |
+| useQuery,       |                   |
+| useMutation,    |                   |
+| useSubscription | GraphQL database  |
+|-------------------------------------|
+```
+
+## Wrapping up
+
+Using reactive and functional programming concepts React and its parts &mdash; props, state, hooks, side effects, pure components &mdash; can be put in a general context.
+
+```
+|-----------------|------------|----------|
+| Concept         | Functional | Reactive |
+|-----------------|------------|----------|
+| Pure components |    Yes     |    No    |
+| Side effects    |    Yes     |    No    |
+| Local state     |    No      |   Yes    |
+| Hooks           |    No      |   Yes    |
+|-----------------------------------------|
+```
+
+Once a general context is present a big picture can be mapped.
+
+```
+|================|                            |================|
+| Component 1    |                            | Component 2    |
+|================|                            |================|
+| Props          |                            | Props          |
+|----------------|                            |----------------|
+| Local state    |                            | Local state    |
+|----------------|                            |----------------|
+|                | <-------- Hooks -------->  |                |
+|                | <-------- Hooks -------->  |                |
+| Side effects   | <-------- Hooks -------->  | Side effects   |
+|                | <-------- Hooks -------->  |                |
+|                | <-------- Hooks -------->  |                |
+|----------------|                            |----------------|
+| Return JSX     |                            | Return JSX     |
+|================|                            |================|
+
+     ^                 ^                ^                ^
+     |                 |                |                |
+     | Hooks           | Hooks          | Hooks          | Hooks
+     |                 |                |                |
+|----------|     |-----------|     |----------|     |-----------|
+| State    |     | Data      |     | Cache    |     | UI        |
+| store    |     | store     |     | store    |     | Events    |
+|----------|     |-----------|     |----------|     |-----------|
+```
 
 ## Resources
 
