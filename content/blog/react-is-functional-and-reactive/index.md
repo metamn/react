@@ -3,7 +3,7 @@ title: React is functional and reactive
 date: '2019-10-01'
 ---
 
-React follows the reactive, functional programming paradigm. That's a shift from the old proactive, imperative approach.
+React follows the functional reactive programming paradigm. That's a shift from the old proactive, imperative approach.
 
 <!--more-->
 
@@ -15,7 +15,7 @@ The old way implemented modularity through tight-coupling and interaction synchr
 
 Modularity and interaction can be expressed with other terms like composition and coupling — to further clear up the picture. Composition is about how the components of the system can add up to form a whole, while coupling is about how they communicate with each other.
 
-[Reactive functional programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) deals with composition the functional programming way and deals with coupling the reactive programming way.
+[Functional reactive programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) deals with composition the functional programming way and deals with coupling the reactive programming way.
 
 ## Composition
 
