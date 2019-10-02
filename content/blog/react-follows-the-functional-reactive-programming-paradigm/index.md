@@ -1,9 +1,9 @@
 ---
-title: 'React is functional and reactive'
+title: 'React follows the functional reactive programming paradigm'
 date: '2019-10-01'
 ---
 
-React follows the functional reactive programming paradigm. That's a shift from the old proactive, imperative approach.
+That's a shift from the old proactive, imperative approach.
 
 <!--more-->
 

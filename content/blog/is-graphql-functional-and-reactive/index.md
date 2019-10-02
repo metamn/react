@@ -1,6 +1,6 @@
 ---
 title: 'Is GraphQL functional and reactive?'
-date: '2019-10-01T19:00:00.284Z'
+date: '2019-10-02'
 ---
 
 GraphQL comes from the same family as React. And React is functional and reactive.
