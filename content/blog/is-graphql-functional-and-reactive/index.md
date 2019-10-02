@@ -1,6 +1,7 @@
 ---
 title: Is GraphQL functional and reactive?
 date: '2019-10-01T19:00:00.284Z'
+draft: true
 ---
 
 GraphQL comes from the same family as React. And React is functional and reactive.
@@ -211,6 +212,7 @@ app.get('/books', function (req, res) {
 |---------------------------------------------------------------------------|
 #
 # - All examples above can be reduced to a single one
+# - Which makes GraphQL loosely coupled
 #
 | GET /graphql?<OPERATION>={<PARAMS>}    | /graphql      | resolvers = {...} |
 ```

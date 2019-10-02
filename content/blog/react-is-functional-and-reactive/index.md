@@ -1,6 +1,7 @@
 ---
 title: React is functional and reactive
 date: '2019-10-01'
+draft: true
 ---
 
 React follows the functional reactive programming paradigm. That's a shift from the old proactive, imperative approach.
