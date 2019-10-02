@@ -180,6 +180,42 @@ app.get('/books', function (req, res) {
 }
 ```
 
+### Wrapping up
+
+```bash
+# REST
+#
+# - All three components have a quasi 1-to-1 relationship
+# - They are all tightly coupled (The list can't be reduced)
+#
+|------------------------------------------------------------|
+| Client requests | URL Endpoints | URL Handlers             |
+|-----------------|---------------|--------------------------|
+| GET /books/1    | /books        | app.get('books', ...)    |
+| GET /authors/1  | /authors      | app.get('authors', ...)  |
+| GET /comments/1 | /comments     | app.get('comments', ...) |
+| DELETE /books/1 | /books        | app.delete('books', ...) |
+|------------------------------------------------------------|
+```
+
+```bash
+# GraphQL
+#
+|---------------------------------------------------------------------------|
+| Client requests                       | URL Endpoints | URL handlers      |
+|---------------------------------------|---------------|-------------------| 
+| GET /graphql?query={book(id: "1")}    | /graphql      | resolvers = {...} |
+| GET /graphql?query={author(id: "1")}  | /graphql      | resolvers = {...} |
+| GET /graphql?query={comment(id: "1")} | /graphql      | resolvers = {...} |
+| GET /graphql?mutation={book(id: "1")} | /graphql      | resolvers = {...} |
+|---------------------------------------------------------------------------|
+#
+# - All examples above can be reduced to a single one
+#
+| GET /graphql?<OPERATION>={<PARAMS>}    | /graphql      | resolvers = {...} |
+```
+
+
 ## Composition
 
 Let's examine again the two ways of writing code on the backend:
@@ -225,11 +261,21 @@ Only GraphQL seems to satisfy conditions F-3, F-4: Use no external information n
 
 REST uses an external resource (`authors`) and performs an additional operation (`const result=`) during execution.
 
-## Summing up 
 
-This thought-play can be easily called _speculation_. Indeed, it is speculation. It's goal is nothing to do with demonstrating scientifically if GraphQL follows the functional reactive pardigm.
+## Finally 
 
-At the end, however, it gives a picture about the paradigm and how GraphQL APIs differ from REST. 
+This thought-play can be easily called _speculation_ by a rigurous reader. 
+
+For example the code for `app.get('/books',...)` can be written to be fully functional.
+However this is the way you'll find it written in majority of REST APIs. 
+
+The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm.
+
+The goal was to check if GraphQL can be interpreted using the paradigm.
+
+At the end the reader has to decide in what measure this exercise was successful. 
+
+Until then &mdash; I hope &mdash; one can have a nice overview of the paradigm, and a glimpse on how GraphQL APIs differ from REST.
 
 ## Resources
 
