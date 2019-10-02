@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Oct 2019 13:47:07 GMT</lastBuildDate><item><title><![CDATA[Is GraphQL functional and reactive?]]></title><description><![CDATA[GraphQL comes from the same family as React. And React is functional and reactive.]]></description><link>http://metamn.io/react/is-graphql-functional-and-reactive/</link><guid isPermaLink="false">http://metamn.io/react/is-graphql-functional-and-reactive/</guid><pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GraphQL comes from the same family as React. And React is functional and reactive.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 02 Oct 2019 14:07:59 GMT</lastBuildDate><item><title><![CDATA[Is GraphQL functional and reactive?]]></title><description><![CDATA[GraphQL comes from the same family as React. And React is functional and reactive.]]></description><link>http://metamn.io/react/is-graphql-functional-and-reactive/</link><guid isPermaLink="false">http://metamn.io/react/is-graphql-functional-and-reactive/</guid><pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GraphQL comes from the same family as React. And React is functional and reactive.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;A quick investigation is necessary.&lt;/p&gt;
 &lt;h2&gt;A short history&lt;/h2&gt;
@@ -11,7 +11,7 @@
 &lt;li&gt;Describe what’s possible with a type system&lt;/li&gt;
 &lt;li&gt;Evolve your API without versions&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;React &lt;a href=&quot;http://metamn.io/react/react-is-functional-and-reactive/&quot;&gt;managed&lt;/a&gt; to change the status quo by embracing functional reactive programming. One might wonder if GraphQL choose the same approach.&lt;/p&gt;
+&lt;p&gt;React &lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot;&gt;managed&lt;/a&gt; to change the status quo by embracing functional reactive programming. One might wonder if GraphQL choose the same approach.&lt;/p&gt;
 &lt;h2&gt;Functional reactive programming&lt;/h2&gt;
 &lt;p&gt;What makes a system functional and reactive is extracted in the list below from Daniel Lew’s excellent article &lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Acronym R stands for reactive, F for functional programming.&lt;/p&gt;
@@ -231,7 +231,7 @@ However this is the way you’ll find it written in majority of REST APIs. &lt;/
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GraphQL&quot;&gt;GraphQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/React_(web_framework)&quot;&gt;React (web framework)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/react-is-functional-and-reactive/&quot;&gt;React is functional and reactive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot;&gt;React follows the functional reactive programming paradigm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React follows the functional reactive programming paradigm]]></title><description><![CDATA[That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</link><guid isPermaLink="false">http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</guid><pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
 &lt;!--more--&gt;
@@ -510,28 +510,25 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;h3&gt;Documentation&lt;/h3&gt;
 &lt;p&gt;Creating themes with GraphQL is documented in the &lt;code class=&quot;language-text&quot;&gt;WPGraphiQL&lt;/code&gt; plugin. Which is also serving as a live testbed for all database operations.&lt;/p&gt;
 &lt;p&gt;It feels refreshing to read the docs next to the live code editor. It’s all in one screen — without the need to fire up webpages and search for results.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/99d00/wp-graphiql-screenshot.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.85667752442997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABhklEQVQ4y5WSi3KrMAxE8/9f2U5nkhJDMBjjd7ZaJXDb9PalGY2NMMerRYdaK5bFI+eMdV3x9PSM7nSCee1gujOOpyOGYZC8aPayn+cZ/M7aSWvTNOF6vSLGiIO1Ft6vaK0pNAjUDg7zMCG6BcfjCU4u9GvAIue4Oqn3vYCdQwhBc5U6vz8Y08uNDoyUkhatTxiXqDVz7hW4hrinl0tZEw2qlElBXA9ObiG9lKI3EboEUZqKAs/G7ECq87IGUZrcgJImPcN2GQocR4vLZdT+b8CI2q44W4+YK9jBrvAOjLLW1aFmJ7CGLRR4M/lfyzGGmzIB5to+Au8qk9jyPj4oJGxRP5oCqZJhxcNUmpj/H2DKO2jLHThNM6z89kfg6IL+nJ+AnxSy5SggBn1M932Rlzz2ZyBnaityZDi0TmwguMkBPnP+fg2kf9xswK57xfPLC4wMrp1HHV7/DfCTh0Zaoo8MAnPJ2mrloLai8/mVwsdQIF9yo76VG+A+DHvtEUjP36vbkmffACuT9flMpLYlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.85667752442997%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABhklEQVQ4y5WSi3KrMAxE8/9f2U5nkhJDMBjjd7ZaJXDb9PalGY2NMMerRYdaK5bFI+eMdV3x9PSM7nSCee1gujOOpyOGYZC8aPayn+cZ/M7aSWvTNOF6vSLGiIO1Ft6vaK0pNAjUDg7zMCG6BcfjCU4u9GvAIue4Oqn3vYCdQwhBc5U6vz8Y08uNDoyUkhatTxiXqDVz7hW4hrinl0tZEw2qlElBXA9ObiG9lKI3EboEUZqKAs/G7ECq87IGUZrcgJImPcN2GQocR4vLZdT+b8CI2q44W4+YK9jBrvAOjLLW1aFmJ7CGLRR4M/lfyzGGmzIB5to+Au8qk9jyPj4oJGxRP5oCqZJhxcNUmpj/H2DKO2jLHThNM6z89kfg6IL+nJ+AnxSy5SggBn1M932Rlzz2ZyBnaityZDi0TmwguMkBPnP+fg2kf9xswK57xfPLC4wMrp1HHV7/DfCTh0Zaoo8MAnPJ2mrloLai8/mVwsdQIF9yo76VG+A+DHvtEUjP36vbkmffACuT9flMpLYlAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;wp-graphiql-screenshot.png&quot;
-        title=&quot;&quot;
+        title=&quot;wp-graphiql-screenshot.png&quot;
         src=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/b9e4f/wp-graphiql-screenshot.png&quot;
         srcset=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/cf440/wp-graphiql-screenshot.png 148w,
 /react/static/b3615b3a2b2ebd28dc0cc89658c80884/d2d38/wp-graphiql-screenshot.png 295w,
@@ -540,70 +537,60 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 /react/static/b3615b3a2b2ebd28dc0cc89658c80884/2d849/wp-graphiql-screenshot.png 1180w,
 /react/static/b3615b3a2b2ebd28dc0cc89658c80884/99d00/wp-graphiql-screenshot.png 1228w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I’ve found the GraphQL API documentation more useful than the original WordPress documentation. Better navigation, less verbose but straight to the point for a quick lookup and even for a deep dive.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/dbb61/wp-graphiql-apidocs.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 126%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsSAAALEgHS3X78AAACl0lEQVQ4y6WV23LaMBCG/f4P0ZlOb9pJT0/Q256m7bTJhBAgIQQwxmfrbFn+uzY0EJOYptXM55Vs+feutCt7r0YpXl7EOBkleHeV4e0kw5tJekczPhnFeP5zgRenS7ymed05De+JZ2chvI9XK/zyMwwijkHIcBELjDONUapwmUhckh2SPadng5Df3duneX5dGHwYr+EJLlCkCUSRI08aW8CVBqgsNq3GYevcqzfj4c0SXiE18rxAmuUtGfWjOEHBeDvPuRqu7sdWrhU8m/rwpDawjUf/0ZqPNu18ttp6yCSUsRSlhKs0eVY/icptPJyGObxMGKwzgSgXUCKCkSmFUMFaS1922yXqF3TbNbxNGDxtK/KsRGk0ytLCmJLQhEFFwn8Ee0PeF4yZxiKWKDiDlUsKWXU2sD7q5T1BSR5praCUJiSkJFQzVq2X+4IPtQPBjBsECQcTqs2vQw/wNEHGLWI/Jm/YdoLrDa8rfhiycEinHCq/RlWyR2ui3lvH7treExRcIRoFYMEZRPQNOp8Ql1DZECWf00atUIolWZ9etsc9FLQRigdE2CILH5KtiRW0YpRKuzRq+vu5+aCgto4mNlQb7KZv2rHdChpoorFHBROu4ScCLGNUJQmMWKAyaW8i94asyQtNYXfT4m93+jBtlEVTz4IplLRmVlMt62y3u0fK7lBQGjptBASnCuEFrOFwVh5N6Md3mUqP0RGmyDaHQd0J+Vg7LD1WIvBTCMn3KsX9e6UIXiGfp23yOlftquIh6FI79+gBO4tJ0CiHeCQgowuUbEg/pwKwCWpLqVPl1M92wPWGv6CD2ru5nWE6/IHZ5Dtm4y/EZ+IrbkafMJ+ewl9MsZxftaxWSwRBSKzvsSLicI0B/VN+A4s8mlVeD0V/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 126%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAYAAAAxFw7TAAAACXBIWXMAAAsSAAALEgHS3X78AAACl0lEQVQ4y6WV23LaMBCG/f4P0ZlOb9pJT0/Q256m7bTJhBAgIQQwxmfrbFn+uzY0EJOYptXM55Vs+feutCt7r0YpXl7EOBkleHeV4e0kw5tJekczPhnFeP5zgRenS7ymed05De+JZ2chvI9XK/zyMwwijkHIcBELjDONUapwmUhckh2SPadng5Df3duneX5dGHwYr+EJLlCkCUSRI08aW8CVBqgsNq3GYevcqzfj4c0SXiE18rxAmuUtGfWjOEHBeDvPuRqu7sdWrhU8m/rwpDawjUf/0ZqPNu18ttp6yCSUsRSlhKs0eVY/icptPJyGObxMGKwzgSgXUCKCkSmFUMFaS1922yXqF3TbNbxNGDxtK/KsRGk0ytLCmJLQhEFFwn8Ee0PeF4yZxiKWKDiDlUsKWXU2sD7q5T1BSR5praCUJiSkJFQzVq2X+4IPtQPBjBsECQcTqs2vQw/wNEHGLWI/Jm/YdoLrDa8rfhiycEinHCq/RlWyR2ui3lvH7treExRcIRoFYMEZRPQNOp8Ql1DZECWf00atUIolWZ9etsc9FLQRigdE2CILH5KtiRW0YpRKuzRq+vu5+aCgto4mNlQb7KZv2rHdChpoorFHBROu4ScCLGNUJQmMWKAyaW8i94asyQtNYXfT4m93+jBtlEVTz4IplLRmVlMt62y3u0fK7lBQGjptBASnCuEFrOFwVh5N6Md3mUqP0RGmyDaHQd0J+Vg7LD1WIvBTCMn3KsX9e6UIXiGfp23yOlftquIh6FI79+gBO4tJ0CiHeCQgowuUbEg/pwKwCWpLqVPl1M92wPWGv6CD2ru5nWE6/IHZ5Dtm4y/EZ+IrbkafMJ+ewl9MsZxftaxWSwRBSKzvsSLicI0B/VN+A4s8mlVeD0V/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;wp-graphiql-apidocs.png&quot;
-        title=&quot;&quot;
+        title=&quot;wp-graphiql-apidocs.png&quot;
         src=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/b9e4f/wp-graphiql-apidocs.png&quot;
         srcset=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/cf440/wp-graphiql-apidocs.png 148w,
 /react/static/2580110f0718610e9d57084cf0b59ede/d2d38/wp-graphiql-apidocs.png 295w,
 /react/static/2580110f0718610e9d57084cf0b59ede/b9e4f/wp-graphiql-apidocs.png 590w,
 /react/static/2580110f0718610e9d57084cf0b59ede/dbb61/wp-graphiql-apidocs.png 650w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;vs.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/c513db3268b477911b0858629766ad15/8bf03/wp-api-screenshot.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 142.49110320284697%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAAAsSAAALEgHS3X78AAAD20lEQVRIx5VVa28UVRg+QIzR/0Dtaika6bZAaWgbgn4xgBdaSTX+BGPiFygl8ZvQLYkU/wAxBhOj/8MvRol+kraUtbS7293Zmdm5X3Zm9/F9z+xMZ5ctxEmeOe95b+c5t/eIqZl5fLjwGc6cv4Bz8+/h7OxFFM/N4eTEWYyOn0Lh5MTzeJvbxPbG2DsYOT6K0ZECxkgnps9M49IHlzAzPYP52XnMnZ8jzIL1xVNFnJ6cwlRxEpMTRcKkxPjYOE68dQLjhTdRePc0ji99jZEvrqMw8z7E0as38OriMl6/dguvXVvBK4s3ceTqMo4u3JQ4triCYwsrWZ8hPrlBWMaRj69DfPoNxJcPIL76AeLzbyE++ukRln79G0u/JFj8+S9cfvjnC3Hl4SOJy7L9A1ce/Jbgx98h7n13D7dvr+LOnRJhFWulu7i71o+10tqhKK2WsL5+H/fXvwfnEtXaPh5vbGBza4vaTSlvbG7hn8cbEqzb3n6Kp+UynlDLKJf/7fW3sfVkG5VKFU1Vg9JUITpxDEVRYFkWfN+H53k9uJn8fz7R7XZlona7jU6nIxHTIKnMiKJIgvXsNwyu60q7TOg4DmzbRhAECVNqWcfsHMeVzjxoyzBkcDpAHmEYysEFdwxybOk6Wq0WLNOS1FN2oAGzlhgwgfRL5bxODK5BTDanHWd9L+rINow7COIk0CW739PnP04smCpvSr1eR7VaxV6lgt3dPcKuRKVaQ6PRoF1UUaeW5X32rSX6NFbTtIQhrwlPVacpqxTEqNUbqJOjRrLeWwrTNJOlIVnVdOwrTQmd+qldMhykbfptqE4A1Q0wZFbZp7sh7DB6fsr8S8GLX2vZ2FFN7DQNWH6YObIt9eMNqpKf7viZPUVfQsnQC6BYLjRyjuKEYre366lP3OmiST4G+SYJcXhCN2yjYbo0JZ+SHByHPob0cTK/HR3OMDUwu52miT3NQhDFGYPBhHXDyTHsvpihanswaFOGMuz1W2T3wujlCWMK5CnbQdh3CwYZmi+bcurIO1dWDLmLh21Km64gLwkPnD8yQ9fQpqPS5CkTgzBbw25fQm418skfqyzh4EVPp91/YNNffgm6fTHorS5dPSo9uZIUtrnuJXJA9zy1cRuGicwxgayDkSxnLHMc24RhO2i06IhQvXNdD89UA7rlwKdauEdyi2S27esmdqnP+qZhQyG4ni/v8bOGBtW0qWZ6EBYV0Lp+UP41MvAg3DcdfgZ8mVAxHah0RsPAl8GcMMg9GZyMY8TBG5IogsDPHBPWbgaPK3fPLx+TgvtiUJF3TJ4AJwM/E8OS5GP+A1wfzL0Tu7hyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 142.49110320284697%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAAAsSAAALEgHS3X78AAAD20lEQVRIx5VVa28UVRg+QIzR/0Dtaika6bZAaWgbgn4xgBdaSTX+BGPiFygl8ZvQLYkU/wAxBhOj/8MvRol+kraUtbS7293Zmdm5X3Zm9/F9z+xMZ5ctxEmeOe95b+c5t/eIqZl5fLjwGc6cv4Bz8+/h7OxFFM/N4eTEWYyOn0Lh5MTzeJvbxPbG2DsYOT6K0ZECxkgnps9M49IHlzAzPYP52XnMnZ8jzIL1xVNFnJ6cwlRxEpMTRcKkxPjYOE68dQLjhTdRePc0ji99jZEvrqMw8z7E0as38OriMl6/dguvXVvBK4s3ceTqMo4u3JQ4triCYwsrWZ8hPrlBWMaRj69DfPoNxJcPIL76AeLzbyE++ukRln79G0u/JFj8+S9cfvjnC3Hl4SOJy7L9A1ce/Jbgx98h7n13D7dvr+LOnRJhFWulu7i71o+10tqhKK2WsL5+H/fXvwfnEtXaPh5vbGBza4vaTSlvbG7hn8cbEqzb3n6Kp+UynlDLKJf/7fW3sfVkG5VKFU1Vg9JUITpxDEVRYFkWfN+H53k9uJn8fz7R7XZlona7jU6nIxHTIKnMiKJIgvXsNwyu60q7TOg4DmzbRhAECVNqWcfsHMeVzjxoyzBkcDpAHmEYysEFdwxybOk6Wq0WLNOS1FN2oAGzlhgwgfRL5bxODK5BTDanHWd9L+rINow7COIk0CW739PnP04smCpvSr1eR7VaxV6lgt3dPcKuRKVaQ6PRoF1UUaeW5X32rSX6NFbTtIQhrwlPVacpqxTEqNUbqJOjRrLeWwrTNJOlIVnVdOwrTQmd+qldMhykbfptqE4A1Q0wZFbZp7sh7DB6fsr8S8GLX2vZ2FFN7DQNWH6YObIt9eMNqpKf7viZPUVfQsnQC6BYLjRyjuKEYre366lP3OmiST4G+SYJcXhCN2yjYbo0JZ+SHByHPob0cTK/HR3OMDUwu52miT3NQhDFGYPBhHXDyTHsvpihanswaFOGMuz1W2T3wujlCWMK5CnbQdh3CwYZmi+bcurIO1dWDLmLh21Km64gLwkPnD8yQ9fQpqPS5CkTgzBbw25fQm418skfqyzh4EVPp91/YNNffgm6fTHorS5dPSo9uZIUtrnuJXJA9zy1cRuGicwxgayDkSxnLHMc24RhO2i06IhQvXNdD89UA7rlwKdauEdyi2S27esmdqnP+qZhQyG4ni/v8bOGBtW0qWZ6EBYV0Lp+UP41MvAg3DcdfgZ8mVAxHah0RsPAl8GcMMg9GZyMY8TBG5IogsDPHBPWbgaPK3fPLx+TgvtiUJF3TJ4AJwM/E8OS5GP+A1wfzL0Tu7hyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;wp-api-screenshot.png&quot;
-        title=&quot;&quot;
+        title=&quot;wp-api-screenshot.png&quot;
         src=&quot;/react/static/c513db3268b477911b0858629766ad15/b9e4f/wp-api-screenshot.png&quot;
         srcset=&quot;/react/static/c513db3268b477911b0858629766ad15/cf440/wp-api-screenshot.png 148w,
 /react/static/c513db3268b477911b0858629766ad15/d2d38/wp-api-screenshot.png 295w,
@@ -612,12 +599,10 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 /react/static/c513db3268b477911b0858629766ad15/2d849/wp-api-screenshot.png 1180w,
 /react/static/c513db3268b477911b0858629766ad15/8bf03/wp-api-screenshot.png 1405w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;Experience&lt;/h3&gt;
 &lt;p&gt;Creating the first theme with GraphQL felt in the same way natural like creating themes the classic way.&lt;/p&gt;
 &lt;p&gt;In fact it was a more delightful experience.&lt;/p&gt;
@@ -743,28 +728,25 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;There are third party generators, tools and frameworks to help. In fact there is an entire industry built around making REST APIs work on Amazon — it is that complicated.&lt;/p&gt;
 &lt;p&gt;While in a few days it was possible to set up AppSync with React and play thoughtfully with optimizations and experience (Relay vs. Apollo) — spending the same time with the REST API was enough only to create and manage the schema. Adding the necessary Lamdba functions and data backend was unsuccessful with generators and tools provided by the ecosystem.&lt;/p&gt;
 &lt;h2&gt;REST&lt;/h2&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/b4133/rest-api-aws.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 56.29629629629629%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQAF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHWW0E0f//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCX//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABoQAAICAwAAAAAAAAAAAAAAAAERADEgIaH/2gAIAQEAAT8hLVGMuuwNbCOH/9oADAMBAAIAAwAAABDz/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAQEBAQAAAAAAAAAAAAABETEAIEH/2gAIAQEAAT8QbUpfidhzNjmi0NLZ4//Z&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.29629629629629%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQAF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQAC/9oADAMBAAIQAxAAAAHWW0E0f//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCX//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CX//EABoQAAICAwAAAAAAAAAAAAAAAAERADEgIaH/2gAIAQEAAT8hLVGMuuwNbCOH/9oADAMBAAIAAwAAABDz/wD/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAZEAEBAQEBAQAAAAAAAAAAAAABETEAIEH/2gAIAQEAAT8QbUpfidhzNjmi0NLZ4//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The REST API on AWS&quot;
-        title=&quot;&quot;
+        title=&quot;The REST API on AWS&quot;
         src=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/c739e/rest-api-aws.jpg&quot;
         srcset=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/8ee9c/rest-api-aws.jpg 148w,
 /react/static/dcc205f362f6e5b460a7dff5b75234cd/ebbe7/rest-api-aws.jpg 295w,
@@ -772,12 +754,10 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 /react/static/dcc205f362f6e5b460a7dff5b75234cd/5413e/rest-api-aws.jpg 885w,
 /react/static/dcc205f362f6e5b460a7dff5b75234cd/b4133/rest-api-aws.jpg 1080w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    
+    &lt;/span&gt;
 &lt;em&gt;Image credits: &lt;a href=&quot;https://iotdemos.wordpress.com/2017/04/24/building-simple-back-end-using-aws-dynamodb-lambda-api-gateway/&quot;&gt;https://iotdemos.wordpress.com&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;To catch the glimpse of the REST on AWS complexity one should watch these official videos. The first deals with &lt;a href=&quot;https://www.youtube.com/watch?v=xkDcBssNd1g&quot;&gt;the difficulty to create an API&lt;/a&gt; and the second with &lt;a href=&quot;https://www.youtube.com/watch?v=9ElpSPXk-g8&quot;&gt;the difficulty of ensuring best practices&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Following the advice from the videos one should use the recommended tools to achieve better results faster:
@@ -795,28 +775,25 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;A GraphQL app can request all articles together with authors, comments and likes in a single query. This data is automatically cached locally for offline access, and when one of its part is updated (let’s say new article added) the new data is pushed to the device and visualized automatically.&lt;/p&gt;
 &lt;p&gt;A complete example of a GraphQL stack is the &lt;a href=&quot;https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/&quot;&gt;Facebook 2019 redesign and rewrite&lt;/a&gt;.&lt;/p&gt;
 &lt;h2&gt;AppSync&lt;/h2&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/1cbac/aws-appsync-management-console.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 68.4108527131783%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACDElEQVQ4y5WTy27TUBCG/UAURBFiA+WyZQmlECEKLZUQIF4DUSgKNEKULQs2PARiwY5SxCVNGnLx/ZK77di14/zMnMRWkeJKHOnLjI+tf/4zmSO1Ox0oigbTtOGPRvD9EfqDISzHQdNwIFttmLYD3bSgaBpFExY95yGNSMTzPARBgPF4DF6TyQRD10W5WsM+UavXcVD7g16/L/aPQ3LpRzdM9Ho9cM5ijEtFHHKpkivTsmCQs6E3FIX5JKMcJHbVHwwQx3HmjvF8n4r0oagaLMuGrCroDrqZYB5SGIbQdANJkrBaJsqCXXJtUu9UXYMXeogOo6k7Es1DYmfcw+n6V5D/MN0wxHHttiNO4tO+dwwSUqnZUXklFNlJp9MV/eVeGhRZkE8SRVEuUip0VDB1GB8GiEPuTSA+dl1PFGLRmHo/nkPmMBVKo+v5SGZj9D9rrqColozx6fMXPN0sorj9FlvFN3hV2qF8B5tb23j+siTg/NmL11k+VzAdofcfPuLayl3c23iCO2uPsLr+mOJD3Ly9geu31rBcWMcyxRuF+1ihvcLqg/mC3CMeAZuu0n6lSrekjgrdmN/liojVgykiJ/h9q6WIEZsrGEVTh8XSOywsLuH85atYPHcFp85eEiycWSIuinhyFvm7E6cv5DsMaOBlWcXX3T3sff+BbzN+/iqj2ZLRaLTQaB5FFvwFsqP12nOsgmEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.4108527131783%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACDElEQVQ4y5WTy27TUBCG/UAURBFiA+WyZQmlECEKLZUQIF4DUSgKNEKULQs2PARiwY5SxCVNGnLx/ZK77di14/zMnMRWkeJKHOnLjI+tf/4zmSO1Ox0oigbTtOGPRvD9EfqDISzHQdNwIFttmLYD3bSgaBpFExY95yGNSMTzPARBgPF4DF6TyQRD10W5WsM+UavXcVD7g16/L/aPQ3LpRzdM9Ho9cM5ijEtFHHKpkivTsmCQs6E3FIX5JKMcJHbVHwwQx3HmjvF8n4r0oagaLMuGrCroDrqZYB5SGIbQdANJkrBaJsqCXXJtUu9UXYMXeogOo6k7Es1DYmfcw+n6V5D/MN0wxHHttiNO4tO+dwwSUqnZUXklFNlJp9MV/eVeGhRZkE8SRVEuUip0VDB1GB8GiEPuTSA+dl1PFGLRmHo/nkPmMBVKo+v5SGZj9D9rrqColozx6fMXPN0sorj9FlvFN3hV2qF8B5tb23j+siTg/NmL11k+VzAdofcfPuLayl3c23iCO2uPsLr+mOJD3Ly9geu31rBcWMcyxRuF+1ihvcLqg/mC3CMeAZuu0n6lSrekjgrdmN/liojVgykiJ/h9q6WIEZsrGEVTh8XSOywsLuH85atYPHcFp85eEiycWSIuinhyFvm7E6cv5DsMaOBlWcXX3T3sff+BbzN+/iqj2ZLRaLTQaB5FFvwFsqP12nOsgmEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The AWS AppSync Management Console&quot;
-        title=&quot;&quot;
+        title=&quot;The AWS AppSync Management Console&quot;
         src=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/b9e4f/aws-appsync-management-console.png&quot;
         srcset=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/cf440/aws-appsync-management-console.png 148w,
 /react/static/830f175816ee1d90dd8c659a3b6b76e3/d2d38/aws-appsync-management-console.png 295w,
@@ -824,12 +801,10 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 /react/static/830f175816ee1d90dd8c659a3b6b76e3/f9b6a/aws-appsync-management-console.png 885w,
 /react/static/830f175816ee1d90dd8c659a3b6b76e3/1cbac/aws-appsync-management-console.png 1032w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://aws.amazon.com/appsync/&quot;&gt;AppSync&lt;/a&gt; is Amazon’s GraphQL service. Manages the API schema, the queries for the schema, the data sources attached to a schema, and the functions / business logic reused across the schema / app.&lt;/p&gt;
 &lt;p&gt;The great thing, the magic of AppSync is that one has to work only on the schema and forget the rest.&lt;/p&gt;
 &lt;p&gt;After defining the schema you’ll get all GraphQL queries, mutations and subscriptions automatically generated with a single click. And a public URL with a working API out of the box.&lt;/p&gt;
@@ -953,28 +928,25 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;Updating the Storybook package for &lt;a href=&quot;http://metamn.io/mr-ui&quot;&gt;MR-UI&lt;/a&gt; was easy. Kudos to the SB team! It took secs.&lt;/p&gt;
 &lt;p&gt;Cleaning up the old code took a few hours. Some addons had to be reconfigured, others became core features. The process was enjoyable since it was trimming code and make it more elegant, readable.&lt;/p&gt;
 &lt;p&gt;The result? Not sure. The old Storybook was more flexible on theming and with some tweaks produced a more enjoyable experience.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/0309e/old-storybook.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACJ0lEQVQ4y21TaXMSURDc//8j/AOWGrW0KpZGF8IRiSSBZQ/2gGU5QhJYYMOSg6SdHgKRKj90vXN6ZrrfM9I0xGwWYblMcHPjYDisC85weXmO0egc4/EFrq4au3WaOlgsPMznrsQ5ijS1cXfXwdHRWxgkynOiL5d8RFEF7XZRcAzXLSAMy+h0qgiCEhzHlKTWC6GH1SpSZJmPp6cEhcJ7GHF8IhdcueBgOm0hSU7R7//BYEDUkfRPZa+m69HoDL1eTZPE8W89J5iAhKb5DgZbZIbb20BLZyUMiKJNVRxZbRhW4HkFJVJS6YSVUx62vSPkJsvP81AJu92TXYu2/Qtt/1gTdIWIJDwnYRzXdGQHM9GThMXiBxjjcUMqbGOZByo4W2AQjbiZWKJZU6r3NSGxXAYyBjoSPGP8et1DufwJxmoV7g5JGAuZI2aQkJpeXzfVaRJvRkvPuD+ZtDAX/fYImYEgIcVlUL1+KC2X1XGC860MNNEXGbhPAxeLtsav18mGcFv2tsLAL8GyfqoJbJ0ExJaYEtGE6dRWUHdWyvhK5fM+oT4beTJ8xHRvOGzIU7EETX3U3GerG7LWbqQMjFdT9iu0NXuWeTJ35dFmeH6G/IJMdaIZW4n+BaV6fIxRKn18JcxfXHbdC2k1EJ1aMrdFp4Gu+SMY9PDQFcR7uL/vABihVvv6Ski32aZpfhEtfki2Q/lKnH9HtfpNv6HnFf8L1zVV74ODN/gLlYqtn41c5/AAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACJ0lEQVQ4y21TaXMSURDc//8j/AOWGrW0KpZGF8IRiSSBZQ/2gGU5QhJYYMOSg6SdHgKRKj90vXN6ZrrfM9I0xGwWYblMcHPjYDisC85weXmO0egc4/EFrq4au3WaOlgsPMznrsQ5ijS1cXfXwdHRWxgkynOiL5d8RFEF7XZRcAzXLSAMy+h0qgiCEhzHlKTWC6GH1SpSZJmPp6cEhcJ7GHF8IhdcueBgOm0hSU7R7//BYEDUkfRPZa+m69HoDL1eTZPE8W89J5iAhKb5DgZbZIbb20BLZyUMiKJNVRxZbRhW4HkFJVJS6YSVUx62vSPkJsvP81AJu92TXYu2/Qtt/1gTdIWIJDwnYRzXdGQHM9GThMXiBxjjcUMqbGOZByo4W2AQjbiZWKJZU6r3NSGxXAYyBjoSPGP8et1DufwJxmoV7g5JGAuZI2aQkJpeXzfVaRJvRkvPuD+ZtDAX/fYImYEgIcVlUL1+KC2X1XGC860MNNEXGbhPAxeLtsav18mGcFv2tsLAL8GyfqoJbJ0ExJaYEtGE6dRWUHdWyvhK5fM+oT4beTJ8xHRvOGzIU7EETX3U3GerG7LWbqQMjFdT9iu0NXuWeTJ35dFmeH6G/IJMdaIZW4n+BaV6fIxRKn18JcxfXHbdC2k1EJ1aMrdFp4Gu+SMY9PDQFcR7uL/vABihVvv6Ski32aZpfhEtfki2Q/lKnH9HtfpNv6HnFf8L1zVV74ODN/gLlYqtn41c5/AAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The old Storybook&quot;
-        title=&quot;&quot;
+        title=&quot;The old Storybook&quot;
         src=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/b9e4f/old-storybook.png&quot;
         srcset=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/cf440/old-storybook.png 148w,
 /react/static/84f4a593eb9048f20afd81302007b12f/d2d38/old-storybook.png 295w,
@@ -983,35 +955,30 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 /react/static/84f4a593eb9048f20afd81302007b12f/2d849/old-storybook.png 1180w,
 /react/static/84f4a593eb9048f20afd81302007b12f/0309e/old-storybook.png 1280w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;The new Storybook officially supports theming which is more restrictive. Less tweaking more uniform looking.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/0309e/new-storybook.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB10lEQVQ4y31TyVLCQBDN/1+8ePLiiZM/YJVruSBCECEEWRL2fQkoEC5WPef10CksSw6vemYy8/r1644T75r4/u4KptMSBoM3rNcNwddXHcvlB1arKuI4xHYbyJmCd/r9PJrNF0SRvef4/j288i087watVkbQaDyj1cyg282h13OTR0xGUmKzYdI65vMygiCNev3JJKnBubg4Qyp1ivPzExTfrzCbeWi3Xw1ZFp1OVgh7vZyseUaC8biIz88adrtQlNqEGUnkRJEPYGwwkYxUSCUkSqJ5wPVwWNgTW+Vck4x2xLFV7VAms5GM6oLgWRSGpsQwfJFyeKaRZEQYptE2hEyiFgihbhgXC18uWR+fUK0+iHctsSAnJVtP3b0VbqIwIdSFElIJCVerD7MvS5d3ZhL4SKNia97xu77/Rahgt6hsMilKOerXYJBHxygcjQqJv9NZSUQcdt45ZGdWquMoqVedfbcJessSGUk6n3v/K7RDWzMKH8U3DjlHhArsqLxL1NKJzbGSeUDf2EmWx4tRVNn7WMFSPPXljH8EyXW4/xDqhlkbxsNi6RptU3q19iDl0UsqZKK+AfdHCfVgbaa+4t/BdS8NUUYaxPI5k9p966f1UMvlP608P6tHsfARtsXMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB10lEQVQ4y31TyVLCQBDN/1+8ePLiiZM/YJVruSBCECEEWRL2fQkoEC5WPef10CksSw6vemYy8/r1644T75r4/u4KptMSBoM3rNcNwddXHcvlB1arKuI4xHYbyJmCd/r9PJrNF0SRvef4/j288i087watVkbQaDyj1cyg282h13OTR0xGUmKzYdI65vMygiCNev3JJKnBubg4Qyp1ivPzExTfrzCbeWi3Xw1ZFp1OVgh7vZyseUaC8biIz88adrtQlNqEGUnkRJEPYGwwkYxUSCUkSqJ5wPVwWNgTW+Vck4x2xLFV7VAms5GM6oLgWRSGpsQwfJFyeKaRZEQYptE2hEyiFgihbhgXC18uWR+fUK0+iHctsSAnJVtP3b0VbqIwIdSFElIJCVerD7MvS5d3ZhL4SKNia97xu77/Rahgt6hsMilKOerXYJBHxygcjQqJv9NZSUQcdt45ZGdWquMoqVedfbcJessSGUk6n3v/K7RDWzMKH8U3DjlHhArsqLxL1NKJzbGSeUDf2EmWx4tRVNn7WMFSPPXljH8EyXW4/xDqhlkbxsNi6RptU3q19iDl0UsqZKK+AfdHCfVgbaa+4t/BdS8NUUYaxPI5k9p966f1UMvlP608P6tHsfARtsXMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The new Storybook&quot;
-        title=&quot;&quot;
+        title=&quot;The new Storybook&quot;
         src=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/b9e4f/new-storybook.png&quot;
         srcset=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/cf440/new-storybook.png 148w,
 /react/static/fad3da5dae6f4fb5420e6b14e807e612/d2d38/new-storybook.png 295w,
@@ -1020,12 +987,10 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 /react/static/fad3da5dae6f4fb5420e6b14e807e612/2d849/new-storybook.png 1180w,
 /react/static/fad3da5dae6f4fb5420e6b14e807e612/0309e/new-storybook.png 1280w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Which is not a problem. With major upgrades no one can expect unofficial tweaks will be supported. And probably the strength of Storybook doesn’t lie in it’s theming support.&lt;/p&gt;
 &lt;p&gt;What really pleased me is &lt;a href=&quot;https://medium.com/storybookjs/storybook-docs-sneak-peak-5be78445094a&quot;&gt;Storybook Docs&lt;/a&gt;. Which is still in … &lt;code class=&quot;language-text&quot;&gt;v0.0&lt;/code&gt;. With little patience, however, we will probably have a proper Design System tool based on stories. Wow! I’ll wait for it.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Verdict&lt;/strong&gt;&lt;/p&gt;
@@ -1145,40 +1110,35 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;li&gt;&lt;a href=&quot;https://alistapart.com/article/coding-with-clarity#section3&quot;&gt;Coding with clarity&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A monochromatic palette with HSL and React]]></title><description><![CDATA[Pick two colors … and voila!]]></description><link>http://metamn.io/react/a-monochromatic-palette-with-hsl-and-react/</link><guid isPermaLink="false">http://metamn.io/react/a-monochromatic-palette-with-hsl-and-react/</guid><pubDate>Tue, 08 Jan 2019 03:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Pick two colors … and voila!&lt;/p&gt;
 &lt;!--more--&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/319b8/monochromatic-palette.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 105.08054522924411%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsSAAALEgHS3X78AAAD+ElEQVQ4y1VU227bRhT0H7YfFPS9/Yk+FEhaI01hBAGS1kBVO45jV45sWVdKJEXxfl9elpQf0unsyqrrh4OldufMzjlzVkdSrtG2K6i160y96j1G0xg62naPOeDk41ldL3UccGr/SJFk2QSr1QVWxkds7M9wGIE3RCXmSJKxJmqaFcJwBMe5husOdc5uZ2sRgjj1W+GOFGtZzhEz0Y8Z2RLbbAGba9GsNXhPaCDPp/D9G8znA4xGpzg/f4OzszcoihmqaqEvfSScIU7nCHMLgdjCER5MESCtXIKfE9r2F5INMBi8xfHxjzg5ecX9lRalFSrJZTnFZjNmeS52fYG+TbGTGeoqQUqlbbvvUZpOWPICsivwz1cJoNchREjS2aHkPeHWnaIoI26mTGZwFSJmb54Ik+QeQWDSiIQRs8xIX1qWvi77SWExpQkkzDw6lTM542HGhOSRcEUCQ5dfVQH6vtTne1xOwuCJUPVQiAVG9h2Gzr0eFykPI7LSQKVOXWyal/j+h+/w4fef8fBga+UH7DNCZYodGlgHFpV4TA4JDLhGPDN0ogL7/gh/nL7F7e0nqow0RsqQuOB5yXk+QRhMEQUr5MWWitibOtSRcYQUoSpZzVqW2ZzHNX8H/2Hq2v+/KWoklqhq1Z85m8yZElMqm/D3jODF/hXp17HUe029xwniVNR6b6nbpUuWXUbZme5TIhOENKbvLYT+HKZxr59eFC+xMKYkXSPh3E2tJURFQ2sTY4fnhXq6+ulZaJsKsq1IYmNb57AqAclvy7jD7dU1b1/D2c7x+XpIRWu44RIXX8ZISayI/rqfYRMZ6BWhVDPWe6g7l6S8lWvR++ilAdFYSGuH5a5QtRbixtWuNpzdsPV0iSp8mlJLi/mqh1T453KBj2vewMf+aWvi1KJqJg1jB+8cFxXB49LDr16ETG6w4JN8GeVwWxcO46esxD2NeZCPY2PGFuzE0o23cxtGtlfllBtMc0/30KPS2zKkUhNRu8HfHPq8tXmBjSsOdyC3rOqRcCIjzBhqw+AMjmWsv23pY0STVJkeW3EjU6o1EUsHN12OgmQF1Q9paMS9XpXcsOSTosC7stBGnIocv5WCPbVwUaf4JRcomTgi2cuyRdxtseDlr5odnM6HI10c1z2mFLFj3486muLRBJ/GPNCUqHex3YX6O2Hy5oFAYvJuA5vfqvGCqha7iObsTbnjqym512mFLGHQCpy1JZRB5/yHeV/y4fP7kqpec6REZ+OOqo6FQLFzcVk5eBEnMNi3q9rGt0GIE+Hg66GHA1nhTArsOEeqzPdVyR6ucdXneN1JkpuYdDGOWwnROxjWW7zICtgtjWpsfJOk+FBtNeG//u0O5s/7QXUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 105.08054522924411%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAAAsSAAALEgHS3X78AAAD+ElEQVQ4y1VU227bRhT0H7YfFPS9/Yk+FEhaI01hBAGS1kBVO45jV45sWVdKJEXxfl9elpQf0unsyqrrh4OldufMzjlzVkdSrtG2K6i160y96j1G0xg62naPOeDk41ldL3UccGr/SJFk2QSr1QVWxkds7M9wGIE3RCXmSJKxJmqaFcJwBMe5husOdc5uZ2sRgjj1W+GOFGtZzhEz0Y8Z2RLbbAGba9GsNXhPaCDPp/D9G8znA4xGpzg/f4OzszcoihmqaqEvfSScIU7nCHMLgdjCER5MESCtXIKfE9r2F5INMBi8xfHxjzg5ecX9lRalFSrJZTnFZjNmeS52fYG+TbGTGeoqQUqlbbvvUZpOWPICsivwz1cJoNchREjS2aHkPeHWnaIoI26mTGZwFSJmb54Ik+QeQWDSiIQRs8xIX1qWvi77SWExpQkkzDw6lTM542HGhOSRcEUCQ5dfVQH6vtTne1xOwuCJUPVQiAVG9h2Gzr0eFykPI7LSQKVOXWyal/j+h+/w4fef8fBga+UH7DNCZYodGlgHFpV4TA4JDLhGPDN0ogL7/gh/nL7F7e0nqow0RsqQuOB5yXk+QRhMEQUr5MWWitibOtSRcYQUoSpZzVqW2ZzHNX8H/2Hq2v+/KWoklqhq1Z85m8yZElMqm/D3jODF/hXp17HUe029xwniVNR6b6nbpUuWXUbZme5TIhOENKbvLYT+HKZxr59eFC+xMKYkXSPh3E2tJURFQ2sTY4fnhXq6+ulZaJsKsq1IYmNb57AqAclvy7jD7dU1b1/D2c7x+XpIRWu44RIXX8ZISayI/rqfYRMZ6BWhVDPWe6g7l6S8lWvR++ilAdFYSGuH5a5QtRbixtWuNpzdsPV0iSp8mlJLi/mqh1T453KBj2vewMf+aWvi1KJqJg1jB+8cFxXB49LDr16ETG6w4JN8GeVwWxcO46esxD2NeZCPY2PGFuzE0o23cxtGtlfllBtMc0/30KPS2zKkUhNRu8HfHPq8tXmBjSsOdyC3rOqRcCIjzBhqw+AMjmWsv23pY0STVJkeW3EjU6o1EUsHN12OgmQF1Q9paMS9XpXcsOSTosC7stBGnIocv5WCPbVwUaf4JRcomTgi2cuyRdxtseDlr5odnM6HI10c1z2mFLFj3486muLRBJ/GPNCUqHex3YX6O2Hy5oFAYvJuA5vfqvGCqha7iObsTbnjqym512mFLGHQCpy1JZRB5/yHeV/y4fP7kqpec6REZ+OOqo6FQLFzcVk5eBEnMNi3q9rGt0GIE+Hg66GHA1nhTArsOEeqzPdVyR6ucdXneN1JkpuYdDGOWwnROxjWW7zICtgtjWpsfJOk+FBtNeG//u0O5s/7QXUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A monochromatic palette&quot;
-        title=&quot;&quot;
+        title=&quot;A monochromatic palette&quot;
         src=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/b9e4f/monochromatic-palette.png&quot;
         srcset=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/cf440/monochromatic-palette.png 148w,
 /react/static/2383090986f7876cec8f6a857bc3f792/d2d38/monochromatic-palette.png 295w,
 /react/static/2383090986f7876cec8f6a857bc3f792/b9e4f/monochromatic-palette.png 590w,
 /react/static/2383090986f7876cec8f6a857bc3f792/319b8/monochromatic-palette.png 807w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Pick a background color&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;Perhaps it should be warm, which is the right half of the HSL scale, like hue starting from 180deg.&lt;/li&gt;
@@ -1321,28 +1281,25 @@ Later, less important sections can have in between colors, such as gray in the c
 &lt;p&gt;Classical typography has roots in the printed press where the size of the paper was fixed. This helped to set up a well-defined grid. On the web due to many screen sizes setting up a grid is more difficult.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://lamb.cc/typograph/&quot;&gt;Iain Lamb with Typograph&lt;/a&gt; gives an enlightening study and a tool to make this happen.&lt;/p&gt;
 &lt;p&gt;It uses browser defaults and builds up gradually a grid where content can be perfectly aligned both vertically and horizontally.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/091d4/typographic-grid.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 66.86567164179105%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB70lEQVQ4y02TV3bCQAxFvf995CM5aZBCSDC4VwzGdEwxZR+Knmw5+dAZTZOv3jwb+WxAYfRGEUee/1AQdMl1X8j3Xmi9tul4jDhC2m5d2u8DOhxCmSMOh6AZNQIykGw2DpU7Ty6tVpYU2nCcTlF7eb/3ZV5VcbuGHEXqcxGdzwkZef7NVB0mfKc07VEY1rRp+kkxr/l+R8LzXimJ36WD+XwoH8ZHZtwhgAAhhPrFsvRabG0LOfZBAHptsWKSyyXl9VhGkOHc9Tom43YbU5Z9keM803D4wPq9CrHLRCAFmceE2HfsJ6Htfd2RzbllPYresseBjxrXayrY6bgnhSfTbxnResjtJckHZZO+tJrxGUiBy1M+hzYR87kpoxQEcln67QK0QUAXxK55rMVi1D7YalUXgkzQccf7OINaBvoGhWnek8+tmuaDtAwK234WMgRySIBR99A+9sZMnWV9OrLWQqjWQWx3LlO5tXWaNeRFMRAr1Z04f+fFn77UwOO1hBaLPGNjL5cj1qdPE9YNuV6EZqqVriOHJMulJVaCdA1hIBtq5P+jmhkUaub/5tbQs1IQvxzsEbNxYRePf7sw7IpmjlPnlvUkVoF+oAcR3IHHKgpT5iA28HKYoA0EDiwWQ1kr+IISqLFVK5hZDV1VSUv+C+e0czA1l/GLAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.86567164179105%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB70lEQVQ4y02TV3bCQAxFvf995CM5aZBCSDC4VwzGdEwxZR+Knmw5+dAZTZOv3jwb+WxAYfRGEUee/1AQdMl1X8j3Xmi9tul4jDhC2m5d2u8DOhxCmSMOh6AZNQIykGw2DpU7Ty6tVpYU2nCcTlF7eb/3ZV5VcbuGHEXqcxGdzwkZef7NVB0mfKc07VEY1rRp+kkxr/l+R8LzXimJ36WD+XwoH8ZHZtwhgAAhhPrFsvRabG0LOfZBAHptsWKSyyXl9VhGkOHc9Tom43YbU5Z9keM803D4wPq9CrHLRCAFmceE2HfsJ6Htfd2RzbllPYresseBjxrXayrY6bgnhSfTbxnResjtJckHZZO+tJrxGUiBy1M+hzYR87kpoxQEcln67QK0QUAXxK55rMVi1D7YalUXgkzQccf7OINaBvoGhWnek8+tmuaDtAwK234WMgRySIBR99A+9sZMnWV9OrLWQqjWQWx3LlO5tXWaNeRFMRAr1Z04f+fFn77UwOO1hBaLPGNjL5cj1qdPE9YNuV6EZqqVriOHJMulJVaCdA1hIBtq5P+jmhkUaub/5tbQs1IQvxzsEbNxYRePf7sw7IpmjlPnlvUkVoF+oAcR3IHHKgpT5iA28HKYoA0EDiwWQ1kr+IISqLFVK5hZDV1VSUv+C+e0czA1l/GLAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;A typographic grid&quot;
-        title=&quot;&quot;
+        title=&quot;A typographic grid&quot;
         src=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/b9e4f/typographic-grid.png&quot;
         srcset=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/cf440/typographic-grid.png 148w,
 /react/static/c0c88720a7ede1cf8281b597bbcdd0b1/d2d38/typographic-grid.png 295w,
@@ -1350,12 +1307,10 @@ Later, less important sections can have in between colors, such as gray in the c
 /react/static/c0c88720a7ede1cf8281b597bbcdd0b1/f9b6a/typographic-grid.png 885w,
 /react/static/c0c88720a7ede1cf8281b597bbcdd0b1/091d4/typographic-grid.png 1005w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Font size and line height&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Here, it pays to work with the grain. Rather than styling everything from scratch, start out by carefully considering what the browser offers by default. Write the CSS from there, as a minimal expression of differences from the default style. This approach gets the job done using the least amount of code, yielding a positive impact on page download speed and the ease with which changes can be made in the future (assuming less code means there is less to understand, maintain, and edit).&lt;/p&gt;
@@ -1567,28 +1522,25 @@ Later, less important sections can have in between colors, such as gray in the c
 &lt;p&gt;This takes lots of experimentation. Just take a look at Lynx &amp;#x26; Hare, a landing page I’ve created recently, and unfortunately not with React and Storybook.&lt;/p&gt;
 &lt;p&gt;For this project I had no input (zero questions answered in the Design Brief) just ‘let it be something like between retro gaming and finance’.&lt;/p&gt;
 &lt;p&gt;After I’ve sketched up the first version the direction suddenly went to minimal, &lt;em&gt;my style&lt;/em&gt;, — I’ve even added a PacMan !!! which I had to throw out. Together with that retro button bringing back that 90s feeling.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/12f40/lynx-pacman.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABcklEQVQ4y42TSVLCUBCGczMP4g2wGII4lEuXXsm9d1CrLEQmRUggGBDEtr8OLxUSIixe9cB7X/4e8H7DC5HppWAP+cfc81yQfVDmH3PPc8H36Fw2gfoz9T+3vuax60krfbget1IAvxUU5hObfBwkEFMQXdkHyTlYKXClqn5USdRvSPhWl2m3LkGnJpPXmvnx0Jdxu2oxsC+NgTtQAUhZKOEB0PnAl7BTl8VHUxbvTcvNeg3zOa4l/yoEiJpIHw6fz0whylBDDGipHzCw2iysMBQsJVPWuF0zCDniWEGDp0rSAv0NIH5WWUEhXwYYD5sGQSnl8xA1bAG9nfd9CTSPv9Sc6+OuQk1KfJ0MpZf0atZNhgOQfrJKvceKTLcDi7b9zO+oB4z+PdyfmuUSKmj66KVqahkIFaDYDQowcRGouwXg7vbELso82bV076JMXGL3DkVWN2Yp2518w8tOFpr+l932M0XKclPcN8ky2A7w2AeHzh/Lw+ykLM5rtAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABcklEQVQ4y42TSVLCUBCGczMP4g2wGII4lEuXXsm9d1CrLEQmRUggGBDEtr8OLxUSIixe9cB7X/4e8H7DC5HppWAP+cfc81yQfVDmH3PPc8H36Fw2gfoz9T+3vuax60krfbget1IAvxUU5hObfBwkEFMQXdkHyTlYKXClqn5USdRvSPhWl2m3LkGnJpPXmvnx0Jdxu2oxsC+NgTtQAUhZKOEB0PnAl7BTl8VHUxbvTcvNeg3zOa4l/yoEiJpIHw6fz0whylBDDGipHzCw2iysMBQsJVPWuF0zCDniWEGDp0rSAv0NIH5WWUEhXwYYD5sGQSnl8xA1bAG9nfd9CTSPv9Sc6+OuQk1KfJ0MpZf0atZNhgOQfrJKvceKTLcDi7b9zO+oB4z+PdyfmuUSKmj66KVqahkIFaDYDQowcRGouwXg7vbELso82bV076JMXGL3DkVWN2Yp2518w8tOFpr+l932M0XKclPcN8ky2A7w2AeHzh/Lw+ykLM5rtAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Bye Pacman!&quot;
-        title=&quot;&quot;
+        title=&quot;Bye Pacman!&quot;
         src=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/b9e4f/lynx-pacman.png&quot;
         srcset=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/cf440/lynx-pacman.png 148w,
 /react/static/de42c519f59b2fd4589ae0c647c43cb1/d2d38/lynx-pacman.png 295w,
@@ -1597,34 +1549,29 @@ Later, less important sections can have in between colors, such as gray in the c
 /react/static/de42c519f59b2fd4589ae0c647c43cb1/2d849/lynx-pacman.png 1180w,
 /react/static/de42c519f59b2fd4589ae0c647c43cb1/12f40/lynx-pacman.png 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/12f40/lynx-button.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACS0lEQVQ4y32TfVMSURTG+Wy9KaKC0YLCstuHq2nKKCUEBRF5t2kYI6xEUVYCFZbVpgRxppmnc8+uvJj0x2/u4S7nuc859x6bM3ON+XRvgDPdhStjMYh7k+MxurCxCIk6M324cjdQdi6h5HUoBQPqzgXUQgdKTqfVoP0OY8a6CX0L5PTBb5sQm9v+jcfLFUyvapDW9iGnTuGJVLDwtghfog5pZRfeaAWBzDkWlotYXD8wD8rrY6i3gsLlbOInZmM6vLEaCTZJ4BBS5IDF/Yka/Ft1ctPGUvwYvk2Nk9U7Ymq+bQmSw6kVDY5IE+53u5BWv1Bijd1KoTILyck6OxOxFNqDFP7O8f2ClsO5TYNK1CBv/0Ag24KfRQ7JnQZf/Ahy+hQK7YtkUf5kh6kungSrXLL7/WdKPsZiXKO4BNebT5h/kYEvVjUPS5+ZF3Onf+M9TF3BEevAET3DUuyIP3gj+0SFBTwf9hhptUz9q1k3354sOJf8hanQCQt6w1+hUDmid89WSlR+g/fcwSL3V1yQEFRJ8N6SzXfYY4f2kAYPJT8NUmKyAT/dsEh+/vGCuGTEGxSJ/79lEp2JnnMPlzaqXLZ/64SfCv8x12JHokzT2ShDsRGHNCnZG7iyfcgFmpTCBeS8Ra6DQN7gVc4ZFp0RhnsBwvbPLNMIMtk+HyJicWmj/xnneowxQRHPrLdgX2vCHjklzjBF4zgdbsBV+GNV0h9ymytWi4GguXZ5ph+9/oaHr8ocP3hZ4gP4WVGPxYGzcQOODZ0m7ArDfJO/e0WCM0AaPBUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAACS0lEQVQ4y32TfVMSURTG+Wy9KaKC0YLCstuHq2nKKCUEBRF5t2kYI6xEUVYCFZbVpgRxppmnc8+uvJj0x2/u4S7nuc859x6bM3ON+XRvgDPdhStjMYh7k+MxurCxCIk6M324cjdQdi6h5HUoBQPqzgXUQgdKTqfVoP0OY8a6CX0L5PTBb5sQm9v+jcfLFUyvapDW9iGnTuGJVLDwtghfog5pZRfeaAWBzDkWlotYXD8wD8rrY6i3gsLlbOInZmM6vLEaCTZJ4BBS5IDF/Yka/Ft1ctPGUvwYvk2Nk9U7Ymq+bQmSw6kVDY5IE+53u5BWv1Bijd1KoTILyck6OxOxFNqDFP7O8f2ClsO5TYNK1CBv/0Ag24KfRQ7JnQZf/Ahy+hQK7YtkUf5kh6kungSrXLL7/WdKPsZiXKO4BNebT5h/kYEvVjUPS5+ZF3Onf+M9TF3BEevAET3DUuyIP3gj+0SFBTwf9hhptUz9q1k3354sOJf8hanQCQt6w1+hUDmid89WSlR+g/fcwSL3V1yQEFRJ8N6SzXfYY4f2kAYPJT8NUmKyAT/dsEh+/vGCuGTEGxSJ/79lEp2JnnMPlzaqXLZ/64SfCv8x12JHokzT2ShDsRGHNCnZG7iyfcgFmpTCBeS8Ra6DQN7gVc4ZFp0RhnsBwvbPLNMIMtk+HyJicWmj/xnneowxQRHPrLdgX2vCHjklzjBF4zgdbsBV+GNV0h9ymytWi4GguXZ5ph+9/oaHr8ocP3hZ4gP4WVGPxYGzcQOODZ0m7ArDfJO/e0WCM0AaPBUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;That button!&quot;
-        title=&quot;&quot;
+        title=&quot;That button!&quot;
         src=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/b9e4f/lynx-button.png&quot;
         srcset=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/cf440/lynx-button.png 148w,
 /react/static/d09f4f3a3fd6111e773cfbe4aa815050/d2d38/lynx-button.png 295w,
@@ -1633,35 +1580,30 @@ Later, less important sections can have in between colors, such as gray in the c
 /react/static/d09f4f3a3fd6111e773cfbe4aa815050/2d849/lynx-button.png 1180w,
 /react/static/d09f4f3a3fd6111e773cfbe4aa815050/12f40/lynx-button.png 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;After creating &lt;em&gt;my style&lt;/em&gt; …&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/12f40/lynx-my-style.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABIElEQVQ4y41UW26EMAzM/Q8EQiCyAUQAiTecx+24MvJmk7Yfo4TEjGdsgznPk2I4joPXfd9p2zZa15X3+i4G8xfhsizUti0553j/L0IEpCD3UKnJNKnem9+yCWAVlmPqwucfhefBL4XqoAprijCm1oiCqqrIvizVdc1w7kVN03Dd8IIQSl2993HLQuj9wEHTNH1jpHEc3zqtCfGsG6Tr/dTwvm/GdV0PcI5V7MuZnMcm4+kyssYAJVA9DAPvU3GPQiGEpRjmeWayvu+ZMBX3YVkjtAa7IAtLokvzYVlDf2ZyD0IQCxAjifT4mNhMdV3HXZaG4NxaS1mW8XgVRUF5nlNZllyKJKFcSHY9JqilFF+vYvmtKTHS8I+DJKlR0Qq/AOSOCFZ9BSsxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABIElEQVQ4y41UW26EMAzM/Q8EQiCyAUQAiTecx+24MvJmk7Yfo4TEjGdsgznPk2I4joPXfd9p2zZa15X3+i4G8xfhsizUti0553j/L0IEpCD3UKnJNKnem9+yCWAVlmPqwucfhefBL4XqoAprijCm1oiCqqrIvizVdc1w7kVN03Dd8IIQSl2993HLQuj9wEHTNH1jpHEc3zqtCfGsG6Tr/dTwvm/GdV0PcI5V7MuZnMcm4+kyssYAJVA9DAPvU3GPQiGEpRjmeWayvu+ZMBX3YVkjtAa7IAtLokvzYVlDf2ZyD0IQCxAjifT4mNhMdV3HXZaG4NxaS1mW8XgVRUF5nlNZllyKJKFcSHY9JqilFF+vYvmtKTHS8I+DJKlR0Qq/AOSOCFZ9BSsxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;My style&quot;
-        title=&quot;&quot;
+        title=&quot;My style&quot;
         src=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/b9e4f/lynx-my-style.png&quot;
         srcset=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/cf440/lynx-my-style.png 148w,
 /react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/d2d38/lynx-my-style.png 295w,
@@ -1670,35 +1612,30 @@ Later, less important sections can have in between colors, such as gray in the c
 /react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/2d849/lynx-my-style.png 1180w,
 /react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/12f40/lynx-my-style.png 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;… still the result was not good enough, so I’ve created a third variant.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/3c71727b3b487527857995077ebe0218/12f40/lynx-5b.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABVUlEQVQ4y52T246CQAyGff8n41ZDFBCMMQb0AtDgARDo5uumZNZzlqS0M9P+7d+ZTpqmkb7vZRgGFWz7bN8+7LZt5Xa7CXHYyPV6ldPppHsTfpvNRqIoUkmSRHzfl8ViIXEcq2bN2Ww2U5nP57JarVSzv91uFbCua5mQgQDP8yQMQ3VcLpdjEAmCINCz6XSqmjVFmM/lcpHz+fxbIYBFUchut5Ou60bqRtGlbe2xdpgP+wCCpZTpCWDY78Ro2dps9AjI7xMQPm7Q/RmUOR8B38krQFdb/z4CulXwNJBnFf4L0A1614qvKRPkXshLwG8vBLq8BF6EOymccSlPK8Tx2Rq93+9VeLNlWT5U/qdCMrjzaBVVVaWaIMaLUVyv1wpsie57q4A4MClZlsnxeJTD4aCVMF55nkuappoMcPYYTei7RTxQtolxe2eUrfEwISGCDZjbP/QPsxmGfGWRNJkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABVUlEQVQ4y52T246CQAyGff8n41ZDFBCMMQb0AtDgARDo5uumZNZzlqS0M9P+7d+ZTpqmkb7vZRgGFWz7bN8+7LZt5Xa7CXHYyPV6ldPppHsTfpvNRqIoUkmSRHzfl8ViIXEcq2bN2Ww2U5nP57JarVSzv91uFbCua5mQgQDP8yQMQ3VcLpdjEAmCINCz6XSqmjVFmM/lcpHz+fxbIYBFUchut5Ou60bqRtGlbe2xdpgP+wCCpZTpCWDY78Ro2dps9AjI7xMQPm7Q/RmUOR8B38krQFdb/z4CulXwNJBnFf4L0A1614qvKRPkXshLwG8vBLq8BF6EOymccSlPK8Tx2Rq93+9VeLNlWT5U/qdCMrjzaBVVVaWaIMaLUVyv1wpsie57q4A4MClZlsnxeJTD4aCVMF55nkuappoMcPYYTei7RTxQtolxe2eUrfEwISGCDZjbP/QPsxmGfGWRNJkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
-        alt=&quot;I don&apos;t know whose style!&quot;
-        title=&quot;&quot;
+        alt=&quot;I don&amp;#39;t know whose style!&quot;
+        title=&quot;I don&amp;#39;t know whose style!&quot;
         src=&quot;/react/static/3c71727b3b487527857995077ebe0218/b9e4f/lynx-5b.png&quot;
         srcset=&quot;/react/static/3c71727b3b487527857995077ebe0218/cf440/lynx-5b.png 148w,
 /react/static/3c71727b3b487527857995077ebe0218/d2d38/lynx-5b.png 295w,
@@ -1707,37 +1644,32 @@ Later, less important sections can have in between colors, such as gray in the c
 /react/static/3c71727b3b487527857995077ebe0218/2d849/lynx-5b.png 1180w,
 /react/static/3c71727b3b487527857995077ebe0218/12f40/lynx-5b.png 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;I wish I had Storybook at design time. Now all my work would be nicely cataloged, documented, buttons would stick together with other buttons, fonts in the same way, color schemes with another colors schemes,
 and in plus I would have live all those variations I have now only as screenshots somewhere on my hard drive.&lt;/p&gt;
 &lt;p&gt;A variant on red:&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/8b984/lynx-5b-red.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABV0lEQVQ4y31TaW+CQBD1V9WKgKIIKmBpq409kv7/pG16pEmbsPs6M7tLV0Q/vAzM8ebYmYEOp9BRApExyXhm/lk6TFPoZGGkj8lc4hDE0OMJQBg0Nzs0uz1UcQW13kDVt0YyyhpsV1Vt9NW1katSbDrNewjvnwxhXhDW5FyJs1qWRseJis1/QrYToVRMBDrqEm73aO4e0Dw+m6zsmK2g57lASLO1JNPpEnqWQS9Wpl0eDRP5hGJws2PlKDqADq3uMjy2xT2EGMWiECdrcJB/m6gXvRV2nFqjI6eg3kR2O3x/U6Fl9nEu6KStrdAyCxEbzwQdVEiv212ZlvAkHBk/gJ2xgz8/eEX1tgxXBV2DohUCrQl4Zfg6eJ3cNXUeRAjfhgHeh2N8EH6oik+SLxeB+adAEME3XcQrV9t5YX8ULWFDSgduU9lv5YKI9JfwxW3JbSfHN+y1/AeoSIbKcox+jAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAABV0lEQVQ4y31TaW+CQBD1V9WKgKIIKmBpq409kv7/pG16pEmbsPs6M7tLV0Q/vAzM8ebYmYEOp9BRApExyXhm/lk6TFPoZGGkj8lc4hDE0OMJQBg0Nzs0uz1UcQW13kDVt0YyyhpsV1Vt9NW1katSbDrNewjvnwxhXhDW5FyJs1qWRseJis1/QrYToVRMBDrqEm73aO4e0Dw+m6zsmK2g57lASLO1JNPpEnqWQS9Wpl0eDRP5hGJws2PlKDqADq3uMjy2xT2EGMWiECdrcJB/m6gXvRV2nFqjI6eg3kR2O3x/U6Fl9nEu6KStrdAyCxEbzwQdVEiv212ZlvAkHBk/gJ2xgz8/eEX1tgxXBV2DohUCrQl4Zfg6eJ3cNXUeRAjfhgHeh2N8EH6oik+SLxeB+adAEME3XcQrV9t5YX8ULWFDSgduU9lv5YKI9JfwxW3JbSfHN+y1/AeoSIbKcox+jAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The last variant in red&quot;
-        title=&quot;&quot;
+        title=&quot;The last variant in red&quot;
         src=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/b9e4f/lynx-5b-red.png&quot;
         srcset=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/cf440/lynx-5b-red.png 148w,
 /react/static/e6fe643a0541835f38b764bb89b7f4e1/d2d38/lynx-5b-red.png 295w,
@@ -1746,35 +1678,30 @@ and in plus I would have live all those variations I have now only as screenshot
 /react/static/e6fe643a0541835f38b764bb89b7f4e1/2d849/lynx-5b-red.png 1180w,
 /react/static/e6fe643a0541835f38b764bb89b7f4e1/8b984/lynx-5b-red.png 2560w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;This one with a Canvas background and particles moving with the cursor.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/8b984/lynx-5b-gradient.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB80lEQVQ4y42Su0scYRTF5+8JpLa0TKrYBGwDWpgiWAhaBRUiSZrYWIZk0cZGSBUTsUkTQfBBWFh3V2WW2WXY17i77mMe387JuXd2klVZkuLHnZnv3vOde+daxmQRhjZ8v4Veb0B66Pf7GlO63a7GMAwRBIEiz/ffJc+6vs6gUNiB634nZ7i8LMJxyiiXy7BtG8ViEaVSCZ7nwRhzR2xc9I9gNruOfP4Dms1d8hXV6qkKuK6rOI6jUVz/l8NCYRG53ArOz9dQqXxm4SGFc+SGNFGv13lJlSPx77i5724wGChWEMzzwxIPNhDHnwDsk18YDvuIoiGjUbG0cJKg74tgDxbwjAIvyArZpOgu+cF5uUyOtEB+yGTBcOQwIDGsOJ6iwAx5Sd6QDIUP6OyKiZG6+/f8DHNcdnQiDh9R5AlF5hhXyUdtO44vRq08FBwXTmLEnCZjRRw+psBTMk+RtZHgN8a8JsqgJwn+FZVL5adpy9Msfk5ekbdkmxyyZXt0cyIWRdHE/Uv+cJLHlmfpaIG8Jltkj/ykoLQwRLvdRq1WU2SNOp2OLrlclF4yPhbL8xbQai2z8B0PMiz4gkbjiMV1XdTb2w7PW9zRiiI7Kd9FJEW2IN1Ty5j3XJEtssNW9+nsmK002EIyG2lHktNZSnH6PE46gt8sMtRkzswj6gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB80lEQVQ4y42Su0scYRTF5+8JpLa0TKrYBGwDWpgiWAhaBRUiSZrYWIZk0cZGSBUTsUkTQfBBWFh3V2WW2WXY17i77mMe387JuXd2klVZkuLHnZnv3vOde+daxmQRhjZ8v4Veb0B66Pf7GlO63a7GMAwRBIEiz/ffJc+6vs6gUNiB634nZ7i8LMJxyiiXy7BtG8ViEaVSCZ7nwRhzR2xc9I9gNruOfP4Dms1d8hXV6qkKuK6rOI6jUVz/l8NCYRG53ArOz9dQqXxm4SGFc+SGNFGv13lJlSPx77i5724wGChWEMzzwxIPNhDHnwDsk18YDvuIoiGjUbG0cJKg74tgDxbwjAIvyArZpOgu+cF5uUyOtEB+yGTBcOQwIDGsOJ6iwAx5Sd6QDIUP6OyKiZG6+/f8DHNcdnQiDh9R5AlF5hhXyUdtO44vRq08FBwXTmLEnCZjRRw+psBTMk+RtZHgN8a8JsqgJwn+FZVL5adpy9Msfk5ekbdkmxyyZXt0cyIWRdHE/Uv+cJLHlmfpaIG8Jltkj/ykoLQwRLvdRq1WU2SNOp2OLrlclF4yPhbL8xbQai2z8B0PMiz4gkbjiMV1XdTb2w7PW9zRiiI7Kd9FJEW2IN1Ty5j3XJEtssNW9+nsmK002EIyG2lHktNZSnH6PE46gt8sMtRkzswj6gAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The last variant with canvas gradient&quot;
-        title=&quot;&quot;
+        title=&quot;The last variant with canvas gradient&quot;
         src=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/b9e4f/lynx-5b-gradient.png&quot;
         srcset=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/cf440/lynx-5b-gradient.png 148w,
 /react/static/55bf7d6e5c2bdfe9ef13926215c0535c/d2d38/lynx-5b-gradient.png 295w,
@@ -1783,35 +1710,30 @@ and in plus I would have live all those variations I have now only as screenshot
 /react/static/55bf7d6e5c2bdfe9ef13926215c0535c/2d849/lynx-5b-gradient.png 1180w,
 /react/static/55bf7d6e5c2bdfe9ef13926215c0535c/8b984/lynx-5b-gradient.png 2560w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Or these, a completely new iteration with type set on a dynamic cell matrix.&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/12f40/lynx-4a.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABhElEQVQ4y51Ty04CQRCcq4nxoF/gRxoRVPQA/Jtvw8NP8KAHBHZhd6a77O7ZZQcwJLJJpbqnumpnZ8B570DkEIRDaEAC1YAIrX0yo3VRJHoZe0fUBXMXNafQNSBC6+0ZolvR7gUX8pIje4nG732YI/bpAEngGUrZpWMucTiKKvBT+NSOTnbI0jAOe6gK/JKwEztbV4cp+xBkMYKI1lzrIdEVzFQFf0t/Lp983ATqwHw+x3K5xGw2w2q1Ms6yTAZLw2KRIc9zzGROZ7WOfg3+EUybQKJghmhcWGBRFFZPp1Mxx7D0xaqVZbFxeTs71CH9TA3z3luwQvV6t83OsD4OvQuF4+pSGMlAVadXxTs/FwZx463ZrSf5AGCr1v+MnApy9jD+L/7wuQFPMMAHBjRBrxyiH0bo+5H0Y/QVfmisfc9v6uZTv2VEuGse4gZDdMI7LhcPuFo+o5U/oePf0C5e0Moe0S5frdfadGHt1Wf+KkPhuhihywLhO4zXsPVqLa039MqX4hduMVUsM1rCcQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABhElEQVQ4y51Ty04CQRCcq4nxoF/gRxoRVPQA/Jtvw8NP8KAHBHZhd6a77O7ZZQcwJLJJpbqnumpnZ8B570DkEIRDaEAC1YAIrX0yo3VRJHoZe0fUBXMXNafQNSBC6+0ZolvR7gUX8pIje4nG732YI/bpAEngGUrZpWMucTiKKvBT+NSOTnbI0jAOe6gK/JKwEztbV4cp+xBkMYKI1lzrIdEVzFQFf0t/Lp983ATqwHw+x3K5xGw2w2q1Ms6yTAZLw2KRIc9zzGROZ7WOfg3+EUybQKJghmhcWGBRFFZPp1Mxx7D0xaqVZbFxeTs71CH9TA3z3luwQvV6t83OsD4OvQuF4+pSGMlAVadXxTs/FwZx463ZrSf5AGCr1v+MnApy9jD+L/7wuQFPMMAHBjRBrxyiH0bo+5H0Y/QVfmisfc9v6uZTv2VEuGse4gZDdMI7LhcPuFo+o5U/oePf0C5e0Moe0S5frdfadGHt1Wf+KkPhuhihywLhO4zXsPVqLa039MqX4hduMVUsM1rCcQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Type on a matrix&quot;
-        title=&quot;&quot;
+        title=&quot;Type on a matrix&quot;
         src=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/b9e4f/lynx-4a.png&quot;
         srcset=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/cf440/lynx-4a.png 148w,
 /react/static/efbe4649b9b4566ae43ea27e5ecc60f3/d2d38/lynx-4a.png 295w,
@@ -1820,35 +1742,30 @@ and in plus I would have live all those variations I have now only as screenshot
 /react/static/efbe4649b9b4566ae43ea27e5ecc60f3/2d849/lynx-4a.png 1180w,
 /react/static/efbe4649b9b4566ae43ea27e5ecc60f3/12f40/lynx-4a.png 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;On gray background:&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/12f40/lynx-4a-gray.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABmUlEQVQ4y6WMOa+BQRiF569Zf4CGQkFDSXSEkFDTUtgj9uKzd5YSJTpLaWl8lvpc78R8GSI390bx5Jz3nDnDVFXF9XrF5XJ5QWS3241Dnt7Kb87nM+73+7NX+c2OxyN+43Q6cT51h8NB68nv93uw3W6Hb9hut1w3mw3W6zXYcrnEt6xWK66LxQJsPp/jG2azmabT6RRsPB5jMpmAdDQaacj3p168oY6gezgcgvX7fQwGA/R6PSiKgk6n86KtVgvdbpdDvt1uP3OFe9qLPwjWaDTQbDbRqNdRqVRQr9VQLpdRrVZRe3jKSqUSV4Lei56U3vD9IydYoVBAsVhEPp9HOp1GJpMBZblcjmekBGXUkc9msxA7gryApVIpJJNJkP4H2gjknCUSCRDxePzfiK0Mi8ViEESj0T8j72RYIBCA3+9HMBhEOBzWiEQinHcvCIVCfEd7GebxeODz+eBwOGAyGWE0Gh9qgk6ng16v556UbrPZzHuDwQCLxQKv1wvayzCXywW32w2n0wmr1QqbzcZ59++33W7nO9rL/ACZWoCy4zhtswAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAAsSAAALEgHS3X78AAABmUlEQVQ4y6WMOa+BQRiF569Zf4CGQkFDSXSEkFDTUtgj9uKzd5YSJTpLaWl8lvpc78R8GSI390bx5Jz3nDnDVFXF9XrF5XJ5QWS3241Dnt7Kb87nM+73+7NX+c2OxyN+43Q6cT51h8NB68nv93uw3W6Hb9hut1w3mw3W6zXYcrnEt6xWK66LxQJsPp/jG2azmabT6RRsPB5jMpmAdDQaacj3p168oY6gezgcgvX7fQwGA/R6PSiKgk6n86KtVgvdbpdDvt1uP3OFe9qLPwjWaDTQbDbRqNdRqVRQr9VQLpdRrVZRe3jKSqUSV4Lei56U3vD9IydYoVBAsVhEPp9HOp1GJpMBZblcjmekBGXUkc9msxA7gryApVIpJJNJkP4H2gjknCUSCRDxePzfiK0Mi8ViEESj0T8j72RYIBCA3+9HMBhEOBzWiEQinHcvCIVCfEd7GebxeODz+eBwOGAyGWE0Gh9qgk6ng16v556UbrPZzHuDwQCLxQKv1wvayzCXywW32w2n0wmr1QqbzcZ59++33W7nO9rL/ACZWoCy4zhtswAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;Type on a matrix, gray&quot;
-        title=&quot;&quot;
+        title=&quot;Type on a matrix, gray&quot;
         src=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/b9e4f/lynx-4a-gray.png&quot;
         srcset=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/cf440/lynx-4a-gray.png 148w,
 /react/static/734cbb74ecb15b19b9946f59078291db/d2d38/lynx-4a-gray.png 295w,
@@ -1857,35 +1774,30 @@ and in plus I would have live all those variations I have now only as screenshot
 /react/static/734cbb74ecb15b19b9946f59078291db/2d849/lynx-4a-gray.png 1180w,
 /react/static/734cbb74ecb15b19b9946f59078291db/12f40/lynx-4a-gray.png 2048w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;… and the underlying cell matrix. I don’t have the rotated and skewed screenshots — they are neat!&lt;/p&gt;
-&lt;p&gt;
-  &lt;a
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+    &gt;
+      &lt;a
     class=&quot;gatsby-resp-image-link&quot;
     href=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/8b984/lynx-matrix.png&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
   &gt;
-  
-  &lt;span
-    class=&quot;gatsby-resp-image-wrapper&quot;
-    style=&quot;position: relative; display: block;  max-width: 590px; margin-left: auto; margin-right: auto;&quot;
-  &gt;
     &lt;span
-      class=&quot;gatsby-resp-image-background-image&quot;
-      style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAA3klEQVQ4y7WTaw6EIAyEvf/NFB/4RC+h0Qt0M5hhK2L8s2vSTErLV6Q02/dd1nWVbduSSnuKU4/jEHxZ3/dSFIXUdS3GmKBVVUlZlt60n1Lsd86dwGmaPKRt25s2TROMvrX2olgHdFmWEzgMgz8BgqioFYk0FEkp8rA/nDAGIpFKmPZTegGO4+gD+AUEY6XRR2GtWEfBeZ6/QCwgQLAuQItBj8Cf/zK6jMBbl+Pu/q3LtxMCqAGx6ufBu4vzAAx32HWdf+l88VqRSKPPydETlOe54Oo88G2WtdJSPmf5A9lwjgl1rWGuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-    &gt;
-      &lt;img
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAA3klEQVQ4y7WTaw6EIAyEvf/NFB/4RC+h0Qt0M5hhK2L8s2vSTErLV6Q02/dd1nWVbduSSnuKU4/jEHxZ3/dSFIXUdS3GmKBVVUlZlt60n1Lsd86dwGmaPKRt25s2TROMvrX2olgHdFmWEzgMgz8BgqioFYk0FEkp8rA/nDAGIpFKmPZTegGO4+gD+AUEY6XRR2GtWEfBeZ6/QCwgQLAuQItBj8Cf/zK6jMBbl+Pu/q3LtxMCqAGx6ufBu4vzAAx32HWdf+l88VqRSKPPydETlOe54Oo88G2WtdJSPmf5A9lwjgl1rWGuAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
         class=&quot;gatsby-resp-image-image&quot;
-        style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot;
         alt=&quot;The cell matrix&quot;
-        title=&quot;&quot;
+        title=&quot;The cell matrix&quot;
         src=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/b9e4f/lynx-matrix.png&quot;
         srcset=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/cf440/lynx-matrix.png 148w,
 /react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/d2d38/lynx-matrix.png 295w,
@@ -1894,12 +1806,10 @@ and in plus I would have live all those variations I have now only as screenshot
 /react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/2d849/lynx-matrix.png 1180w,
 /react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/8b984/lynx-matrix.png 2560w&quot;
         sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        loading=&quot;lazy&quot;
       /&gt;
-    &lt;/span&gt;
-  &lt;/span&gt;
-  
   &lt;/a&gt;
-    &lt;/p&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Now I’ve &lt;a href=&quot;http://metamn.io/mr-ui/?selectedKind=Playground&amp;#x26;selectedStory=Lynx%20%26%20Hare&amp;#x26;full=0&amp;#x26;addons=1&amp;#x26;stories=1&amp;#x26;panelRight=0&amp;#x26;addonPanel=storybook-addon-background%2Fbackground-panel&amp;#x26;background=beige&quot;&gt;saved the project to Storybook&lt;/a&gt;, at least the layout. You can play with live. And I’ll use it as a demo project across the entire UI library in the future.&lt;/p&gt;
 &lt;p&gt;Just to remind me to be thankful for Storybook every time I use.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[To React with best practices]]></title><description><![CDATA[WordPress is here with Gutenberg — it’s time to react.]]></description><link>http://metamn.io/react/to-react-with-best-practices/</link><guid isPermaLink="false">http://metamn.io/react/to-react-with-best-practices/</guid><pubDate>Thu, 13 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;WordPress is here with Gutenberg — it’s time to react.&lt;/p&gt;
 &lt;!--more--&gt;
