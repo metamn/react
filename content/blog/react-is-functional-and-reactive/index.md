@@ -11,11 +11,11 @@ React follows the functional reactive programming paradigm. That's a shift from 
 
 Both paradigms solve the same problem — to build modular, interactive applications — in different ways.
 
-The old way implemented modularity through tight-coupling and interaction synchronously. The new way implements modularity with loose-coupling and interaction asynchronously
+The old way implemented modularity through tight-coupling and interaction synchronously. The new way implements modularity with loose-coupling and interaction asynchronously.
 
-Modularity and interaction can be expressed with other terms like composition and coupling — to further clear up the picture. Composition is about how the components of the system can add up to form a whole, while coupling is about how they communicate with each other.
+Modularity and interaction abstracted to composition and coupling can further elucidate the picture. Composition is about how the components of the system can add up to form a whole, while coupling is about how they communicate with each other.
 
-[Functional reactive programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) deals with composition the functional programming way and deals with coupling the reactive programming way.
+[Functional reactive programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) deals with composition the functional programming way and with coupling the reactive programming way.
 
 ## Composition
 
@@ -63,7 +63,7 @@ const ImpureComponent = props => {
    * ✅ Clear interfaces:
    * - props are input params, JSX is the return value
    * ✅ Input params are not modified
-   * - `props` are protected by React so they can't be easily distorted
+   * - props are protected by React so they can't be easily distorted
    */
 
   /**
@@ -91,7 +91,7 @@ const ImpureComponent = props => {
 
 ### Side effects, managed
 
-When side effects are not avoidable at least they have to be implemented in a way to not distort the original application flow &mdash; [to stay resilient](https://overreacted.io/writing-resilient-components/#writing-resilient-components).
+When side effects are not avoidable they have to be made [resilient](https://overreacted.io/writing-resilient-components/#writing-resilient-components) &mdash; not distorting the original application flow.
 
 ```js
 /**
@@ -108,6 +108,7 @@ const SideEffectsWithUseEffect = props => {
    * ✅ By using `useEffect` the rendering of the component is not suspended, the flow is not distorted.
    * ✅ First the component is rendered with the default value
    * ✅ After 3 seconds React automatically updates the component with the new value.
+   * (The 3s delay added makes the effect visible on UI)
    */
   useEffect(() => {
     /**
@@ -160,7 +161,7 @@ Reactive programming achieves this through:
 	
 	2.2 They react when an event happens
 	
-	2.3 They return an observable &mdash; emitting events other components can subscribe to.
+	2.3 They return an observable &mdash; which emits events other components can subscribe to.
 
 ### Isolation 
 
@@ -176,7 +177,7 @@ In React asynchronous communication is all about hooks. Components communicate w
 |-----------------| ------------------|
 | useContext      | Local data store  |
 | useMemo         | Local cache store |
-| useCallback     | Child components  |
+| useCallback     | Other components  |
 | useQuery,       |                   |
 | useMutation,    |                   |
 | useSubscription | GraphQL database  |
@@ -185,20 +186,9 @@ In React asynchronous communication is all about hooks. Components communicate w
 
 ## Wrapping up
 
-Using reactive and functional programming concepts React and its parts &mdash; props, state, hooks, side effects, pure components &mdash; can be put in a general context.
+Using reactive and functional programming concepts React and its building blocks &mdash; props, state, hooks, side effects, pure components &mdash; can be put in a general context.
 
-```
-|-----------------|------------|----------|
-| Concept         | Functional | Reactive |
-|-----------------|------------|----------|
-| Pure components |    Yes     |    No    |
-| Side effects    |    Yes     |    No    |
-| Local state     |    No      |   Yes    |
-| Hooks           |    No      |   Yes    |
-|-----------------------------------------|
-```
-
-A general context is a great help when mapping up the big picture.
+A general context which is a great help when mapping up the big picture.
 
 ```
 |================|                            |================|
