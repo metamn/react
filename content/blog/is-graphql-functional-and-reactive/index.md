@@ -7,7 +7,7 @@ GraphQL comes from the same family as React. And React is functional and reactiv
 
 <!--more-->
 
-A quick investigation is necessary. At least one can understand better these new concepts.
+A quick investigation is necessary.
 
 ## A short history
 
@@ -22,13 +22,13 @@ The list of features on [GraphQL.org](https://graphql.org/) clearly points to a 
 - Describe what’s possible with a type system
 - Evolve your API without versions
 
-React [managed](http://metamn.io/react/react-is-functional-and-reactive/) to change the status quo by sticking to functional reactive programming. One might wonder if this is also true for GraphQL.
+React [managed](http://metamn.io/react/react-is-functional-and-reactive/) to change the status quo by opting to rely on functional reactive programming. One might wonder if GraphQL choose the same way.
 
 ## Functional reactive programming
 
 What makes a system functional and reactive is extracted in the list below from Daniel Lew's excellent article [An Introduction to Functional Reactive Programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/).
 
-Acronyms R stand for reactive, F for functional programming.
+Acronym R stands for reactive, F for functional programming.
 
 ```
 |---------|-------------|-------------------------------------------------------------------------|
@@ -53,18 +53,18 @@ Like every API &mdash; GraphQL is built on three main concepts:
 - **Endpoint**: One or more URLs where requests are sent and from where the results are received
 - **Backend**: Processes the requests and returns data
 
-Speaking in GraphQL code:
+Speaking in code (GraphQL):
 
 ```bash
 # The client sends a data request to the backend
+#
+GET /graphql?query={ book(id: "1") { title, author { firstName } } }
 #
 # `/graphql` is an endpoint which receives the request ...
 # ... and forwards to the backend
 #
 # `{ title, author { firstName } }` is the shape of data ...
 # ... the clients wants to receive
-#
-GET /graphql?query={ book(id: "1") { title, author { firstName } } }
 ```
 
 ```js
@@ -102,13 +102,16 @@ Calling the client, the endpoint and the backend as _components_ of the GraphQL 
 
 GraphQL components are (clearly) decoupled. They all work in isolation and don't interfere in each other's inner workings.
 
-These statements can be further articulated by comparing GraphQL to REST &mdash; another paradigm, the predecessor of GraphQL. 
+These statements can be further articulated with another example using REST, the predecessor of GraphQL. 
 
-Speaking code the example above can be replicated with REST in the following way:
+Speaking code, again, the original example above in REST is:
 
 ```bash
 # The client sends a data request to the backend
 #
+GET /books/1
+#
+# `/books` is an endpoint which receives the request
 # The client needs to know in advance if there is a `/books` endpoint.
 #
 # More, if it wants to retrieve `authors`, `comments`, ... 
@@ -121,10 +124,6 @@ Speaking code the example above can be replicated with REST in the following way
 #
 # 🢥 In REST the client is tightly coupled ...
 # ... to the URL endpoints
-#
-# `/books` is an endpoint which receives the request
-#
-GET /books/1
 ```
 
 ```js
@@ -143,19 +142,16 @@ GET /books/1
  * 
  * 🢥 In REST the URL endpoints are tightly coupled to ...
  * ... the URL handlers on the backend
- * 
- * More, in REST the backend doesn't knows the shape of the results ...
- * ... the client needs.
- * So it returns an arbitrary shape the client ...
- * ... has to be aware of apriori. 
- * 
- * 🢥 In REST the client is tightly coupled to the backend.
- * 
  */  
 app.get('/books', function (req, res) {
   const id = req.id
   const book = find(books, { id: id })
   const author = find(authors, {id: book.authorID})
+  /**
+  * The shape of the return data needs to be assembled.
+  * And it is done in an arbitrary way.
+  * The client has no influence about the shape returned.
+  */ 
   const result = {
 	  title: book.title,
 	  author: {
@@ -171,9 +167,7 @@ app.get('/books', function (req, res) {
 /**
  * Finally the client receives the result.
  * 
- * The result has a shape defined by the backend ...
- * ... which can be either too few or too many ...
- * ... for the client's need.
+ * The result has a shape defined by the backend
  * 
  * In REST the client is tightly coupled to the backend.
  */ 
@@ -223,15 +217,15 @@ app.get('/books', function (req, res) {
 })
 ```
 
-Both of them return the same result. However the first approach seems to be pure functional while the last one procedural.
+Both of them return the same result. However the first approach seems to be pure functional while the second procedural.
 
 Both of them seems to satisfy conditions F-1 and F-2: stable interfaces, and input params kept unmodified.
 
-On the other hand only GraphQL seems to satisfy conditions F-3, F-4: Use no external information nor additional operations.
+Only GraphQL seems to satisfy conditions F-3, F-4: Use no external information nor additional operations.
 
-REST uses an external resource in `find(authors, ...)` inside an `app.get('/books', ...` call and performs the additional operation `const result=` when assembling the results. 
+REST uses an external resource (`authors`) and performs an additional operation (`const result=`) during execution.
 
-## Finally 
+## Summing up 
 
 This thought-play can be easily called _speculation_. Indeed, it is speculation. It's goal is nothing to do with demonstrating scientifically if GraphQL follows the functional reactive pardigm.
 
