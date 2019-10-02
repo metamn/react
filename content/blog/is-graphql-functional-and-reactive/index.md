@@ -1,7 +1,6 @@
 ---
-title: Is GraphQL functional and reactive?
+title: 'Is GraphQL functional and reactive?'
 date: '2019-10-01T19:00:00.284Z'
-draft: true
 ---
 
 GraphQL comes from the same family as React. And React is functional and reactive.
@@ -23,7 +22,7 @@ The list of features on [GraphQL.org](https://graphql.org/) clearly points to a 
 - Describe what’s possible with a type system
 - Evolve your API without versions
 
-React [managed](http://metamn.io/react/react-is-functional-and-reactive/) to change the status quo by opting to rely on functional reactive programming. One might wonder if GraphQL choose the same way.
+React [managed](http://metamn.io/react/react-is-functional-and-reactive/) to change the status quo by embracing functional reactive programming. One might wonder if GraphQL choose the same approach.
 
 ## Functional reactive programming
 
@@ -37,7 +36,7 @@ Acronym R stands for reactive, F for functional programming.
 |---------|-------------|-------------------------------------------------------------------------|
 | R-1     | Isolation   | Components are aware of, and care about their own problems only         |
 | R-2     | Isolation   | Components does not interfere with each other’s inner workings          |
-| R-3     | Async       | Components communicate in an asynchronous way                           |
+| R-3     | Async       | Components communicate in an asynchronously                             |
 | F-1     | Composition | Components have clear and stable interfaces                             |
 | F-2     | Composition | During execution a component doesn't modify its input parameters        |
 | F-3     | Composition | No external information is used to produce the return value             |
@@ -133,7 +132,7 @@ GET /books/1
  * 
  * For every resource (`book`, `author`, ...) and 
  * operation (`get`, `delete') there should be 
- * a coresponding URL handler
+ * a corresponding URL handler
  * 
  * Like:
  *  - app.get('books', ...)
@@ -150,7 +149,7 @@ app.get('/books', function (req, res) {
   const author = find(authors, {id: book.authorID})
   /**
   * The shape of the return data needs to be assembled.
-  * And it is done in an arbitrary way.
+  * And it is done arbitrarily.
   * The client has no influence about the shape returned.
   */ 
   const result = {
@@ -211,12 +210,36 @@ app.get('/books', function (req, res) {
 | GET /graphql?mutation={book(id: "1")} | /graphql      | resolvers = {...} |
 |---------------------------------------------------------------------------|
 #
-# - All examples above can be reduced to a single one
-# - Which makes GraphQL loosely coupled
+# - All components above can be further reduced
+# - Which makes them loosely coupled
 #
 | GET /graphql?<OPERATION>={<PARAMS>}    | /graphql      | resolvers = {...} |
 ```
 
+Or, illustrated with a diagram:
+
+```bash
+# REST
+#
+|-----------------|         |-----------|         |-----------------------------|
+| Client          |         | Endpoints |         | Handlers                    |
+|-----------------|         |-----------|         |-----------------------------|
+| GET /books/1    | <-----> | /books    | <-----> | app.get('books', ...)       |
+| GET /authors/1  | <-----> | /authors  | <-----> | app.get('authors', ...)     |       
+| GET /comments/1 | <-----> | /comments | <-----> | app.get('comments', ...)    |
+| DELETE /books/1 | <-----> | /books    | <-----> | app.delete('books', ...)    |
+|-----------------|         |-----------|         |-----------------------------|
+
+# GraphQL
+#
+|---------------------------------|         |----------|         |-------------------|
+| Client                          |         | Endpoint |         | Resolvers         |
+|---------------------------------|         |----------|         |-------------------|
+| GET /graphql?query={...}        |         |          |         |                   |
+| GET /graphql?mutation={...}     | <-----> | /graphql | <-----> | resolvers = {...} |       
+| GET /graphql?subscription={...} |         |          |         |                   |
+|---------------------------------|         |----------|         |-------------------|
+```
 
 ## Composition
 
@@ -255,20 +278,20 @@ app.get('/books', function (req, res) {
 })
 ```
 
-Both of them return the same result. However the first approach seems to be pure functional while the second procedural.
+The first approach seem to be pure functional while the second procedural.
 
-Both of them seems to satisfy conditions F-1 and F-2: stable interfaces, and input params kept unmodified.
+Both of them seem to satisfy conditions F-1 and F-2: stable interfaces, and input parameters kept unmodified.
 
-Only GraphQL seems to satisfy conditions F-3, F-4: Use no external information nor additional operations.
+Only GraphQL seem to satisfy conditions F-3, F-4: Use no external information nor additional operations.
 
 REST uses an external resource (`authors`) and performs an additional operation (`const result=`) during execution.
 
 
 ## Finally 
 
-This thought-play can be easily called _speculation_ by a rigurous reader. 
+This thought-play can be easily called _speculation_ by a rigorous reader. 
 
-For example the code for `app.get('/books',...)` can be written to be fully functional.
+For example the code for `app.get('/books', ...)` can be written to be fully functional.
 However this is the way you'll find it written in majority of REST APIs. 
 
 The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm.
