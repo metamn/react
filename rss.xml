@@ -1,9 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Oct 2019 01:44:50 GMT</lastBuildDate><item><title><![CDATA[Identify the right leaders]]></title><description><![CDATA[Or else.]]></description><link>http://metamn.io/react/identify-the-right-leaders/</link><guid isPermaLink="false">http://metamn.io/react/identify-the-right-leaders/</guid><pubDate>Thu, 03 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Or else.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Oct 2019 08:53:01 GMT</lastBuildDate><item><title><![CDATA[Rapid prototyping for GraphQL APIs?]]></title><description><![CDATA[That’s nearly impossible today.]]></description><link>http://metamn.io/react/rapid-prototyping-for-graphql-apis/</link><guid isPermaLink="false">http://metamn.io/react/rapid-prototyping-for-graphql-apis/</guid><pubDate>Thu, 03 Oct 2019 03:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s nearly impossible today.&lt;/p&gt;
 &lt;!--more--&gt;
+&lt;h2&gt;GraphQL is young&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nordicapis.com/is-graphql-moving-toward-ubiquity/&quot;&gt;According to its creator&lt;/a&gt; GraphQL is expected to become ubiquitous in 2020-2021. Today is in the phase of being accepted by the large companies.&lt;/p&gt;
+&lt;p&gt;The official GraphQL page &lt;a href=&quot;https://graphql.org/code/#services&quot;&gt;lists&lt;/a&gt; only a handful of services ready to build upon. Of them a few are complete solutions — backends as a service — and of them a few are production ready.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Graphcool - is self hosted&lt;/li&gt;
+&lt;li&gt;Reindex - looks empty&lt;/li&gt;
+&lt;li&gt;Scaphold - closed down&lt;/li&gt;
+&lt;li&gt;Tipe - is in beta&lt;/li&gt;
+&lt;li&gt;Hasura - has no pricing plans&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;What’s left is Apollo, GraphCMS and AWS AppSync.&lt;/p&gt;
+&lt;p&gt;Before checking them let’s see how an ideal GraphQL backend should look like.&lt;/p&gt;
+&lt;h2&gt;The ideal GraphQL API service&lt;/h2&gt;
+&lt;p&gt;An ideal solution would offer the following features:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Visual Schema designer&lt;/li&gt;
+&lt;li&gt;Automatic database generation based on the schema&lt;/li&gt;
+&lt;li&gt;Automatic resolver generation&lt;/li&gt;
+&lt;li&gt;Automatic lambda function generation for the resolvers&lt;/li&gt;
+&lt;li&gt;Automatic Type / Schema code generation and sync for clients&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;In other words:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;One should be able to visually design the data structure&lt;/li&gt;
+&lt;li&gt;From that design all else is automatically generated: database tables, resolvers, lambda functions, schema, types, boilerplate client code&lt;/li&gt;
+&lt;li&gt;On client side, during development, when the schema is modified it is automatically synced with the backend.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That would mean rapid prototyping.&lt;/p&gt;
+&lt;h2&gt;Apollo and AWS AppSync&lt;/h2&gt;
+&lt;p&gt;Both of them support all requirements except 1.) the visual scheme designer.&lt;/p&gt;
+&lt;p&gt;In Apollo all tasks imply &lt;a href=&quot;https://www.apollographql.com/docs/tutorial/introduction/&quot;&gt;manual work&lt;/a&gt;. In AWS AppSync + Amplify everything is automated.&lt;/p&gt;
+&lt;p&gt;No wonder. Their description on GraphQL.org are pretty clear.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Apollo Engine: A service for monitoring the performance and usage of your GraphQL backend.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;AWS AppSync: Fully managed GraphQL service with realtime subscriptions, offline programming &amp;#x26; synchronization, and enterprise security features as well as fine grained authorization controls.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One has to choose AWS AppSync then. Only AWS is suitable for production and enterprise not for rapid prototyping. All plans are paid and every operation is billed.&lt;/p&gt;
+&lt;p&gt;GraphCMS to the rescue?&lt;/p&gt;
+&lt;h2&gt;Headless CMS is young (and not enough)&lt;/h2&gt;
+&lt;p&gt;From the &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1AmrfMT6a-tT9x4nR__RumuCcT6NedxliFf-76Ocv2pQ/edit?usp=sharing&quot;&gt;list of developer friendly headless CMS services on JAMStack&lt;/a&gt; — including Contentful, GraphCMS, Sanity, TakeShape, Prismic, Kentico — only a few experiences worth it.&lt;/p&gt;
+&lt;p&gt;Setting up an account and trying to get a GraphQL endpoint on a free plan was tedious or impossible in many times:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Contentful - No GraphQL on the free plan&lt;/li&gt;
+&lt;li&gt;GraphCMS - Except 5.) Automatic code generation and sync - it offers all other features. However these features seems to be undocumented and very fragile.&lt;/li&gt;
+&lt;li&gt;Sanity - A strange, download first approach. Skipped for now.&lt;/li&gt;
+&lt;li&gt;TakeShape - The GraphQL endpoint works out of the box. Worth try it further.&lt;/li&gt;
+&lt;li&gt;Prismic - GraphQL support has to be asked for / enabled manually by the support team&lt;/li&gt;
+&lt;li&gt;WPGraphQL - Works perfect however is tailored to the WordPress data structure. It can be extended of course but WordPress is a specific, not a general purpose CMS.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Wait for the Headless CMS scene to take off. Otherwise, if needed right now, go with AWS.&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://nordicapis.com/is-graphql-moving-toward-ubiquity/&quot;&gt;Is GraphQL Moving Toward Ubiquity?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://graphql.org/code/#services&quot;&gt;GraphQL Services&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/docs/tutorial/introduction/&quot;&gt;Apollo Introduction&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1AmrfMT6a-tT9x4nR__RumuCcT6NedxliFf-76Ocv2pQ/edit?usp=sharing&quot;&gt;A list of developer friendly headless CMS services on JAMStack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Identify the right leaders]]></title><description><![CDATA[Or else.]]></description><link>http://metamn.io/react/identify-the-right-leaders/</link><guid isPermaLink="false">http://metamn.io/react/identify-the-right-leaders/</guid><pubDate>Thu, 03 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Or else.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;hr&gt;
 &lt;h2&gt;The buzz&lt;/h2&gt;
-&lt;p&gt;React is famous about its steep learning curve. No wonder — starting from the programming model through data to user interaction introduced changes which are often paradigm shifts.&lt;/p&gt;
+&lt;p&gt;React is famous about its steep learning curve. No wonder — starting from the programming model through data manipulation to user interaction introduced changes which are often paradigm shifts.&lt;/p&gt;
 &lt;p&gt;Want the buzzwords?&lt;/p&gt;
-&lt;p&gt;Reactive programming, Functional programming, Pure functions, Side effects, State, Hooks, Functional components, Referential equality, Finite State Machines / XState, Data driven applications, Code splitting, Pre-caching assets, Pre-rendering static HTML, Memoization, Static type checking — none of these were present in your old framework, perhaps.&lt;/p&gt;
+&lt;p&gt;Reactive programming, Functional programming, Pure functions, Side effects, State, Hooks, Functional components, Referential equality, Finite state machines, Data driven applications, Memoization, Static type checking — none of these were present in your old framework, perhaps.&lt;/p&gt;
 &lt;p&gt;Learning React is not like it was learning Ruby on Rails, Yii, or MVC. It’s more like a fresh start with unlearning first, then re-learning everything from information architecture design to event-based user interfaces.&lt;/p&gt;
 &lt;h2&gt;The problem&lt;/h2&gt;
 &lt;p&gt;Identify the right leaders.&lt;/p&gt;
@@ -18,16 +80,251 @@
 &lt;/ul&gt;
 &lt;p&gt;Once you’ve found the &lt;em&gt;line&lt;/em&gt; your learning process will be smooth unless you leave the safe waters. At the edge there is nobody to guide you.&lt;/p&gt;
 &lt;h2&gt;An example&lt;/h2&gt;
-&lt;p&gt;All the buzz is around the state. It’s React’s cornerstone and it’s not yet solved.&lt;/p&gt;
+&lt;p&gt;All the buzz now is around the state. It’s React’s cornerstone and it’s yet not solved.&lt;/p&gt;
 &lt;p&gt;Go with Redux? Forget Redux after hooks? Dive into finite state machines? What about MobX? Many job posts require it — it must be popular and useful.&lt;/p&gt;
-&lt;p&gt;Apollo started to introduce local state management with GraphQL. What that means for all the other libraries? Will they push it together with Apollo Client? &lt;/p&gt;
+&lt;p&gt;Apollo started to introduce local state management with GraphQL. What that means for all the other libraries? Will they bundle/push it together with Apollo Client? &lt;/p&gt;
 &lt;p&gt;RWieruch just published a tutorial for state management with RxJS. Should I read it? &lt;/p&gt;
 &lt;p&gt;There is a new library React Tracked: Super fast global/shared state with context and hooks. Should I read it? Can I trust the author? Is he in the &lt;em&gt;line&lt;/em&gt;?&lt;/p&gt;
 &lt;h2&gt;The solution&lt;/h2&gt;
 &lt;p&gt;I went with finite state machines / Xstate. Why?&lt;/p&gt;
-&lt;p&gt;Its leader is trustworthy. Checked videos, blog posts, chatted on twitter, created a test project, advanced it, found a bug, filed a bug in Github, got a fix for it — and all the time every interaction felt so natural.&lt;/p&gt;
-&lt;p&gt;Will this choice stand the test of time? I don’t know. But this new piece of knowledge perfectly fits the bigger picture. Good UI/UX should be flawless and this tool helps achieve that.&lt;/p&gt;
-&lt;p&gt;I’m adding David K. Piano to the list.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React follows the functional reactive programming paradigm]]></title><description><![CDATA[That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</link><guid isPermaLink="false">http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</guid><pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
+&lt;p&gt;Its leader is trustworthy. Checked videos, blog posts, chatted on twitter, created a test project, advanced it, found a bug, filed a bug, got a fix for it — and all the time every interaction felt so natural.&lt;/p&gt;
+&lt;p&gt;Will this choice stand the test of time? I don’t know. But this new piece of knowledge perfectly fits the &lt;em&gt;line&lt;/em&gt;. Good UI/UX should be flawless and this tool helps achieve that.&lt;/p&gt;
+&lt;p&gt;I’m adding David K. Piano to the list.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Is GraphQL functional and reactive?]]></title><description><![CDATA[GraphQL comes from the same family as React. And React is functional and reactive.]]></description><link>http://metamn.io/react/is-graphql-functional-and-reactive/</link><guid isPermaLink="false">http://metamn.io/react/is-graphql-functional-and-reactive/</guid><pubDate>Wed, 02 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;GraphQL comes from the same family as React. And React is functional and reactive.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;A quick investigation is necessary.&lt;/p&gt;
+&lt;h2&gt;A short history&lt;/h2&gt;
+&lt;p&gt;GraphQL was developed by Facebook at the same time when React was created. Perhaps they were meant to be perfect running mates.&lt;/p&gt;
+&lt;p&gt;Both of them define a new era in their own domain: React in web frameworks and GraphQL in APIs. &lt;/p&gt;
+&lt;p&gt;The list of features on &lt;a href=&quot;https://graphql.org/&quot;&gt;GraphQL.org&lt;/a&gt; clearly points to a paradigm shift:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ask for what you need, get exactly that&lt;/li&gt;
+&lt;li&gt;Get many resources in a single request&lt;/li&gt;
+&lt;li&gt;Describe what’s possible with a type system&lt;/li&gt;
+&lt;li&gt;Evolve your API without versions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;React &lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot;&gt;managed&lt;/a&gt; to change the status quo by embracing functional reactive programming. One might wonder if GraphQL choose the same approach.&lt;/p&gt;
+&lt;h2&gt;Functional reactive programming&lt;/h2&gt;
+&lt;p&gt;What makes a system functional and reactive is extracted in the list below from Daniel Lew’s excellent article &lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Acronym R stands for reactive, F for functional programming.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|---------|-------------|-------------------------------------------------------------------------|
+| Acronym | Feature     | Description                                                             |
+|---------|-------------|-------------------------------------------------------------------------|
+| R-1     | Isolation   | Components are aware of, and care about their own problems only         |
+| R-2     | Isolation   | Components does not interfere with each other’s inner workings          |
+| R-3     | Async       | Components communicate in an asynchronously                             |
+| F-1     | Composition | Components have clear and stable interfaces                             |
+| F-2     | Composition | During execution a component doesn&amp;#39;t modify its input parameters        |
+| F-3     | Composition | No external information is used to produce the return value             |
+| F-4     | Composition | No additional operations are performed beside the planned functionality |&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If GraphQL meets these features it can be considered functional and reactive.&lt;/p&gt;
+&lt;h2&gt;How GraphQL works&lt;/h2&gt;
+&lt;p&gt;Like every API — GraphQL is built on three main concepts:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Client&lt;/strong&gt;: makes data requests to a backend&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Endpoint&lt;/strong&gt;: One or more URLs where requests are sent and from where the results are received&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Backend&lt;/strong&gt;: Processes the requests and returns data&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Speaking in code (GraphQL):&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# The client sends a data request to the backend&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; book&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id: &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; title, author &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; firstName &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# `/graphql` is an endpoint which receives the request ...&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# ... and forwards to the backend&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# `{ title, author { firstName } }` is the shape of data ...&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# ... the clients wants to receive&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * The backend processes the request using resolvers
+ * ... and returns the results
+ */&lt;/span&gt;  
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  Query&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;root&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;authors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  Author&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;books&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; authorId&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * Finally the client receives the result.
+ * 
+ * The result has the shape defined by the client at request
+ */&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Black Hole Blues&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Janna&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Calling the client, the endpoint and the backend as &lt;em&gt;components&lt;/em&gt; of the GraphQL system it can be verified if they fulfill the traits of a functional reactive system. &lt;/p&gt;
+&lt;h2&gt;Isolation&lt;/h2&gt;
+&lt;p&gt;GraphQL components are (clearly) decoupled. They all work in isolation and don’t interfere in each other’s inner workings.&lt;/p&gt;
+&lt;p&gt;These statements can be further articulated with another example using REST, the predecessor of GraphQL. &lt;/p&gt;
+&lt;p&gt;Speaking code, again, the original example above in REST is:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# The client sends a data request to the backend&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+GET /books/1
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# `/books` is an endpoint which receives the request&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# The client needs to know in advance if there is a `/books` endpoint.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# More, if it wants to retrieve `authors`, `comments`, ... &lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# ... it needs to know in advance if these endpoints exists.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# Like:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - GET /authors/1&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - GET /comments/1&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - GET /authors/1/comments&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - ... and lots of others for POST, DELETE and REST verbs.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# 🢥 In REST the client is tightly coupled ...&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# ... to the URL endpoints&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * The backend processes the request using URL handlers
+ * 
+ * For every resource (`book`, `author`, ...) and 
+ * operation (`get`, `delete&apos;) there should be 
+ * a corresponding URL handler
+ * 
+ * Like:
+ *  - app.get(&apos;books&apos;, ...)
+ *  - app.get(&apos;authors&apos;, ...)
+ *  - app.get(&apos;comments&apos;, ...)
+ *  - ... and lots of others for `put`, `delete`, `post`, `patch`
+ * 
+ * 🢥 In REST the URL endpoints are tightly coupled to ...
+ * ... the URL handlers on the backend
+ */&lt;/span&gt;  
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/books&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;books&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; author &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;authors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; book&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;authorID&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+  * The shape of the return data needs to be assembled.
+  * And it is done arbitrarily.
+  * The client has no influence about the shape returned.
+  */&lt;/span&gt; 
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	  title&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; book&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	  author&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		  firstName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		  lastName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName
+	  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;author&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * Finally the client receives the result.
+ * 
+ * The result has a shape defined by the backend
+ * 
+ * In REST the client is tightly coupled to the backend.
+ */&lt;/span&gt; 
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Black Hole Blues&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;token string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Janna&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;lastName&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Levin&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Wrapping up&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# REST&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - All three components have a quasi 1-to-1 relationship&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - They are all tightly coupled (The list can&apos;t be reduced)&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;------------------------------------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Client requests &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; URL Endpoints &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; URL Handlers             &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;--------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /books/1    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /books        &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;books&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /authors/1  &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /authors      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;authors&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /comments/1 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /comments     &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;comments&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; DELETE /books/1 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /books        &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.delete&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;books&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;------------------------------------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# GraphQL&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------------------------------------------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Client requests                       &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; URL Endpoints &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; URL handlers      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; 
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;book&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id: &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /graphql      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;author&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id: &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /graphql      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;comment&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id: &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /graphql      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?mutation&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;book&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id: &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /graphql      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------------------------------------------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - All components above can be further reduced&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;# - Which makes them loosely coupled&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;OPERATION&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;PARAMS&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /graphql      &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Or, illustrated with a diagram:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# REST&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Client          &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Endpoints &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Handlers                    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /books/1    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /books    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;books&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;       &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /authors/1  &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /authors  &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;authors&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;     &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;       
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /comments/1 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /comments &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.get&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;comments&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; DELETE /books/1 &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /books    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; app.delete&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;books&apos;&lt;/span&gt;, &lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-----------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# GraphQL&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;----------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Client                          &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Endpoint &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; Resolvers         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;----------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;        &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;          &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;                   &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?mutation&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;     &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; /graphql &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;-----&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;       
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; GET /graphql?subscription&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;          &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;                   &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;
+&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;---------------------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;----------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;         &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;-------------------&lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Composition&lt;/h2&gt;
+&lt;p&gt;Let’s examine again the two ways of writing code on the backend:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * GraphQL
+ */&lt;/span&gt;  
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  Query&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;root&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;authors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  Author&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;books&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; authorId&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * REST
+ */&lt;/span&gt; 
+app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;/books&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;req&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; res&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; id &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; req&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; book &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;books&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; author &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;authors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; book&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;authorID&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; result &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	  title&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; book&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;title&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	  author&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		  firstName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;firstName&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		  lastName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;lastName
+	  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  res&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;author&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The first approach seem to be pure functional while the second procedural.&lt;/p&gt;
+&lt;p&gt;Both of them seem to satisfy conditions F-1 and F-2: stable interfaces, and input parameters kept unmodified.&lt;/p&gt;
+&lt;p&gt;Only GraphQL seem to satisfy conditions F-3, F-4: Use no external information nor additional operations.&lt;/p&gt;
+&lt;p&gt;REST uses an external resource (&lt;code class=&quot;language-text&quot;&gt;authors&lt;/code&gt;) and performs an additional operation (&lt;code class=&quot;language-text&quot;&gt;const result=&lt;/code&gt;) during execution.&lt;/p&gt;
+&lt;h2&gt;Finally&lt;/h2&gt;
+&lt;p&gt;This thought-play can be easily called &lt;em&gt;speculation&lt;/em&gt; by a rigorous reader. &lt;/p&gt;
+&lt;p&gt;For example the code for &lt;code class=&quot;language-text&quot;&gt;app.get(&amp;#39;/books&amp;#39;, ...)&lt;/code&gt; can be written to be fully functional.
+However this is the way you’ll find it written in majority of REST APIs. &lt;/p&gt;
+&lt;p&gt;The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm.&lt;/p&gt;
+&lt;p&gt;The goal was to check if GraphQL can be interpreted using the paradigm.&lt;/p&gt;
+&lt;p&gt;At the end the reader has to decide in what measure this exercise was successful. &lt;/p&gt;
+&lt;p&gt;Until then — I hope — one can have a nice overview of the paradigm, and a glimpse on how GraphQL APIs differ from REST.&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GraphQL&quot;&gt;GraphQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/React_(web_framework)&quot;&gt;React (web framework)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot;&gt;React follows the functional reactive programming paradigm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React follows the functional reactive programming paradigm]]></title><description><![CDATA[That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</link><guid isPermaLink="false">http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</guid><pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;The context&lt;/h2&gt;
 &lt;p&gt;Both paradigms solve the same problem — to build modular, interactive applications — in different ways.&lt;/p&gt;
