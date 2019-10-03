@@ -49,7 +49,7 @@ There is a new library React Tracked: Super fast global/shared state with contex
 
 I went with finite state machines / Xstate. Why?
 
-It's leader is trustworthy. Checked videos, blog posts, chatted on twitter, created a test project, advanced it, found a bug, filed a bug in Github, got a fix for it &mdash; and all the time every interaction felt so natural.
+Its leader is trustworthy. Checked videos, blog posts, chatted on twitter, created a test project, advanced it, found a bug, filed a bug in Github, got a fix for it &mdash; and all the time every interaction felt so natural.
 
 Will this choice stand the test of time? I don't know. But this new piece of knowledge perfectly fits the bigger picture. Good UI/UX should be flawless and this tool helps achieve that.
 
