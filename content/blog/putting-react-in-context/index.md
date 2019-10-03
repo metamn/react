@@ -92,4 +92,48 @@ Just to get a glimpse about how vast the React context is &mdash; please allow m
 </tbody>
 </table>
 
-Stay tuned, details are on the way.
+~~Stay tuned, details are on the way.~~
+
+## Updates
+
+This article will be continuously updated to serve as a central hub for the concepts presented above.
+
+There is an ongoing experience on [Github](https://github.com/metamn/react-best-practices) distilled into a [documentation site](http://metamn.io/react-best-practices/?path=/docs/home--page).
+
+When considerable results are found a new article is written and linked below.
+
+<table>
+<thead>
+	<tr>
+		<th>Context</th>
+		<th>Description</th>
+		<th>Articles</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Leaders</td>
+		<td>Identify trusted opinion leaders and sources of learning</td>
+		<td><a href="http://metamn.io/react/identify-the-right-leaders/" title="Identify the right leaders">Identify the right leaders</a></td>
+	</tr>
+	<tr>
+		<td>Programming paradigms</td>
+		<td>The foundation of React</td>
+		<td><a href="http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/" title="React follows the functional reactive programming paradigm">React follows the functional reactive programming paradigm</a></td>
+	</tr>
+	<tr>
+		<td>GraphQL</td>
+		<td>Data driven applications</td>
+		<td><ul><li><a href="http://metamn.io/react/rapid-prototyping-for-graphql-apis/" title="Rapid prototyping for GraphQL APIs?">Rapid prototyping for GraphQL APIs?</a></li>
+		<li><a href="http://metamn.io/react/is-graphql-functional-and-reactive/" title="Is GraphQL functional and reactive?">Is GraphQL functional and reactive?</a></li>
+		<li><a href="http://metamn.io/react/graphql-and-rest-apis-with-aws/" title="GraphQL and REST APIs with AWS">GraphQL and REST APIs with AWS</a></li></ul></td>
+	</tr>
+	<tr>
+		<td>Rapid prototyping</td>
+		<td>Both on front and back-end</td>
+		<td><a href="http://metamn.io/react/rapid-prototyping-for-graphql-apis/" title="Rapid prototyping for GraphQL APIs?">Rapid prototyping for GraphQL APIs?</a></td>
+	</tr>
+	
+</tbody>
+</table>
+

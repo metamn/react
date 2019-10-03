@@ -22,11 +22,11 @@ The official GraphQL page [lists](https://graphql.org/code/#services) only a han
 
 What's left is Apollo, GraphCMS and AWS AppSync.
 
-Before checking them let's see how an ideal GraphQL backend should look like.
+Before checking them let's see how an ideal GraphQL API backend should look like.
 
 ## The ideal GraphQL API service
 
-An ideal solution would offer the following features:
+An ideal service would offer the following features:
 
 1. Visual Schema designer
 2. Automatic database generation based on the schema
@@ -37,7 +37,7 @@ An ideal solution would offer the following features:
 In other words:
 
 - One should be able to visually design the data structure
-- From that design all else is automatically generated: database tables, resolvers, lambda functions, schema, types, boilerplate client code
+- From that design all else &mdash; possible &mdash; is automatically generated: database tables, resolvers, lambda functions, schema, types, boilerplate client code
 - On client side, during development, when the schema is modified it is automatically synced with the backend.
 
 That would mean rapid prototyping.
@@ -65,15 +65,15 @@ From the [list of developer friendly headless CMS services on JAMStack](https://
 Setting up an account and trying to get a GraphQL endpoint on a free plan was tedious or impossible in many times:
 
 - Contentful - No GraphQL on the free plan
-- GraphCMS - Except 5.) Automatic code generation and sync - it offers all other features. However these features seems to be undocumented and very fragile.
+- GraphCMS - Except 5.) Automatic code generation and sync &mdash; it offers all other features. However these features seems to be undocumented and very fragile.
 - Sanity - A strange, download first approach. Skipped for now.
-- TakeShape - The GraphQL endpoint works out of the box. Worth try it further.
-- Prismic - GraphQL support has to be asked for / enabled manually by the support team
+- TakeShape - The GraphQL endpoint works out of the box. Worth tryexperiencing with it further.
+- Prismic - GraphQL support has to be asked for / enabled manually by the support team. Worth tryexperiencing with it further.
 - WPGraphQL - Works perfect however is tailored to the WordPress data structure. It can be extended of course but WordPress is a specific, not a general purpose CMS.
 
 ## Conclusion
 
-Wait for the Headless CMS scene to take off. Otherwise, if needed right now, go with AWS.
+Wait for the Headless CMS scene to take off. Otherwise, if needed right now, go with AWS. All services can be used for free for a year.
 
 ## Resources
 
