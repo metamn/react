@@ -3,7 +3,7 @@ title: 'Rapid prototyping for GraphQL APIs?'
 date: '2019-10-03T03:00:00.284Z'
 ---
 
-That's nearly impossible.
+That's nearly impossible today.
 
 <!--more-->
 
@@ -26,7 +26,7 @@ Before checking them let's see how an ideal GraphQL backend should look like.
 
 ## The ideal GraphQL API service
 
-An ideal GraphQL solution would offer the following features:
+An ideal solution would offer the following features:
 
 1. Visual Schema designer
 2. Automatic database generation based on the schema
@@ -54,7 +54,7 @@ No wonder. Their description on GraphQL.org are pretty clear.
 
 > AWS AppSync: Fully managed GraphQL service with realtime subscriptions, offline programming & synchronization, and enterprise security features as well as fine grained authorization controls.
 
-One has to choose AWS AppSync then. The problem is AWS is suitable for production and enterprise not for rapid prototyping.
+One has to choose AWS AppSync then. Only AWS is suitable for production and enterprise not for rapid prototyping. All plans are paid and every operation is billed.
 
 GraphCMS to the rescue?
 
@@ -73,7 +73,7 @@ Setting up an account and trying to get a GraphQL endpoint on a free plan was te
 
 ## Conclusion
 
-Wait for the Headless CMS to take off. Else, if needed now, go with AWS.
+Wait for the Headless CMS scene to take off. Otherwise, if needed right now, go with AWS.
 
 ## Resources
 
