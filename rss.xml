@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Oct 2019 09:44:41 GMT</lastBuildDate><item><title><![CDATA[Rapid prototyping for GraphQL APIs?]]></title><description><![CDATA[That’s nearly impossible today.]]></description><link>http://metamn.io/react/rapid-prototyping-for-graphql-apis/</link><guid isPermaLink="false">http://metamn.io/react/rapid-prototyping-for-graphql-apis/</guid><pubDate>Thu, 03 Oct 2019 03:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s nearly impossible today.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Oct 2019 02:34:12 GMT</lastBuildDate><item><title><![CDATA[Rapid prototyping for GraphQL APIs?]]></title><description><![CDATA[That’s nearly impossible today.]]></description><link>http://metamn.io/react/rapid-prototyping-for-graphql-apis/</link><guid isPermaLink="false">http://metamn.io/react/rapid-prototyping-for-graphql-apis/</guid><pubDate>Thu, 03 Oct 2019 03:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s nearly impossible today.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;GraphQL is young&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://nordicapis.com/is-graphql-moving-toward-ubiquity/&quot;&gt;According to its creator&lt;/a&gt; GraphQL is expected to become ubiquitous in 2020-2021. Today is in the phase of being accepted by the large companies.&lt;/p&gt;
@@ -314,16 +314,104 @@ app&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=
 &lt;p&gt;This thought-play can be easily called &lt;em&gt;speculation&lt;/em&gt; by a rigorous reader. &lt;/p&gt;
 &lt;p&gt;For example the code for &lt;code class=&quot;language-text&quot;&gt;app.get(&amp;#39;/books&amp;#39;, ...)&lt;/code&gt; can be written to be fully functional.
 However this is the way you’ll find it written in majority of REST APIs. &lt;/p&gt;
-&lt;p&gt;The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm.&lt;/p&gt;
-&lt;p&gt;The goal was to check if GraphQL can be interpreted using the paradigm.&lt;/p&gt;
-&lt;p&gt;At the end the reader has to decide in what measure this exercise was successful. &lt;/p&gt;
-&lt;p&gt;Until then — I hope — one can have a nice overview of the paradigm, and a glimpse on how GraphQL APIs differ from REST.&lt;/p&gt;
+&lt;p&gt;The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm. The goal was to ask the question and try to give an answer.&lt;/p&gt;
+&lt;p&gt;The reader is free to decide in what measure this exercise was successful. Until then a little help from others.&lt;/p&gt;
+&lt;h3&gt;Apollo and Expedia&lt;/h3&gt;
+&lt;p&gt;From the article: &lt;a href=&quot;https://www.apollographql.com/customers/expediagroup/&quot;&gt;Expedia Group Transforms Product Development with Apollo&lt;/a&gt;&lt;/p&gt;
+&lt;h4&gt;Before adopting a data graph&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 673px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/14834da9e6e0ba14c0ab029894a06b07/96ffc/graphql-1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.08618127786033%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAC3UlEQVQoz2NgwAQqLCzs/DCOibk2o4aOgpijvQ8TiK+jryFpYKyvAGKbWZiymZobm+vqmrKAFTMxiIBpO4VdDLqaVhAD9HxkBfj5OGAGRvm3M6ZFTZW2DWZgBPFTIyeLRgXWi4LYAe5FrOEBhTrTt/OB5bSUXeEOYYhxOAsWTPa84OSrf1IcxNbl2cbYlv+QMSfkvJEBz0mwC5dOeSmS6nNGs6FsI9hVpTE3DVJ9TwozMFQzxTlfkAW7DoSNRTaDDTYT32pqK7/T21F5LwvMMk2ODUK2cjsFfQ0P8AG5QItbeBgYFgkyMCwXY2DwZmdgaBJwUd/DYyC4gZvBRmk32EAQsJXfxeaovFsGyNcAYkMglrBX3M2c4H6MOcj8oBBIzeP7Xysf3Ht54fL5R2cvnLl/9vHj50fu3ni/iJlhI4eLxm5eeBhCaT4gFgRiAZBhQKwExMr2irtEwm0PczMwZLFdu/Ax8+ypW2t2bb28eeOqS4dPn7iz4fGDjzXSDFt4HVV2CSIbxgo1kBuIuaCYFyomC3S9qpPKbm1BhlW6XAxbDXgYdugwMGwBunoGF0i/m9YOZqA6EYYAs4Mw7/K6aOxldlDezQtkgwwXd1DaLQakNYFYFehKQ6C4npvmXh1P3d0a7tq71D11dyl4G+xRCjA5IGEtu4vZQWmXMNgwFobJzI7Ku0RNxTfzmktslQZKiNjK71AxEdksZqe4UwwYSfIsDJNYgGxxO4WdoqosKzhs5HbIOCjv5AdGohyQrQC0UMlCYoc0w/V9/5liHM8pa7Ju505yv84fZX9OUZxhF0tb2n/mOJcLSubc95hirV+zxLteUDZmecnkJveCKdrxvEpN/E8WAYZzQDXnlScW/2c2E9su4G2w357B06FRIiVqrio4LYZ1isYEzVQDsZ1sCngTwuZogZKJpXk4R0LofD1QXhCUEGSJD52t5eteyQNSBxTX8XSuACfoysyzUgDktucNegfPzwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Before adopting a data graph&quot;
+        title=&quot;Before adopting a data graph&quot;
+        src=&quot;/react/static/14834da9e6e0ba14c0ab029894a06b07/96ffc/graphql-1.png&quot;
+        srcset=&quot;/react/static/14834da9e6e0ba14c0ab029894a06b07/72cd8/graphql-1.png 192w,
+/react/static/14834da9e6e0ba14c0ab029894a06b07/45483/graphql-1.png 384w,
+/react/static/14834da9e6e0ba14c0ab029894a06b07/96ffc/graphql-1.png 673w&quot;
+        sizes=&quot;(max-width: 673px) 100vw, 673px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;In between: experimenting with a Backend-For-Frontend, a pattern which mimics a data graph.&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 707px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/bb657684779fcf903f23cfda5ab2d19b/331c8/graphql-2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 51.48514851485149%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAACrklEQVQoz2NgAAItPRUJbT01LhCbmZWBA0gpg9j84gxgoKUvL6iqKcsOYhsa64nrGmjIgdimZua8puZGBgwIoMjw//9/htKsxQpV+Ut5wZplo9jcbDPkQexQhzWMIDozeoFUZc5qbhA7P2mBQFX+clkQu6tjAmd6XLcOzDQPmzKwQxiYGU7xwgQbM16wBpme8LNR2MQEE0v2PCcXaXdcnIehB2jBRg4+hi0yQGGwZbIMhxQZGPq5XTR28GYH3lBmuHn5g8+hPXdCLp97EXbz0mc1BoZgZlv5HS52CrsMbeV2soI0STAsZXVW2y3MwFDOsnXlE719Wx+nrV14J2f57Ou5xw8+ilo974ETODiE1/MwvH7x7fGVy/fePX3y5vfXz39zgcLsUQ5HxIEGqgGxFhBLuKjvYSuJPwv2xZsXP/OePn3+8fat+w/Onbn98fHjZ+/v3fw0A+TiWJejfAz5weeYvPUOGbio7Y21kdspbSu3S8RecRcH0CBOIBYAYkkglgViYSAWtJPfpeCstkvTRW2Prav6PvcA48Ny4SbnGG1kd/KB5MFhpMy0jsNCcoearfwuN6CgAxDrAbESyHVALAPEUkCsA8RmQDWm1rI7La2kd2qbim0XNRHZJmosvI3NQWk3O8hysIGOKrt5XDX2sNkr7Zaxld+pDNRkApR0BNKeQBc5A9m+QLY1yDCg6w2BWNZeaZe2o/JueSBbBYgVgGr4ga6UABvopXeI21ltj7y17C4hZ7W9Ck6qexStZXYJOKvuVQUGhZiN3C45F/W9yo4qe+SBQaLsrLrHAOgiBVv53UDv79G1V9wNChIzoLgR2MDCxKOS6cHHwWkoN+aofHHiKbDTsyOOqVWknxYBsbPCj+lMar8ETou5USf0Nqy7zAplG4JoM7Ht7Jkhp8wBtMPs3mENnQIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;In between&quot;
+        title=&quot;In between&quot;
+        src=&quot;/react/static/bb657684779fcf903f23cfda5ab2d19b/331c8/graphql-2.png&quot;
+        srcset=&quot;/react/static/bb657684779fcf903f23cfda5ab2d19b/72cd8/graphql-2.png 192w,
+/react/static/bb657684779fcf903f23cfda5ab2d19b/45483/graphql-2.png 384w,
+/react/static/bb657684779fcf903f23cfda5ab2d19b/331c8/graphql-2.png 707w&quot;
+        sizes=&quot;(max-width: 707px) 100vw, 707px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;The move to one data graph&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 703px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/afda5/graphql-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.76529160739687%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAC6UlEQVQoz2PQ1FVm0dFTl/6v95/BSDWTAQR0DFT5NLQVuUHs////MwT6RXOYWRhrVpZMYS7Pm8MIEjcyM1QwtzRXBLEjffsYmBiEQeIqDHlJ81hTIyYrMCCBtMjpwiUZiwSQxWz1SySR+SnRXbJhAQUSMD7IYiezAlWGaU3PmAvCrslaSuzgc1LezWfAt4k7zvm0TJrPGRkuhqWc7YWXZFZPu2+wsP+557aVr/Sq085LcTMs4swOuCIfZX1FzER4I4+d3C5eD619AjXJj+TgNsY6HWWKsj/MGGZ5lAnEP7ftPpi+c+Z95ce7X/6fP3/z451bz//fvvolHiR+5MB5oLwYQ4TVCaYkj2NMziq7wUHBYK+wi9tNYy9/uN0B3jCb/bx+hgf4Iu0P8kU57uPX5TrMtWTiQ+V96184zpt02XXzyrsOc7ufyZrwH+eKdT3AH2xxgC/I7CBfnOtR3mCLg3xOKrv5GIDeRAkrVMApAiTEgRgUVqJQGhjefBLYVIfZHAa5chbn09v/BR49eLPn4YNXB25c+Br1/Pm7PXfvvNh67fyn2CdPXp26dePZmhsXP6Y+fPj8yq0bL+bcvvox+/GTl1fv3nrX+fjet5Jv335ff/b4Wx3U3E7OO/f+SP2Hgju3v7WD6L9f//y/e/d7F4j96dWXLw/ufZ8MYn949fX+44ff5oPYb559OfPy2ff1YPE3P3eDjdNgWcsX4XxIcuP8R/k7lz7J6W++br56xoOqtdMf5E9svWGxbfGT8s0LHsUtmX3f6NC6F0Xr5z0MXb3godmh9S/KVs164Ldu4UObPSsfl6+e88CNgWExJ0N38R/2SJtzYhDXVnOYiexThrBn80oyHOWEsGdwMDDsY4aw1wATvA7Ud9v5YOEnyLBGqDH/EitDoEe3RHrcAhmQYEbcPJnspCWyIHZu6jzpnJSF0iB2duJC+cyEBeCEnZ20SCktdr44RHyJSkr0DFDEMbRVXJQtSzvNBgC+5knBM+x69AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Data graph&quot;
+        title=&quot;Data graph&quot;
+        src=&quot;/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/afda5/graphql-3.png&quot;
+        srcset=&quot;/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/72cd8/graphql-3.png 192w,
+/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/45483/graphql-3.png 384w,
+/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/afda5/graphql-3.png 703w&quot;
+        sizes=&quot;(max-width: 703px) 100vw, 703px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2&gt;Resources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GraphQL&quot;&gt;GraphQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/React_(web_framework)&quot;&gt;React (web framework)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot;&gt;React follows the functional reactive programming paradigm&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/customers/expediagroup/&quot;&gt;Expedia Group Transforms Product Development with Apollo&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React follows the functional reactive programming paradigm]]></title><description><![CDATA[That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</link><guid isPermaLink="false">http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</guid><pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;The context&lt;/h2&gt;
@@ -519,7 +607,7 @@ However this is the way you’ll find it written in majority of REST APIs. &lt;/
 	&lt;tr&gt;
 		&lt;td&gt;Leaders&lt;/td&gt;
 		&lt;td&gt;Identify trusted opinion leaders and sources of learning&lt;/td&gt;
-		&lt;td&gt;&lt;a href=&quot;https://www.robinwieruch.de/&quot;&gt;https://www.robinwieruch.de/&lt;/a&gt;, &lt;a href=&quot;https://kentcdodds.com/&quot;&gt;https://kentcdodds.com/&lt;/a&gt;, &lt;a href=&quot;https://overreacted.io/&quot;&gt;https://overreacted.io/&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;Robin Wieruch, Kent C. Dodds, Dan Abramov&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Programming paradigms&lt;/td&gt;
@@ -641,7 +729,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;It feels refreshing to read the docs next to the live code editor. It’s all in one screen — without the need to fire up webpages and search for results.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -658,14 +746,13 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;wp-graphiql-screenshot.png&quot;
         title=&quot;wp-graphiql-screenshot.png&quot;
-        src=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/b9e4f/wp-graphiql-screenshot.png&quot;
-        srcset=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/cf440/wp-graphiql-screenshot.png 148w,
-/react/static/b3615b3a2b2ebd28dc0cc89658c80884/d2d38/wp-graphiql-screenshot.png 295w,
-/react/static/b3615b3a2b2ebd28dc0cc89658c80884/b9e4f/wp-graphiql-screenshot.png 590w,
-/react/static/b3615b3a2b2ebd28dc0cc89658c80884/f9b6a/wp-graphiql-screenshot.png 885w,
-/react/static/b3615b3a2b2ebd28dc0cc89658c80884/2d849/wp-graphiql-screenshot.png 1180w,
+        src=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/5cc77/wp-graphiql-screenshot.png&quot;
+        srcset=&quot;/react/static/b3615b3a2b2ebd28dc0cc89658c80884/72cd8/wp-graphiql-screenshot.png 192w,
+/react/static/b3615b3a2b2ebd28dc0cc89658c80884/45483/wp-graphiql-screenshot.png 384w,
+/react/static/b3615b3a2b2ebd28dc0cc89658c80884/5cc77/wp-graphiql-screenshot.png 768w,
+/react/static/b3615b3a2b2ebd28dc0cc89658c80884/04090/wp-graphiql-screenshot.png 1152w,
 /react/static/b3615b3a2b2ebd28dc0cc89658c80884/99d00/wp-graphiql-screenshot.png 1228w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -673,7 +760,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;I’ve found the GraphQL API documentation more useful than the original WordPress documentation. Better navigation, less verbose but straight to the point for a quick lookup and even for a deep dive.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 650px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -690,12 +777,11 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;wp-graphiql-apidocs.png&quot;
         title=&quot;wp-graphiql-apidocs.png&quot;
-        src=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/b9e4f/wp-graphiql-apidocs.png&quot;
-        srcset=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/cf440/wp-graphiql-apidocs.png 148w,
-/react/static/2580110f0718610e9d57084cf0b59ede/d2d38/wp-graphiql-apidocs.png 295w,
-/react/static/2580110f0718610e9d57084cf0b59ede/b9e4f/wp-graphiql-apidocs.png 590w,
+        src=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/dbb61/wp-graphiql-apidocs.png&quot;
+        srcset=&quot;/react/static/2580110f0718610e9d57084cf0b59ede/72cd8/wp-graphiql-apidocs.png 192w,
+/react/static/2580110f0718610e9d57084cf0b59ede/45483/wp-graphiql-apidocs.png 384w,
 /react/static/2580110f0718610e9d57084cf0b59ede/dbb61/wp-graphiql-apidocs.png 650w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 650px) 100vw, 650px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -703,7 +789,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;vs.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -720,14 +806,13 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;wp-api-screenshot.png&quot;
         title=&quot;wp-api-screenshot.png&quot;
-        src=&quot;/react/static/c513db3268b477911b0858629766ad15/b9e4f/wp-api-screenshot.png&quot;
-        srcset=&quot;/react/static/c513db3268b477911b0858629766ad15/cf440/wp-api-screenshot.png 148w,
-/react/static/c513db3268b477911b0858629766ad15/d2d38/wp-api-screenshot.png 295w,
-/react/static/c513db3268b477911b0858629766ad15/b9e4f/wp-api-screenshot.png 590w,
-/react/static/c513db3268b477911b0858629766ad15/f9b6a/wp-api-screenshot.png 885w,
-/react/static/c513db3268b477911b0858629766ad15/2d849/wp-api-screenshot.png 1180w,
+        src=&quot;/react/static/c513db3268b477911b0858629766ad15/5cc77/wp-api-screenshot.png&quot;
+        srcset=&quot;/react/static/c513db3268b477911b0858629766ad15/72cd8/wp-api-screenshot.png 192w,
+/react/static/c513db3268b477911b0858629766ad15/45483/wp-api-screenshot.png 384w,
+/react/static/c513db3268b477911b0858629766ad15/5cc77/wp-api-screenshot.png 768w,
+/react/static/c513db3268b477911b0858629766ad15/04090/wp-api-screenshot.png 1152w,
 /react/static/c513db3268b477911b0858629766ad15/8bf03/wp-api-screenshot.png 1405w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -859,7 +944,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;h2&gt;REST&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -876,13 +961,12 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The REST API on AWS&quot;
         title=&quot;The REST API on AWS&quot;
-        src=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/c739e/rest-api-aws.jpg&quot;
-        srcset=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/8ee9c/rest-api-aws.jpg 148w,
-/react/static/dcc205f362f6e5b460a7dff5b75234cd/ebbe7/rest-api-aws.jpg 295w,
-/react/static/dcc205f362f6e5b460a7dff5b75234cd/c739e/rest-api-aws.jpg 590w,
-/react/static/dcc205f362f6e5b460a7dff5b75234cd/5413e/rest-api-aws.jpg 885w,
+        src=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/7fd22/rest-api-aws.jpg&quot;
+        srcset=&quot;/react/static/dcc205f362f6e5b460a7dff5b75234cd/5bcd3/rest-api-aws.jpg 192w,
+/react/static/dcc205f362f6e5b460a7dff5b75234cd/567e2/rest-api-aws.jpg 384w,
+/react/static/dcc205f362f6e5b460a7dff5b75234cd/7fd22/rest-api-aws.jpg 768w,
 /react/static/dcc205f362f6e5b460a7dff5b75234cd/b4133/rest-api-aws.jpg 1080w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -906,7 +990,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;h2&gt;AppSync&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -923,13 +1007,12 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The AWS AppSync Management Console&quot;
         title=&quot;The AWS AppSync Management Console&quot;
-        src=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/b9e4f/aws-appsync-management-console.png&quot;
-        srcset=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/cf440/aws-appsync-management-console.png 148w,
-/react/static/830f175816ee1d90dd8c659a3b6b76e3/d2d38/aws-appsync-management-console.png 295w,
-/react/static/830f175816ee1d90dd8c659a3b6b76e3/b9e4f/aws-appsync-management-console.png 590w,
-/react/static/830f175816ee1d90dd8c659a3b6b76e3/f9b6a/aws-appsync-management-console.png 885w,
+        src=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/5cc77/aws-appsync-management-console.png&quot;
+        srcset=&quot;/react/static/830f175816ee1d90dd8c659a3b6b76e3/72cd8/aws-appsync-management-console.png 192w,
+/react/static/830f175816ee1d90dd8c659a3b6b76e3/45483/aws-appsync-management-console.png 384w,
+/react/static/830f175816ee1d90dd8c659a3b6b76e3/5cc77/aws-appsync-management-console.png 768w,
 /react/static/830f175816ee1d90dd8c659a3b6b76e3/1cbac/aws-appsync-management-console.png 1032w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1059,7 +1142,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;The result? Not sure. The old Storybook was more flexible on theming and with some tweaks produced a more enjoyable experience.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1076,14 +1159,13 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The old Storybook&quot;
         title=&quot;The old Storybook&quot;
-        src=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/b9e4f/old-storybook.png&quot;
-        srcset=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/cf440/old-storybook.png 148w,
-/react/static/84f4a593eb9048f20afd81302007b12f/d2d38/old-storybook.png 295w,
-/react/static/84f4a593eb9048f20afd81302007b12f/b9e4f/old-storybook.png 590w,
-/react/static/84f4a593eb9048f20afd81302007b12f/f9b6a/old-storybook.png 885w,
-/react/static/84f4a593eb9048f20afd81302007b12f/2d849/old-storybook.png 1180w,
+        src=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/5cc77/old-storybook.png&quot;
+        srcset=&quot;/react/static/84f4a593eb9048f20afd81302007b12f/72cd8/old-storybook.png 192w,
+/react/static/84f4a593eb9048f20afd81302007b12f/45483/old-storybook.png 384w,
+/react/static/84f4a593eb9048f20afd81302007b12f/5cc77/old-storybook.png 768w,
+/react/static/84f4a593eb9048f20afd81302007b12f/04090/old-storybook.png 1152w,
 /react/static/84f4a593eb9048f20afd81302007b12f/0309e/old-storybook.png 1280w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1091,7 +1173,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;p&gt;The new Storybook officially supports theming which is more restrictive. Less tweaking more uniform looking.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1108,14 +1190,13 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The new Storybook&quot;
         title=&quot;The new Storybook&quot;
-        src=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/b9e4f/new-storybook.png&quot;
-        srcset=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/cf440/new-storybook.png 148w,
-/react/static/fad3da5dae6f4fb5420e6b14e807e612/d2d38/new-storybook.png 295w,
-/react/static/fad3da5dae6f4fb5420e6b14e807e612/b9e4f/new-storybook.png 590w,
-/react/static/fad3da5dae6f4fb5420e6b14e807e612/f9b6a/new-storybook.png 885w,
-/react/static/fad3da5dae6f4fb5420e6b14e807e612/2d849/new-storybook.png 1180w,
+        src=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/5cc77/new-storybook.png&quot;
+        srcset=&quot;/react/static/fad3da5dae6f4fb5420e6b14e807e612/72cd8/new-storybook.png 192w,
+/react/static/fad3da5dae6f4fb5420e6b14e807e612/45483/new-storybook.png 384w,
+/react/static/fad3da5dae6f4fb5420e6b14e807e612/5cc77/new-storybook.png 768w,
+/react/static/fad3da5dae6f4fb5420e6b14e807e612/04090/new-storybook.png 1152w,
 /react/static/fad3da5dae6f4fb5420e6b14e807e612/0309e/new-storybook.png 1280w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1241,7 +1322,7 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
 &lt;!--more--&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1258,12 +1339,12 @@ Big kudos to &lt;a href=&quot;https://github.com/devloco&quot;&gt;@devloco&lt;/a
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;A monochromatic palette&quot;
         title=&quot;A monochromatic palette&quot;
-        src=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/b9e4f/monochromatic-palette.png&quot;
-        srcset=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/cf440/monochromatic-palette.png 148w,
-/react/static/2383090986f7876cec8f6a857bc3f792/d2d38/monochromatic-palette.png 295w,
-/react/static/2383090986f7876cec8f6a857bc3f792/b9e4f/monochromatic-palette.png 590w,
+        src=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/5cc77/monochromatic-palette.png&quot;
+        srcset=&quot;/react/static/2383090986f7876cec8f6a857bc3f792/72cd8/monochromatic-palette.png 192w,
+/react/static/2383090986f7876cec8f6a857bc3f792/45483/monochromatic-palette.png 384w,
+/react/static/2383090986f7876cec8f6a857bc3f792/5cc77/monochromatic-palette.png 768w,
 /react/static/2383090986f7876cec8f6a857bc3f792/319b8/monochromatic-palette.png 807w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1412,7 +1493,7 @@ Later, less important sections can have in between colors, such as gray in the c
 &lt;p&gt;It uses browser defaults and builds up gradually a grid where content can be perfectly aligned both vertically and horizontally.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1429,13 +1510,12 @@ Later, less important sections can have in between colors, such as gray in the c
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;A typographic grid&quot;
         title=&quot;A typographic grid&quot;
-        src=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/b9e4f/typographic-grid.png&quot;
-        srcset=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/cf440/typographic-grid.png 148w,
-/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/d2d38/typographic-grid.png 295w,
-/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/b9e4f/typographic-grid.png 590w,
-/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/f9b6a/typographic-grid.png 885w,
+        src=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/5cc77/typographic-grid.png&quot;
+        srcset=&quot;/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/72cd8/typographic-grid.png 192w,
+/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/45483/typographic-grid.png 384w,
+/react/static/c0c88720a7ede1cf8281b597bbcdd0b1/5cc77/typographic-grid.png 768w,
 /react/static/c0c88720a7ede1cf8281b597bbcdd0b1/091d4/typographic-grid.png 1005w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1653,7 +1733,7 @@ Later, less important sections can have in between colors, such as gray in the c
 &lt;p&gt;After I’ve sketched up the first version the direction suddenly went to minimal, &lt;em&gt;my style&lt;/em&gt;, — I’ve even added a PacMan !!! which I had to throw out. Together with that retro button bringing back that 90s feeling.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1670,21 +1750,21 @@ Later, less important sections can have in between colors, such as gray in the c
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Bye Pacman!&quot;
         title=&quot;Bye Pacman!&quot;
-        src=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/b9e4f/lynx-pacman.png&quot;
-        srcset=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/cf440/lynx-pacman.png 148w,
-/react/static/de42c519f59b2fd4589ae0c647c43cb1/d2d38/lynx-pacman.png 295w,
-/react/static/de42c519f59b2fd4589ae0c647c43cb1/b9e4f/lynx-pacman.png 590w,
-/react/static/de42c519f59b2fd4589ae0c647c43cb1/f9b6a/lynx-pacman.png 885w,
-/react/static/de42c519f59b2fd4589ae0c647c43cb1/2d849/lynx-pacman.png 1180w,
+        src=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/5cc77/lynx-pacman.png&quot;
+        srcset=&quot;/react/static/de42c519f59b2fd4589ae0c647c43cb1/72cd8/lynx-pacman.png 192w,
+/react/static/de42c519f59b2fd4589ae0c647c43cb1/45483/lynx-pacman.png 384w,
+/react/static/de42c519f59b2fd4589ae0c647c43cb1/5cc77/lynx-pacman.png 768w,
+/react/static/de42c519f59b2fd4589ae0c647c43cb1/04090/lynx-pacman.png 1152w,
+/react/static/de42c519f59b2fd4589ae0c647c43cb1/ccc27/lynx-pacman.png 1536w,
 /react/static/de42c519f59b2fd4589ae0c647c43cb1/12f40/lynx-pacman.png 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1701,14 +1781,14 @@ Later, less important sections can have in between colors, such as gray in the c
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;That button!&quot;
         title=&quot;That button!&quot;
-        src=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/b9e4f/lynx-button.png&quot;
-        srcset=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/cf440/lynx-button.png 148w,
-/react/static/d09f4f3a3fd6111e773cfbe4aa815050/d2d38/lynx-button.png 295w,
-/react/static/d09f4f3a3fd6111e773cfbe4aa815050/b9e4f/lynx-button.png 590w,
-/react/static/d09f4f3a3fd6111e773cfbe4aa815050/f9b6a/lynx-button.png 885w,
-/react/static/d09f4f3a3fd6111e773cfbe4aa815050/2d849/lynx-button.png 1180w,
+        src=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/5cc77/lynx-button.png&quot;
+        srcset=&quot;/react/static/d09f4f3a3fd6111e773cfbe4aa815050/72cd8/lynx-button.png 192w,
+/react/static/d09f4f3a3fd6111e773cfbe4aa815050/45483/lynx-button.png 384w,
+/react/static/d09f4f3a3fd6111e773cfbe4aa815050/5cc77/lynx-button.png 768w,
+/react/static/d09f4f3a3fd6111e773cfbe4aa815050/04090/lynx-button.png 1152w,
+/react/static/d09f4f3a3fd6111e773cfbe4aa815050/ccc27/lynx-button.png 1536w,
 /react/static/d09f4f3a3fd6111e773cfbe4aa815050/12f40/lynx-button.png 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1716,7 +1796,7 @@ Later, less important sections can have in between colors, such as gray in the c
 &lt;p&gt;After creating &lt;em&gt;my style&lt;/em&gt; …&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1733,14 +1813,14 @@ Later, less important sections can have in between colors, such as gray in the c
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;My style&quot;
         title=&quot;My style&quot;
-        src=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/b9e4f/lynx-my-style.png&quot;
-        srcset=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/cf440/lynx-my-style.png 148w,
-/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/d2d38/lynx-my-style.png 295w,
-/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/b9e4f/lynx-my-style.png 590w,
-/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/f9b6a/lynx-my-style.png 885w,
-/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/2d849/lynx-my-style.png 1180w,
+        src=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/5cc77/lynx-my-style.png&quot;
+        srcset=&quot;/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/72cd8/lynx-my-style.png 192w,
+/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/45483/lynx-my-style.png 384w,
+/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/5cc77/lynx-my-style.png 768w,
+/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/04090/lynx-my-style.png 1152w,
+/react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/ccc27/lynx-my-style.png 1536w,
 /react/static/a6c1fd292219ee5b2e9c9c6625b7dafa/12f40/lynx-my-style.png 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1748,7 +1828,7 @@ Later, less important sections can have in between colors, such as gray in the c
 &lt;p&gt;… still the result was not good enough, so I’ve created a third variant.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1765,14 +1845,14 @@ Later, less important sections can have in between colors, such as gray in the c
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;I don&amp;#39;t know whose style!&quot;
         title=&quot;I don&amp;#39;t know whose style!&quot;
-        src=&quot;/react/static/3c71727b3b487527857995077ebe0218/b9e4f/lynx-5b.png&quot;
-        srcset=&quot;/react/static/3c71727b3b487527857995077ebe0218/cf440/lynx-5b.png 148w,
-/react/static/3c71727b3b487527857995077ebe0218/d2d38/lynx-5b.png 295w,
-/react/static/3c71727b3b487527857995077ebe0218/b9e4f/lynx-5b.png 590w,
-/react/static/3c71727b3b487527857995077ebe0218/f9b6a/lynx-5b.png 885w,
-/react/static/3c71727b3b487527857995077ebe0218/2d849/lynx-5b.png 1180w,
+        src=&quot;/react/static/3c71727b3b487527857995077ebe0218/5cc77/lynx-5b.png&quot;
+        srcset=&quot;/react/static/3c71727b3b487527857995077ebe0218/72cd8/lynx-5b.png 192w,
+/react/static/3c71727b3b487527857995077ebe0218/45483/lynx-5b.png 384w,
+/react/static/3c71727b3b487527857995077ebe0218/5cc77/lynx-5b.png 768w,
+/react/static/3c71727b3b487527857995077ebe0218/04090/lynx-5b.png 1152w,
+/react/static/3c71727b3b487527857995077ebe0218/ccc27/lynx-5b.png 1536w,
 /react/static/3c71727b3b487527857995077ebe0218/12f40/lynx-5b.png 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1782,7 +1862,7 @@ and in plus I would have live all those variations I have now only as screenshot
 &lt;p&gt;A variant on red:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1799,14 +1879,14 @@ and in plus I would have live all those variations I have now only as screenshot
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The last variant in red&quot;
         title=&quot;The last variant in red&quot;
-        src=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/b9e4f/lynx-5b-red.png&quot;
-        srcset=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/cf440/lynx-5b-red.png 148w,
-/react/static/e6fe643a0541835f38b764bb89b7f4e1/d2d38/lynx-5b-red.png 295w,
-/react/static/e6fe643a0541835f38b764bb89b7f4e1/b9e4f/lynx-5b-red.png 590w,
-/react/static/e6fe643a0541835f38b764bb89b7f4e1/f9b6a/lynx-5b-red.png 885w,
-/react/static/e6fe643a0541835f38b764bb89b7f4e1/2d849/lynx-5b-red.png 1180w,
+        src=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/5cc77/lynx-5b-red.png&quot;
+        srcset=&quot;/react/static/e6fe643a0541835f38b764bb89b7f4e1/72cd8/lynx-5b-red.png 192w,
+/react/static/e6fe643a0541835f38b764bb89b7f4e1/45483/lynx-5b-red.png 384w,
+/react/static/e6fe643a0541835f38b764bb89b7f4e1/5cc77/lynx-5b-red.png 768w,
+/react/static/e6fe643a0541835f38b764bb89b7f4e1/04090/lynx-5b-red.png 1152w,
+/react/static/e6fe643a0541835f38b764bb89b7f4e1/ccc27/lynx-5b-red.png 1536w,
 /react/static/e6fe643a0541835f38b764bb89b7f4e1/8b984/lynx-5b-red.png 2560w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1814,7 +1894,7 @@ and in plus I would have live all those variations I have now only as screenshot
 &lt;p&gt;This one with a Canvas background and particles moving with the cursor.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1831,14 +1911,14 @@ and in plus I would have live all those variations I have now only as screenshot
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The last variant with canvas gradient&quot;
         title=&quot;The last variant with canvas gradient&quot;
-        src=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/b9e4f/lynx-5b-gradient.png&quot;
-        srcset=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/cf440/lynx-5b-gradient.png 148w,
-/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/d2d38/lynx-5b-gradient.png 295w,
-/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/b9e4f/lynx-5b-gradient.png 590w,
-/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/f9b6a/lynx-5b-gradient.png 885w,
-/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/2d849/lynx-5b-gradient.png 1180w,
+        src=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/5cc77/lynx-5b-gradient.png&quot;
+        srcset=&quot;/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/72cd8/lynx-5b-gradient.png 192w,
+/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/45483/lynx-5b-gradient.png 384w,
+/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/5cc77/lynx-5b-gradient.png 768w,
+/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/04090/lynx-5b-gradient.png 1152w,
+/react/static/55bf7d6e5c2bdfe9ef13926215c0535c/ccc27/lynx-5b-gradient.png 1536w,
 /react/static/55bf7d6e5c2bdfe9ef13926215c0535c/8b984/lynx-5b-gradient.png 2560w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1846,7 +1926,7 @@ and in plus I would have live all those variations I have now only as screenshot
 &lt;p&gt;Or these, a completely new iteration with type set on a dynamic cell matrix.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1863,14 +1943,14 @@ and in plus I would have live all those variations I have now only as screenshot
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Type on a matrix&quot;
         title=&quot;Type on a matrix&quot;
-        src=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/b9e4f/lynx-4a.png&quot;
-        srcset=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/cf440/lynx-4a.png 148w,
-/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/d2d38/lynx-4a.png 295w,
-/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/b9e4f/lynx-4a.png 590w,
-/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/f9b6a/lynx-4a.png 885w,
-/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/2d849/lynx-4a.png 1180w,
+        src=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/5cc77/lynx-4a.png&quot;
+        srcset=&quot;/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/72cd8/lynx-4a.png 192w,
+/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/45483/lynx-4a.png 384w,
+/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/5cc77/lynx-4a.png 768w,
+/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/04090/lynx-4a.png 1152w,
+/react/static/efbe4649b9b4566ae43ea27e5ecc60f3/ccc27/lynx-4a.png 1536w,
 /react/static/efbe4649b9b4566ae43ea27e5ecc60f3/12f40/lynx-4a.png 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1878,7 +1958,7 @@ and in plus I would have live all those variations I have now only as screenshot
 &lt;p&gt;On gray background:&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1895,14 +1975,14 @@ and in plus I would have live all those variations I have now only as screenshot
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Type on a matrix, gray&quot;
         title=&quot;Type on a matrix, gray&quot;
-        src=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/b9e4f/lynx-4a-gray.png&quot;
-        srcset=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/cf440/lynx-4a-gray.png 148w,
-/react/static/734cbb74ecb15b19b9946f59078291db/d2d38/lynx-4a-gray.png 295w,
-/react/static/734cbb74ecb15b19b9946f59078291db/b9e4f/lynx-4a-gray.png 590w,
-/react/static/734cbb74ecb15b19b9946f59078291db/f9b6a/lynx-4a-gray.png 885w,
-/react/static/734cbb74ecb15b19b9946f59078291db/2d849/lynx-4a-gray.png 1180w,
+        src=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/5cc77/lynx-4a-gray.png&quot;
+        srcset=&quot;/react/static/734cbb74ecb15b19b9946f59078291db/72cd8/lynx-4a-gray.png 192w,
+/react/static/734cbb74ecb15b19b9946f59078291db/45483/lynx-4a-gray.png 384w,
+/react/static/734cbb74ecb15b19b9946f59078291db/5cc77/lynx-4a-gray.png 768w,
+/react/static/734cbb74ecb15b19b9946f59078291db/04090/lynx-4a-gray.png 1152w,
+/react/static/734cbb74ecb15b19b9946f59078291db/ccc27/lynx-4a-gray.png 1536w,
 /react/static/734cbb74ecb15b19b9946f59078291db/12f40/lynx-4a-gray.png 2048w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
@@ -1910,7 +1990,7 @@ and in plus I would have live all those variations I have now only as screenshot
 &lt;p&gt;… and the underlying cell matrix. I don’t have the rotated and skewed screenshots — they are neat!&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 590px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -1927,14 +2007,14 @@ and in plus I would have live all those variations I have now only as screenshot
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;The cell matrix&quot;
         title=&quot;The cell matrix&quot;
-        src=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/b9e4f/lynx-matrix.png&quot;
-        srcset=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/cf440/lynx-matrix.png 148w,
-/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/d2d38/lynx-matrix.png 295w,
-/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/b9e4f/lynx-matrix.png 590w,
-/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/f9b6a/lynx-matrix.png 885w,
-/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/2d849/lynx-matrix.png 1180w,
+        src=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/5cc77/lynx-matrix.png&quot;
+        srcset=&quot;/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/72cd8/lynx-matrix.png 192w,
+/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/45483/lynx-matrix.png 384w,
+/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/5cc77/lynx-matrix.png 768w,
+/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/04090/lynx-matrix.png 1152w,
+/react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/ccc27/lynx-matrix.png 1536w,
 /react/static/32c87651a0ff9c9d0e9ec4ec4d46a4e3/8b984/lynx-matrix.png 2560w&quot;
-        sizes=&quot;(max-width: 590px) 100vw, 590px&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
         loading=&quot;lazy&quot;
       /&gt;
   &lt;/a&gt;
