@@ -294,13 +294,25 @@ This thought-play can be easily called _speculation_ by a rigorous reader.
 For example the code for `app.get('/books', ...)` can be written to be fully functional.
 However this is the way you'll find it written in majority of REST APIs. 
 
-The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm.
+The goal of this document was never to demonstrate scientifically GraphQL follows the functional reactive pardigm. The goal was to ask the question and try to give an answer.
 
-The goal was to check if GraphQL can be interpreted using the paradigm.
+The reader is free to decide in what measure this exercise was successful. Until then a little help from others.
 
-At the end the reader has to decide in what measure this exercise was successful. 
+### Apollo and Expedia
 
-Until then &mdash; I hope &mdash; one can have a nice overview of the paradigm, and a glimpse on how GraphQL APIs differ from REST.
+From the article: [Expedia Group Transforms Product Development with Apollo](https://www.apollographql.com/customers/expediagroup/)
+
+#### Before adopting a data graph
+
+![Before adopting a data graph](graphql-1.png)
+
+#### In between: experimenting with a Backend-For-Frontend, a pattern which mimics a data graph.
+
+![In between](graphql-2.png)
+
+#### The move to one data graph
+
+![Data graph](graphql-3.png)
 
 ## Resources
 
@@ -308,3 +320,4 @@ Until then &mdash; I hope &mdash; one can have a nice overview of the paradigm, 
 - [React (web framework)](https://en.wikipedia.org/wiki/React_(web_framework))
 - [React follows the functional reactive programming paradigm](http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/)
 - [An Introduction to Functional Reactive Programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/)
+- [Expedia Group Transforms Product Development with Apollo](https://www.apollographql.com/customers/expediagroup/)

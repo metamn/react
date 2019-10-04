@@ -27,7 +27,7 @@ Just to get a glimpse about how vast the React context is &mdash; please allow m
 	<tr>
 		<td>Leaders</td>
 		<td>Identify trusted opinion leaders and sources of learning</td>
-		<td><a href="https://www.robinwieruch.de/">https://www.robinwieruch.de/</a>, <a href="https://kentcdodds.com/">https://kentcdodds.com/</a>, <a href="https://overreacted.io/">https://overreacted.io/</a></td>
+		<td>Robin Wieruch, Kent C. Dodds, Dan Abramov</td>
 	</tr>
 	<tr>
 		<td>Programming paradigms</td>
