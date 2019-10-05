@@ -3,7 +3,7 @@ title: 'Ontology, taxonomy, choreography'
 date: '2019-10-06'
 ---
 
-A way to think about Information Architecture close to React terms.
+A way to think about Information Architecture in React terms.
 
 <!--more-->
 
@@ -45,20 +45,28 @@ Understanding a problem and understanding how people can best solve the problem 
 
 Modeling structure and behavior with user interfaces.
 
-
 ## Structure and behavior
 
-Video: https://www.uxbooth.com/articles/complete-beginners-guide-to-information-architecture/
+Simplified to this point &mdash; the tasks of an Information Architect are clear:
 
-- Ontology
-- Taxonomy
-- Choreography
+1. Reduce, limit the complexity of the problem.
+2. Organize the information about the problem into data.
+3. Define data entities, properties of entities, and the relations between.
+4. Organize entities into hierarchies, maps and views.
+5. Design the sequences of movement between the elements above.
 
-## React
+With the words of [Dan Klyn](https://www.uxbooth.com/articles/complete-beginners-guide-to-information-architecture/) &mdash; model structure with ontology and taxonomy, model behavior with choreography.
+
+<iframe src="https://player.vimeo.com/video/8866160" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/8866160">explaining information architecture</a> from <a href="https://vimeo.com/user3007539">Dan Klyn</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+
+## Ontology, taxonomy, choreography and React
+
 
 - GQL
 - FSM
-- Routes + Hierarchy (https://www.uxbooth.com/articles designing-for-mobile-part-1-information-architecture/)
+- Routes + Hierarchy (https://www.uxbooth.com/articles/designing-for-mobile-part-1-information-architecture/)
 
 ## Other
 
