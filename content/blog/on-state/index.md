@@ -19,7 +19,7 @@ In Dan Lew's [seminal article](https://blog.danlew.net/2017/07/27/an-introductio
 
 ![Proactive](proactive.png)
 
-In proactive programming a component directly modifies the state of another component &mdash; and the passive component doesn't even knows about it. In fact, the passive component has no state at all. Strictly, it has state, but it doesn't needs to know about, it is not responsible for it. State in this context really doesn't matter.
+In proactive programming a component directly modifies the state of another component &mdash; and the passive component doesn't even know about it. In fact, the passive component has no state at all. Strictly, it has state, but it doesn't need to know about, it is not responsible for it. State in this context really doesn't matter.
 
 ### Reactive programming &mdash; Yes! State!
 
@@ -60,7 +60,7 @@ None of them is powerful enough to handle complex states leaving to the ecosyste
 
 - [Redux](https://redux.js.org/), [MobX](https://mobx.js.org/) &mdash; Scalable state for large applications.
 - [Apollo GraphQL](https://www.apollographql.com/docs/react/essentials/local-state/) &mdash; State management bundled with data management from a proven provider.
-- [XState](https://css-tricks.com/finite-state-machines-with-react/) &mdash; Finite state manachines and statecharts to manage state and make it error prone.
+- [XState](https://css-tricks.com/finite-state-machines-with-react/) &mdash; Finite state machines and state charts to manage state and make it error prone.
 
 ```
 |================|=============================|===========================================
@@ -81,7 +81,7 @@ None of them is powerful enough to handle complex states leaving to the ecosyste
 
 Every day a new state [library](https://twitter.com/DavidKPiano/status/1180174113954029570) or [approach](https://twitter.com/dai_shi/status/1178106720108679168) is popping up. There is no holy grail &mdash; everybody makes its own bet.
 
-The general consensus *"use only when you need it"* &mdash; resonates with the basic principle of React: don't over-complicate. 
+The consensus *"use only when you need it"* &mdash; resonates with the basic principle of React: don't over-complicate. 
 
 Important is to know each technique and combine by need.
 
