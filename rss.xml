@@ -1,4 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 04 Oct 2019 02:34:12 GMT</lastBuildDate><item><title><![CDATA[Rapid prototyping for GraphQL APIs?]]></title><description><![CDATA[That’s nearly impossible today.]]></description><link>http://metamn.io/react/rapid-prototyping-for-graphql-apis/</link><guid isPermaLink="false">http://metamn.io/react/rapid-prototyping-for-graphql-apis/</guid><pubDate>Thu, 03 Oct 2019 03:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s nearly impossible today.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Oct 2019 10:01:24 GMT</lastBuildDate><item><title><![CDATA[On state]]></title><description><![CDATA[Everything in React rolls around the concept of state.]]></description><link>http://metamn.io/react/on-state/</link><guid isPermaLink="false">http://metamn.io/react/on-state/</guid><pubDate>Sat, 05 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Everything in React rolls around the concept of state.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;A term coming from the reactive programming nature of React.&lt;/p&gt;
+&lt;h2&gt;The concept&lt;/h2&gt;
+&lt;p&gt;The concept is not new. It was present and irrelevant in proactive programming. Now it is surfacing as the central element of reactive programming.&lt;/p&gt;
+&lt;p&gt;In Dan Lew’s &lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;seminal article&lt;/a&gt; about Functional Reactive Programming the concept is fully explained and put further in context. Please read it first. It’s pure joy.&lt;/p&gt;
+&lt;h3&gt;Proactive programming — No state&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 640px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/a2a55819a1e57c50d2a57de68a67b0f0/e49a9/proactive.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAAA70lEQVQoz8WRTctEYBSG/Wsr/0CyUbKwsWFjIWUhdhbIQlmR73yUKGShmJnTKPOMmcVb72LO6jz33XW+Huz+h7g940hQHUMf4zjmeT4Mwyc/z/OyLBcRO+v1fS+KomVZsizHcQzKvu+HlaYpRVE0TTdNg/Z/wVmWGYYRRZHjOK7rojBgYRj6vs8wzKFf4aqqVFUlSVJRFNu2p2kqy3JdV7CASZIkCAKO477DRVGYpqlpmq7rnueBAktu2wYJtMVxnCAIKPd97LqueZ4HTJIkmPDscLgsywqCcDn427XhZm3bdl13DoZan7+A3f8Rv4MfQ2BtKPML5NMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Proactive&quot;
+        title=&quot;Proactive&quot;
+        src=&quot;/react/static/a2a55819a1e57c50d2a57de68a67b0f0/e49a9/proactive.png&quot;
+        srcset=&quot;/react/static/a2a55819a1e57c50d2a57de68a67b0f0/72cd8/proactive.png 192w,
+/react/static/a2a55819a1e57c50d2a57de68a67b0f0/45483/proactive.png 384w,
+/react/static/a2a55819a1e57c50d2a57de68a67b0f0/e49a9/proactive.png 640w&quot;
+        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In proactive programming a component directly modifies the state of another component — and the passive component doesn’t even know about it. In fact, the passive component has no state at all. Strictly, it has state, but it doesn’t need to know about, it is not responsible for it. State in this context really doesn’t matter.&lt;/p&gt;
+&lt;h3&gt;Reactive programming — Yes! State!&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 640px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/971d604ff62fc7eb7c82b9ed25dddb22/e49a9/reactive.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAAAsSAAALEgHS3X78AAAA6UlEQVQoz8VQTQtEUBT1s238A0pKycLGQhYWSlmIpc2kkA2SIhJRkpSaj5tX5vXGYprNnNV9575z77mHen6BxwFU4DyFP8ZxrKqq67pP/TzP67oSJHXOA6Wmab7vG4ZRFAUw9wNQlGXJcRzP823b4vvfYvjhum6e57cDSIxaIMuyLIoiURQRT4qbprEsi2VZ0zTjOAZmWZa+76dpEgQBRidJIsvytRiu9TzPtm3HccIwBGbf923boEjTlKZphmHqur62DfcoihIEga7r4PDcgLqSJKmqSgROpg1RD8NwGsNb4P8i7Z/xP/EL/FltDRh6pDwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Reactive&quot;
+        title=&quot;Reactive&quot;
+        src=&quot;/react/static/971d604ff62fc7eb7c82b9ed25dddb22/e49a9/reactive.png&quot;
+        srcset=&quot;/react/static/971d604ff62fc7eb7c82b9ed25dddb22/72cd8/reactive.png 192w,
+/react/static/971d604ff62fc7eb7c82b9ed25dddb22/45483/reactive.png 384w,
+/react/static/971d604ff62fc7eb7c82b9ed25dddb22/e49a9/reactive.png 640w&quot;
+        sizes=&quot;(max-width: 640px) 100vw, 640px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In reactive programming everything is different. Each component owns its own state and modifies it on request. No component can directly modify the state of another component.&lt;/p&gt;
+&lt;p&gt;This kind of isolation brings greater composability — essential to build large systems like complex, interactive user interfaces.&lt;/p&gt;
+&lt;h3&gt;How it works&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|============|==================|=================|==============|
+| Paradigm   | Step 1           | Step 2          | Step 3       |
+|============|==================|=================|==============|
+| Reactive   | The switcher     | The bulb        | The bulb     |
+|            | emits request    | receives        | changes its  |
+|            | for state change | the request     | own state    |
+|------------|------------------|-----------------|--------------|
+| Imperative | The bulb         | The switcher    |              |
+|            | exposes a state  | calls the state |              |
+|            | change function  | change function |              |
+|            |                  | of the bulb     |              |
+|================================================================|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;State in React&lt;/h2&gt;
+&lt;p&gt;State is so important in React it is marked first among its features.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. — &lt;a href=&quot;https://reactjs.org/&quot;&gt;https://reactjs.org/&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Even &lt;a href=&quot;https://reactjs.org/docs/hooks-reference.html&quot;&gt;hooks&lt;/a&gt; start with state. &lt;/p&gt;
+&lt;p&gt;Speaking hooks React offers two of them to manage state. &lt;code class=&quot;language-text&quot;&gt;useState&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;useReducer&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;None of them is powerful enough to handle complex states leaving to the ecosystem to come up with  alternatives.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;, &lt;a href=&quot;https://mobx.js.org/&quot;&gt;MobX&lt;/a&gt; — Scalable state for large applications.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/docs/react/essentials/local-state/&quot;&gt;Apollo GraphQL&lt;/a&gt; — State management bundled with data management from a proven provider.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://css-tricks.com/finite-state-machines-with-react/&quot;&gt;XState&lt;/a&gt; — Finite state machines and state charts to manage state and make it error prone.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|================|=============================|===========================================
+| Implementation | When to use                 | State type | Notes                       |
+|================|=============================|===========================================
+| useState       | Simple states               | Local      |                             |
+|----------------|-----------------------------|------------|-----------------------------|
+| useReducer     | Complex state logic         | Local      | With `useContext` ~= Redux  |
+|----------------|-----------------------------|------------|-----------------------------|
+| useMachine     | Complex state logic         | Local      | - Use for component design  |
+| (XState)       | Fool-proof states           |            | - Autogenerate tests        |
+|----------------|-----------------------------|------------|-----------------------------|
+| Redux, MobX    | When none above are enough  | Global     |                             |
+|================|=============================|============|=============================|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How to choose&lt;/h2&gt;
+&lt;p&gt;Every day a new state &lt;a href=&quot;https://twitter.com/DavidKPiano/status/1180174113954029570&quot;&gt;library&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/dai_shi/status/1178106720108679168&quot;&gt;approach&lt;/a&gt; is popping up. There is no holy grail — everybody makes its own bet.&lt;/p&gt;
+&lt;p&gt;The consensus &lt;em&gt;“use only when you need it”&lt;/em&gt; — resonates with the basic principle of React: don’t over-complicate. &lt;/p&gt;
+&lt;p&gt;Important is to know each technique and combine by need.&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.robinwieruch.de/react-state-usereducer-usestate-usecontext/&quot;&gt;React State with Hooks: useReducer, useState, useContext&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://kentcdodds.com/blog/application-state-management-with-react&quot;&gt;Application State Management with React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.robinwieruch.de/redux-vs-usereducer/&quot;&gt;React’s useReducer vs Redux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://css-tricks.com/finite-state-machines-with-react/&quot;&gt;Finite State Machines with React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/gatsbyjs/gatsby/pull/11897&quot;&gt;Gatsby: Move page component state &amp;#x26; side effect handling to xstate&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://css-tricks.com/model-based-testing-in-react-with-state-machines/&quot;&gt;Model-Based Testing in React with State Machines&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/docs/react/essentials/local-state/&quot;&gt;Learn how to work with your local data in Apollo Client&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Rapid prototyping for GraphQL APIs?]]></title><description><![CDATA[That’s nearly impossible today.]]></description><link>http://metamn.io/react/rapid-prototyping-for-graphql-apis/</link><guid isPermaLink="false">http://metamn.io/react/rapid-prototyping-for-graphql-apis/</guid><pubDate>Thu, 03 Oct 2019 03:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s nearly impossible today.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;GraphQL is young&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://nordicapis.com/is-graphql-moving-toward-ubiquity/&quot;&gt;According to its creator&lt;/a&gt; GraphQL is expected to become ubiquitous in 2020-2021. Today is in the phase of being accepted by the large companies.&lt;/p&gt;
