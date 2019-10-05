@@ -34,18 +34,17 @@ Peter Morville, the voice of IA, [captures](https://prezi.com/aafmvya6bk7t/under
 
 ![IA definition #1](ia-1.png)
 
-... and concludes with a statement where UX is removed:
+... and concludes with a statement where &mdash; again &mdash; UX is removed:
 
 ![IA definition #2](ia-2.png)
 
 
 Here we are in the business of understanding.
 
+Understanding a problem and understanding how people can best solve the problem &mdash; in a interactive space. 
 
----
+Modeling structure and behavior with user interfaces.
 
-
-understanding = modeling = structure and behavior
 
 ## Structure and behavior
 
