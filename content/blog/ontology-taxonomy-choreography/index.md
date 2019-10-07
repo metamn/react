@@ -1,7 +1,7 @@
 ---
 title: 'Ontology, taxonomy, choreography'
 date: '2019-10-06'
-draft: true
+draft: false
 ---
 
 A way to think about Information Architecture in React terms.

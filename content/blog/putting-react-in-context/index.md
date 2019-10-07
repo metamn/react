@@ -122,6 +122,16 @@ When considerable results are found a new article is written and linked below.
 		<td><a href="http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/" title="React follows the functional reactive programming paradigm">React follows the functional reactive programming paradigm</a></td>
 	</tr>
 	<tr>
+		<td>Basic concepts</td>
+		<td>Understanding React</td>
+		<td><a href="http://metamn.io/react/on-state/" title="On state">On state</a></td>
+	</tr>
+	<tr>
+		<td>Designing applications</td>
+		<td>Data and interaction models</td>
+		<td><a href="http://metamn.io/react/ontology-taxonomy-choreography/" title="Ontology, taxonomy, choreography">Ontology, taxonomy, choreography</a></td>
+	</tr>
+	<tr>
 		<td>GraphQL</td>
 		<td>Data driven applications</td>
 		<td><ul><li><a href="http://metamn.io/react/rapid-prototyping-for-graphql-apis/" title="Rapid prototyping for GraphQL APIs?">Rapid prototyping for GraphQL APIs?</a></li>
