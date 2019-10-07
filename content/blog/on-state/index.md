@@ -52,13 +52,13 @@ State is so important in React it is marked first among its features.
 
 > React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. &mdash; [https://reactjs.org/](https://reactjs.org/)
 
-More, when hooks were introduced they were explained with the help of state. 
+More, when hooks were introduced they were immediately related to state. 
 
 > Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. &mdash; [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
 
-React has to offer built-in mechanisms to deal with state &mdash; to support one of its core features. And yes it does with `useState`, `useReducer`. 
+React has to offer built-in mechanisms to deal with state &mdash; to support one of its core features. And yes it does with `useState` and `useReducer`. 
 
-But none of these are powerful enough to handle complex scenarios &mdash; leaving to the ecosystem to come up with  alternatives. Like:
+None of these are powerful enough to handle complex scenarios &mdash; leaving to the ecosystem to come up with  alternatives like:
 
 - [Redux](https://redux.js.org/), [MobX](https://mobx.js.org/) &mdash; Scalable state services for large applications.
 - [Apollo GraphQL](https://www.apollographql.com/docs/react/essentials/local-state/) &mdash; State management bundled with data management from a proven provider.
@@ -66,7 +66,7 @@ But none of these are powerful enough to handle complex scenarios &mdash; leavin
 
 Every day a new state [library](https://twitter.com/DavidKPiano/status/1180174113954029570) or [approach](https://twitter.com/dai_shi/status/1178106720108679168) is popping up. There is no holy grail which one to use &mdash; everybody makes its own bet.
 
-Important is to follow the React way: 
+When in doubt important is to follow the React way: 
 
 > Don’t overthink it. 
 
