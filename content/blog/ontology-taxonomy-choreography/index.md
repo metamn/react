@@ -13,7 +13,7 @@ A way to think about Information Architecture in React terms.
 
 We all think we know what Information Architecture is &mdash; so why the question?
 
-Wikipedia has [9 definitions](https://en.wikipedia.org/wiki/Information_architecture) for this term. Chosing the ones related to web / app design and development we have:
+Wikipedia has [9 definitions](https://en.wikipedia.org/wiki/Information_architecture) for this term. Chosing the ones related to web / app design we have:
 
 1. The art and science of organizing and labeling web sites, intranets, online communities, and software to support findability and usability.
 2. The combination of organization, labeling, search and navigation systems within websites and intranets.
@@ -24,13 +24,13 @@ These definitions relate to keywords specific to UX design &mdash; usability, ex
 - Information Architecture concerns structure
 - User Experience concerns emotion
 
-The problem is reduced and there is a path to follow.
+With these definitions the problem is reduced and there is a path to follow: *structure*.
 
 ## Architects of understanding
 
 The term IA was born together with the web and evolved with mobile devices and apps.
 
-Peter Morville, the voice of IA, [captures](https://prezi.com/aafmvya6bk7t/understanding-information-architecture/
+Peter Morville, an Information Architecture icon, [captures](https://prezi.com/aafmvya6bk7t/understanding-information-architecture/
 ) perfectly these moments:
 
 ![IA definition #1](ia-1.png)
@@ -40,11 +40,9 @@ Peter Morville, the voice of IA, [captures](https://prezi.com/aafmvya6bk7t/under
 ![IA definition #2](ia-2.png)
 
 
-Here we are in the business of understanding.
+Here we are in the business of understanding: understanding the problem and understanding how people can best solve the problem &mdash; in a interactive space. 
 
-Understanding a problem and understanding how people can best solve the problem &mdash; in a interactive space. 
-
-Modeling structure and behavior with user interfaces.
+In other words: modeling structure and behavior with user interfaces.
 
 ## Structure and behavior
 
@@ -52,7 +50,7 @@ Simplified to this point &mdash; the tasks of an Information Architect are clear
 
 1. Reduce, limit the complexity of the problem.
 2. Organize the information about the problem into data.
-3. Define data entities, properties of entities, and the relations between.
+3. Define data entities, the properties of entities, and the relations between.
 4. Organize entities into hierarchies, maps and views.
 5. Design the sequences of movement between the elements above.
 
