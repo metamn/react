@@ -13,7 +13,7 @@ A way to think about Information Architecture in React terms.
 
 We all think we know what Information Architecture is &mdash; so why the question?
 
-Wikipedia has [9 definitions](https://en.wikipedia.org/wiki/Information_architecture) for this term. Chosing the ones related to web / app design we have:
+Wikipedia has [9 definitions](https://en.wikipedia.org/wiki/Information_architecture) for this term. Choosing the ones related to web / app design we have:
 
 1. The art and science of organizing and labeling web sites, intranets, online communities, and software to support findability and usability.
 2. The combination of organization, labeling, search and navigation systems within websites and intranets.
@@ -89,3 +89,6 @@ Ontology, taxonomy and choreography can act as the boundaries of these two diffe
 ## Resources
 
 - [Information architecture - Wikipedia](https://en.wikipedia.org/wiki/Information_architecture)
+- [The Difference Between Information Architecture and UX Design](https://www.uxbooth.com/articles/the-difference-between-ia-and-ux-design/)
+- [Understanding Information Architecture](https://prezi.com/aafmvya6bk7t/understanding-information-architecture/)
+- [Explaining Information Architecture](https://vimeo.com/8866160)
