@@ -1,8 +1,115 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 05 Oct 2019 10:01:24 GMT</lastBuildDate><item><title><![CDATA[On state]]></title><description><![CDATA[Everything in React rolls around the concept of state.]]></description><link>http://metamn.io/react/on-state/</link><guid isPermaLink="false">http://metamn.io/react/on-state/</guid><pubDate>Sat, 05 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Everything in React rolls around the concept of state.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Oct 2019 07:17:21 GMT</lastBuildDate><item><title><![CDATA[Ontology, taxonomy, choreography]]></title><description><![CDATA[A way to think about Information Architecture in React terms.]]></description><link>http://metamn.io/react/ontology-taxonomy-choreography/</link><guid isPermaLink="false">http://metamn.io/react/ontology-taxonomy-choreography/</guid><pubDate>Sun, 06 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A way to think about Information Architecture in React terms.&lt;/p&gt;
 &lt;!--more--&gt;
-&lt;p&gt;A term coming from the reactive programming nature of React.&lt;/p&gt;
+&lt;h2&gt;What is Information Architecture, and what is not?&lt;/h2&gt;
+&lt;p&gt;We all think we know what Information Architecture is — so why the question?&lt;/p&gt;
+&lt;p&gt;Wikipedia has &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_architecture&quot;&gt;9 definitions&lt;/a&gt; for this term. Chosing the ones related to web / app design and development we have:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The art and science of organizing and labeling web sites, intranets, online communities, and software to support findability and usability.&lt;/li&gt;
+&lt;li&gt;The combination of organization, labeling, search and navigation systems within websites and intranets.&lt;/li&gt;
+&lt;li&gt;The practice of organizing the information / content / functionality of a web site so that it presents the best user experience it can, with information and services being easily usable and findable (as applied to web design and development).&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;These definitions relate to keywords specific to UX design — usability, experience — yet there is a &lt;a href=&quot;https://www.uxbooth.com/articles/the-difference-between-ia-and-ux-design/&quot;&gt;clear differentiation&lt;/a&gt; between IA and UX:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Information Architecture concerns structure&lt;/li&gt;
+&lt;li&gt;User Experience concerns emotion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The problem is reduced and there is a path to follow.&lt;/p&gt;
+&lt;h2&gt;Architects of understanding&lt;/h2&gt;
+&lt;p&gt;The term IA was born together with the web and evolved with mobile devices and apps.&lt;/p&gt;
+&lt;p&gt;Peter Morville, the voice of IA, &lt;a href=&quot;https://prezi.com/aafmvya6bk7t/understanding-information-architecture/&quot;&gt;captures&lt;/a&gt; perfectly these moments:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACIklEQVQoz4WSTU8TURSG2bpz79r/494/4A9wLSvjyo0aXLrBkJgoBETZgAaNgoCUQCidfkynQ7+m7Xx35s609PHcNgWNC+7knXMnmfucc957FjIV4g196p5DtdemEfTZ//2Lo+MDJpOMMBxQr9epVmtUKhUsy6JUKuE4HbIsIk0DlDC09H5Bv/LxiBEQK4W6uuLCMFh8sohZM8jlkGmWKZeLXBTPqFYM2ZfxXIc4dsnz+B/ogs4SRSE/9/Zo2DaFkxMODo9w+j2shokbJ/SCCCeI6Ycx4XAGOC0ZFArH2HbtutJpheNxwqVZ48XTZ7x5+Ypvn7cgSdErzYa03JDLQTSNWm2REsD3g2O2t3cEesR4PLwBcpWyc37Go+VlHr5e4vH6Os9PCnxsXpIk0RSg1fVDOhLdSODdNutffrC68YnDw30Gg/aNh+RDlkpF7q695/7WJvc21rjzboUHu1/JVMxAAI602pWWozSeVleSjnyxaSJPLBbYtikwf+ahij0M3+WD3WC1WmHloshb0a5UmCUBWccia9bIdew1STsNRl2bUauOalvkej8a3lTY77eZ5BmS7L+VSjJlVWaql1EaYpVn33IZyjRQTfPaP6WBrZaFH7h4gRzOU+IkJogCiRFK5lP1WqhBB9WX6DQlil/aM/2tJfOb6pGZA/VseV5XLsCfap5tKt2GHolbpOb/ag+L56f0nNY1bObFbEjnWW/T3xX+AeMsLv/Piqz3AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;IA definition #1&quot;
+        title=&quot;IA definition #1&quot;
+        src=&quot;/react/static/469ae099c34ac773fb499b6b7be12900/5cc77/ia-1.png&quot;
+        srcset=&quot;/react/static/469ae099c34ac773fb499b6b7be12900/72cd8/ia-1.png 192w,
+/react/static/469ae099c34ac773fb499b6b7be12900/45483/ia-1.png 384w,
+/react/static/469ae099c34ac773fb499b6b7be12900/5cc77/ia-1.png 768w,
+/react/static/469ae099c34ac773fb499b6b7be12900/04090/ia-1.png 1152w,
+/react/static/469ae099c34ac773fb499b6b7be12900/ccc27/ia-1.png 1536w,
+/react/static/469ae099c34ac773fb499b6b7be12900/a987b/ia-1.png 1920w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;… and concludes with a statement where — again — UX is removed:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB6UlEQVQoz42SSXPaQBCF9ddzyiX3HFKVHJPCMSEONgZcYJdYYkBsAiRIgGBDEiyJRWJmJAx+aSG2ii8+dL3u0eib19MjJS4v0G43YdsWOJ/h8ZEDWGO1Enh6ElivBdUe1Zxql2qO1XpF6sJ17WchJS5jaKhVTKfjDWww0FHMf0anraBWU6CqCrLZG+i6CkXJQ9Pq6OoxaK0iGZgTZA4hggiA8RjKSgHTyZgWHai1FMInb1Eu3yKZjKNQyCMeP0elUiTgdzSaKiq5N6hVr9Hvd2AaI3iecwBeRM9QJyd+y8N7HbmcjFIpg9JtFNXKDbRmhuBF2pNHNnOFRj0NOSMjl72CWi9gPL7Dcrk4ANOpJPq9Dhxngt+jLiKRU0TC7xA/e4XIl0+4Tn+FLKdw/u0DTkLvkYi+xmk4hFDoIznUyMjDBrQHtlp1WNbfzUBc14FHp3mkfDEHZzMIblM+gWA2lsIGW8zgkQraL7aD2MF8lSYEY2waXKy/SD+zYQ+sr4Pf/wQf9cC3NbujetgFG/wA//NrCyWYOAxG8p0dT8l3Y5rmJizTCtSy8GAEuUG5QeuWYcD1jWyd7Vs+2LWDkyhnNO0FBduHjQUPcl93+a7N49alPX33QQRv6yVxfHfPgBuHbqAvjf8fta//AFNYLw4fC9IZAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;IA definition #2&quot;
+        title=&quot;IA definition #2&quot;
+        src=&quot;/react/static/a0bb273b9226f28e655146a4ef043c40/5cc77/ia-2.png&quot;
+        srcset=&quot;/react/static/a0bb273b9226f28e655146a4ef043c40/72cd8/ia-2.png 192w,
+/react/static/a0bb273b9226f28e655146a4ef043c40/45483/ia-2.png 384w,
+/react/static/a0bb273b9226f28e655146a4ef043c40/5cc77/ia-2.png 768w,
+/react/static/a0bb273b9226f28e655146a4ef043c40/04090/ia-2.png 1152w,
+/react/static/a0bb273b9226f28e655146a4ef043c40/ccc27/ia-2.png 1536w,
+/react/static/a0bb273b9226f28e655146a4ef043c40/a987b/ia-2.png 1920w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Here we are in the business of understanding.&lt;/p&gt;
+&lt;p&gt;Understanding a problem and understanding how people can best solve the problem — in a interactive space. &lt;/p&gt;
+&lt;p&gt;Modeling structure and behavior with user interfaces.&lt;/p&gt;
+&lt;h2&gt;Structure and behavior&lt;/h2&gt;
+&lt;p&gt;Simplified to this point — the tasks of an Information Architect are clear:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reduce, limit the complexity of the problem.&lt;/li&gt;
+&lt;li&gt;Organize the information about the problem into data.&lt;/li&gt;
+&lt;li&gt;Define data entities, properties of entities, and the relations between.&lt;/li&gt;
+&lt;li&gt;Organize entities into hierarchies, maps and views.&lt;/li&gt;
+&lt;li&gt;Design the sequences of movement between the elements above.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;With the words of &lt;a href=&quot;https://www.uxbooth.com/articles/complete-beginners-guide-to-information-architecture/&quot;&gt;Dan Klyn&lt;/a&gt; — model structure with ontology and taxonomy, model behavior with choreography.&lt;/p&gt;
+
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 75%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;https://player.vimeo.com/video/8866160&quot; frameborder=&quot;0&quot; allow=&quot;autoplay; fullscreen&quot; allowfullscreen style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&quot;https://vimeo.com/8866160&quot;&gt;explaining information architecture&lt;/a&gt; from &lt;a href=&quot;https://vimeo.com/user3007539&quot;&gt;Dan Klyn&lt;/a&gt; on &lt;a href=&quot;https://vimeo.com&quot;&gt;Vimeo&lt;/a&gt;.&lt;/p&gt;
+          &lt;/div&gt;
+          
+&lt;h2&gt;Ontology, taxonomy, choreography and React&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;GQL&lt;/li&gt;
+&lt;li&gt;FSM&lt;/li&gt;
+&lt;li&gt;Routes + Hierarchy (&lt;a href=&quot;https://www.uxbooth.com/articles/designing-for-mobile-part-1-information-architecture/&quot;&gt;https://www.uxbooth.com/articles/designing-for-mobile-part-1-information-architecture/&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Other&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://lobste.rs/s/n4vihh/software_architecture_is_overrated&quot;&gt;https://lobste.rs/s/n4vihh/software_architecture_is_overrated&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://eventmodeling.org/posts/what-is-event-modeling/&quot;&gt;https://eventmodeling.org/posts/what-is-event-modeling/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Information_architecture&quot;&gt;Information architecture - Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[On state]]></title><description><![CDATA[Everything in React rolls around the concept of state. A term coming from the reactive programming nature of React.]]></description><link>http://metamn.io/react/on-state/</link><guid isPermaLink="false">http://metamn.io/react/on-state/</guid><pubDate>Sat, 05 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Everything in React rolls around the concept of state. A term coming from the reactive programming nature of React.&lt;/p&gt;
+&lt;!--more--&gt;
 &lt;h2&gt;The concept&lt;/h2&gt;
-&lt;p&gt;The concept is not new. It was present and irrelevant in proactive programming. Now it is surfacing as the central element of reactive programming.&lt;/p&gt;
+&lt;p&gt;Was unknown in proactive programming. Now it is surfacing as the central element of reactive programming.&lt;/p&gt;
 &lt;p&gt;In Dan Lew’s &lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;seminal article&lt;/a&gt; about Functional Reactive Programming the concept is fully explained and put further in context. Please read it first. It’s pure joy.&lt;/p&gt;
 &lt;h3&gt;Proactive programming — No state&lt;/h3&gt;
 &lt;p&gt;&lt;span
@@ -33,8 +140,9 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In proactive programming a component directly modifies the state of another component — and the passive component doesn’t even know about it. In fact, the passive component has no state at all. Strictly, it has state, but it doesn’t need to know about, it is not responsible for it. State in this context really doesn’t matter.&lt;/p&gt;
-&lt;h3&gt;Reactive programming — Yes! State!&lt;/h3&gt;
+&lt;p&gt;In proactive programming a component directly calls public methods of other components — and the passive components are not aware of these calls. They do no accounting for what is happening inside — they have no state. &lt;/p&gt;
+&lt;p&gt;The caller component is responsible to interpret the results of the call. The passive component has one single responsibility: make available the methods.&lt;/p&gt;
+&lt;h3&gt;Reactive programming — With state&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 640px;&quot;
@@ -63,7 +171,7 @@
       /&gt;
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;In reactive programming everything is different. Each component owns its own state and modifies it on request. No component can directly modify the state of another component.&lt;/p&gt;
+&lt;p&gt;In reactive programming everything is different. Each component owns its own state and modifies it on request. No component can directly modify the state of another component. A component has to ask another component to perform an operation then wait for the results — that’s all.&lt;/p&gt;
 &lt;p&gt;This kind of isolation brings greater composability — essential to build large systems like complex, interactive user interfaces.&lt;/p&gt;
 &lt;h3&gt;How it works&lt;/h3&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|============|==================|=================|==============|
@@ -83,14 +191,27 @@
 &lt;blockquote&gt;
 &lt;p&gt;React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. — &lt;a href=&quot;https://reactjs.org/&quot;&gt;https://reactjs.org/&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Even &lt;a href=&quot;https://reactjs.org/docs/hooks-reference.html&quot;&gt;hooks&lt;/a&gt; start with state. &lt;/p&gt;
-&lt;p&gt;Speaking hooks React offers two of them to manage state. &lt;code class=&quot;language-text&quot;&gt;useState&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;useReducer&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;None of them is powerful enough to handle complex states leaving to the ecosystem to come up with  alternatives.&lt;/p&gt;
+&lt;p&gt;More, when hooks were introduced they were explained with the help of state. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. — &lt;a href=&quot;https://reactjs.org/docs/hooks-intro.html&quot;&gt;Introducing Hooks&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;React has to offer built-in mechanisms to deal with state — to support one of its core features. And yes it does with &lt;code class=&quot;language-text&quot;&gt;useState&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;useReducer&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;But none of these are powerful enough to handle complex scenarios — leaving to the ecosystem to come up with  alternatives. Like:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;, &lt;a href=&quot;https://mobx.js.org/&quot;&gt;MobX&lt;/a&gt; — Scalable state for large applications.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://redux.js.org/&quot;&gt;Redux&lt;/a&gt;, &lt;a href=&quot;https://mobx.js.org/&quot;&gt;MobX&lt;/a&gt; — Scalable state services for large applications.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/docs/react/essentials/local-state/&quot;&gt;Apollo GraphQL&lt;/a&gt; — State management bundled with data management from a proven provider.&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://css-tricks.com/finite-state-machines-with-react/&quot;&gt;XState&lt;/a&gt; — Finite state machines and state charts to manage state and make it error prone.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Every day a new state &lt;a href=&quot;https://twitter.com/DavidKPiano/status/1180174113954029570&quot;&gt;library&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/dai_shi/status/1178106720108679168&quot;&gt;approach&lt;/a&gt; is popping up. There is no holy grail which one to use — everybody makes its own bet.&lt;/p&gt;
+&lt;p&gt;Important is to follow the React way: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Don’t overthink it. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Which in this case translates to:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Use only when you need it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Learn the different techniques and combine them by need.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|================|=============================|===========================================
 | Implementation | When to use                 | State type | Notes                       |
 |================|=============================|===========================================
@@ -103,10 +224,6 @@
 |----------------|-----------------------------|------------|-----------------------------|
 | Redux, MobX    | When none above are enough  | Global     |                             |
 |================|=============================|============|=============================|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;How to choose&lt;/h2&gt;
-&lt;p&gt;Every day a new state &lt;a href=&quot;https://twitter.com/DavidKPiano/status/1180174113954029570&quot;&gt;library&lt;/a&gt; or &lt;a href=&quot;https://twitter.com/dai_shi/status/1178106720108679168&quot;&gt;approach&lt;/a&gt; is popping up. There is no holy grail — everybody makes its own bet.&lt;/p&gt;
-&lt;p&gt;The consensus &lt;em&gt;“use only when you need it”&lt;/em&gt; — resonates with the basic principle of React: don’t over-complicate. &lt;/p&gt;
-&lt;p&gt;Important is to know each technique and combine by need.&lt;/p&gt;
 &lt;h2&gt;Resources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
