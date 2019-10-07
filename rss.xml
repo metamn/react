@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Oct 2019 08:11:23 GMT</lastBuildDate><item><title><![CDATA[Ontology, taxonomy, choreography]]></title><description><![CDATA[A way to think about Information Architecture in React terms.]]></description><link>http://metamn.io/react/ontology-taxonomy-choreography/</link><guid isPermaLink="false">http://metamn.io/react/ontology-taxonomy-choreography/</guid><pubDate>Mon, 07 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A way to think about Information Architecture in React terms.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 07 Oct 2019 11:00:24 GMT</lastBuildDate><item><title><![CDATA[Ontology, taxonomy, choreography]]></title><description><![CDATA[A way to think about Information Architecture in React terms.]]></description><link>http://metamn.io/react/ontology-taxonomy-choreography/</link><guid isPermaLink="false">http://metamn.io/react/ontology-taxonomy-choreography/</guid><pubDate>Mon, 07 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A way to think about Information Architecture in React terms.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;What is Information Architecture, and what is not?&lt;/h2&gt;
 &lt;p&gt;We all think we know what Information Architecture is — so why the question?&lt;/p&gt;
-&lt;p&gt;Wikipedia has &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_architecture&quot;&gt;9 definitions&lt;/a&gt; for this term. Chosing the ones related to web / app design we have:&lt;/p&gt;
+&lt;p&gt;Wikipedia has &lt;a href=&quot;https://en.wikipedia.org/wiki/Information_architecture&quot;&gt;9 definitions&lt;/a&gt; for this term. Choosing the ones related to web / app design we have:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;The art and science of organizing and labeling web sites, intranets, online communities, and software to support findability and usability.&lt;/li&gt;
 &lt;li&gt;The combination of organization, labeling, search and navigation systems within websites and intranets.&lt;/li&gt;
@@ -93,7 +93,7 @@
 &lt;/ol&gt;
 &lt;h2&gt;Ontology, taxonomy, choreography and React&lt;/h2&gt;
 &lt;p&gt;It’s important to put React into the Information Architecture context. It helps developers to think about the big picture, to have a shared vocabulary with the UI/UX design team.&lt;/p&gt;
-&lt;p&gt;Ontology, taxonomy and choreography can act as the boundaries of these two different disciplines.&lt;/p&gt;
+&lt;p&gt;Ontology, taxonomy and choreography can act as the boundary between these two different disciplines.&lt;/p&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|------------|     |------------|     |--------------|
 | Ontology   |     | Taxonomy   |     | Choreography | 
 |------------|     |------------|     |--------------|
@@ -114,6 +114,9 @@
 &lt;h2&gt;Resources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Information_architecture&quot;&gt;Information architecture - Wikipedia&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.uxbooth.com/articles/the-difference-between-ia-and-ux-design/&quot;&gt;The Difference Between Information Architecture and UX Design&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://prezi.com/aafmvya6bk7t/understanding-information-architecture/&quot;&gt;Understanding Information Architecture&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://vimeo.com/8866160&quot;&gt;Explaining Information Architecture&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[On state]]></title><description><![CDATA[Everything in React rolls around the concept of state. A term coming from the reactive programming nature of React.]]></description><link>http://metamn.io/react/on-state/</link><guid isPermaLink="false">http://metamn.io/react/on-state/</guid><pubDate>Sat, 05 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Everything in React rolls around the concept of state. A term coming from the reactive programming nature of React.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;The concept&lt;/h2&gt;
