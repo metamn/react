@@ -63,7 +63,7 @@ Simplified to this point &mdash; the tasks of an Information Architect are clear
 
 It's important to put React into the Information Architecture context. It helps developers to think about the big picture, to have a shared vocabulary with the UI/UX design team.
 
-Ontology, taxonomy and choreography can act as the boundaries of these two different disciplines.
+Ontology, taxonomy and choreography can act as the boundary between these two different disciplines.
 
 ```
 |------------|     |------------|     |--------------|
