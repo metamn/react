@@ -3,15 +3,13 @@ title: 'On state'
 date: '2019-10-05'
 ---
 
-Everything in React rolls around the concept of state.
+Everything in React rolls around the concept of state. A term coming from the reactive programming nature of React.
 
 <!--more-->
 
-A term coming from the reactive programming nature of React.
-
 ## The concept
 
-The concept is not new. It was present and irrelevant in proactive programming. Now it is surfacing as the central element of reactive programming.
+Was unknown in proactive programming. Now it is surfacing as the central element of reactive programming.
 
 In Dan Lew's [seminal article](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) about Functional Reactive Programming the concept is fully explained and put further in context. Please read it first. It's pure joy.
 
@@ -19,13 +17,15 @@ In Dan Lew's [seminal article](https://blog.danlew.net/2017/07/27/an-introductio
 
 ![Proactive](proactive.png)
 
-In proactive programming a component directly modifies the state of another component &mdash; and the passive component doesn't even know about it. In fact, the passive component has no state at all. Strictly, it has state, but it doesn't need to know about, it is not responsible for it. State in this context really doesn't matter.
+In proactive programming a component directly calls public methods of other components &mdash; and the passive components are not aware of these calls. They do no accounting for what is happening inside &mdash; they have no state. 
 
-### Reactive programming &mdash; Yes! State!
+The caller component is responsible to interpret the results of the call. The passive component has one single responsibility: make available the methods.
+
+### Reactive programming &mdash; With state
 
 ![Reactive](reactive.png)
 
-In reactive programming everything is different. Each component owns its own state and modifies it on request. No component can directly modify the state of another component.
+In reactive programming everything is different. Each component owns its own state and modifies it on request. No component can directly modify the state of another component. A component has to ask another component to perform an operation then wait for the results &mdash; that's all.
 
 This kind of isolation brings greater composability &mdash; essential to build large systems like complex, interactive user interfaces.
 
