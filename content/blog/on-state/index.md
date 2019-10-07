@@ -52,15 +52,29 @@ State is so important in React it is marked first among its features.
 
 > React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. &mdash; [https://reactjs.org/](https://reactjs.org/)
 
-Even [hooks](https://reactjs.org/docs/hooks-reference.html) start with state. 
+More, when hooks were introduced they were explained with the help of state. 
 
-Speaking hooks React offers two of them to manage state. `useState` and `useReducer`.
+> Hooks are a new addition in React 16.8. They let you use state and other React features without writing a class. &mdash; [Introducing Hooks](https://reactjs.org/docs/hooks-intro.html)
 
-None of them is powerful enough to handle complex states leaving to the ecosystem to come up with  alternatives.
+React has to offer built-in mechanisms to deal with state &mdash; to support one of its core features. And yes it does with `useState`, `useReducer`. 
 
-- [Redux](https://redux.js.org/), [MobX](https://mobx.js.org/) &mdash; Scalable state for large applications.
+But none of these are powerful enough to handle complex scenarios &mdash; leaving to the ecosystem to come up with  alternatives. Like:
+
+- [Redux](https://redux.js.org/), [MobX](https://mobx.js.org/) &mdash; Scalable state services for large applications.
 - [Apollo GraphQL](https://www.apollographql.com/docs/react/essentials/local-state/) &mdash; State management bundled with data management from a proven provider.
 - [XState](https://css-tricks.com/finite-state-machines-with-react/) &mdash; Finite state machines and state charts to manage state and make it error prone.
+
+Every day a new state [library](https://twitter.com/DavidKPiano/status/1180174113954029570) or [approach](https://twitter.com/dai_shi/status/1178106720108679168) is popping up. There is no holy grail which one to use &mdash; everybody makes its own bet.
+
+Important is to follow the React way: 
+
+> Don’t overthink it. 
+
+Which in this case translates to:
+
+> Use only when you need it.
+
+Learn the different techniques and combine them by need.
 
 ```
 |================|=============================|===========================================
@@ -76,14 +90,6 @@ None of them is powerful enough to handle complex states leaving to the ecosyste
 | Redux, MobX    | When none above are enough  | Global     |                             |
 |================|=============================|============|=============================|
 ```
-
-## How to choose
-
-Every day a new state [library](https://twitter.com/DavidKPiano/status/1180174113954029570) or [approach](https://twitter.com/dai_shi/status/1178106720108679168) is popping up. There is no holy grail &mdash; everybody makes its own bet.
-
-The consensus *"use only when you need it"* &mdash; resonates with the basic principle of React: don't over-complicate. 
-
-Important is to know each technique and combine by need.
 
 ## Resources
 
