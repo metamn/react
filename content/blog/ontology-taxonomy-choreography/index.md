@@ -1,6 +1,6 @@
 ---
 title: 'Ontology, taxonomy, choreography'
-date: '2019-10-06'
+date: '2019-10-07'
 draft: false
 ---
 
@@ -42,9 +42,14 @@ Peter Morville, an Information Architecture icon, [captures](https://prezi.com/a
 
 Here we are in the business of understanding: understanding the problem and understanding how people can best solve the problem &mdash; in a interactive space. 
 
-In other words: modeling structure and behavior with user interfaces.
+In tech terms: modeling structure and modeling behavior with user interfaces.
 
 ## Structure and behavior
+
+[Dan Klyn](https://www.uxbooth.com/articles/complete-beginners-guide-to-information-architecture/) has a clear take on how to model structure and behavior in user interfaces: with ontology, taxonomy and choreography.
+
+<iframe src="https://player.vimeo.com/video/8866160" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/8866160">explaining information architecture</a> from <a href="https://vimeo.com/user3007539">Dan Klyn</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 
 Simplified to this point &mdash; the tasks of an Information Architect are clear:
 
@@ -54,23 +59,32 @@ Simplified to this point &mdash; the tasks of an Information Architect are clear
 4. Organize entities into hierarchies, maps and views.
 5. Design the sequences of movement between the elements above.
 
-With the words of [Dan Klyn](https://www.uxbooth.com/articles/complete-beginners-guide-to-information-architecture/) &mdash; model structure with ontology and taxonomy, model behavior with choreography.
-
-<iframe src="https://player.vimeo.com/video/8866160" width="640" height="480" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-<p><a href="https://vimeo.com/8866160">explaining information architecture</a> from <a href="https://vimeo.com/user3007539">Dan Klyn</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-
 ## Ontology, taxonomy, choreography and React
 
+It's important to put React into the Information Architecture context. It helps developers to think about the big picture, to have a shared vocabulary with the UI/UX design team.
 
-- GQL
-- FSM
-- Routes + Hierarchy (https://www.uxbooth.com/articles/designing-for-mobile-part-1-information-architecture/)
+Ontology, taxonomy and choreography can act as the boundaries of these two different disciplines.
 
-## Other
+```
+|------------|     |------------|     |--------------|
+| Ontology   |     | Taxonomy   |     | Choreography | 
+|------------|     |------------|     |--------------|
+| Data       |     | Sitemap    |     | Events       |
+|------------|     |------------|     |--------------|
+     |                   |                   |
+     |                   |                   |
+     ▼                   ▼                   ▼
+|------------|     |------------|     |--------------|
+| GraphQL    |     | Router     |     | State        |
+|------------|     |------------|     |--------------|
+     |                   |                   |
+     |                   |                   |
+     ▼                   ▼                   ▼
+|----------------------------------------------------|
+|                 React Components                   |
+|----------------------------------------------------| 
+```
 
-- https://lobste.rs/s/n4vihh/software_architecture_is_overrated
-- https://eventmodeling.org/posts/what-is-event-modeling/
 
 ## Resources
 
