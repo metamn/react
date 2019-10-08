@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 06:05:00 GMT</lastBuildDate><item><title><![CDATA[The reactive, functional nature of React]]></title><description><![CDATA[React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/the-reactive-fuctional-nature-of-react/</link><guid isPermaLink="false">http://metamn.io/react/the-reactive-fuctional-nature-of-react/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 06:18:27 GMT</lastBuildDate><item><title><![CDATA[The reactive, functional nature of React]]></title><description><![CDATA[React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/the-reactive-fuctional-nature-of-react/</link><guid isPermaLink="false">http://metamn.io/react/the-reactive-fuctional-nature-of-react/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;The context&lt;/h2&gt;
 &lt;p&gt;Both paradigms solve the same problem — to build modular, interactive applications — in different ways.&lt;/p&gt;
@@ -833,186 +833,9 @@ However this is the way you’ll find it written in majority of REST APIs. &lt;/
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/GraphQL&quot;&gt;GraphQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/React_(web_framework)&quot;&gt;React (web framework)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot;&gt;React follows the functional reactive programming paradigm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/the-reactive-fuctional-nature-of-react/&quot;&gt;The reactive, functional nature of React&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.apollographql.com/customers/expediagroup/&quot;&gt;Expedia Group Transforms Product Development with Apollo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React follows the functional reactive programming paradigm]]></title><description><![CDATA[That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</link><guid isPermaLink="false">http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/</guid><pubDate>Tue, 01 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
-&lt;!--more--&gt;
-&lt;h2&gt;The context&lt;/h2&gt;
-&lt;p&gt;Both paradigms solve the same problem — to build modular, interactive applications — in different ways.&lt;/p&gt;
-&lt;p&gt;The old way implemented modularity through tight-coupling and interaction synchronously. The new way implements modularity with loose-coupling and interaction asynchronously.&lt;/p&gt;
-&lt;p&gt;Modularity and interaction abstracted to composition and coupling can further elucidate the picture. Composition is about how the components of the system can add up to form a whole, while coupling is about how they communicate with each other.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;Functional reactive programming&lt;/a&gt; deals with composition the functional programming way and with coupling the reactive programming way.&lt;/p&gt;
-&lt;h2&gt;Composition&lt;/h2&gt;
-&lt;p&gt;Composing up a system from smaller parts is best possible when the underlying components behave predictably:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;They have clear and stable interfaces — input parameters and return values — which can be easily combined.&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;During execution, while input parameters are transformed into return values&lt;/p&gt;
-&lt;p&gt;2.1. The process doesn’t modify the input parameters&lt;/p&gt;
-&lt;p&gt;2.2. No external information is used beside input parameters to produce the return value&lt;/p&gt;
-&lt;p&gt;2.3. No additional operations are performed beside the planned functionality&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Pure functions&lt;/h3&gt;
-&lt;p&gt;Such components in functional programming are called &lt;em&gt;pure functions&lt;/em&gt;.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
- * A pure component example
- */&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;PureComponent&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * ✅ Clear interfaces:
-   * - props are input params, JSX is the return value
-   * ✅ Input params are not modified
-   * ✅ No external information is used beside input params to produce the return value
-   * ✅ No additional operations are performed beside the planned functionality
-   */&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Pure component props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;div&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Impure functions&lt;/h3&gt;
-&lt;p&gt;Having only pure functions in a complex system is almost impossible. Therefore the concept of impure functions and side effects is introduced.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
- * An impure component example with side effects
- */&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;ImpureComponent&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * ✅ Clear interfaces:
-   * - props are input params, JSX is the return value
-   * ✅ Input params are not modified
-   * - props are protected by React so they can&apos;t be easily distorted
-   */&lt;/span&gt;
-
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * Side effect #1
-   *
-   * ❌ External information is used beside input params to produce the return value
-   */&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; external &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;External info&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * Side effect #2
-   *
-   * ❌ Additional operations are performed beside the planned functionality
-   */&lt;/span&gt;
-  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;props:&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Impure component props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;External info &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; value&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;external&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ul&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3&gt;Side effects, managed&lt;/h3&gt;
-&lt;p&gt;When side effects are not avoidable they have to be made &lt;a href=&quot;https://overreacted.io/writing-resilient-components/#writing-resilient-components&quot;&gt;resilient&lt;/a&gt; — not distorting the original application flow.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
- * Side effects managed through useEffect
- */&lt;/span&gt;
-&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;SideEffectsWithUseEffect&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;props&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * ✅ The `external` side effect is wrapped into a state
-   * ✅ Later it can be managed via `useEffect` which makes it resilient 
-   */&lt;/span&gt;
-  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;external&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; setExternal&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;useState&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Initial value ...&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * ✅ By using `useEffect` the rendering of the component is not suspended, the flow is not distorted.
-   * ✅ First the component is rendered with the default value
-   * ✅ After 3 seconds React automatically updates the component with the new value.
-   * (The 3s delay added makes the effect visible on UI)
-   */&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;token comment&quot;&gt;/**
-     * Manages the side effect
-     */&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; timer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-      &lt;span class=&quot;token function&quot;&gt;setExternal&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Initial value replaced with useEffect&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;token comment&quot;&gt;/**
-     * Cleans up the side effect
-     *
-     * @link https://reactjs.org/docs/hooks-effect.html
-     */&lt;/span&gt;
-    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;clearTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;timer&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-  
-  &lt;span class=&quot;token comment&quot;&gt;/**
-   * ✅ The `console.log` additional operation side effect is wrapped into the `useEffect` hook
-   * ✅ The Effect Hook lets you perform side effects in function components
-   */&lt;/span&gt;
-  &lt;span class=&quot;token function&quot;&gt;useEffect&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
-	  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;props:&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-
-  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
-    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;ul&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Component props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;stringify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-      &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;External info &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; value &lt;span class=&quot;token keyword&quot;&gt;with&lt;/span&gt; useEffect&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;external&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;li&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-    &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;ul&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
-  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Coupling&lt;/h2&gt;
-&lt;p&gt;Coupling deals with the communication between the components of a system. To make a system scale communication has to be in the same effective as composition.&lt;/p&gt;
-&lt;p&gt;Reactive programming achieves this through:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;Isolation:&lt;/p&gt;
-&lt;p&gt;1.1 Components are aware of, and care about their own problems only&lt;/p&gt;
-&lt;p&gt;1.2 Components does not interfere with each other’s inner workings&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;Asynchronous communication:&lt;/p&gt;
-&lt;p&gt;2.1 Components subscribe to events&lt;/p&gt;
-&lt;p&gt;2.2 They react when an event happens&lt;/p&gt;
-&lt;p&gt;2.3 They return an observable — which emits events other components can subscribe to.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3&gt;Isolation&lt;/h3&gt;
-&lt;p&gt;In React isolation is about the local state — components can update only their own state and can’t modify other component’s state.&lt;/p&gt;
-&lt;h3&gt;Asynchronous communication&lt;/h3&gt;
-&lt;p&gt;In React asynchronous communication is all about hooks. Components communicate with each other and the surrounding ecosystem — the local data store, the local cache store, the database — via the hooks mechanism.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|-----------------|-------------------|
-| Hook            | Ecosystem         |
-|-----------------| ------------------|
-| useContext      | Local data store  |
-| useMemo         | Local cache store |
-| useCallback     | Other components  |
-| useQuery,       |                   |
-| useMutation,    |                   |
-| useSubscription | GraphQL database  |
-|-------------------------------------|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Wrapping up&lt;/h2&gt;
-&lt;p&gt;Using reactive and functional programming concepts React and its building blocks — props, state, hooks, side effects, pure components — can be put in a general context.&lt;/p&gt;
-&lt;p&gt;A general context which is a great help when mapping up the big picture.&lt;/p&gt;
-&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|================|                            |================|
-| Component 1    |                            | Component 2    |
-|================|                            |================|
-| Props          |                            | Props          |
-|----------------|                            |----------------|
-| Local state    |                            | Local state    |
-|----------------|                            |----------------|
-|                | &amp;lt;-------- Hooks --------&amp;gt;  |                |
-|                | &amp;lt;-------- Hooks --------&amp;gt;  |                |
-| Side effects   | &amp;lt;-------- Hooks --------&amp;gt;  | Side effects   |
-|                | &amp;lt;-------- Hooks --------&amp;gt;  |                |
-|                | &amp;lt;-------- Hooks --------&amp;gt;  |                |
-|----------------|                            |----------------|
-| Return JSX     |                            | Return JSX     |
-|================|                            |================|
-
-     ^                 ^                ^                ^
-     |                 |                |                |
-     | Hooks           | Hooks          | Hooks          | Hooks
-     |                 |                |                |
-|----------|     |-----------|     |----------|     |-----------|
-| State    |     | Data      |     | Cache    |     | UI        |
-| store    |     | store     |     | store    |     | Events    |
-|----------|     |-----------|     |----------|     |-----------|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2&gt;Resources&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://overreacted.io/writing-resilient-components/#writing-resilient-components&quot;&gt;Writing Resilient Components&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Putting React in context]]></title><description><![CDATA[A deep dive into the language and the ecosystem around.]]></description><link>http://metamn.io/react/putting-react-in-context/</link><guid isPermaLink="false">http://metamn.io/react/putting-react-in-context/</guid><pubDate>Wed, 25 Sep 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A deep dive into the language and the ecosystem around.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;hr&gt;
@@ -1117,7 +940,7 @@ However this is the way you’ll find it written in majority of REST APIs. &lt;/
 	&lt;tr&gt;
 		&lt;td&gt;Programming paradigms&lt;/td&gt;
 		&lt;td&gt;The foundation of React&lt;/td&gt;
-		&lt;td&gt;&lt;a href=&quot;http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/&quot; title=&quot;React follows the functional reactive programming paradigm&quot;&gt;React follows the functional reactive programming paradigm&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;a href=&quot;http://metamn.io/react/the-reactive-fuctional-nature-of-react/&quot; title=&quot;The reactive, functional nature of React&quot;&gt;The reactive, functional nature of React&lt;/a&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Basic concepts&lt;/td&gt;
