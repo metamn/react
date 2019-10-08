@@ -22,7 +22,7 @@ The list of features on [GraphQL.org](https://graphql.org/) clearly points to a 
 - Describe what’s possible with a type system
 - Evolve your API without versions
 
-React [managed](http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/) to change the status quo by embracing functional reactive programming. One might wonder if GraphQL choose the same approach.
+React [managed](http://metamn.io/react/the-reactive-fuctional-nature-of-react/) to change the status quo by embracing functional reactive programming. One might wonder if GraphQL choose the same approach.
 
 ## Functional reactive programming
 
