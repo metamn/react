@@ -46,15 +46,17 @@ That would mean rapid prototyping.
 
 Both of them support all requirements except 1.) the visual scheme designer.
 
-In Apollo all tasks imply [manual work](https://www.apollographql.com/docs/tutorial/introduction/). In AWS AppSync + Amplify everything is automated.
+In Apollo all tasks imply (mostly) [manual work](https://www.apollographql.com/docs/tutorial/introduction/). In AWS AppSync + Amplify everything is automated.
 
-No wonder. Their description on GraphQL.org are pretty clear.
+No wonder. Their description and distinctive features are put pretty clear on [GraphQL.org](https://graphql.org/code/#services).
 
 > Apollo Engine: A service for monitoring the performance and usage of your GraphQL backend.
 
 > AWS AppSync: Fully managed GraphQL service with realtime subscriptions, offline programming & synchronization, and enterprise security features as well as fine grained authorization controls.
 
-One has to choose AWS AppSync then. Only AWS is suitable for production and enterprise not for rapid prototyping. All plans are paid and every operation is billed.
+One has to choose AWS AppSync then, or dive deep into Apollo to find hidden gems unsurfaced during this quick research.
+
+However in our collective mindset AWS is for large scale production apps and enterprise use not for rapid prototyping. All plans are paid and every operation is billed.
 
 GraphCMS to the rescue?
 
@@ -67,13 +69,17 @@ Setting up an account and trying to get a GraphQL endpoint on a free plan was te
 - Contentful - No GraphQL on the free plan
 - GraphCMS - Except 5.) Automatic code generation and sync &mdash; it offers all other features. However these features seems to be undocumented and very fragile.
 - Sanity - A strange, download first approach. Skipped for now.
-- TakeShape - The GraphQL endpoint works out of the box. Worth tryexperiencing with it further.
-- Prismic - GraphQL support has to be asked for / enabled manually by the support team. Worth tryexperiencing with it further.
+- TakeShape - The GraphQL endpoint works out of the box. Worth experiencing with it further.
+- Prismic - GraphQL support has to be asked for / enabled manually by the support team. Worth experiencing with it further.
 - WPGraphQL - Works perfect however is tailored to the WordPress data structure. It can be extended of course but WordPress is a specific, not a general purpose CMS.
 
 ## Conclusion
 
-Wait for the Headless CMS scene to take off. Otherwise, if needed right now, go with AWS. All services can be used for free for a year.
+Wait for the Headless CMS scene to take off. 
+
+Otherwise, if needed right now, go with AWS. All services can be used for free for a year.
+
+Is AWS expensive? It's a Tier 1 service. Probably all other Headless CMS providers on upper tiers are building upon its infrastructure &mdash; increasing the bill. 
 
 ## Resources
 

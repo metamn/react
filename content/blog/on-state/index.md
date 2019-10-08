@@ -27,7 +27,7 @@ The caller component is responsible to interpret the results of the call. The pa
 
 In reactive programming everything is different. Each component owns its own state and modifies it on request. No component can directly modify the state of another component. 
 
-The caller component has to ask the reciver component to perform an operation which might modify the receiver component's internal state, then wait for &mdash; subscribe to &mdash; the results.
+The caller component has to ask the receiver component to perform an operation which might modify the receiver component's internal state, then wait for &mdash; subscribe to &mdash; the results.
 
 This kind of isolation brings greater composability &mdash; essential to build large scale systems and complex, interactive user interfaces.
 

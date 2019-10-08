@@ -40,7 +40,7 @@ Peter Morville, an Information Architecture icon, [captures](https://prezi.com/a
 ![IA definition #2](ia-2.png)
 
 
-Here we are in the business of understanding: understanding the problem and understanding how people can best solve the problem &mdash; in a interactive space. 
+Here we are in the business of understanding: understanding the problem and understanding how people can best solve the problem &mdash; in an interactive space. 
 
 Information Architecture now has a shape. It's about modeling problem structure and modeling user behavior with the help of user interfaces.
 
