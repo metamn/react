@@ -21,10 +21,10 @@ Wikipedia has [9 definitions](https://en.wikipedia.org/wiki/Information_architec
 
 These definitions relate to keywords specific to UX design &mdash; usability, experience &mdash; yet there is a [clear differentiation](https://www.uxbooth.com/articles/the-difference-between-ia-and-ux-design/) between IA and UX:
 
-- Information Architecture concerns structure
-- User Experience concerns emotion
+- Information Architecture concerns *structure*.
+- User Experience concerns *emotion*.
 
-With these definitions the problem is reduced and there is a path to follow: *structure*.
+Let's analyze further Information Architecture by the means of structure.
 
 ## Architects of understanding
 
@@ -42,7 +42,7 @@ Peter Morville, an Information Architecture icon, [captures](https://prezi.com/a
 
 Here we are in the business of understanding: understanding the problem and understanding how people can best solve the problem &mdash; in a interactive space. 
 
-In tech terms: modeling structure and modeling behavior with user interfaces.
+Information Architecture now has a shape. It's about modeling problem structure and modeling user behavior with the help of user interfaces.
 
 ## Structure and behavior
 
@@ -61,17 +61,17 @@ Simplified to this point &mdash; the tasks of an Information Architect are clear
 
 ## Ontology, taxonomy, choreography and React
 
-It's important to put React into the Information Architecture context. It helps developers to think about the big picture, to have a shared vocabulary with the UI/UX design team.
+Finally we can put React in context with Information Architecture giving developers and UI/UX designers a bigger picture and a shared vocabulary.
 
 Ontology, taxonomy and choreography can act as the boundary between these two different disciplines.
 
 ```
 |------------|     |------------|     |--------------|
-| Ontology   |     | Taxonomy   |     | Choreography | 
-|------------|     |------------|     |--------------|
-| Data       |     | Sitemap    |     | Events       |
-|------------|     |------------|     |--------------|
-     |                   |                   |
+| Ontology   |     | Taxonomy   |     | Choreography |    UI/UX ▲
+|------------|     |------------|     |--------------|    -----------
+| Data       |     | Sitemap    |     | Events       |    UI/UX + Dev
+|------------|     |------------|     |--------------|    -----------
+     |                   |                   |            Dev ▼
      |                   |                   |
      ▼                   ▼                   ▼
 |------------|     |------------|     |--------------|
