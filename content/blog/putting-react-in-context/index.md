@@ -119,7 +119,7 @@ When considerable results are found a new article is written and linked below.
 	<tr>
 		<td>Programming paradigms</td>
 		<td>The foundation of React</td>
-		<td><a href="http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/" title="React follows the functional reactive programming paradigm">React follows the functional reactive programming paradigm</a></td>
+		<td><a href="http://metamn.io/react/the-reactive-fuctional-nature-of-react/" title="The reactive, functional nature of React">The reactive, functional nature of React</a></td>
 	</tr>
 	<tr>
 		<td>Basic concepts</td>

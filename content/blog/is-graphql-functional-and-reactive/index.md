@@ -318,6 +318,6 @@ From the article: [Expedia Group Transforms Product Development with Apollo](htt
 
 - [GraphQL](https://en.wikipedia.org/wiki/GraphQL)
 - [React (web framework)](https://en.wikipedia.org/wiki/React_(web_framework))
-- [React follows the functional reactive programming paradigm](http://metamn.io/react/react-follows-the-functional-reactive-programming-paradigm/)
+- [The reactive, functional nature of React](http://metamn.io/react/the-reactive-fuctional-nature-of-react/)
 - [An Introduction to Functional Reactive Programming](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/)
 - [Expedia Group Transforms Product Development with Apollo](https://www.apollographql.com/customers/expediagroup/)
