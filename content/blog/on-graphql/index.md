@@ -33,11 +33,17 @@ This makes GraphQL lean on the backend. It's just a simple layer returning resul
 
 What glues together the client-side queries and server-side responses is the GraphQL Schema &mdash; a place where:
 
-- all types,
-- all fields on types,
-- all functions associated with each and every field
+- all types, and
+- all fields on types, and
+- all single purpose functions (resolvers) associated with each and every field
 
 are defined.
+
+This can be called the *Single Source Of Truth* or *Smart Data Objects* &mdash; as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
+
+## Resolvers
+
+
 
 ### In practice
 
