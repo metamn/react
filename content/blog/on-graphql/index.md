@@ -17,17 +17,17 @@ GraphQL, according to [GraphQL.org](https://graphql.org/learn/) is three things:
 
 ### Query language
 
-We all know query languages: SQL for example, which queries relational databases. With APIs we've learnt another query language &mdash; REST, CRUD &mdash; which queries data on the backend.
+We all know query languages. SQL to query relational databases. REST API to query data on the backend.
 
-GraphQL is in the same way a query language. Perhaps a more advanced one assembling the traits of [functional and reactive systems](http://metamn.io/react/is-graphql-functional-and-reactive/).
+GraphQL is in the same way a query language for data on the backend. Perhaps more advanced by embracing the principles of [functional and reactive programming](http://metamn.io/react/is-graphql-functional-and-reactive/).
 
 ### Server-side runtime
 
-The creators of GraphQL implemented the [UNIX philosophy](https://www.youtube.com/watch?v=gb1R-fWP1Yw) in their creation: do one thing and do it well.
+Do one thing and do it well &mdash; the philosophy of UNIX [is built into](https://www.youtube.com/watch?v=gb1R-fWP1Yw) GraphQL making it a super simple layer on the backend. 
 
-This makes GraphQL lean on the backend. It's just a simple layer returning results for queries. How results are computed, put together is outside of GraphQL's scope. 
+The server-side runtime does only one thing: returns results for queries. How results are computed, put together &mdash; the business logic &mdash; is outside of its scope. 
 
-(As a compensation) it offers connectivity to various backend services &mdash; databases, storage engines, serverless functions, authentication, caching, ... &mdash; which can be used in any combination to handle the business logic and define how the application works.  
+(As a compensation) GraphQL offers connectivity to various backend services like databases, storage engines, serverless functions, authentication, caching to be used in any combination to define how the application works.  
 
 ### Type system
 
@@ -39,35 +39,40 @@ What glues together the client-side queries and server-side responses is the Gra
 
 are defined.
 
-This can be called the *Single Source Of Truth* or *Smart Data Objects* &mdash; as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
-
-## Resolvers
-
+This is the truth layer &mdash; *Single source of truth* or *Smart Data Objects* as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
 
 
 ### In practice
 
 ```js
-/**
- * A GraphQL Schema
- */
+/* A GraphQL Schema */
 
-/* Data type = defines a data entity */
+/**
+ * Data type
+ * - Defines a data entity
+ */
 type Book {
 	id: ID
-	title: String
+	title: String  /* A field */
 	author: Author
 }
 
-/* Data type = defines a data entity */
+/**
+ * Data type
+ * - Defines a data entity
+ */
 type Author {
-	firstName: String
+	id: ID
+	firstName: String  /* A field */
 	lastName: String
 }
 
-/* Query type = defines operations on data */
+/**
+ * Query type
+ * - Defines operations on data
+ */
 type Query {
-	book(id: ID): Book
+	book(id: ID): Book  /* A field */
 	author(id: ID): Author
 }
 ```
@@ -88,9 +93,8 @@ GET /graphql?query={
 
 ```js
 /**
- * Server-side functions called resolvers
+ * Server-side, single purpose functions (resolvers)
  */
-
 const resolvers = {
   Query: {
     author: (root, { id }) => find(authors, { id: id }),
@@ -105,7 +109,6 @@ const resolvers = {
 /**
  * The result
  */
-
 {
   "title": "Black Hole Blues",
   "author": {
@@ -113,6 +116,16 @@ const resolvers = {
   }
 }
 ```
+
+## The pattern
+
+The most important takeaway in GraphQL is the 
+
+> `type` &rarr; `field` &rarr; `function` 
+
+pattern.
+
+Every field has an associated function, a single purpose function which returns results
 
 ## Resources
 
