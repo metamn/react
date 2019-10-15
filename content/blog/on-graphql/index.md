@@ -144,13 +144,18 @@ The chatty server-side functions (resolvers) which might repeteadly load data fr
 
 ### The business logic &mdash; a question mark
 
-xxx
+- it seems 'serverless` cannot be avoided: https://graphql.org/learn/thinking-in-graphs/#business-logic-layer
+- business logic needs a special layer, a single source of thruth
+- also GraphQL creator says `resolvers should map to the business logic`
+ 
 
 ### Scaling the Schema &mdash; it's hard
 
 Around two third of all talks from the [2019 GraphQL conference](https://www.youtube.com/playlist?list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO) is about the schema. 
 
-How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema.
+How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing this issue. 
+
+Even more it looks like all the other design patterns &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
 
 ## Conclusion
 
@@ -165,3 +170,4 @@ It makes app design and user interface development more human by empowering the 
 - [GraphQL before GraphQL — Dan Schafer @ GraphQLConf 2019](https://www.youtube.com/watch?v=gb1R-fWP1Yw)
 - [The "N+1 selects problem"](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping)
 - [GraphQL Execution Strategies — Andreas Marek @ GraphQL Conf 2019](https://www.youtube.com/watch?v=P_yfbQrdzJo&list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&index=18)
+- [GraphQL Berlin Meetup #15: System Design and Architecture @ GraphQL — Bogdan Nedelcu](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be)
