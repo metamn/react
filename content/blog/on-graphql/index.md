@@ -142,7 +142,21 @@ Writing the associated `functions` to `fields` is again free thinking: just focu
 
 The chatty server-side functions (resolvers) which might repeteadly load data from the database are collected, optimized into a single request, and their results cached &mdash; by the GraphQL middle-layer.
 
-### Scaling the Schema &mdash; the hard part
+### The business logic &mdash; a question mark
+
+xxx
+
+### Scaling the Schema &mdash; it's hard
+
+Around two third of all talks from the [2019 GraphQL conference](https://www.youtube.com/playlist?list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO) is about the schema. 
+
+How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema.
+
+## Conclusion
+
+GraphQL is no silver bullet. It's not better or worse than other paradigms. And no, it doesn't render the back-end developer job obsolete. 
+
+It makes app design and user interface development more human by empowering the designers and front-end developers. What is gained here has to be solved on the back-end in new ways.
 
 ## Resources
 
