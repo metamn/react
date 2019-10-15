@@ -147,7 +147,7 @@ The chatty server-side functions (resolvers) which might repeteadly load data fr
 - it seems 'serverless` cannot be avoided: https://graphql.org/learn/thinking-in-graphs/#business-logic-layer
 - business logic needs a special layer, a single source of thruth
 - also GraphQL creator says `resolvers should map to the business logic`
- 
+
 
 ### Scaling the Schema &mdash; it's hard
 
@@ -155,7 +155,7 @@ Around two third of all talks from the [2019 GraphQL conference](https://www.you
 
 How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing this issue. 
 
-Even more it looks like all the other design patterns &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
+Even more [it looks like](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be) all the other GraphQL design patterns &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
 
 ## Conclusion
 
