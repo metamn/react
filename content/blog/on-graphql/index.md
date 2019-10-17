@@ -19,7 +19,7 @@ GraphQL, according to [GraphQL.org](https://graphql.org/learn/) is three things:
 
 We all know query languages. SQL &mdash; to query relational databases. REST API &mdash; to query data on the backend.
 
-GraphQL is in the same way a query language. It is like REST but built on the more advanced principles of [functional and reactive programming](http://metamn.io/react/is-graphql-functional-and-reactive/).
+GraphQL is in the same way a query language. It is like REST built on the more advanced principles of [functional and reactive programming](http://metamn.io/react/is-graphql-functional-and-reactive/).
 
 ### Server-side runtime
 
@@ -39,6 +39,12 @@ What glues together the client-side queries and server-side responses is the Gra
 
 
 This is the truth layer &mdash; the *single source of truth* or *Smart Data Objects* as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
+
+### The business logic &mdash; a question mark
+
+- it seems 'serverless` cannot be avoided: https://graphql.org/learn/thinking-in-graphs/#business-logic-layer
+- business logic needs a special layer, a single source of thruth
+- also GraphQL creator says `resolvers should map to the business logic`
 
 
 ### In practice
@@ -76,20 +82,6 @@ type Query {
 }
 ```
 
-```bash
-# Client-side query
-#
-GET /graphql?query={ 
-	book(id: "1") { 
-		title, 
-		author 
-		{ 
-			firstName 
-		} 
-	} 
-}
-```
-
 ```js
 /**
  * Server-side, single purpose functions (resolvers)
@@ -102,6 +94,22 @@ const resolvers = {
     books: (author) => filter(books, { authorId: author.id }),
   },
 };
+```
+
+resolver binding to the model
+
+```bash
+# Client-side query
+#
+GET /graphql?query={ 
+	book(id: "1") { 
+		title, 
+		author 
+		{ 
+			firstName 
+		} 
+	} 
+}
 ```
 
 ```js
@@ -126,36 +134,47 @@ Types have fields and every field has an associated server-side function which r
 
 This pattern is a double-edged sword. It makes application design and development easier but scaling on the server-side harder.
 
-### App design and development &mdash; made easy
+### Model data with graphs
 
-The [N+1 selects problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping) is a basic design and development constraint in older paradigms like ORM. It makes the business model to follow ceratin strict technical guidelines which is not natural to default human thinking. 
+The [N+1 selects problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping) is a basic design and development constraint in older paradigms like ORM. It makes the business / data / component model to follow ceratin strict technical guidelines which is not natural to default human thinking. 
 
 In GraphQL this issue [is automatically solved](https://www.youtube.com/watch?v=P_yfbQrdzJo&list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&index=18).
 
-The original N+1 problem is related to database design. Improperly designed databases can lead to more database queries than optimal reducing considerably the app response time. To circumvent this issue in the object-relational paradigm various normalization techniques are used.
+The original N+1 problem is related to database design. Improperly designed database tables can lead to more database queries than optimal reducing considerably the app response time. To circumvent this issue in the object-relational paradigm various normalization techniques are used.
 
-In GraphQL there is no N+1 problem. One can design freely the schema (database) and a middle-layer &mdash; the Dataloader &mdash; takes care of eliminating the N+1 performance issues. 
+In GraphQL there is no N+1 problem. One can design freely the types in the schema and a middle-layer &mdash; the Dataloader &mdash; takes care of eliminating the N+1 performance issues. 
 
-In practice this means `fields` can be freely added to `types` without worrying about normalization. Thus the business domain can be modeled in a less rigid, more human friendly way using *graphs* which let directly store the relationships between records. 
+In practice this means `fields` can be freely added to `types` without worrying about normalization. Components can be modeled in a less rigid, more human friendly way using *graphs* which let directly store the relationships between records. 
 
 Writing the associated `functions` to `fields` is again free thinking: just focus on the single purpose of the function of returning the results and forget about redundancy, caching and performance.
 
 The chatty server-side functions (resolvers) which might repeteadly load data from the database are collected, optimized into a single request, and their results cached &mdash; by the GraphQL middle-layer.
 
-### The business logic &mdash; a question mark
+It's easy to observe the reactive functional programming paradigm in this approach:
 
-- it seems 'serverless` cannot be avoided: https://graphql.org/learn/thinking-in-graphs/#business-logic-layer
-- business logic needs a special layer, a single source of thruth
-- also GraphQL creator says `resolvers should map to the business logic`
+1. Think freely and create isolated, self-contained components (models and functions)
+2. Don't worry about things that don't matter in this context (performance)
+3. The underlying system and tools will solve all that for you.
 
+### Model business with DDD and microservices 
 
-### Scaling the Schema &mdash; it's hard
+The same thinking can be applied not just to individual components but to the entire business model using Domain Driven Design and microservices architecture.   
+
+The idea is the same: 
+
+1. Think freely and divide the problem, the business model into isolated, self-contained subdomains.
+2. Focus to one thing and solve each subpart of the problem individually using microservices.
+3. Let the backend orchestrate how all these work together. 
+
+### Challenges are mounting on the back-end
 
 Around two third of all talks from the [2019 GraphQL conference](https://www.youtube.com/playlist?list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO) is about the schema. 
 
 How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing this issue. 
 
 Even more [it looks like](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be) all the other GraphQL design patterns &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
+
+ide meg valami ....
 
 ## Conclusion
 
