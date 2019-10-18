@@ -33,21 +33,11 @@ The GraphQL runtime does only one thing: returns results for queries. How result
 
 What glues together the client-side queries and server-side responses is the GraphQL Schema &mdash; a place where:
 
-- all types are defined together with
-- all fields for all types, and
-- all single purpose functions (resolvers) associated with each and every field
+- All types are defined together with
+- All fields for all types, and
+- All single purpose functions (resolvers) associated with each and every field
 
-
-This is the truth layer &mdash; the *single source of truth* or *Smart Data Objects* as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
-
-### The business logic &mdash; a question mark
-
-- it seems 'serverless` cannot be avoided: https://graphql.org/learn/thinking-in-graphs/#business-logic-layer
-- business logic needs a special layer, a single source of thruth
-- also GraphQL creator says `resolvers should map to the business logic`
-
-
-### In practice
+In practice:
 
 ```js
 /* A GraphQL Schema */
@@ -96,8 +86,6 @@ const resolvers = {
 };
 ```
 
-resolver binding to the model
-
 ```bash
 # Client-side query
 #
@@ -123,6 +111,42 @@ GET /graphql?query={
   }
 }
 ```
+
+## The Facebook way
+
+GraphQL was created by Facebook and later open sourced for the community. Together with the other parts of the stack &mdash; React, Relay &mdash; they [power](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/) one of the largest web apps today, Facebook.com.
+
+It's good to be aware of the Facebook way to gain insights on best practices, on large scale.
+
+[Facebook thinks](https://blog.apollographql.com/graphql-at-facebook-by-dan-schafer-38d65ef075af) GraphQL is about three things:
+
+1. A database modeled as a graph
+2. A single source of thruth
+3. A thin API layer
+
+### Graph database
+
+According to [Comparing Database Types: How Database Types Evolved to Meet Different Needs](https://www.prisma.io/blog/comparison-of-database-models-1iz9u29nwn37):
+
+> Graph databases are most useful when working with data where the relationships or connections are highly important. 
+
+In contrast, the well known relational database pradigm is best used to organize well-structured data:
+
+> In general, relational databases are often a good fit for any data that is regular, predictable.
+
+In other words graph databases focus on interaction, relational databases on structure. It's no wonder Facebook choose the prior to handle interaction-heavy user interfaces.
+
+
+### Single source of truth
+
+
+This is the truth layer &mdash; the *single source of truth* or *Smart Data Objects* as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
+
+The business logic &mdash; a question mark
+
+- it seems 'serverless` cannot be avoided: https://graphql.org/learn/thinking-in-graphs/#business-logic-layer
+- business logic needs a special layer, a single source of thruth
+- also GraphQL creator says `resolvers should map to the business logic`
 
 ## The pattern
 
