@@ -284,9 +284,9 @@ The chatty server-side functions (resolvers) which might repeteadly load data fr
 
 Around two third of all talks from the [2019 GraphQL conference](https://www.youtube.com/playlist?list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO) is about the schema.
 
-How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing this issue.
+How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing the schema scaling issue.
 
-Even more [it looks like](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be) all the other GraphQL design patterns &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
+Even more [all other design patterns](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be) GraphQL / DDD / Microservices are built on &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
 
 ide meg valami ....
 
@@ -294,7 +294,7 @@ ide meg valami ....
 
 GraphQL is no silver bullet. It's not better or worse than other paradigms. And no, it doesn't render the back-end developer job obsolete.
 
-It makes app design and user interface development more human by empowering the designers and front-end developers. What is gained here has to be solved on the back-end in new ways.
+It makes app design and user interface development more human by empowering the designers and front-end developers. What is gained here has to be solved on the back-end in new ways with new efforts.
 
 ## Resources
 
