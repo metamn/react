@@ -116,28 +116,55 @@ GET /graphql?query={
 
 GraphQL was created by Facebook and later open sourced for the community. Together with the other parts of the stack &mdash; React, Relay &mdash; they [power](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/) one of the largest web apps today, Facebook.com.
 
-It's good to be aware of the Facebook way to gain insights on best practices, on large scale.
+It's good to be aware of the Facebook way to gain insights on best practices on the largest scale.
 
 [Facebook thinks](https://blog.apollographql.com/graphql-at-facebook-by-dan-schafer-38d65ef075af) GraphQL is about three things:
 
-1. A database modeled as a graph
-2. A single source of thruth
-3. A thin API layer
+1. The underlying database and business model is a graph
+2. There is a single source of thruth
+3. The API is a thin layer
 
-### Graph database
+### Graph databases
 
 According to [Comparing Database Types: How Database Types Evolved to Meet Different Needs](https://www.prisma.io/blog/comparison-of-database-models-1iz9u29nwn37):
 
 > Graph databases are most useful when working with data where the relationships or connections are highly important. 
 
-In contrast, the well known relational database pradigm is best used to organize well-structured data:
+In contrast, the relational database pradigm is best used to organize well-structured data:
 
 > In general, relational databases are often a good fit for any data that is regular, predictable.
 
-In other words graph databases focus on interaction, relational databases on structure. It's no wonder Facebook choose the prior to handle interaction-heavy user interfaces.
+In other words graph databases focus on interactions in an unpredictable environment while relational databases focus on structure in a well-known context. 
 
+In graph databases entities have flexible shapes and more importantly they can form relationships freely, on the fly.
+
+![Graph database diagram](graph.png)
+
+In relational databases the business domain is well known apriori and what's left is to create a well performing model upon.
+
+![Relational database diagram](relational.png)
+
+It's no wonder Facebook choose the graph approach to handle interaction-heavy user interfaces.
+
+### Domain-driven design &mdash; DDD
+
+Dynamic contexts needs a new kind of design thinking to be able to provide solutions.
+
+In a rigid environment, where there are no moving parts and everything is under *control* one could easily model *how* things work using an *imperative* approach.
+
+In dynamic environments the only (relatively) sure thing is the existence of an entity. The capabilities it offers can change over time. Therefore the most important thing an entity can do is to *declare* *what* are its capabilities. Then the other parts of the system will be able to understand it and interact with. 
+
+For such evolving models where an entity is: 
+
+> An object that is not defined by its attributes, but rather by a thread of continuity and its identity.
+
+a suitable &mdash; and perhaps at this moment the only &mdash; solution is [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
+
+### Microservices
 
 ### Single source of truth
+
+
 
 
 This is the truth layer &mdash; the *single source of truth* or *Smart Data Objects* as the GraphQL creators [like](https://www.youtube.com/watch?v=gb1R-fWP1Yw) to call it.
@@ -214,3 +241,4 @@ It makes app design and user interface development more human by empowering the 
 - [The "N+1 selects problem"](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping)
 - [GraphQL Execution Strategies — Andreas Marek @ GraphQL Conf 2019](https://www.youtube.com/watch?v=P_yfbQrdzJo&list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&index=18)
 - [GraphQL Berlin Meetup #15: System Design and Architecture @ GraphQL — Bogdan Nedelcu](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be)
+- [REST-first design is Imperative, DDD is Declarative [Comparison] - DDD w/ TypeScript](https://khalilstemmler.com/articles/typescript-domain-driven-design/ddd-vs-crud-design/)
