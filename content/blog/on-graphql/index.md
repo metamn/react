@@ -3,7 +3,7 @@ title: 'On GraphQL'
 date: '2019-10-10'
 ---
 
-Easy to use. Complicated to scale.
+Easy to use on the front-end. More complicated to design and scale.
 
 <!--more-->
 
@@ -162,6 +162,14 @@ a suitable &mdash; and perhaps at this moment the only &mdash; solution is [Doma
 
 ### Microservices
 
+The Facebook way implies Domain-driven design which is closely related to microservices architecture.
+
+Ville Touronen from University of Helsinki wrote a well-worth-reading [master thesis](https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf) about how GraphQL connects to DDD and microservices.
+
+In short &mdash; this new context, array of technologies, and paradigms requires the business domain to be divided and implemented using different functional domains (*services*) which are highly isolated, independent and loosely coupled (*micro*). 
+
+Microservices complete the big picture. The Facebook way is a complete bet on the Functional Reactive Programming paradigm from design (DDD), data (GraphQL and graph databases), implementation (React) to servers (microservices).  
+
 ### Single source of truth
 
 
@@ -242,3 +250,4 @@ It makes app design and user interface development more human by empowering the 
 - [GraphQL Execution Strategies — Andreas Marek @ GraphQL Conf 2019](https://www.youtube.com/watch?v=P_yfbQrdzJo&list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&index=18)
 - [GraphQL Berlin Meetup #15: System Design and Architecture @ GraphQL — Bogdan Nedelcu](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be)
 - [REST-first design is Imperative, DDD is Declarative [Comparison] - DDD w/ TypeScript](https://khalilstemmler.com/articles/typescript-domain-driven-design/ddd-vs-crud-design/)
+- [Microservice architecture patterns with GraphQL](https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf)
