@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Oct 2019 11:33:47 GMT</lastBuildDate><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated to architect and scale.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Thu, 10 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated to architect and scale.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Oct 2019 12:02:24 GMT</lastBuildDate><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated on the back-end.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated on the back-end.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;Definition&lt;/h2&gt;
 &lt;p&gt;GraphQL, according to &lt;a href=&quot;https://graphql.org/learn/&quot;&gt;GraphQL.org&lt;/a&gt; is three things:&lt;/p&gt;
@@ -391,7 +391,27 @@ GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt
 &lt;li&gt;&lt;a href=&quot;https://khalilstemmler.com/articles/typescript-domain-driven-design/ddd-vs-crud-design/&quot;&gt;REST-first design is Imperative, DDD is Declarative [Comparison] - DDD w/ TypeScript&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf&quot;&gt;Microservice architecture patterns with GraphQL&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The reactive, functional nature of React]]></title><description><![CDATA[React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/the-reactive-fuctional-nature-of-react/</link><guid isPermaLink="false">http://metamn.io/react/the-reactive-fuctional-nature-of-react/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[We're gonna program like it's 1999]]></title><description><![CDATA[How joy and simplicity was brought back into our lives by the Facebook crew.]]></description><link>http://metamn.io/react/were-gonna-program-like-its-1999/</link><guid isPermaLink="false">http://metamn.io/react/were-gonna-program-like-its-1999/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;How joy and simplicity was brought back into our lives by the Facebook crew.&lt;/p&gt;
+&lt;!--more--&gt;
+
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 56.25%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe src=&quot;https://www.youtube.com/embed/ADEav6zlDjg&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          
+&lt;h2&gt;Personally&lt;/h2&gt;
+&lt;p&gt;With React and its ecosystem — functional reactive programming, microservices, domain-driven design, data-driven applications — I’ve got back my mojo.&lt;/p&gt;
+&lt;p&gt;Now I write code as I’ve written twenty or thirty years ago.&lt;/p&gt;
+&lt;p&gt;Now I design and develop user interfaces and applications like a software engineer. &lt;/p&gt;
+&lt;p&gt;No more hacking — it’s programming again.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The reactive, functional nature of React]]></title><description><![CDATA[React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/the-reactive-fuctional-nature-of-react/</link><guid isPermaLink="false">http://metamn.io/react/the-reactive-fuctional-nature-of-react/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;The context&lt;/h2&gt;
 &lt;p&gt;Both paradigms solve the same problem — to build modular, interactive applications — in different ways.&lt;/p&gt;
