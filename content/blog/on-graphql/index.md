@@ -23,7 +23,11 @@ GraphQL is in the same way a query language. It is like REST built on the more a
 
 ### Server-side runtime
 
-The UNIX philosophy of _Do one thing and do it well_ [is built into](https://www.youtube.com/watch?v=gb1R-fWP1Yw) GraphQL making it a super simple layer on the server.
+The UNIX philosophy of
+
+> Do one thing and do it well
+
+[is built into](https://www.youtube.com/watch?v=gb1R-fWP1Yw) GraphQL making it a super simple layer on the server.
 
 The GraphQL runtime does only one thing: returns results for queries. How results are computed, put together, collected from other services &mdash; the business logic &mdash; is outside of its scope.
 
@@ -116,17 +120,17 @@ GET /graphql?query={
 
 GraphQL was created by Facebook and later open sourced for the community. Together with the other parts of the stack &mdash; React, Relay &mdash; they [power](https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/) one of the largest web apps today, Facebook.com.
 
-It's good to be aware of the Facebook way to gain insights on best practices on the largest scale.
+It's good to be aware of the Facebook way. To learn about the best practices on large scale.
 
-[Facebook thinks](https://blog.apollographql.com/graphql-at-facebook-by-dan-schafer-38d65ef075af) GraphQL is about three things:
+[According to Facebook](https://blog.apollographql.com/graphql-at-facebook-by-dan-schafer-38d65ef075af) GraphQL is about three things:
 
 1. The underlying database and business model is a graph
-2. There is a single source of thruth
+2. There is a single source of truth
 3. The API is a thin layer
 
 ### Graph databases
 
-According to [Comparing Database Types: How Database Types Evolved to Meet Different Needs](https://www.prisma.io/blog/comparison-of-database-models-1iz9u29nwn37):
+[Comparing Database Types: How Database Types Evolved to Meet Different Needs](https://www.prisma.io/blog/comparison-of-database-models-1iz9u29nwn37) has a great overview and definition for graph databases:
 
 > Graph databases are most useful when working with data where the relationships or connections are highly important.
 
@@ -144,7 +148,7 @@ In relational databases the business domain is well known apriori and what's lef
 
 ![Relational database diagram](relational.png)
 
-It's no wonder Facebook choose the graph approach to handle interaction-heavy user interfaces.
+No wonder Facebook choose the graph approach. It handles better the use case of interaction-heavy user interfaces.
 
 ### Domain-driven design &mdash; DDD
 
@@ -152,13 +156,13 @@ Dynamic contexts needs [a new kind of design thinking](https://khalilstemmler.co
 
 In a rigid environment, where there are no moving parts and everything is under _control_ one could easily model _how_ things work using an _imperative_ approach.
 
-In dynamic environments the only (relatively) sure thing is the existence of an entity. The capabilities it offers can change over time. Therefore the most important thing an entity can do is to _declare_ _what_ are its capabilities. Then the other parts of the system will be able to understand it and interact with.
+In dynamic environments the only (relatively) sure thing is the existence of an entity. The capabilities an entity offers can change over time. Therefore the most important thing an entity can do is to _declare_ _what_ are its capabilities. Then the other parts of the system will be able to understand it and interact with.
 
 For such evolving models where an entity is:
 
 > An object that is not defined by its attributes, but rather by a thread of continuity and its identity.
 
-a suitable &mdash; and perhaps at this moment the only &mdash; design approach is [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
+a suitable design approach is called [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
 
 ### Microservices
 
@@ -166,7 +170,7 @@ The Facebook way implies Domain-driven design which is closely related to the mi
 
 Ville Touronen from University of Helsinki wrote a well-worth-reading [master thesis](https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf) about how GraphQL connects to DDD and microservices.
 
-In short &mdash; this new context, array of technologies, and paradigms requires the business domain to be divided and implemented using different functional domains (_services_) which are highly isolated, independent and loosely coupled (_micro_).
+In short &mdash; this new context, array of technologies, and paradigms requires the business domain to be split into different functional domains (_services_) which are highly isolated, independent and loosely coupled (_micro_).
 
 Microservices complete the big picture. The Facebook way is a full bet on the [Functional Reactive Programming paradigm](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) from design (DDD), data (GraphQL and graph databases), implementation (React) to servers (microservices).
 
@@ -174,9 +178,9 @@ Microservices complete the big picture. The Facebook way is a full bet on the [F
 
 In a dynamic context it is very important to establish a single source of truth from where all other parts of the stack approvision themselves.
 
-The creators of GraphQL [are always eager to emphasize it](https://www.youtube.com/watch?v=gb1R-fWP1Yw).
+The creators of GraphQL [are always eager to emphasize](https://www.youtube.com/watch?v=gb1R-fWP1Yw) the importance of such a truth layer.
 
-In [Thinking in Graphs - Business Logic Layer](https://graphql.org/learn/thinking-in-graphs/#business-logic-layer) we have a clear definition and a diagram describing the need:
+In [Thinking in Graphs / Business Logic Layer](https://graphql.org/learn/thinking-in-graphs/#business-logic-layer) chapter there is a clear definition and a diagram describing the use case:
 
 > Your business logic layer should act as the single source of truth for enforcing business domain rules
 
@@ -184,11 +188,15 @@ In [Thinking in Graphs - Business Logic Layer](https://graphql.org/learn/thinkin
 
 In the Facebook approach the truth gatekeeper role is given to GraphQL. 
 
-Its type system / schema is suitable to declare and define the capabilities of an entity. And it is extendable through _Smart Data Objects / GraphQLObjectType_ to connect the business logic layer.
+GraphQL's type system / schema is suitable to declare and define the capabilities of an entity. And it is extendable through _Smart Data Objects / GraphQLObjectType_ to connect with the business logic layer.
 ```js
 /**
  * From Ville Touronen's master thesis
+ * 
+ * See: https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf
  */
+
+
 
 /**
  * - The business logic is held in a separate layer
@@ -237,7 +245,7 @@ const bookType = new GraphQLObjectType({
 			type: GraphQLNonNull(GraphQLString) ,
 			description: 'The internal identifier of the book',
 		},
-		/* ... */
+		/* ... The other fields ... */
 	})
 })
 
@@ -266,7 +274,7 @@ This pattern is a double-edged sword. It makes design and development easier but
 
 ### The N+1 problem
 
-The [N+1 selects problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping) is a basic design and development constraint in older paradigms like relational databases. It makes the business / data / component model to follow ceratin strict technical guidelines which is not natural to default human thinking.
+The [N+1 selects problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping) is a basic design and development constraint in older paradigms like relational databases. It makes the business / data / component model to follow certain strict technical guidelines which are not natural to default human thinking.
 
 In GraphQL this issue [is automatically solved](https://www.youtube.com/watch?v=P_yfbQrdzJo&list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&index=18).
 
