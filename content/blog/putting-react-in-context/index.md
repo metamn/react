@@ -129,14 +129,14 @@ When considerable results are found a new article is written and linked below.
 	<tr>
 		<td>Designing applications</td>
 		<td>Data and interaction models</td>
-		<td><a href="http://metamn.io/react/ontology-taxonomy-choreography/" title="Ontology, taxonomy, choreography">Ontology, taxonomy, choreography</a></td>
+		<td><ul><li><a href="http://metamn.io/react/ontology-taxonomy-choreography/" title="Ontology, taxonomy, choreography">Ontology, taxonomy, choreography</a></li><li><a href="http://metamn.io/react/on-graphql/" title="On GraphQL">On GraphQL</a></li></ul></td>
 	</tr>
 	<tr>
 		<td>GraphQL</td>
 		<td>Data driven applications</td>
 		<td><ul><li><a href="http://metamn.io/react/rapid-prototyping-for-graphql-apis/" title="Rapid prototyping for GraphQL APIs?">Rapid prototyping for GraphQL APIs?</a></li>
 		<li><a href="http://metamn.io/react/is-graphql-functional-and-reactive/" title="Is GraphQL functional and reactive?">Is GraphQL functional and reactive?</a></li>
-		<li><a href="http://metamn.io/react/graphql-and-rest-apis-with-aws/" title="GraphQL and REST APIs with AWS">GraphQL and REST APIs with AWS</a></li></ul></td>
+		<li><a href="http://metamn.io/react/graphql-and-rest-apis-with-aws/" title="GraphQL and REST APIs with AWS">GraphQL and REST APIs with AWS</a></li><li><a href="http://metamn.io/react/on-graphql/" title="On GraphQL">On GraphQL</a></li></ul></td>
 	</tr>
 	<tr>
 		<td>Rapid prototyping</td>
