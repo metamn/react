@@ -122,7 +122,11 @@ GraphQL was created by Facebook and later open sourced for the community. Togeth
 
 It's good to be aware of the Facebook way. To learn about the best practices on large scale.
 
-[According to Facebook](https://blog.apollographql.com/graphql-at-facebook-by-dan-schafer-38d65ef075af) GraphQL is about three things:
+> Facebook has been using GraphQL in production for almost four years; today, it serves over 300 billion queries a day and its schema has nearly 10,000 types. 
+
+> In building this API, we’ve developed a set of best practices for designing an understandable and scalable GraphQL schema. &mdash; [Dan Schafer at react-europe](https://www.youtube.com/watch?v=etax3aEe2dA)
+
+Facebook defines GraphQL using the following concepts:
 
 1. The underlying database and business model is a graph
 2. There is a single source of truth
