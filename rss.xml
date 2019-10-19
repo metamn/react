@@ -1,4 +1,397 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 08 Oct 2019 14:31:38 GMT</lastBuildDate><item><title><![CDATA[The reactive, functional nature of React]]></title><description><![CDATA[React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/the-reactive-fuctional-nature-of-react/</link><guid isPermaLink="false">http://metamn.io/react/the-reactive-fuctional-nature-of-react/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Oct 2019 11:33:47 GMT</lastBuildDate><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated to architect and scale.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Thu, 10 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated to architect and scale.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;h2&gt;Definition&lt;/h2&gt;
+&lt;p&gt;GraphQL, according to &lt;a href=&quot;https://graphql.org/learn/&quot;&gt;GraphQL.org&lt;/a&gt; is three things:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;A query language&lt;/li&gt;
+&lt;li&gt;A server-side runtime&lt;/li&gt;
+&lt;li&gt;A type system&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Query language&lt;/h3&gt;
+&lt;p&gt;We all know query languages. SQL — to query relational databases. REST API — to query data on the backend.&lt;/p&gt;
+&lt;p&gt;GraphQL is in the same way a query language. It is like REST built on the more advanced principles of &lt;a href=&quot;http://metamn.io/react/is-graphql-functional-and-reactive/&quot;&gt;functional and reactive programming&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Server-side runtime&lt;/h3&gt;
+&lt;p&gt;The UNIX philosophy of&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Do one thing and do it well&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=gb1R-fWP1Yw&quot;&gt;is built into&lt;/a&gt; GraphQL making it a super simple layer on the server.&lt;/p&gt;
+&lt;p&gt;The GraphQL runtime does only one thing: returns results for queries. How results are computed, put together, collected from other services — the business logic — is outside its scope.&lt;/p&gt;
+&lt;p&gt;(As a compensation) GraphQL offers extensive connectivity to various backend services like databases, storage engines, serverless functions, authentication, caching to be used in any combination to define how the application works.&lt;/p&gt;
+&lt;h3&gt;Type system&lt;/h3&gt;
+&lt;p&gt;What glues together the client-side queries and server-side responses is the GraphQL Schema — a place where:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;All types are defined together with&lt;/li&gt;
+&lt;li&gt;All fields for all types, and&lt;/li&gt;
+&lt;li&gt;All single purpose functions (resolvers) associated with each and every field&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In practice:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* A GraphQL Schema */&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Data type
+ * - Defines a data entity
+ */&lt;/span&gt;
+type Book &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ID&lt;/span&gt;
+	title&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; String  &lt;span class=&quot;token comment&quot;&gt;/* A field */&lt;/span&gt;
+	author&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Author
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Data type
+ * - Defines a data entity
+ */&lt;/span&gt;
+type Author &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ID&lt;/span&gt;
+	firstName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; String  &lt;span class=&quot;token comment&quot;&gt;/* A field */&lt;/span&gt;
+	lastName&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; String
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Query type
+ * - Defines operations on data
+ */&lt;/span&gt;
+type Query &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;token function&quot;&gt;book&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Book  &lt;span class=&quot;token comment&quot;&gt;/* A field */&lt;/span&gt;
+	&lt;span class=&quot;token function&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;ID&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Author
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * Server-side, single purpose functions (resolvers)
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; resolvers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  Query&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;author&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;root&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;authors&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  Author&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function-variable function&quot;&gt;books&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;author&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;filter&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;books&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; authorId&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; author&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# Client-side query&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;#&lt;/span&gt;
+GET /graphql?query&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	book&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;id: &lt;span class=&quot;token string&quot;&gt;&quot;1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		title,
+		author
+		&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			firstName
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * The result
+ */&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;title&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Black Hole Blues&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token string&quot;&gt;&quot;author&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&quot;firstName&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Janna&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;The Facebook way&lt;/h2&gt;
+&lt;p&gt;GraphQL was created by Facebook and later open sourced for the community. Together with the other parts of the stack — React, Relay — they &lt;a href=&quot;https://developers.facebook.com/videos/2019/building-the-new-facebookcom-with-react-graphql-and-relay/&quot;&gt;power&lt;/a&gt; one of the largest web apps today, Facebook.com.&lt;/p&gt;
+&lt;p&gt;It’s good to be aware of the Facebook way. To learn about the best practices on large scale.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Facebook has been using GraphQL in production for almost four years; today, it serves over 300 billion queries a day and its schema has nearly 10,000 types. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In building this API, we’ve developed a set of best practices for designing an understandable and scalable GraphQL schema. — &lt;a href=&quot;https://www.youtube.com/watch?v=etax3aEe2dA&quot;&gt;Dan Schafer at react-europe&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Facebook defines GraphQL using the following concepts:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The underlying database and business model is a graph&lt;/li&gt;
+&lt;li&gt;There is a single source of truth&lt;/li&gt;
+&lt;li&gt;The API is a thin layer&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Graph databases&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.prisma.io/blog/comparison-of-database-models-1iz9u29nwn37&quot;&gt;Comparing Database Types: How Database Types Evolved to Meet Different Needs&lt;/a&gt; has a great overview and definition for graph databases:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Graph databases are most useful when working with data where the relationships or connections are highly important.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In contrast, the relational database paradigm is best used to organize well-structured data:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In general, relational databases are often a good fit for any data that is regular, predictable.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In other words graph databases focus on interactions in an unpredictable environment while relational databases focus on structure in a well-known context.&lt;/p&gt;
+&lt;p&gt;In graph databases entities have flexible shapes and more importantly they can form relationships freely, on the fly.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/3b80b2d015e6eb609990c6471ffb24fc/4a38b/graph.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.22077922077922%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsSAAALEgHS3X78AAAB+UlEQVQoz3WSiW7TQBCG8/4PAhISh0IoUFQVUKuCSkrbkCbkcprE6zg+13t4bzN2QiSsMtqVdu355p9jO1XbHGxTluWuT4IrGn6X8Q3HWfPHtVw7bVQbWCrHs8Fbb9wLvFN/fpoFfmWcNea/sHPOSg1OupQ4SRmleBen/hbO1loHWypYnDJCWRs2jBtOeBKLNJFS1uGUhiwqYyvrjjWJPCNhoDixgncOqrpiOy/w3oWrDzT+TGIEX0FHME5yDIcD6qoi+BmtT/DunEcXNQwpQbYcR5PbT6vRl9XkguRJU7/WpdC6ztaBfmPh48NseLaZX26m3xrYWCjMWGuYVAWnaUEZg5zTNBNc1e13DvSlUnt5a5zRzhjX2aenITbAUlpQk9CWUhEuccyTRbYeaxoIXLgnR2WAhFYrTYuCFSTPMqlkpat00Z8PnqFFN3p8n/ub4yv4B7ZS1pMQch+iFhdCYsZwvBz/QN4v5A2LJK3awg3sVF2tKeuSrDaaiJJwkmG4SgY1aFVKiskTsEinLL5Do6+Gjuh2rhi3LONbpHGii8z9nbCMozIO27A37HmzV2h9skM9HA4wmqFpd3b7cv27u3n4qA8TrvzR+WLwmmbZ/i0e4MndWf/qxf31m+vL58HyXlAababp1ovRPPKX0Iq9H0nDBC1U8/KO9geqFR9bU7jSjwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Graph database diagram&quot;
+        title=&quot;Graph database diagram&quot;
+        src=&quot;/react/static/3b80b2d015e6eb609990c6471ffb24fc/5cc77/graph.png&quot;
+        srcset=&quot;/react/static/3b80b2d015e6eb609990c6471ffb24fc/72cd8/graph.png 192w,
+/react/static/3b80b2d015e6eb609990c6471ffb24fc/45483/graph.png 384w,
+/react/static/3b80b2d015e6eb609990c6471ffb24fc/5cc77/graph.png 768w,
+/react/static/3b80b2d015e6eb609990c6471ffb24fc/4a38b/graph.png 770w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In relational databases the business domain is well known a priori and what’s left is to create a well performing model upon.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 427px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/862b436d4275dd481798a51af65547bf/8928d/relational.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 125.76112412177987%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAZCAIAAAC+dZmEAAAACXBIWXMAAAsSAAALEgHS3X78AAADdUlEQVQ4y42UC3eaSBTH+f4fotueTZomjYnR2LVqV7E+4hsVFQTkLQgiIPKShzs+au3uZjf33AMzd+Y/c8/85g60e8XiOAZfgyckoqbQLWFS0efCOX406HVxBL7SuDbpXPFEWqZSLNo5x98kVvCXKXLD4ilznhPGvbeL9+ktabyff8SahX4hKTOzN6Udgzm706TAcuMwDtbOP4egi612IKN9UvHFGlHsKkYcRVvL3o9eDP0QH2KeTG1VJNBQS2zzoxKPFj0F8RbImvy+4meeqm9VdC20Z0iBQ4uu3FnNhtD5DFS8zqJ3CyrjKCWNzQIHDXcJ24sC22+486WEZejhvYg/mWLBXxZ5pPBTrBBNYpQQmGzkd3ZBF3jktSOvE9h1cYqscY5B0yyV0aTiWqtsNHgxrV2I6War8340vsenD/IiN8buKfqJoJ5oOslj3dC08dHDCP+M4YnB8FaSv0hkBTqfvkKi3VJiWM90So9YOwsaLFIATg8LHIbGfoA1c/0/E6P686CanjQyeKsMXXIFHkV7EFEQgbZnOZ6xCcMI2HEHX7dCP9hPCAGHGDoSOtM6MDj9Ij8IXf8MZs98A5hHP1jF0J6QNpamL8wAtuXBmu17thu5VriRPJl25pSji5sl6xni1pI3DOaq3Naxj1tB6gQW8Ed6kACQfB2W0bSpGY6E61TKFPJbrSxMkkT31uBygVYOjapOfVlQxPGYIWkM09OUzOb99YtjVhfT3MawdG6MtW+IwaO1KNvLireqmRJszEuGDIuTZ4WhTmIBg0d4oj8EYDIYmRTILBA7GkURCWGe54UsNUv1B3eN5u/fK+86vRuGTKnc7CRmel9btXej7qdO7f1keNsrfdgYa1Oatsq/dWsfJ/0Hic2LdE6YZXkqu5RKCpOXafIk1gSWGnXpCbL3dp0adjzX3dqOyvHyaLpk+ZU41yXp4PJqLoG45zhHtr+UZGB7l93I217U0b8YtF/hcAFC11uTnG9aoe0Glh06rjUTPc0MADlwdS7s18fg0HflSaDXVa5IommBzHF4lkGfXaOhs7CpKH97Q36Kj4Uhj2tE95NM/uEosKuWvWXZ1yo7u6lNs0tR+B+xSjZ6jQ8klpSFr4AH0rruNa+7rSu0cWMspP8QH6qKQPrVu3ErhXef0Wby5dvHau6q/u26V/r8Wtp/ARtiXxJe+dWHAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Relational database diagram&quot;
+        title=&quot;Relational database diagram&quot;
+        src=&quot;/react/static/862b436d4275dd481798a51af65547bf/8928d/relational.png&quot;
+        srcset=&quot;/react/static/862b436d4275dd481798a51af65547bf/72cd8/relational.png 192w,
+/react/static/862b436d4275dd481798a51af65547bf/45483/relational.png 384w,
+/react/static/862b436d4275dd481798a51af65547bf/8928d/relational.png 427w&quot;
+        sizes=&quot;(max-width: 427px) 100vw, 427px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;No wonder Facebook chose the graph approach. It handles better the use case of interaction-heavy user interfaces.&lt;/p&gt;
+&lt;h3&gt;Domain-driven design — DDD&lt;/h3&gt;
+&lt;p&gt;Dynamic contexts needs &lt;a href=&quot;https://khalilstemmler.com/articles/typescript-domain-driven-design/ddd-vs-crud-design/&quot;&gt;a new kind of design thinking&lt;/a&gt; to be able to provide solutions.&lt;/p&gt;
+&lt;p&gt;In a rigid environment, where there are no moving parts and everything is under &lt;em&gt;control&lt;/em&gt; one could easily model &lt;em&gt;how&lt;/em&gt; things work using an &lt;em&gt;imperative&lt;/em&gt; approach.&lt;/p&gt;
+&lt;p&gt;In dynamic environments the only (relatively) sure thing is the existence of an entity. The capabilities an entity offers can change over time. Therefore the most important thing an entity can do is to &lt;em&gt;declare&lt;/em&gt; &lt;em&gt;what&lt;/em&gt; are its capabilities. Then the other parts of the system will be able to understand it and interact with.&lt;/p&gt;
+&lt;p&gt;For such evolving models where an entity is:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An object that is not defined by its attributes, but rather by a thread of continuity and its identity.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;a suitable design approach is called &lt;a href=&quot;https://en.wikipedia.org/wiki/Domain-driven_design&quot;&gt;Domain-driven design&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/9b03f9f58a3d496febdabc9b0d33af9e/57e09/dddsketch.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 61.917098445595855%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsTAAALEwEAmpwYAAAC40lEQVQoz2PwcXdmZEAFrAn+LhyKkiJCriaanDpqSgIBfr7s6fHhLCoa6hw6+vo8csrKXEB1bFDMCsSM7FxcTDADOKb3tuo+vH1t4+Mb5w6e2bkiEKiaa3lLrsy0kgQ5FQYGTqg6kAa45T5FhbyhZWW8AcXFfHqurvwgc5iYmVnBkmvnT5E7tGfbrpN7t5xbPasnBST5+fF1DpDchZOHdW5dOe+9Z+0C+/bJkyxOXrniNnHjRtfYCRPUzJqbeR2qqkRSZ8/mB9vIzMzJICUuyv3iyUOh9MQYOQaEa+Dg1sWTGz+9evL/2tFtL5Zt23z5/N17/2fv2fvOMSFRb3JHh/SOU6ckMjs6QV5nYGFl5WAoy06SuXP1/OevLx/8v7Rv3bSNq5ao37txZfGlY3tW7Fo2zTgtOUlkYmeTSXF6nK57cLB6WVu7kbm/v/yElauczt+583/fzVv/KxYtLgQZqGliwsNgaaLPt3PDSr/ta5Ykzuup1Ti4bZ3ruROHXh7fveHdvlWzvNAcDA/D2Vu38vbOmZPYPHNWWmZvrzpIjIuXF+xDdgZMAAo/AVCw3LlyZt7jO9e+3zq588KKHVv3nLpx4+38AwevW8XEqqNr4hcR5WDg4uRgVlNRFvj//z/jvEkdzOiKju/dFnf26L7p+9YtrOmbNyd348GDEzpXrGwBSnGvOXDQ/syNGxc2nT9/vGD2HGtkfWxO9jZgl54+sN3m/s0r++9eOLr/zPZlNgx4wKxNmyy3HDq0Y8qGDXtTurotUSTlZKTBUb9v8yr7M0cPHD+yfe25LQsnOoLDa1I3l7ujDbeGrg7vvnPnWUC+AYkXNzayTZ03TzwiLU0ppLSUFRpUSGHAx8uNHgkqCrIghTBxFlDSsnVxAQf+8n37wk9dv/5/1YkT//OmzwhB0WljaQ6mjQ30mNXU1Li93F1YBfn5OKE5BAWISkiA0h1LXF6ewoT584PqZszwt4+IlAfJAQARRhgPrfs4fQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;DDD Sketch&quot;
+        title=&quot;DDD Sketch&quot;
+        src=&quot;/react/static/9b03f9f58a3d496febdabc9b0d33af9e/5cc77/dddsketch.png&quot;
+        srcset=&quot;/react/static/9b03f9f58a3d496febdabc9b0d33af9e/72cd8/dddsketch.png 192w,
+/react/static/9b03f9f58a3d496febdabc9b0d33af9e/45483/dddsketch.png 384w,
+/react/static/9b03f9f58a3d496febdabc9b0d33af9e/5cc77/dddsketch.png 768w,
+/react/static/9b03f9f58a3d496febdabc9b0d33af9e/57e09/dddsketch.png 772w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;via&lt;/em&gt; &lt;a href=&quot;https://martinfowler.com/bliki/images/boundedContext/sketch.png&quot;&gt;Martin Fowler&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Microservices&lt;/h3&gt;
+&lt;p&gt;The Facebook way implies Domain-driven design which is closely related to the microservices architecture.&lt;/p&gt;
+&lt;p&gt;Ville Touronen from University of Helsinki wrote a well-worth-reading &lt;a href=&quot;https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf&quot;&gt;master thesis&lt;/a&gt; about how GraphQL connects to DDD and microservices.&lt;/p&gt;
+&lt;p&gt;In short — this new context, array of technologies, and paradigms requires the business domain to be split into different functional domains (&lt;em&gt;services&lt;/em&gt;) which are highly isolated, independent and loosely coupled (&lt;em&gt;micro&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 703px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/afda5/graphql-3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.76529160739687%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAC6UlEQVQoz2PQ1FVm0dFTl/6v95/BSDWTAQR0DFT5NLQVuUHs////MwT6RXOYWRhrVpZMYS7Pm8MIEjcyM1QwtzRXBLEjffsYmBiEQeIqDHlJ81hTIyYrMCCBtMjpwiUZiwSQxWz1SySR+SnRXbJhAQUSMD7IYiezAlWGaU3PmAvCrslaSuzgc1LezWfAt4k7zvm0TJrPGRkuhqWc7YWXZFZPu2+wsP+557aVr/Sq085LcTMs4swOuCIfZX1FzER4I4+d3C5eD619AjXJj+TgNsY6HWWKsj/MGGZ5lAnEP7ftPpi+c+Z95ce7X/6fP3/z451bz//fvvolHiR+5MB5oLwYQ4TVCaYkj2NMziq7wUHBYK+wi9tNYy9/uN0B3jCb/bx+hgf4Iu0P8kU57uPX5TrMtWTiQ+V96184zpt02XXzyrsOc7ufyZrwH+eKdT3AH2xxgC/I7CBfnOtR3mCLg3xOKrv5GIDeRAkrVMApAiTEgRgUVqJQGhjefBLYVIfZHAa5chbn09v/BR49eLPn4YNXB25c+Br1/Pm7PXfvvNh67fyn2CdPXp26dePZmhsXP6Y+fPj8yq0bL+bcvvox+/GTl1fv3nrX+fjet5Jv335ff/b4Wx3U3E7OO/f+SP2Hgju3v7WD6L9f//y/e/d7F4j96dWXLw/ufZ8MYn949fX+44ff5oPYb559OfPy2ff1YPE3P3eDjdNgWcsX4XxIcuP8R/k7lz7J6W++br56xoOqtdMf5E9svWGxbfGT8s0LHsUtmX3f6NC6F0Xr5z0MXb3godmh9S/KVs164Ldu4UObPSsfl6+e88CNgWExJ0N38R/2SJtzYhDXVnOYiexThrBn80oyHOWEsGdwMDDsY4aw1wATvA7Ud9v5YOEnyLBGqDH/EitDoEe3RHrcAhmQYEbcPJnspCWyIHZu6jzpnJSF0iB2duJC+cyEBeCEnZ20SCktdr44RHyJSkr0DFDEMbRVXJQtSzvNBgC+5knBM+x69AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Microservices&quot;
+        title=&quot;Microservices&quot;
+        src=&quot;/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/afda5/graphql-3.png&quot;
+        srcset=&quot;/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/72cd8/graphql-3.png 192w,
+/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/45483/graphql-3.png 384w,
+/react/static/7dfd9697bf7774ccbf5bb9604449fa3e/afda5/graphql-3.png 703w&quot;
+        sizes=&quot;(max-width: 703px) 100vw, 703px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;via&lt;/em&gt; &lt;a href=&quot;https://www.apollographql.com/customers/expediagroup/&quot;&gt;Apollo / Expedia GraphQL architecture&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Microservices complete the big picture. The Facebook way is a full bet on the &lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;Functional Reactive Programming paradigm&lt;/a&gt; from design (DDD), data (GraphQL and graph databases), implementation (React) to servers (microservices).&lt;/p&gt;
+&lt;h3&gt;Single source of truth&lt;/h3&gt;
+&lt;p&gt;In a dynamic context it is very important to establish a single source of truth from where all other parts of the stack provision themselves.&lt;/p&gt;
+&lt;p&gt;The creators of GraphQL &lt;a href=&quot;https://www.youtube.com/watch?v=gb1R-fWP1Yw&quot;&gt;are always eager to emphasize&lt;/a&gt; the importance of such a truth layer.&lt;/p&gt;
+&lt;p&gt;In &lt;a href=&quot;https://graphql.org/learn/thinking-in-graphs/#business-logic-layer&quot;&gt;Thinking in Graphs / Business Logic Layer&lt;/a&gt; chapter there is a clear definition and a diagram describing the use case:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your business logic layer should act as the single source of truth for enforcing business domain rules&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 594px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/7a2ea703be847da2ca5545ee41c7b5ac/262c7/business-layer.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 93.93939393939394%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsSAAALEgHS3X78AAADzUlEQVQ4y63Qy1NbZRgG8PNPuBBXzngZpY4zWhe0QHMBaS0Eim3CRa5hpp0BQgK0U9oilkzXVaKykNZKKCgKSQhJSEKSQpJ2IJcSkhRkXLjSHYRpgjIh5/H9ziGIrF388nzne5/3W4Tr8Uqg9UnBUueT8zqfLNcXlEPrlTTQfbIvKEPn4plct6eE13jP8dolKes3U3+D9ShzbD//BqfxSg/6nlTkvn1+I/dVRJMb8CuyOr+UHi9v6PFKE/djnRiJ6rIjEd3B/XDnQd9SOWinWeuTvdAuS4TZl5FuelSWo36Oux4sBjO0ehGfr5zH9UAxBsKl6H/ynlLnK9oajl3EvVAtvlitxHBIgYEVCXp9pxp7fUW/3aTe7WflGFypwI2nJegPngWndutG1K7er1ucXYZWZ7dB7dIZOtza0TrHA0W7+9Zwm0sz2rTQZWihWYtTY2h3935T7xiraXfd1He4daOtdMewPXrHwPVYI39seOpTCU/zNtlJeJqY7TXPZ/txt2o34VZtkx2RkuX22mLjftzTtMt6rL/uadv53VuzY3A83uEGbXP7CL6NbOAUDgSFguxyIXLRavBrKvDPL4lijcJdNvABsv53j/r7gfeB4Gv4ZVEPbsg2l4H/dfBLb/F5WGbe5LFSymNVTqR0PscjVEEp4REopPkbQo/1s0vv8PC/ws+4hnhObY1lZtx38ZNTz0879Zh26TG5MIwJB7EPwmi7g0n7HUzYBsltTDnozn6X5nq2I/R/dN7DnOsWBm3z4IpN2cxpE3B6FjxhiWYf0OAB6r1AHaXCKWYjfVcu0IxSuQicMQMfUv+jWTGLTDw4qTmTKbNkIDe/5AlLXHakUbeQhpKywZlGtS2NFncabe4MqubTaKVU0fxji9hnyojMnGEP/pWRWv6GxLTHE9A3Smb3UHxMKTk7Iyo1icnu8/18MpzUtPeS8OQgT3aCcGcWHZ2P9Y/jpJZ9yOk/ki/8Pzj5bMZMHMT+H6Y9cjxPzE72D3HrFx4ukgDxi773r1c89Mdk3/ljZWP+mJxSPiaey5kHwox1hO7RnogLV08gWfsz4rXTSJB4zTSSqhlsXbNjU23F1lUbfu2wYrPdio0Wi4DNWCd+Sdw5jgspjHsRxQTCCqOochzRK1NIdlmR6JrDRr8DSc08kt1WxK+a8UI7j80Bp9Bh3aO9Qxz9/BmuMu5SpkJV4ykhK8dTq+cfpVYvPPo3SeiTHwTsjnXyO/k9hgtXjb9KFwVhRmEsEM7VxoKocqogcmVSyChl5DL59LEgqpoqCNdMiF3aERy+8Q/stPr0eadJ8QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Business logic layer&quot;
+        title=&quot;Business logic layer&quot;
+        src=&quot;/react/static/7a2ea703be847da2ca5545ee41c7b5ac/262c7/business-layer.png&quot;
+        srcset=&quot;/react/static/7a2ea703be847da2ca5545ee41c7b5ac/72cd8/business-layer.png 192w,
+/react/static/7a2ea703be847da2ca5545ee41c7b5ac/45483/business-layer.png 384w,
+/react/static/7a2ea703be847da2ca5545ee41c7b5ac/262c7/business-layer.png 594w&quot;
+        sizes=&quot;(max-width: 594px) 100vw, 594px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In the Facebook approach the truth gatekeeper role is given to GraphQL. &lt;/p&gt;
+&lt;p&gt;GraphQL’s type system / schema is suitable to declare and define the capabilities of an entity. And it is extendable through &lt;em&gt;Smart Data Objects / GraphQLObjectType&lt;/em&gt; to connect with the business logic layer.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/**
+ * From Ville Touronen&apos;s master thesis
+ * 
+ * See: https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf
+ */&lt;/span&gt;
+
+
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * - The business logic is held in a separate layer
+ * - Each type (`Book`) has an associated `model` where
+ * ... data fetching, business logic, or security is solved 
+ * ... exactly once for this type across the application
+ * ... providing the single source of truth
+ * 
+ * See: https://blog.apollographql.com/graphql-at-facebook-by-dan-schafer-38d65ef075af 
+ */&lt;/span&gt; 
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; getBook &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./models/book&apos;&lt;/span&gt;
+
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Bindings to the business logic layer
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; bookQuery &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GraphQLSchema&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	query&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GraphQLObjectType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;Query&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		fields&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			book&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+				type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; bookType &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+				args&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+					id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+						description&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;internal id of the book&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+						type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;GraphQLNonNull&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; GraphQLString &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+					&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+				&lt;span class=&quot;token comment&quot;&gt;/**
+				 * Resolvers **always** map to the business logic
+				 */&lt;/span&gt;
+				&lt;span class=&quot;token function-variable function&quot;&gt;resolve&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;root&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getBook&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt; id &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * The capabilities of an entity aka the types
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; bookType &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GraphQLObjectType&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	name&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Book&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	description&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;A book with an ISBN code&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	&lt;span class=&quot;token function-variable function&quot;&gt;fields&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+		id&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+			type&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;GraphQLNonNull&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;GraphQLString&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+			description&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;The internal identifier of the book&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+		&lt;span class=&quot;token comment&quot;&gt;/* ... The other fields ... */&lt;/span&gt;
+	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * All wrapped together
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; BookSchema &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;GraphQLSchema&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+	query&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; bookQuery&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+	types&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; bookType &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Thin API Layer&lt;/h3&gt;
+&lt;p&gt;The most important takeaway up to this point is the:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;type&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;field&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;resolver&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;business logic&lt;/code&gt; pattern.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Types have fields and every field has an associated server-side function which returns results and connects to the business logic layer.&lt;/p&gt;
+&lt;p&gt;The first three items constitute the thin API layer of GraphQL, the last one is the separated business logic layer.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;|------------------|                 |----------------------|
+| GraphQL Thin API |                 | Business Logic Layer |
+|---------------------------|        |--------------------------------|
+| Type -&amp;gt; Field -&amp;gt; Resolver |   -&amp;gt;   | Model / Single source of truth |
+|---------------------------|        |--------------------------------|&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This pattern is a double-edged sword. It makes design and development easier but scaling on the server-side harder.&lt;/p&gt;
+&lt;h4&gt;The N+1 problem&lt;/h4&gt;
+&lt;p&gt;The &lt;a href=&quot;https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping&quot;&gt;N+1 selects problem&lt;/a&gt; is a basic design and development constraint in older paradigms like relational databases. It makes the business / data / component model to follow certain strict technical guidelines which are not natural to default human thinking.&lt;/p&gt;
+&lt;p&gt;In GraphQL this issue &lt;a href=&quot;https://www.youtube.com/watch?v=P_yfbQrdzJo&amp;#x26;list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&amp;#x26;index=18&quot;&gt;is automatically solved&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The original N+1 problem is related to database design. Improperly designed database tables can lead to more database queries than optimal reducing considerably the app response time. To circumvent this issue in the object-relational paradigm various normalization techniques are used.&lt;/p&gt;
+&lt;p&gt;In GraphQL there is no N+1 problem. One can design freely the types in the schema and a middle-layer — the Dataloader — takes care of eliminating the N+1 performance issues.&lt;/p&gt;
+&lt;p&gt;In practice this means &lt;code class=&quot;language-text&quot;&gt;fields&lt;/code&gt; can be freely added to &lt;code class=&quot;language-text&quot;&gt;types&lt;/code&gt; without worrying about normalization. Components can be modeled in a less rigid, more human friendly way using &lt;em&gt;graphs&lt;/em&gt; which let directly store the relationships between records.&lt;/p&gt;
+&lt;p&gt;Writing the associated &lt;code class=&quot;language-text&quot;&gt;resolvers&lt;/code&gt; to &lt;code class=&quot;language-text&quot;&gt;fields&lt;/code&gt; is again free thinking: just focus on the single purpose of the function of returning the results and forget about redundancy, caching and performance.&lt;/p&gt;
+&lt;p&gt;The chatty server-side functions (resolvers) which might repaetedly load data from the database are collected, optimized into a single request, and their results cached — by the GraphQL middle-layer.&lt;/p&gt;
+&lt;h4&gt;Challenges are mounting on the back-end&lt;/h4&gt;
+&lt;p&gt;Around two third of all talks from the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&quot;&gt;2019 GraphQL conference&lt;/a&gt; is about the schema.&lt;/p&gt;
+&lt;p&gt;How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing the schema scaling issue.&lt;/p&gt;
+&lt;p&gt;The GraphQL / Domain-driven design / Microservices &lt;a href=&quot;https://www.youtube.com/watch?v=S22rYsesrQc&amp;#x26;feature=youtu.be&quot;&gt;patterns&lt;/a&gt; — API Gateway, Integration Database, Data Federation, Backend for Front End — are new concepts and all subject of scaling.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;GraphQL is no silver bullet. It’s not better or worse than other paradigms.&lt;/p&gt;
+&lt;p&gt;It makes app design and user interface development more human by empowering the architects, designers and front-end developers. What is gained here has to be solved on the back-end in new ways with new efforts.&lt;/p&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://graphql.org/learn/&quot;&gt;Introduction to GraphQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/is-graphql-functional-and-reactive/&quot;&gt;Is GraphQL functional and reactive?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=gb1R-fWP1Yw&quot;&gt;GraphQL before GraphQL — Dan Schafer @ GraphQLConf 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping&quot;&gt;The “N+1 selects problem”&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=P_yfbQrdzJo&amp;#x26;list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO&amp;#x26;index=18&quot;&gt;GraphQL Execution Strategies — Andreas Marek @ GraphQL Conf 2019&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=S22rYsesrQc&amp;#x26;feature=youtu.be&quot;&gt;GraphQL Berlin Meetup #15: System Design and Architecture @ GraphQL — Bogdan Nedelcu&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://khalilstemmler.com/articles/typescript-domain-driven-design/ddd-vs-crud-design/&quot;&gt;REST-first design is Imperative, DDD is Declarative [Comparison] - DDD w/ TypeScript&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf&quot;&gt;Microservice architecture patterns with GraphQL&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/&quot;&gt;An Introduction to Functional Reactive Programming&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[The reactive, functional nature of React]]></title><description><![CDATA[React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.]]></description><link>http://metamn.io/react/the-reactive-fuctional-nature-of-react/</link><guid isPermaLink="false">http://metamn.io/react/the-reactive-fuctional-nature-of-react/</guid><pubDate>Tue, 08 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React follows the Functional Reactive Programming paradigm. That’s a shift from the old proactive, imperative approach.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;The context&lt;/h2&gt;
 &lt;p&gt;Both paradigms solve the same problem — to build modular, interactive applications — in different ways.&lt;/p&gt;
@@ -947,14 +1340,14 @@ However this is the way you’ll find it written in majority of REST APIs. &lt;/
 	&lt;tr&gt;
 		&lt;td&gt;Designing applications&lt;/td&gt;
 		&lt;td&gt;Data and interaction models&lt;/td&gt;
-		&lt;td&gt;&lt;a href=&quot;http://metamn.io/react/ontology-taxonomy-choreography/&quot; title=&quot;Ontology, taxonomy, choreography&quot;&gt;Ontology, taxonomy, choreography&lt;/a&gt;&lt;/td&gt;
+		&lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/ontology-taxonomy-choreography/&quot; title=&quot;Ontology, taxonomy, choreography&quot;&gt;Ontology, taxonomy, choreography&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-graphql/&quot; title=&quot;On GraphQL&quot;&gt;On GraphQL&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;GraphQL&lt;/td&gt;
 		&lt;td&gt;Data driven applications&lt;/td&gt;
 		&lt;td&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/rapid-prototyping-for-graphql-apis/&quot; title=&quot;Rapid prototyping for GraphQL APIs?&quot;&gt;Rapid prototyping for GraphQL APIs?&lt;/a&gt;&lt;/li&gt;
 		&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/is-graphql-functional-and-reactive/&quot; title=&quot;Is GraphQL functional and reactive?&quot;&gt;Is GraphQL functional and reactive?&lt;/a&gt;&lt;/li&gt;
-		&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/graphql-and-rest-apis-with-aws/&quot; title=&quot;GraphQL and REST APIs with AWS&quot;&gt;GraphQL and REST APIs with AWS&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+		&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/graphql-and-rest-apis-with-aws/&quot; title=&quot;GraphQL and REST APIs with AWS&quot;&gt;GraphQL and REST APIs with AWS&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-graphql/&quot; title=&quot;On GraphQL&quot;&gt;On GraphQL&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
 	&lt;/tr&gt;
 	&lt;tr&gt;
 		&lt;td&gt;Rapid prototyping&lt;/td&gt;
