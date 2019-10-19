@@ -1,6 +1,6 @@
 ---
 title: "On GraphQL"
-date: "2019-10-10"
+date: "2019-10-19"
 ---
 
 Easy to use on the front-end. More complicated to architect and scale.
