@@ -29,7 +29,7 @@ The UNIX philosophy of
 
 [is built into](https://www.youtube.com/watch?v=gb1R-fWP1Yw) GraphQL making it a super simple layer on the server.
 
-The GraphQL runtime does only one thing: returns results for queries. How results are computed, put together, collected from other services &mdash; the business logic &mdash; is outside of its scope.
+The GraphQL runtime does only one thing: returns results for queries. How results are computed, put together, collected from other services &mdash; the business logic &mdash; is outside its scope.
 
 (As a compensation) GraphQL offers extensive connectivity to various backend services like databases, storage engines, serverless functions, authentication, caching to be used in any combination to define how the application works.
 
@@ -138,7 +138,7 @@ Facebook defines GraphQL using the following concepts:
 
 > Graph databases are most useful when working with data where the relationships or connections are highly important.
 
-In contrast, the relational database pradigm is best used to organize well-structured data:
+In contrast, the relational database paradigm is best used to organize well-structured data:
 
 > In general, relational databases are often a good fit for any data that is regular, predictable.
 
@@ -148,11 +148,11 @@ In graph databases entities have flexible shapes and more importantly they can f
 
 ![Graph database diagram](graph.png)
 
-In relational databases the business domain is well known apriori and what's left is to create a well performing model upon.
+In relational databases the business domain is well known a priori and what's left is to create a well performing model upon.
 
 ![Relational database diagram](relational.png)
 
-No wonder Facebook choose the graph approach. It handles better the use case of interaction-heavy user interfaces.
+No wonder Facebook chose the graph approach. It handles better the use case of interaction-heavy user interfaces.
 
 ### Domain-driven design &mdash; DDD
 
@@ -187,7 +187,7 @@ Microservices complete the big picture. The Facebook way is a full bet on the [F
 
 ### Single source of truth
 
-In a dynamic context it is very important to establish a single source of truth from where all other parts of the stack approvision themselves.
+In a dynamic context it is very important to establish a single source of truth from where all other parts of the stack provision themselves.
 
 The creators of GraphQL [are always eager to emphasize](https://www.youtube.com/watch?v=gb1R-fWP1Yw) the importance of such a truth layer.
 
@@ -303,7 +303,7 @@ In practice this means `fields` can be freely added to `types` without worrying 
 
 Writing the associated `resolvers` to `fields` is again free thinking: just focus on the single purpose of the function of returning the results and forget about redundancy, caching and performance.
 
-The chatty server-side functions (resolvers) which might repeteadly load data from the database are collected, optimized into a single request, and their results cached &mdash; by the GraphQL middle-layer.
+The chatty server-side functions (resolvers) which might repaetedly load data from the database are collected, optimized into a single request, and their results cached &mdash; by the GraphQL middle-layer.
 
 #### Challenges are mounting on the back-end
 
