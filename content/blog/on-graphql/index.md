@@ -3,7 +3,7 @@ title: "On GraphQL"
 date: "2019-10-10"
 ---
 
-Easy to use on the front-end. More complicated to model and scale.
+Easy to use on the front-end. More complicated to architect and scale.
 
 <!--more-->
 
@@ -168,6 +168,9 @@ For such evolving models where an entity is:
 
 a suitable design approach is called [Domain-driven design](https://en.wikipedia.org/wiki/Domain-driven_design).
 
+![DDD Sketch](dddsketch.png)
+> _via_ [Martin Fowler](https://martinfowler.com/bliki/images/boundedContext/sketch.png)
+
 ### Microservices
 
 The Facebook way implies Domain-driven design which is closely related to the microservices architecture.
@@ -176,7 +179,11 @@ Ville Touronen from University of Helsinki wrote a well-worth-reading [master th
 
 In short &mdash; this new context, array of technologies, and paradigms requires the business domain to be split into different functional domains (_services_) which are highly isolated, independent and loosely coupled (_micro_).
 
+![Microservices](graphql-3.png)
+> _via_ [Apollo / Expedia GraphQL architecture](https://www.apollographql.com/customers/expediagroup/)
+
 Microservices complete the big picture. The Facebook way is a full bet on the [Functional Reactive Programming paradigm](https://blog.danlew.net/2017/07/27/an-introduction-to-functional-reactive-programming/) from design (DDD), data (GraphQL and graph databases), implementation (React) to servers (microservices).
+
 
 ### Single source of truth
 
@@ -264,19 +271,25 @@ export const BookSchema = new GraphQLSchema({
 
 ### Thin API Layer
 
-xxx
-
-## The pattern
-
-The most important takeaway for now is the
+The most important takeaway up to this point is the:
 
 > `type` &rarr; `field` &rarr; `resolver` &rarr; `business logic` pattern.
 
 Types have fields and every field has an associated server-side function which returns results and connects to the business logic layer.
 
+The first three items constitute the thin API layer of GraphQL, the last one is the separated business logic layer.
+
+```
+|------------------|                 |----------------------|
+| GraphQL Thin API |                 | Business Logic Layer |
+|---------------------------|        |--------------------------------|
+| Type -> Field -> Resolver |   ->   | Model / Single source of truth |
+|---------------------------|        |--------------------------------|
+```
+
 This pattern is a double-edged sword. It makes design and development easier but scaling on the server-side harder.
 
-### The N+1 problem
+#### The N+1 problem
 
 The [N+1 selects problem](https://stackoverflow.com/questions/97197/what-is-the-n1-selects-problem-in-orm-object-relational-mapping) is a basic design and development constraint in older paradigms like relational databases. It makes the business / data / component model to follow certain strict technical guidelines which are not natural to default human thinking.
 
@@ -288,25 +301,23 @@ In GraphQL there is no N+1 problem. One can design freely the types in the schem
 
 In practice this means `fields` can be freely added to `types` without worrying about normalization. Components can be modeled in a less rigid, more human friendly way using _graphs_ which let directly store the relationships between records.
 
-Writing the associated `functions` to `fields` is again free thinking: just focus on the single purpose of the function of returning the results and forget about redundancy, caching and performance.
+Writing the associated `resolvers` to `fields` is again free thinking: just focus on the single purpose of the function of returning the results and forget about redundancy, caching and performance.
 
 The chatty server-side functions (resolvers) which might repeteadly load data from the database are collected, optimized into a single request, and their results cached &mdash; by the GraphQL middle-layer.
 
-### Challenges are mounting on the back-end
+#### Challenges are mounting on the back-end
 
 Around two third of all talks from the [2019 GraphQL conference](https://www.youtube.com/playlist?list=PLn2e1F9Rfr6kChXoURShhO3A-4r8FLYsO) is about the schema.
 
 How to build it from fragments to make it scalable; how to design it in a way to properly handle error messages; a dozen of opinions on how to manage the growth of the schema. From Github, Facebook to Twitter, Coursera and Visa everybody is facing the schema scaling issue.
 
-Even more [all other design patterns](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be) GraphQL / DDD / Microservices are built on &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are in the same way subjects of scaling.
-
-ide meg valami ....
+The GraphQL / Domain-driven design / Microservices [patterns](https://www.youtube.com/watch?v=S22rYsesrQc&feature=youtu.be) &mdash; API Gateway, Integration Database, Data Federation, Backend for Front End &mdash; are new concepts and all subject of scaling.
 
 ## Conclusion
 
-GraphQL is no silver bullet. It's not better or worse than other paradigms. And no, it doesn't render the back-end developer job obsolete.
+GraphQL is no silver bullet. It's not better or worse than other paradigms.
 
-It makes app design and user interface development more human by empowering the designers and front-end developers. What is gained here has to be solved on the back-end in new ways with new efforts.
+It makes app design and user interface development more human by empowering the architects, designers and front-end developers. What is gained here has to be solved on the back-end in new ways with new efforts.
 
 ## Resources
 
