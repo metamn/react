@@ -124,12 +124,12 @@ When considerable results are found a new article is written and linked below.
 	<tr>
 		<td>Basic concepts</td>
 		<td>Understanding React</td>
-		<td><a href="http://metamn.io/react/on-state/" title="On state">On state</a></td>
+		<td><ul><li><a href="http://metamn.io/react/on-state/" title="On state">On state</a></li><li><a href="http://metamn.io/react/a-big-picture/" title="A Big Picture">A Big Picture</a></li></ul></td>
 	</tr>
 	<tr>
 		<td>Designing applications</td>
 		<td>Data and interaction models</td>
-		<td><ul><li><a href="http://metamn.io/react/ontology-taxonomy-choreography/" title="Ontology, taxonomy, choreography">Ontology, taxonomy, choreography</a></li><li><a href="http://metamn.io/react/on-graphql/" title="On GraphQL">On GraphQL</a></li></ul></td>
+		<td><ul><li><a href="http://metamn.io/react/ontology-taxonomy-choreography/" title="Ontology, taxonomy, choreography">Ontology, taxonomy, choreography</a></li><li><a href="http://metamn.io/react/on-graphql/" title="On GraphQL">On GraphQL</a></li><li><a href="http://metamn.io/react/a-big-picture/" title="A Big Picture">A Big Picture</a></li></ul></td>
 	</tr>
 	<tr>
 		<td>GraphQL</td>
