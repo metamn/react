@@ -1,4 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 19 Oct 2019 12:02:24 GMT</lastBuildDate><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated on the back-end.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated on the back-end.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Oct 2019 08:37:31 GMT</lastBuildDate><item><title><![CDATA[A Big Picture]]></title><description><![CDATA[React and the ecosystem mapped up.]]></description><link>http://metamn.io/react/a-big-picture/</link><guid isPermaLink="false">http://metamn.io/react/a-big-picture/</guid><pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React and the ecosystem mapped up.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/2f950/miro.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 200%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAACXBIWXMAAAsTAAALEwEAmpwYAAADl0lEQVRIx62WW1MiMRCF5///JF/xCaoUlFUoEBCVu4LcBAbJ8vXuSfVwKd1yU9Uzk2Ryck6n00my2WzCarUy2263P7I0TUPy8fER3t/fw3w+D7vdLvhC/fPz86TRJ1MdcgnIgE0mE7PX19fw9vZmNpvNzrJBUbvdDq1WK4xGIyNgDHkMBgPrfH5+jsDYeDwOKDgsAMLGGwwjYK/Xs5keHx/DcDg0xrDDFYvFIsqXS+QvP0EEpAKzarVqLAGEGYYUgAXoARjsJ8gwxF/IBgyp+AepsOP7HMOTgFSQ9vLyYqDIhTFuALzT6WS+u91uWC6X5wFZcqTl83mTjdTr62v7pr1YLIb7+3tjz/fd3Z0xZxwAsgzD6XRqDPv9vn3DEAMEv8KMcHp6erJ2VLCyMMUUSuv1+k9g43hmRRayBazQgSmA2gAY//OmDVC+wUrkm3q9Hm5ubkwqLPAVvqtUKibz9vbW/qEN1riBNvrK5XJoNpsGnvBACnH48PBgb8mFKX0y2lEAAerErfpwGapMMrK8PFyAg/HJ4Y7wxj/+HX0ImPYuq6U4+8q0GB40UScVQP2WUqGPgafa/V7nn0QAvC8uLsxHPnVRLi8vbbEoSl8U2gqFQgSMW0/oONknAwohwUqywjjd9xFKrPpJQIp2gB+EJAZhsPfS5e8MIA3EGrFFYZVLpVLmx8FgFKazeayTMNieBDMKrq6usgwbjUakTugwgZjDYvg3lDxrAhtgAHO5XGSbaHXpkM+o0y5AApkNoMI/+E9HAX0RUKvmJcqPeh+GEu0+T/pISRSUzMgqKuexzWCqjMNbdSUG3CN1CvAIyLZhQQBVxlbgMkhZhTr/KkthfjuaZGaEVa1Ws9CQPxkIc5IGm1/nC4Vv1LCgENE2TPABsysX8q0FUL5DJm8kaqA/yDBtTwNEJrIIHd7aETAHSO1MqkUUICmOCY8AYYPvdItANmBIw1/00a405U9H3BIB5UM5GSBmlCtoZ0JFAqx0CdA5ojMmAqqBb34QK6RS16nmIwBA2kVE+THZ7UF05WCw/KaVxABhQtr51mVK8o8kz/YMaVTwwlhhQ51V1DGh/aygpo9xkWHcVi5tHd5jdCT41Kbtqnc86MM2Db/WIdQX69Btt/YSpyeBfQ481x4BG3uSzcUmVKr7C2RnElIjssvcUr9jRxmbebc71B8z+KrE9GW+ifdk2b+z0+Up+enN3y9amu4Zhv9cfgNMXRlxbFUe2AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;The Big Picture&quot;
+        title=&quot;The Big Picture&quot;
+        src=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/5cc77/miro.png&quot;
+        srcset=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/72cd8/miro.png 192w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/45483/miro.png 384w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/5cc77/miro.png 768w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/04090/miro.png 1152w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/ccc27/miro.png 1536w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/2f950/miro.png 1600w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A higher resolution and detailed information about the building blocks is avaialable in &lt;a href=&quot;https://miro.com/app/board/o9J_kwFipAA=/&quot;&gt;Miro&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated on the back-end.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated on the back-end.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;Definition&lt;/h2&gt;
 &lt;p&gt;GraphQL, according to &lt;a href=&quot;https://graphql.org/learn/&quot;&gt;GraphQL.org&lt;/a&gt; is three things:&lt;/p&gt;
