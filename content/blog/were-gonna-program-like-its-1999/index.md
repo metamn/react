@@ -11,10 +11,10 @@ How joy and simplicity was brought back into our lives by the Facebook crew.
 
 ## Personally
 
-With React and its ecosystem &mdash; functional reactive programming, microservices, domain-driven design, data-driven applications &mdash; I've got back my mojo.
+With [React and its ecosystem](http://metamn.io/react/a-big-picture/) &mdash; functional reactive programming, microservices, domain-driven design, data-driven applications &mdash; I've got back my mojo.
 
 Now I write code as I've written twenty or thirty years ago.
 
 Now I design and develop user interfaces and applications like a software engineer. 
 
-No more hacking &mdash; it's programming again.
+No more hacking, plumbing, massaging HTML, CSS, Javascript with Gulp, Grunt or Webpack &mdash; it's programming again.

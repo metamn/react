@@ -298,21 +298,8 @@ The goal of this document was never to demonstrate scientifically GraphQL follow
 
 The reader is free to decide in what measure this exercise was successful. Until then a little help from others.
 
-### Apollo and Expedia
-
-From the article: [Expedia Group Transforms Product Development with Apollo](https://www.apollographql.com/customers/expediagroup/)
-
-#### Before adopting a data graph
-
-![Before adopting a data graph](graphql-1.png)
-
-#### In between: experimenting with a Backend-For-Frontend, a pattern which mimics a data graph.
-
-![In between](graphql-2.png)
-
-#### The move to one data graph
-
-![Data graph](graphql-3.png)
+- [Microservice architecture patterns with GraphQL](https://helda.helsinki.fi/bitstream/handle/10138/304677/Touronen_Ville_Pro_gradu_2019.pdf)
+- [Mapping the React ecosystem (in Miro)](https://miro.com/app/board/o9J_kwFipAA=/)
 
 ## Resources
 
