@@ -74,3 +74,50 @@ date: '2020-01-28'
 - Which is not yet possible:
 
 > Although there has been a vast amount of effort in the semantic web services field, the approaches did not gain too much adoption outside of academia, mainly due to lack of concrete incentives and steep learning curves.
+
+## Co-location pays off
+
+```
+Component.js - the main file
+Component.features.js - the requirements as executable specifications
+Component.tests.js - tests
+Components.stories.js - Storybook tests
+Component.data.js - data types (for special cases)
+Component.css.js - styles (for special cases)
+Component.md - documentation
+Component.api.md - api doc generated from code comments
+Component.lang.xx-xx.js - internationalization
+...
+```
+
+## Split components into independent modules
+
+- Even in a relatively small app (SAAS providing searching/filtering information) the number of components can grow up around 100
+- To reduce `/components` complexity we can split it into `/components/saas` and `/components/search` since both of them are standalone (even reusable) modules
+- Clear separation means all components inside a module are importing components from the same module only. For example `/saas/pricing` component imports components only from `/saas` and no components from `/search`.
+
+## Cucumber.io is the Github for tests
+
+- https://cucumber.io/
+- It hosts and manages your tests as Github does your code
+
+## Refactoring - The rule of 3
+
+- One needs at least 3 use cases before refactoring code / extracting reusable parts / trying to generalize a solution
+
+## shortid - For list keys in React
+
+- https://www.npmjs.com/package/shortid
+- Never use `index` from `map` for `key`. Use instead the `shortid` package.
+- https://reactjs.org/docs/lists-and-keys.html#keys
+- https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318
+
+## Skeletons and strategies for React hooks
+
+- [Passport.js](http://www.passportjs.org/) offers a nice authentication solution: there is a general workflow where 500+ custom strategies can be inserted.
+- This skeleton / strategy pattern was found useful in other scenarios like data fetching (https://github.com/metamn/use-data) and even porting the Passport.js idea to the React frontend (https://github.com/metamn/use-auth)
+
+## JSON form generators are all buggy
+
+- See https://github.com/metamn/react-forms
+- Tested `react-jsonschema-form`, `uniforms`, Final Form, Formik and more
