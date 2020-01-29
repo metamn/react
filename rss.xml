@@ -1,38 +1,131 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Oct 2019 12:35:14 GMT</lastBuildDate><item><title><![CDATA[A Big Picture]]></title><description><![CDATA[React and the ecosystem mapped up.]]></description><link>http://metamn.io/react/a-big-picture/</link><guid isPermaLink="false">http://metamn.io/react/a-big-picture/</guid><pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React and the ecosystem mapped up.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 29 Jan 2020 09:42:23 GMT</lastBuildDate><item><title><![CDATA[Things I've learnt — Q4 2019]]></title><description><![CDATA[22 things in random order.]]></description><link>http://metamn.io/react/things-ive-learnt-q4-2019/</link><guid isPermaLink="false">http://metamn.io/react/things-ive-learnt-q4-2019/</guid><pubDate>Tue, 28 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;22 things in random order.&lt;/p&gt;
 &lt;!--more--&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/2f950/miro.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 200%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAACXBIWXMAAAsTAAALEwEAmpwYAAADl0lEQVRIx62WW1MiMRCF5///JF/xCaoUlFUoEBCVu4LcBAbJ8vXuSfVwKd1yU9Uzk2Ryck6n00my2WzCarUy2263P7I0TUPy8fER3t/fw3w+D7vdLvhC/fPz86TRJ1MdcgnIgE0mE7PX19fw9vZmNpvNzrJBUbvdDq1WK4xGIyNgDHkMBgPrfH5+jsDYeDwOKDgsAMLGGwwjYK/Xs5keHx/DcDg0xrDDFYvFIsqXS+QvP0EEpAKzarVqLAGEGYYUgAXoARjsJ8gwxF/IBgyp+AepsOP7HMOTgFSQ9vLyYqDIhTFuALzT6WS+u91uWC6X5wFZcqTl83mTjdTr62v7pr1YLIb7+3tjz/fd3Z0xZxwAsgzD6XRqDPv9vn3DEAMEv8KMcHp6erJ2VLCyMMUUSuv1+k9g43hmRRayBazQgSmA2gAY//OmDVC+wUrkm3q9Hm5ubkwqLPAVvqtUKibz9vbW/qEN1riBNvrK5XJoNpsGnvBACnH48PBgb8mFKX0y2lEAAerErfpwGapMMrK8PFyAg/HJ4Y7wxj/+HX0ImPYuq6U4+8q0GB40UScVQP2WUqGPgafa/V7nn0QAvC8uLsxHPnVRLi8vbbEoSl8U2gqFQgSMW0/oONknAwohwUqywjjd9xFKrPpJQIp2gB+EJAZhsPfS5e8MIA3EGrFFYZVLpVLmx8FgFKazeayTMNieBDMKrq6usgwbjUakTugwgZjDYvg3lDxrAhtgAHO5XGSbaHXpkM+o0y5AApkNoMI/+E9HAX0RUKvmJcqPeh+GEu0+T/pISRSUzMgqKuexzWCqjMNbdSUG3CN1CvAIyLZhQQBVxlbgMkhZhTr/KkthfjuaZGaEVa1Ws9CQPxkIc5IGm1/nC4Vv1LCgENE2TPABsysX8q0FUL5DJm8kaqA/yDBtTwNEJrIIHd7aETAHSO1MqkUUICmOCY8AYYPvdItANmBIw1/00a405U9H3BIB5UM5GSBmlCtoZ0JFAqx0CdA5ojMmAqqBb34QK6RS16nmIwBA2kVE+THZ7UF05WCw/KaVxABhQtr51mVK8o8kz/YMaVTwwlhhQ51V1DGh/aygpo9xkWHcVi5tHd5jdCT41Kbtqnc86MM2Db/WIdQX69Btt/YSpyeBfQ481x4BG3uSzcUmVKr7C2RnElIjssvcUr9jRxmbebc71B8z+KrE9GW+ifdk2b+z0+Up+enN3y9amu4Zhv9cfgNMXRlxbFUe2AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;The Big Picture&quot;
-        title=&quot;The Big Picture&quot;
-        src=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/5cc77/miro.png&quot;
-        srcset=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/72cd8/miro.png 192w,
-/react/static/e2c21289c07979e534e2c4fdb2e6ef50/45483/miro.png 384w,
-/react/static/e2c21289c07979e534e2c4fdb2e6ef50/5cc77/miro.png 768w,
-/react/static/e2c21289c07979e534e2c4fdb2e6ef50/04090/miro.png 1152w,
-/react/static/e2c21289c07979e534e2c4fdb2e6ef50/ccc27/miro.png 1536w,
-/react/static/e2c21289c07979e534e2c4fdb2e6ef50/2f950/miro.png 1600w&quot;
-        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;A higher resolution and detailed information about the building blocks is available in &lt;a href=&quot;https://miro.com/app/board/o9J_kwFipAA=/&quot;&gt;Miro&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;All resources based upon the chart was drawn are available in &lt;a href=&quot;http://metamn.io/react/putting-react-in-context/&quot;&gt;Putting React in context&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to write React code in 2019]]></title><description><![CDATA[Cory House nails it.]]></description><link>http://metamn.io/react/how-to-write-react-code-in2019/</link><guid isPermaLink="false">http://metamn.io/react/how-to-write-react-code-in2019/</guid><pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://twitter.com/housecor/status/1185222395210153984?s=20&quot;&gt;Cory House&lt;/a&gt; nails it.&lt;/p&gt;
+&lt;h2&gt;Mirage - Mocking APIs&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://miragejs.com/&quot;&gt;https://miragejs.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Build complete frontend features, even if your API doesn’t exist.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TLA+, Alloy - Verify requirements with formal methods&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.hillelwayne.com/post/business-case-formal-methods/&quot;&gt;https://www.hillelwayne.com/post/business-case-formal-methods/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Test requirements for bugs and incompleteness before anything else&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;TypeScript is not a sound type system&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://blog.logrocket.com/is-typescript-worth-it/&quot;&gt;https://blog.logrocket.com/is-typescript-worth-it/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A sound type system is one that ensures your program does not get into invalid states.&lt;/li&gt;
+&lt;li&gt;Typescript is entirely upfront about the fact that 100% soundness is not a goal&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Parallelized Decision Making&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arkwright.github.io/parallelized-decision-making.html&quot;&gt;https://arkwright.github.io/parallelized-decision-making.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Doing Things In Serial Is Slower Than Doing Them In Parallel&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Event sourcing and microservices are hard&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arkwright.github.io/event-sourcing.html&quot;&gt;https://arkwright.github.io/event-sourcing.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;But don’t dive in, because you’ll probably drown&lt;/li&gt;
+&lt;li&gt;Incorporate this pattern into a portion of your project — get your feet wet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Immutable.js - Functional Javascript from Facebook&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.freecodecamp.org/news/immutable-js-is-intimidating-heres-how-to-get-started-2db1770466d6/&quot;&gt;https://www.freecodecamp.org/news/immutable-js-is-intimidating-heres-how-to-get-started-2db1770466d6/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;A library used by Facebook to replace native Javascript constructs (array, object, …) with functional counterparts (list, map)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;QuickCheck: Property Based Testing in Javascript (aka auto-generated test inputs covering [hundreds of] edge cases)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=_2tK9G7rKQQ&amp;#x26;t=1006s&quot;&gt;https://www.youtube.com/watch?v=_2tK9G7rKQQ&amp;#x26;t=1006s&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://marmelab.com/blog/2019/04/18/property-based-testing-js.html&quot;&gt;https://marmelab.com/blog/2019/04/18/property-based-testing-js.html&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Property based testing is a technique widely used in the Haskell community, using a tool such as QuickCheck. The idea consists in automatically generating inputs for testing a function.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Expo supports all platforms&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=ykBxY01j_rA&quot;&gt;https://www.youtube.com/watch?v=ykBxY01j_rA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Build for web, deploy everywhere native&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Executable requirement specifications&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://agilemodeling.com/essays/executableSpecifications.htm&quot;&gt;http://agilemodeling.com/essays/executableSpecifications.htm&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://cucumber.io/&quot;&gt;https://cucumber.io/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;UI Before API&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://overreacted.io/what-are-the-react-team-principles/&quot;&gt;https://overreacted.io/what-are-the-react-team-principles/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Proptypes should be immutable&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Proptypes can be chained up (the parent imports the children proptypes and default props) in React but makes Storybook crash randomly&lt;/li&gt;
+&lt;li&gt;With import proptypes lose their immutability, their structure becomes dynamic (depending on children proptypes) instead of being static (hand written; children proptypes copy/pasted into parent proptypes)&lt;/li&gt;
+&lt;li&gt;Neither approach is ok =&gt; there is a need for a data layer (&lt;code class=&quot;language-text&quot;&gt;Component.data.js&lt;/code&gt;) which imports children proptypes and generates static proptypes for the parent&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;AirBnb custom Proptypes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/airbnb/prop-types&quot;&gt;https://github.com/airbnb/prop-types&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;extends the standard Proptypes with new validators&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Describing data and services (API) with standards is in infancy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;We saw at “Proptypes should be immutable” that we need a data layer independent of the Proptypes syntax (or even TypeScript or anything else)&lt;/li&gt;
+&lt;li&gt;For that a standard approach (JSON-LD, Schema.org) should be used like &lt;a href=&quot;https://json-schema.org/&quot;&gt;https://json-schema.org/&lt;/a&gt;, &lt;a href=&quot;https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages&quot;&gt;https://en.wikipedia.org/wiki/Overview_of_RESTful_API_Description_Languages&lt;/a&gt;, &lt;a href=&quot;https://www.markus-lanthaler.com/hydra/&quot;&gt;https://www.markus-lanthaler.com/hydra/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;More, not just data but also the services should be described with machine-readable standards: &lt;a href=&quot;https://www.sciencedirect.com/science/article/pii/S1877050918316302&quot;&gt;https://www.sciencedirect.com/science/article/pii/S1877050918316302&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Which is not yet possible:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Although there has been a vast amount of effort in the semantic web services field, the approaches did not gain too much adoption outside of academia, mainly due to lack of concrete incentives and steep learning curves.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Co-location pays off&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Component.js - the main file
+Component.features.js - the requirements as executable specifications
+Component.tests.js - tests
+Components.stories.js - Storybook tests
+Component.data.js - data types (for special cases)
+Component.css.js - styles (for special cases)
+Component.md - documentation
+Component.api.md - api doc generated from code comments
+Component.lang.xx-xx.js - internationalization
+...&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Split components into independent modules&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Even in a relatively small app (SAAS providing searching/filtering information) the number of components can grow up around 100&lt;/li&gt;
+&lt;li&gt;To reduce &lt;code class=&quot;language-text&quot;&gt;/components&lt;/code&gt; complexity we can split it into &lt;code class=&quot;language-text&quot;&gt;/components/saas&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;/components/search&lt;/code&gt; since both of them are standalone (even reusable) modules&lt;/li&gt;
+&lt;li&gt;Clear separation means all components inside a module are importing components from the same module only. For example &lt;code class=&quot;language-text&quot;&gt;/saas/pricing&lt;/code&gt; component imports components only from &lt;code class=&quot;language-text&quot;&gt;/saas&lt;/code&gt; and no components from &lt;code class=&quot;language-text&quot;&gt;/search&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Cucumber.io is the Github for tests&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://cucumber.io/&quot;&gt;https://cucumber.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;It hosts and manages your tests as Github does your code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Refactoring - The rule of 3&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;One needs at least 3 use cases before refactoring code / extracting reusable parts / trying to generalize a solution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;shortid - For list keys in React&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.npmjs.com/package/shortid&quot;&gt;https://www.npmjs.com/package/shortid&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Never use &lt;code class=&quot;language-text&quot;&gt;index&lt;/code&gt; from &lt;code class=&quot;language-text&quot;&gt;map&lt;/code&gt; for &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt;. Use instead the &lt;code class=&quot;language-text&quot;&gt;shortid&lt;/code&gt; package.&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://reactjs.org/docs/lists-and-keys.html#keys&quot;&gt;https://reactjs.org/docs/lists-and-keys.html#keys&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318&quot;&gt;https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Skeletons and strategies for React hooks&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.passportjs.org/&quot;&gt;Passport.js&lt;/a&gt; offers a nice authentication solution: there is a general workflow where 500+ custom strategies can be inserted.&lt;/li&gt;
+&lt;li&gt;This skeleton / strategy pattern was found useful in other scenarios like data fetching (&lt;a href=&quot;https://github.com/metamn/use-data&quot;&gt;https://github.com/metamn/use-data&lt;/a&gt;) and even porting the Passport.js idea to the React frontend (&lt;a href=&quot;https://github.com/metamn/use-auth&quot;&gt;https://github.com/metamn/use-auth&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;JSON form generators are all buggy&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;See &lt;a href=&quot;https://github.com/metamn/react-forms&quot;&gt;https://github.com/metamn/react-forms&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Tested &lt;code class=&quot;language-text&quot;&gt;react-jsonschema-form&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;uniforms&lt;/code&gt;, Final Form, Formik and more&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;&lt;code class=&quot;language-text&quot;&gt;react-admin&lt;/code&gt; useful only for CRUD resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://marmelab.com/react-admin/&quot;&gt;https://marmelab.com/react-admin/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;When you have non-crud resources lots of overwriting is needed and won’t worth it&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Bit.dev is the Github for React packages&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://bit.dev/&quot;&gt;https://bit.dev/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Package any React component and clone it, fork it, pull it, push it like code on Github.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[How to write React code in 2019]]></title><description><![CDATA[Cory House nails it.]]></description><link>http://metamn.io/react/how-to-write-react-code-in2019/</link><guid isPermaLink="false">http://metamn.io/react/how-to-write-react-code-in2019/</guid><pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://twitter.com/housecor/status/1185222395210153984?s=20&quot;&gt;Cory House&lt;/a&gt; nails it.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;p&gt;Even if there is &lt;a href=&quot;http://metamn.io/react/there-is-no-official-style-guide-for-react/&quot;&gt;no official style guide&lt;/a&gt; to write React code — there are official &lt;a href=&quot;https://reactjs.org/docs/thinking-in-react.html&quot;&gt;guidelines&lt;/a&gt; and &lt;a href=&quot;https://reactjs.org/docs/hooks-rules.html&quot;&gt;rules&lt;/a&gt; to follow, and a common sense emerging from &lt;a href=&quot;Identify%20the%20right%20leaders&quot;&gt;the leaders&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;In &lt;a href=&quot;https://www.dropbox.com/s/tsid5bnphznbvjv/Lessons%20learned%20from%205%20years%20in%20React.docx?dl=0&quot;&gt;Lessons learned from 5 years in React&lt;/a&gt; Cory House collects his wisdom into one single document. I found it deeply resonating with my practice — and the common sense.&lt;/p&gt;
@@ -175,7 +268,41 @@
 &lt;li&gt;&lt;a href=&quot;https://reactjs.org/docs/hooks-rules.html&quot;&gt;Rules of Hooks&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://reactjs.org/docs/thinking-in-react.html&quot;&gt;Thinking in React&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.dropbox.com/s/tsid5bnphznbvjv/Lessons%20learned%20from%205%20years%20in%20React.docx?dl=0&quot;&gt;Lessons learned from 5 years in React&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated on the back-end.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated on the back-end.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[A Big Picture]]></title><description><![CDATA[React and the ecosystem mapped up.]]></description><link>http://metamn.io/react/a-big-picture/</link><guid isPermaLink="false">http://metamn.io/react/a-big-picture/</guid><pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;React and the ecosystem mapped up.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/2f950/miro.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 200%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAACXBIWXMAAAsTAAALEwEAmpwYAAADl0lEQVRIx62WW1MiMRCF5///JF/xCaoUlFUoEBCVu4LcBAbJ8vXuSfVwKd1yU9Uzk2Ryck6n00my2WzCarUy2263P7I0TUPy8fER3t/fw3w+D7vdLvhC/fPz86TRJ1MdcgnIgE0mE7PX19fw9vZmNpvNzrJBUbvdDq1WK4xGIyNgDHkMBgPrfH5+jsDYeDwOKDgsAMLGGwwjYK/Xs5keHx/DcDg0xrDDFYvFIsqXS+QvP0EEpAKzarVqLAGEGYYUgAXoARjsJ8gwxF/IBgyp+AepsOP7HMOTgFSQ9vLyYqDIhTFuALzT6WS+u91uWC6X5wFZcqTl83mTjdTr62v7pr1YLIb7+3tjz/fd3Z0xZxwAsgzD6XRqDPv9vn3DEAMEv8KMcHp6erJ2VLCyMMUUSuv1+k9g43hmRRayBazQgSmA2gAY//OmDVC+wUrkm3q9Hm5ubkwqLPAVvqtUKibz9vbW/qEN1riBNvrK5XJoNpsGnvBACnH48PBgb8mFKX0y2lEAAerErfpwGapMMrK8PFyAg/HJ4Y7wxj/+HX0ImPYuq6U4+8q0GB40UScVQP2WUqGPgafa/V7nn0QAvC8uLsxHPnVRLi8vbbEoSl8U2gqFQgSMW0/oONknAwohwUqywjjd9xFKrPpJQIp2gB+EJAZhsPfS5e8MIA3EGrFFYZVLpVLmx8FgFKazeayTMNieBDMKrq6usgwbjUakTugwgZjDYvg3lDxrAhtgAHO5XGSbaHXpkM+o0y5AApkNoMI/+E9HAX0RUKvmJcqPeh+GEu0+T/pISRSUzMgqKuexzWCqjMNbdSUG3CN1CvAIyLZhQQBVxlbgMkhZhTr/KkthfjuaZGaEVa1Ws9CQPxkIc5IGm1/nC4Vv1LCgENE2TPABsysX8q0FUL5DJm8kaqA/yDBtTwNEJrIIHd7aETAHSO1MqkUUICmOCY8AYYPvdItANmBIw1/00a405U9H3BIB5UM5GSBmlCtoZ0JFAqx0CdA5ojMmAqqBb34QK6RS16nmIwBA2kVE+THZ7UF05WCw/KaVxABhQtr51mVK8o8kz/YMaVTwwlhhQ51V1DGh/aygpo9xkWHcVi5tHd5jdCT41Kbtqnc86MM2Db/WIdQX69Btt/YSpyeBfQ481x4BG3uSzcUmVKr7C2RnElIjssvcUr9jRxmbebc71B8z+KrE9GW+ifdk2b+z0+Up+enN3y9amu4Zhv9cfgNMXRlxbFUe2AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;The Big Picture&quot;
+        title=&quot;The Big Picture&quot;
+        src=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/5cc77/miro.png&quot;
+        srcset=&quot;/react/static/e2c21289c07979e534e2c4fdb2e6ef50/72cd8/miro.png 192w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/45483/miro.png 384w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/5cc77/miro.png 768w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/04090/miro.png 1152w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/ccc27/miro.png 1536w,
+/react/static/e2c21289c07979e534e2c4fdb2e6ef50/2f950/miro.png 1600w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;A higher resolution image and detailed information about the building blocks is available in &lt;a href=&quot;https://miro.com/app/board/o9J_kwFipAA=/&quot;&gt;Miro&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All resources based upon the chart was drawn are available in &lt;a href=&quot;http://metamn.io/react/putting-react-in-context/&quot;&gt;Putting React in context&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[On GraphQL]]></title><description><![CDATA[Easy to use on the front-end. More complicated on the back-end.]]></description><link>http://metamn.io/react/on-graphql/</link><guid isPermaLink="false">http://metamn.io/react/on-graphql/</guid><pubDate>Sat, 19 Oct 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Easy to use on the front-end. More complicated on the back-end.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;h2&gt;Definition&lt;/h2&gt;
 &lt;p&gt;GraphQL, according to &lt;a href=&quot;https://graphql.org/learn/&quot;&gt;GraphQL.org&lt;/a&gt; is three things:&lt;/p&gt;
