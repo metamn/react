@@ -3,6 +3,10 @@ title: "Things I've learnt — Q4 2019"
 date: '2020-01-28'
 ---
 
+22 things in random order.
+
+<!--more-->
+
 ## Mirage - Mocking APIs
 
 - https://miragejs.com/
