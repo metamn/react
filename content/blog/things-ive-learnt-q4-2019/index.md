@@ -121,3 +121,13 @@ Component.lang.xx-xx.js - internationalization
 
 - See https://github.com/metamn/react-forms
 - Tested `react-jsonschema-form`, `uniforms`, Final Form, Formik and more
+
+## `react-admin` useful only for CRUD resources
+
+- https://marmelab.com/react-admin/
+- When you have non-crud resources lots of overwriting is needed and won't worth it
+
+## Bit.dev is the Github for React packages
+
+- https://bit.dev/
+- Package any React component and clone it, fork it, pull it, push it like code on Github.
