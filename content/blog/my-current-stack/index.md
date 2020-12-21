@@ -3,7 +3,7 @@ title: 'My current stack'
 date: '2020-12-21'
 ---
 
-For highly interactive, static websites without API.
+Opinionated. For highly interactive, static websites without API.
 
 <!--more-->
 
@@ -11,11 +11,11 @@ For highly interactive, static websites without API.
 
 React [worth it](http://metamn.io/react/things-ive-learnt-in-2020/) for a list of use cases.
 
-One of these is [interactive design](https://en.wikipedia.org/wiki/Interactive_design) where the result aims for meaningful experiences.
+One of these is [interactive design](https://en.wikipedia.org/wiki/Interactive_design) built on heavy user interactions in a different way than apps do.
 
-That involves heavy user interactions&mdash;in a different way than apps do. Instead of data input the interaction is continuous through gestures, information transformation, real-time content updates from external sources.
+Instead of data input the interaction is continuous through gestures, information transformation, real-time content updates from external sources.
 
-For that scenario my current, highly opinionated, but years in the making stack, follows:
+For that scenario my current, highly opinionated, months in the making stack follows:
 
 ## Typescript
 
@@ -31,11 +31,11 @@ In plus, as a bonus, everything Typescript runs through a real-time linter to de
 
 If React then Javascript/Typescript. On all fronts.
 
-Structure and behaviour is already JSX. Presentation, styling should be JSS too instead of CSS.
+Structure and behaviour is already JSX. Presentation, styling should be Javascript, too.
 
-It's better to have [style objects](https://emotion.sh/docs/object-styles) and functions&mdash;pure Javascript code&mdash;than other constructs written on another language.
+It's better to have [style objects](https://emotion.sh/docs/object-styles) and functions&mdash;pure Javascript code, uniform codebase&mdash;than other constructs written on another language.
 
-From all the major CSS-in-JS libraries Emotion.js is singular in [supporting](https://github.com/osequi/hacks/blob/master/CSS-in-JS.md) props in keyframe animations following the object syntax.
+From all the major CSS-in-JS libraries Emotion is singular in [supporting](https://github.com/osequi/hacks/blob/master/CSS-in-JS.md) props in keyframe animations following the object syntax.
 
 In other words with Emotion one can write anything CSS using Javascript.
 
@@ -43,7 +43,7 @@ In other words with Emotion one can write anything CSS using Javascript.
 
 Interactive design doesn't require end-to-end testing where a flow runs across pages to complete.
 
-Unit testing is good enough. Out-of-the-box tools like Jest, React Testing Library, TS-Jest extended with special libraries for hooks and responsiveness do the job.
+Unit testing is good enough. Out-of-the-box tools like Jest, React Testing Library, ts-jest extended with special libraries for hooks and responsiveness do the job.
 
 ## MDX
 
@@ -70,3 +70,17 @@ It would be nice to have [XState](https://xstate.js.org/) to reduce concerns aro
 The high learning curve is an impediment to that. Finite state machines are a mathematical model of computation. As such, the theory behind is comprehensive.
 
 For a banal [menu animation](https://github.com/davidkpiano/xstate/issues/1702#issuecomment-740139365s) one must be familiar with transient states and guards.
+
+## Packaging
+
+No packaging, monorepo, publishing to `npm` registry yet.
+
+Lerna, Yarn Workspaces, Create React Library don't fit the stack above. Too much devops, tweaks, headache. Perhaps in the future.
+
+What works is [absolute imports and module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases) offered by Typescript and Next.js
+
+## Summing up
+
+The React ecosystem is fragile. All parts work on their own but break when combined.
+
+Where two parts meet, a grey zone forms. Bugs in the grey zones doesn't belong to any of the maintainers. This is where stack building implies Herculean efforts often with no results.
