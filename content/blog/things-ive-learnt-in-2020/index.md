@@ -3,7 +3,7 @@ title: "Things I've learnt in 2020"
 date: '2020-12-20'
 ---
 
-React, after all, might worth it.
+React&mdash;used appropriately&mdash;worths it.
 
 <!--more-->
 
@@ -47,10 +47,10 @@ What makes React great is how fast it updates the smallest pixel on the screen.
 
 This feature opens up perspective in creative coding with React. What was until now possible with WebGL and Canvas is now possible with plain HTML, CSS and the shadow DOM.
 
-Paint on the screen when the cursor moves, you've thought? Right, React is the perfect tool for that.
+Paint on the screen when the cursor moves, you've thought? Right, you can do it with React.
 
 ## Summing up
 
 React is god-sent. It's the first web language optimized for _heavy_ user interactions.
 
-Used in the right context makes magic. Otherwise is pure pain.
+Used in the right context makes magic. Otherwise, well, is often pain.
