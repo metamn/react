@@ -62,3 +62,11 @@ When generating the site on server side&mdash;Next.js provides the best support.
 Interactive design sites present valuable content. That content must be understandable by machines, too. This is where SEO and static rendering comes in picture.
 
 Gatsby was a contender. Their outdated philosophy `move fast and break things` makes the source code of this blog, running on Gatsby, rubbish.
+
+## State
+
+It would be nice to have [XState](https://xstate.js.org/) to reduce concerns around state as Typescript does around code.
+
+The high learning curve is an impediment to that. Finite state machines are a mathematical model of computation. As such, the theory behind is comprehensive.
+
+For a banal [menu animation](https://github.com/davidkpiano/xstate/issues/1702#issuecomment-740139365s) one must be familiar with transient states and guards.
