@@ -3,7 +3,7 @@ title: "Things I've learnt in 2020"
 date: '2020-12-20'
 ---
 
-React&mdash;used appropriately&mdash;worth it.
+React&mdash;used appropriately&mdash;works.
 
 <!--more-->
 

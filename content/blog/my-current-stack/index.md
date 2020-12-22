@@ -9,7 +9,7 @@ For highly interactive, static websites without API.
 
 ---
 
-React [worth it](http://metamn.io/react/things-ive-learnt-in-2020/) for a list of use cases.
+React [works](http://metamn.io/react/things-ive-learnt-in-2020/) for a list of use cases.
 
 One of these is [interactive design](https://en.wikipedia.org/wiki/Interactive_design) built on heavy user interactions in a different way than apps do.
 
