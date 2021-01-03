@@ -3,6 +3,12 @@ title: 'On design systems'
 date: '2021-01-03'
 ---
 
+Theory and practice.
+
+<!--more-->
+
+---
+
 ## A short history
 
 Design systems have been around since 2013-2014.
@@ -15,7 +21,7 @@ Lonely Planet's [Rizzo](https://github.com/lonelyplanet/rizzo) was the early bir
 
 Why companies create design systems? A [quick analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals the main goals:
 
-- Internal: To build apps for a brand and/or platform.
+- Internal: To build apps for their brand and/or platform.
 - External: To build general purpose apps.
 - Foundational: To help build design systems and component libraries.
 
@@ -25,17 +31,17 @@ A handful of companies create general purpose systems. More precisely they creat
 
 This generosity links to the company size: Google, IBM, Ant, Adobe can afford to open source code worth millions:
 
-> This represents millions of dollars of investment for each company to duplicate work that many other companies are also doing. (https://react-spectrum.adobe.com/react-aria/why.html)
+> This represents millions of dollars of investment for each company to duplicate work that many other companies are also doing. &mdash; [React Aria](https://react-spectrum.adobe.com/react-aria/why.html)
 
 Foundational systems represent a new business model&mdash;[Modulz](https://www.modulz.app/) helps teams create design systems without writing code&mdash;or [institutions](https://bold.bridge.ufsc.br/en/about/) sharing their work for the common good.
 
-We all need designs systems. Yet the term is still unclear.
+Lots of reasons to build designs systems. Yet the term is still unclear.
 
 ## Designs systems vs. Component libraries
 
 These terms are often interchanged. The difference is subtle and far-reaching.
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The difference between a component library and a design system is whether or not your components have &#39;className&#39; and &#39;style&#39; props.</p>&mdash; Mark Dalgleish (@markdalgleish) <a href="https://twitter.com/markdalgleish/status/1308330959973027846?ref_src=twsrc%5Etfw">September 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+> The difference between a component library and a design system is whether or not your components have &#39;className&#39; and &#39;style&#39; props. &mdash; [Mark Dalgleish](https://twitter.com/markdalgleish/status/1308330959973027846?ref_src=twsrc%5Etfw)
 
 Design systems are strict. They form a complete system. They don't allow on-the-fly customisation. Modifying a system is possible at a well-defined entry point then changes reflect across the site automatically.
 
@@ -55,6 +61,25 @@ Material Design goes full circle. From top-bottom connects designers and their t
 
 ## Definition?
 
-Every design system is different and hangs on the purpose. Purpose then defines the type and reach.
+Every design system is different and hangs on a purpose. Purpose then defines type and reach.
 
-Let's play with this idea further by analyzing how to approach creating a design system for [interactive design](https://en.wikipedia.org/wiki/Interactive_design) websites.
+Let's play with this idea further by analyzing how to approach creating a design system for interactive design websites.
+
+## Interactive design
+
+> Interactive design is a user-oriented field of study that focuses on meaningful communication of media through cyclical and collaborative processes between people and technology. [Wikipedia](https://en.wikipedia.org/wiki/Interactive_design)
+
+Interactive design employs heavy user interactions in a different way than apps do.
+
+Instead of data input the interaction is continuous through gestures, information transformation, real-time content updates from external sources.
+
+Interactive design sites present meaningful content worth made understandable to machines and search engines.
+
+This is where SEO and static rendering comes in picture.
+
+## Purpose, again.
+
+1. Enable continuous interactions through gestures and real-time content updates.
+2. For websites, not apps.
+
+Make it for internal use first. Build a few sites then see if serves a general audience.
