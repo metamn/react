@@ -13,13 +13,13 @@ Lonely Planet's [Rizzo](https://github.com/lonelyplanet/rizzo) was the early bir
 
 ## Purpose
 
-Why companies create design systems? A [quick analysys](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals the main goals:
+Why companies create design systems? A [quick analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals the main goals:
 
 - Internal: To build apps for a brand and/or platform.
 - External: To build general purpose apps.
-- Foundational: To help building design systems and component libraries.
+- Foundational: To help build design systems and component libraries.
 
-The majority builds internal sytems&mdash;no wonder&mdash;design systems shine when used to create uniform looking products across a portfolio.
+The majority builds internal systems&mdash;no wonder&mdash;design systems shine when used to create uniform looking products across a portfolio.
 
 A handful of companies create general purpose systems. More precisely they create an internal system and share to the public.
 
@@ -33,22 +33,28 @@ We all need designs systems. Yet the term is still unclear.
 
 ## Designs systems vs. Component libraries
 
-These terms are often interchanged. The difference is subtle and far reaching.
+These terms are often interchanged. The difference is subtle and far-reaching.
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The difference between a component library and a design system is whether or not your components have &#39;className&#39; and &#39;style&#39; props.</p>&mdash; Mark Dalgleish (@markdalgleish) <a href="https://twitter.com/markdalgleish/status/1308330959973027846?ref_src=twsrc%5Etfw">September 22, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Design systems are strict. They form a complete system. They don't allow on-the-fly customisation. Modifying a system is possible on a well defined entry point then changes reflect across the site automaticaly.
+Design systems are strict. They form a complete system. They don't allow on-the-fly customisation. Modifying a system is possible at a well-defined entry point then changes reflect across the site automatically.
 
 Component libraries are loose. They offer the basics and let customisation happen at any point, any time.
 
-Design systems are more expensive to create then easier to use. As [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows non-devs can create with a design system, too.
+Design systems are more expensive to create, and easier to use. As [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows non-devs can create with a design system, too.
 
 ## Reach
 
 The reach of a design system varies like its purpose.
 
-Material Design goes full circle. From top-bottom connects designers and their tools with developers of all platforms and technologies. Form Figma to React and native apps everything is in a system.
+Material Design goes full circle. From top-bottom connects designers and their tools with developers of all platforms and technologies. From Figma to React and native apps everything is in a system.
 
-[Radix](https://radix-ui.com/primitives/docs/overview/introduction) from Modulz is barebones to that level of not offering any styling.
+[Radix](https://radix-ui.com/primitives/docs/overview/introduction) from Modulz is bare bones to that level of not offering any styling.
 
-[Spectrum](https://react-spectrum.adobe.com/index.html) from Adobe
+[Spectrum](https://react-spectrum.adobe.com/index.html) from Adobe offers support for server side rendering, virtual lists, state management and accessibility for anybody building design systems.
+
+## Definition?
+
+Every design system is different and hangs on the purpose. Purpose then defines the type and reach.
+
+Let's play with this idea further by analyzing how to approach creating a design system for [interactive design](https://en.wikipedia.org/wiki/Interactive_design) websites.
