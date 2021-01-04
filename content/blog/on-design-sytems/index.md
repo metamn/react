@@ -17,7 +17,7 @@ Lonely Planet's [Rizzo](https://github.com/lonelyplanet/rizzo) was the early bir
 
 2020 was the year when design systems popped up every week. [Adele](https://adele.uxpin.com/) of UXPin lists over a hundred systems and libraries&mdash;yet the list is incomplete.
 
-## Purpose
+## Purpose and audience
 
 Why companies create design systems? A [quick analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals the main goals:
 
@@ -35,11 +35,9 @@ This generosity links to the company size: Google, IBM, Ant, Adobe can afford to
 
 Foundational systems represent a new business model&mdash;[Modulz](https://www.modulz.app/) helps teams create design systems without writing code&mdash;or [institutions](https://bold.bridge.ufsc.br/en/about/) sharing their work for the common good.
 
-Lots of reasons to build designs systems. Yet the term is still unclear.
+## Type
 
-## Designs systems vs. Component libraries
-
-These terms are often interchanged. The difference is subtle and far-reaching.
+The terms design system and component library are often interchanged. The difference is subtle and far-reaching.
 
 > The difference between a component library and a design system is whether or not your components have &#39;className&#39; and &#39;style&#39; props. &mdash; [Mark Dalgleish](https://twitter.com/markdalgleish/status/1308330959973027846?ref_src=twsrc%5Etfw)
 
@@ -49,9 +47,9 @@ Component libraries are loose. They offer the basics and let customisation happe
 
 Design systems are more expensive to create, and easier to use. As [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows non-devs can create with a design system, too.
 
-## Reach
+## Features
 
-The reach of a design system varies like its purpose.
+Purpose and audience defines type and features.
 
 Material Design goes full circle. From top-bottom connects designers and their tools with developers of all platforms and technologies. From Figma to React and native apps everything is in a system.
 
@@ -59,27 +57,27 @@ Material Design goes full circle. From top-bottom connects designers and their t
 
 [Spectrum](https://react-spectrum.adobe.com/index.html) from Adobe offers support for server side rendering, virtual lists, state management and accessibility for anybody building design systems.
 
-## Definition?
+While purpose, audience and type overlap, features differentiate and define the unique characteristics of a design system.
 
-Every design system is different and hangs on a purpose. Purpose then defines type and reach.
+## Example
 
-Let's play with this idea further by analyzing how to approach creating a design system for interactive design websites.
+Design systems hang on a purpose. Purpose then defines type, features and the technology stack.
+
+Let's play with this idea further by analyzing how to approach creating a tool for building interactive design websites.
 
 ## Interactive design
 
 > Interactive design is a user-oriented field of study that focuses on meaningful communication of media through cyclical and collaborative processes between people and technology. [Wikipedia](https://en.wikipedia.org/wiki/Interactive_design)
 
-Interactive design employs heavy user interactions in a different way than apps do.
+This definition is vague. Its principles clears the picture:
 
-Instead of data input the interaction is continuous through gestures, information transformation, real-time content updates from external sources.
+- Interactive design deals with meaningful content.
+- Interacting with content is again meaningful.
+- Content is changing continuously upon interaction.
+- Content is updated, retrieved, transformed continously from external sources.
 
-Interactive design sites present meaningful content worth made understandable to machines and search engines.
+On web interactive design is young. Started as storytelling today it goes as [interactive articles](https://idyll-lang.org/), [explorable explanations](https://explorabl.es/), or [data-driven journalism](https://pudding.cool/). [Amelia Wattenberger](https://wattenberger.com/) leads the pack.
 
-This is where SEO and static rendering comes in picture.
+In short, interactive design deals with a stream of content and lets users explore it in meaningful, playful ways.
 
-## Purpose, again.
-
-1. Enable continuous interactions through gestures and real-time content updates.
-2. For websites, not apps.
-
-Make it for internal use first. Build a few sites then see if serves a general audience.
+Comparing to apps interaction is through gestures&mdash;new, creative ways&mdash;versus classic input boxes.
