@@ -45,7 +45,7 @@ Design systems are strict. They form a complete system. They don't allow on-the-
 
 Component libraries are loose. They offer the basics and let customisation happen at any point, any time.
 
-Design systems are more expensive to create, and easier to use later. As [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows even non-devs can create with a design system.
+Design systems are more expensive to create, and easier to use later. [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows even non-devs can create with a design system.
 
 ## Features
 
@@ -63,18 +63,18 @@ While purpose, audience and type overlap, features differentiate and define the 
 
 Design systems hang on a purpose. Purpose then defines everything else down to the technology stack.
 
-Let's play with this idea further by analyzing how to approach creating a tool for building interactive design websites.
+Let's play with this idea further by analysing how to approach creating a tool for building interactive design websites.
 
 ### Interactive design
 
 > Interactive design is a user-oriented field of study that focuses on meaningful communication of media through cyclical and collaborative processes between people and technology. [Wikipedia](https://en.wikipedia.org/wiki/Interactive_design)
 
-This definition is vague. Its principles clears the picture:
+This definition is vague. The principles clear the picture:
 
 - Interactive design deals with meaningful content.
 - Interacting with content is again meaningful.
 - Content is changing continuously upon interaction.
-- External sources constinuously transforms and updates the content.
+- External sources continuously transforms and updates the content.
 
 On web interactive design is young. Started as storytelling today it goes as [interactive articles](https://idyll-lang.org/), [explorable explanations](https://explorabl.es/), or [data-driven journalism](https://pudding.cool/). [Amelia Wattenberger](https://wattenberger.com/) leads the pack.
 
@@ -97,7 +97,7 @@ Now let's see how purpose and audience defines the rest.
 1. Interaction design employs gestures. Like [updating the site on cursor movement](https://violuk.com/). For that we need a web framework supporting real-time interface updates. Like **React**.
 2. Gestures involve input devices like keyboard, mouse, touchpad, touchscreen, camera for now and glasses, gloves in the future. **Accessibility (A11y)** libraries offer the best available cross-browser and cross-device gesture management tools today.
 3. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **SEO** and **Server Side Rendering (SSR)**.
-4. Content is continously updated and transformed. This can result in thousands of content pieces on a single page, which requires **virtual lists** for performant rendering.
+4. Content is continuously updated and transformed. This can result in thousands of content pieces on a single page, which requires **virtual lists** for performant rendering.
 5. Internal audience requires to packaging. Registries like **[NPM](https://www.npmjs.com/)** are not required to publish the code.
 
 Using common terms the main features become:
@@ -125,29 +125,29 @@ This quick [design systems analysis](https://docs.google.com/spreadsheets/d/1Yn-
 
 Design systems have no clear theory behind yet. Everybody rolls their own following or not existing design patterns.
 
-The patterns below come from the analyzed systems. Shopify's Polaris and Adobe's Spectrum are implementing all these patterns to a certain extent. The rest implements none, or part of them.
+The patterns below come from the analysed systems. Shopify's Polaris and Adobe's Spectrum are implementing all these patterns to a certain extent. The rest implements none, or part of them.
 
 Theory is important. Drives design decisions. It's good to have solid foundation and principles enduring years.
 
 #### Single Source of Truth (SST)
 
-Design systems collect settings under a common place. Any later change goes into this single source of truth and reflects accross the system automatically. Devs are not required to spend their attention searching for settings locations.
+Design systems collect settings under a common place. Any later change goes into this single source of truth and reflects across the system automatically. Devs are not required to spend their attention searching for settings locations.
 
 #### Single Responsibility Principle (SRP)
 
-Design systems contains dozens, hundreds of tokens and components.
+Design systems contain dozens, hundreds of tokens and components.
 
-Independent components&mdash;contained; capable to exist on their own, in isolation&mdash compose better and provide modular architecture.
+Independent components&mdash;contained; capable to exist on their own, in isolation&mdash; compose better and provide modular architecture.
 
 #### The base / variant pattern (BEM)
 
-In [Building (and Re-Building) the Airbnb Design System](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system) an old pattern, [BEM](http://getbem.com/introduction/) emerges as solution for scalability.
+In [Building (and Re-Building) the Airbnb Design System](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system) an old pattern, [BEM](http://getbem.com/introduction/) emerges as a solution for scalability.
 
 Keeping a simple base and following simple rules for extensions scales up the source code and reduces its complexity.
 
 ### Technology
 
-In contrast to theory, technology is well defined on the design systems scene.
+In contrast to theory, technology is well-defined on the design systems scene.
 
 The majority of the solutions goes with **Typescript** and **CSS-in-JS**. All solutions embrace packaging and publishing to NPM. Half of them via a **monorepo**.
 
@@ -155,7 +155,7 @@ Testing isn't fully satisfactory. The majority does **unit testing** using **ts-
 
 Often times **Storybook** complements missing unit tests and mocks integration tests with visual tests.
 
-Storybook mocks also documentation. [Bold](https://bold.bridge.ufsc.br/en/) alone managed to come up with a good looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
+Storybook mocks also documentation. [Bold](https://bold.bridge.ufsc.br/en/) alone managed to come up with a good-looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
 
 The big players, again, managed to come up with an **in-house, integrated documentation** tool reaching UX excellence.
 
