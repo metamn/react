@@ -107,6 +107,7 @@ Using common terms the main features become:
 - Supporting gestures (A11y)
 - For static websites. (SSR)
 - Optimized for search engines. (SEO)
+- No NPM publishing. No monorepo support (Internal audience)
 
 ### Technology
 
@@ -154,4 +155,18 @@ In many cases **Storybook** is used to complement missing unit tests and to mock
 
 Storybook is used extensively for documentation. Only [Bold](https://bold.bridge.ufsc.br/en/) managed to come up with a good looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
 
-The big players, again, managed to come up with an **in-house, integrated documentation** tool reaching excellence.
+The big players, again, managed to come up with an **in-house, integrated documentation** tool reaching UX excellence.
+
+What's missing from the majority of solutions is **generated documentation (JSDoc)**. Manual documentation&mdash;no matter what&mdash;breaks from the source code's reality.
+
+### Usability
+
+Design systems have _users_ who build solutions with the system without extending it, and have _devs_ who build / adapt / tweak new design systems from the existing system.
+
+The first group values _User Experience (UX)_ while the second group longs for _Developer Experience (DX)_
+
+Of course these groups overlap often times. Important is to examine design systems from two perspectives instead of a single one.
+
+#### UX
+
+#### DX
