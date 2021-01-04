@@ -95,25 +95,36 @@ Now let's see how purpose and audience defines the rest.
 ### Features
 
 1. Interaction design employs gestures. Like [updating the site on cursor movement](https://violuk.com/). For that we need a web framework supporting real-time interface updates. Like **React**.
-2. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **SEO** and **Server Side Rendering (SSR)**.
-3. Internal audience requires to packaging. The code won't be published to a registry like **[NPM](https://www.npmjs.com/)**.
+2. Gestures involve input devices like keyboard, mouse, touchpad, touchscreen, camera for now and glasses, gloves in the future. Cross-browser and crss-device gesture management tools are found in **Accessibility (A11y)** libraries nowadays.
+3. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **SEO** and **Server Side Rendering (SSR)**.
+4. Content is continously updated and transformed. This can result in thousands of content pieces on a single page, which requires **virtual lists** as solution.
+5. Internal audience requires to packaging. The code won't be published to a registry like **[NPM](https://www.npmjs.com/)**.
 
 Using common terms the main features become:
 
-- Highly interactive components. (React)
+- Highly interactive components (React)
+- Supporting streaming content (Virtual lists)
+- Supporting gestures (A11y)
 - For static websites. (SSR)
 - Optimized for search engines. (SEO)
 
 ### Technology
 
-1. SSR is best supported by [Next.js](https://nextjs.org/)
-2. SEO starts with [Semantic HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML).
+1. Virtual lists and A11y is supported by [react-aria](https://react-spectrum.adobe.com/react-aria/index.html)
+2. SSR is best supported by [Next.js](https://nextjs.org/)
+3. SEO starts with [Semantic HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML).
 
 ## Best practices
 
 The [design systems analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals common practices covering theory, technology and usability.
 
 ### Theory
+
+There is no theory behind design systems yet. Everybody rolls their own following or not existing design patterns.
+
+The patterns below were extracted from the analyzed systems. Shopify's Polaris and Adobe's Spectrum are implementing all these patterns to a certain extent. The rest implements none, or part of them.
+
+Theory is important. Drives design decisions. Design systems are built to last. It's good to have solid foundation and principles enduring years.
 
 #### Single Source of Truth (SST)
 
@@ -129,4 +140,18 @@ Independent components compose better and provide modular architecture.
 
 In [Building (and Re-Building) the Airbnb Design System](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system) an old pattern, [BEM](http://getbem.com/introduction/) emerges as solution for scalability.
 
-Keeping a simple base and following basic rules for extensions scales up and reduces the complexity of the code.
+Keeping a simple base and following simple rules for extensions scales up the source code and reduces its complexity.
+
+### Technology
+
+In contrast to theory, technology is well defined on the design systems scene.
+
+The majority goes with **Typescript** and **CSS-in-JS**. All solutions are packaged and published to NPM. Half of them via a **monorepo**.
+
+Testing isn't fully satisfactory. The majority does **unit testing** using **ts-jest** and **React Testing Library** with questionable coverage.
+
+In many cases **Storybook** is used to complement missing unit tests and to mock integration tests with visual tests.
+
+Storybook is used extensively for documentation. Only [Bold](https://bold.bridge.ufsc.br/en/) managed to come up with a good looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
+
+The big players, again, managed to come up with an **in-house, integrated documentation** tool reaching excellence.
