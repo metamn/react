@@ -65,7 +65,7 @@ Design systems hang on a purpose. Purpose then defines type, features and the te
 
 Let's play with this idea further by analyzing how to approach creating a tool for building interactive design websites.
 
-## Interactive design
+### Interactive design
 
 > Interactive design is a user-oriented field of study that focuses on meaningful communication of media through cyclical and collaborative processes between people and technology. [Wikipedia](https://en.wikipedia.org/wiki/Interactive_design)
 
@@ -81,3 +81,52 @@ On web interactive design is young. Started as storytelling today it goes as [in
 In short, interactive design deals with a stream of content and lets users explore it in meaningful, playful ways.
 
 Comparing to apps interaction is through gestures&mdash;new, creative ways&mdash;versus classic input boxes.
+
+### Somenage
+
+Let's call this example tool Somenage, from _some_ and _nage_ (Japanese for _throw_), depicting the attempt(s) to structure the unknown.
+
+The **purpose** is clear: A tool for building interactive design websites.
+
+The **audience** is modest: Let it be an internal tool first, then after a few sites built perhaps others will gain interest in using it.
+
+Now let's see how purpose and audience defines the rest.
+
+### Features
+
+1. Interaction design employs gestures. Like [updating the site on cursor movement](https://violuk.com/). For that we need a web framework supporting real-time interface updates. Like **React**.
+2. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **SEO** and **Server Side Rendering (SSR)**.
+3. Internal audience requires to packaging. The code won't be published to a registry like **[NPM](https://www.npmjs.com/)**.
+
+Using common terms the main features become:
+
+- Highly interactive components. (React)
+- For static websites. (SSR)
+- Optimized for search engines. (SEO)
+
+### Technology
+
+1. SSR is best supported by [Next.js](https://nextjs.org/)
+2. SEO starts with [Semantic HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML).
+
+## Best practices
+
+The [design systems analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals common practices covering theory, technology and usability.
+
+### Theory
+
+#### Single Source of Truth (SST)
+
+Design systems collect settings under a common place. Any later change, update is performed in that single common place and is reflected accross the system automatically. No need to make changes in multiple places to achieve an update.
+
+#### Single Responsibility Principle (SRP)
+
+Design systems are built on dozens, hundreds of tokens and components. Each of them should be contained, capable to exist on its own, in isolation.
+
+Independent components compose better and provide modular architecture.
+
+#### The base / variant pattern (BEM)
+
+In [Building (and Re-Building) the Airbnb Design System](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system) an old pattern, [BEM](http://getbem.com/introduction/) emerges as solution for scalability.
+
+Keeping a simple base and following basic rules for extensions scales up and reduces the complexity of the code.
