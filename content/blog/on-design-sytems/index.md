@@ -31,7 +31,7 @@ A handful of companies create general purpose systems. More precisely they creat
 
 This generosity links to the company size: Google, IBM, Ant, Adobe can afford to open source code worth millions:
 
-> This represents millions of dollars of investment for each company to duplicate work that many other companies are also doing. &mdash; [React Aria](https://react-spectrum.adobe.com/react-aria/why.html)
+> This represents millions of dollars of investment for each company to duplicate work that many other companies are also doing. &mdash; [Adobe Spectrum](https://react-spectrum.adobe.com/react-aria/why.html)
 
 Foundational systems represent a new business model&mdash;[Modulz](https://www.modulz.app/) helps teams create design systems without writing code&mdash;or [institutions](https://bold.bridge.ufsc.br/en/about/) sharing their work for the common good.
 
@@ -45,11 +45,11 @@ Design systems are strict. They form a complete system. They don't allow on-the-
 
 Component libraries are loose. They offer the basics and let customisation happen at any point, any time.
 
-Design systems are more expensive to create, and easier to use. As [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows non-devs can create with a design system, too.
+Design systems are more expensive to create, and easier to use later. As [Braid's Playroom](https://seek-oss.github.io/braid-design-system/) shows even non-devs can create with a design system.
 
 ## Features
 
-Purpose and audience defines type and features.
+Purpose and audience defines a design systems' type and features.
 
 Material Design goes full circle. From top-bottom connects designers and their tools with developers of all platforms and technologies. From Figma to React and native apps everything is in a system.
 
@@ -61,7 +61,7 @@ While purpose, audience and type overlap, features differentiate and define the 
 
 ## Example
 
-Design systems hang on a purpose. Purpose then defines type, features and the technology stack.
+Design systems hang on a purpose. Purpose then defines everything else down to the technology stack.
 
 Let's play with this idea further by analyzing how to approach creating a tool for building interactive design websites.
 
@@ -74,7 +74,7 @@ This definition is vague. Its principles clears the picture:
 - Interactive design deals with meaningful content.
 - Interacting with content is again meaningful.
 - Content is changing continuously upon interaction.
-- Content is updated, retrieved, transformed continously from external sources.
+- External sources constinuously transforms and updates the content.
 
 On web interactive design is young. Started as storytelling today it goes as [interactive articles](https://idyll-lang.org/), [explorable explanations](https://explorabl.es/), or [data-driven journalism](https://pudding.cool/). [Amelia Wattenberger](https://wattenberger.com/) leads the pack.
 
@@ -88,54 +88,56 @@ Let's call this example tool Somenage, from _some_ and _nage_ (Japanese for _thr
 
 The **purpose** is clear: A tool for building interactive design websites.
 
-The **audience** is modest: Let it be an internal tool first, then after a few sites built perhaps others will gain interest in using it.
+The **audience** is modest: Let it be an internal tool first, then after a while make it available for the public.
 
 Now let's see how purpose and audience defines the rest.
 
 ### Features
 
 1. Interaction design employs gestures. Like [updating the site on cursor movement](https://violuk.com/). For that we need a web framework supporting real-time interface updates. Like **React**.
-2. Gestures involve input devices like keyboard, mouse, touchpad, touchscreen, camera for now and glasses, gloves in the future. Cross-browser and crss-device gesture management tools are found in **Accessibility (A11y)** libraries nowadays.
+2. Gestures involve input devices like keyboard, mouse, touchpad, touchscreen, camera for now and glasses, gloves in the future. **Accessibility (A11y)** libraries offer the best available cross-browser and cross-device gesture management tools today.
 3. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **SEO** and **Server Side Rendering (SSR)**.
-4. Content is continously updated and transformed. This can result in thousands of content pieces on a single page, which requires **virtual lists** as solution.
-5. Internal audience requires to packaging. The code won't be published to a registry like **[NPM](https://www.npmjs.com/)**.
+4. Content is continously updated and transformed. This can result in thousands of content pieces on a single page, which requires **virtual lists** for performant rendering.
+5. Internal audience requires to packaging. Registries like **[NPM](https://www.npmjs.com/)** are not required to publish the code.
 
 Using common terms the main features become:
 
 - Highly interactive components (React)
-- Supporting streaming content (Virtual lists)
-- Supporting gestures (A11y)
-- For static websites. (SSR)
+- Streaming content (Virtual lists)
+- Gestures (A11y)
+- Static websites. (SSR)
 - Optimized for search engines. (SEO)
-- No NPM publishing. No monorepo support (Internal audience)
+- No NPM publishing. No monorepo. (Internal audience)
 
 ### Technology
 
-1. Virtual lists and A11y is supported by [react-aria](https://react-spectrum.adobe.com/react-aria/index.html)
-2. SSR is best supported by [Next.js](https://nextjs.org/)
-3. SEO starts with [Semantic HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML).
+1. [react-aria](https://react-spectrum.adobe.com/react-aria/index.html) for virtual lists and A11y.
+2. [Next.js](https://nextjs.org/) for SSR.
+3. [Semantic HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML) for SEO.
+
+The list is short for now. Best practices will complete the missing parts.
 
 ## Best practices
 
-The [design systems analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals common practices covering theory, technology and usability.
+This quick [design systems analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals common practices covering theory, technology and usability.
 
 ### Theory
 
-There is no theory behind design systems yet. Everybody rolls their own following or not existing design patterns.
+Design systems have no clear theory behind yet. Everybody rolls their own following or not existing design patterns.
 
-The patterns below were extracted from the analyzed systems. Shopify's Polaris and Adobe's Spectrum are implementing all these patterns to a certain extent. The rest implements none, or part of them.
+The patterns below come from the analyzed systems. Shopify's Polaris and Adobe's Spectrum are implementing all these patterns to a certain extent. The rest implements none, or part of them.
 
-Theory is important. Drives design decisions. Design systems are built to last. It's good to have solid foundation and principles enduring years.
+Theory is important. Drives design decisions. It's good to have solid foundation and principles enduring years.
 
 #### Single Source of Truth (SST)
 
-Design systems collect settings under a common place. Any later change, update is performed in that single common place and is reflected accross the system automatically. No need to make changes in multiple places to achieve an update.
+Design systems collect settings under a common place. Any later change goes into this single source of truth and reflects accross the system automatically. Devs are not required to spend their attention searching for settings locations.
 
 #### Single Responsibility Principle (SRP)
 
-Design systems are built on dozens, hundreds of tokens and components. Each of them should be contained, capable to exist on its own, in isolation.
+Design systems contains dozens, hundreds of tokens and components.
 
-Independent components compose better and provide modular architecture.
+Independent components&mdash;contained; capable to exist on their own, in isolation&mdash compose better and provide modular architecture.
 
 #### The base / variant pattern (BEM)
 
@@ -147,13 +149,13 @@ Keeping a simple base and following simple rules for extensions scales up the so
 
 In contrast to theory, technology is well defined on the design systems scene.
 
-The majority goes with **Typescript** and **CSS-in-JS**. All solutions are packaged and published to NPM. Half of them via a **monorepo**.
+The majority of the solutions goes with **Typescript** and **CSS-in-JS**. All solutions embrace packaging and publishing to NPM. Half of them via a **monorepo**.
 
 Testing isn't fully satisfactory. The majority does **unit testing** using **ts-jest** and **React Testing Library** with questionable coverage.
 
-In many cases **Storybook** is used to complement missing unit tests and to mock integration tests with visual tests.
+Often times **Storybook** complements missing unit tests and mocks integration tests with visual tests.
 
-Storybook is used extensively for documentation. Only [Bold](https://bold.bridge.ufsc.br/en/) managed to come up with a good looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
+Storybook mocks also documentation. [Bold](https://bold.bridge.ufsc.br/en/) alone managed to come up with a good looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
 
 The big players, again, managed to come up with an **in-house, integrated documentation** tool reaching UX excellence.
 
@@ -163,9 +165,9 @@ What's missing from the majority of solutions is **generated documentation (JSDo
 
 Design systems have _users_ who build solutions with the system without extending it, and have _devs_ who build / adapt / tweak new design systems from the existing system.
 
-The first group values _User Experience (UX)_ while the second group longs for _Developer Experience (DX)_
+The first group values **User Experience (UX)** while the second group longs for **Developer Experience (DX)**.
 
-Of course these groups overlap often times. Important is to examine design systems from two perspectives instead of a single one.
+The groups overlap. Important is to examine design systems from these two perspectives instead of a single one.
 
 #### UX
 
