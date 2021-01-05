@@ -169,6 +169,54 @@ The first group values **User Experience (UX)** while the second group longs for
 
 The groups overlap. Important is to examine design systems from these two perspectives instead of a single one.
 
-#### UX
+#### Documentation
 
-#### DX
+For users the first important feature is the documentation. This is the entry point where they meet the design system.
+
+From the analysis [IBM's Carbon](https://www.carbondesignsystem.com/) turned out the most complete, offering the following features:
+
+- Impecable UX of the documentation site.
+- Integrated: All docs (API, Guide) integrated into a single application.
+- Generated: Entries generated from JSDoc, MDX, tests instead of written separately.
+- Searcheable.
+- Props throughfully explained.
+- Every prop comes with its own example.
+- Live editor for examples.
+
+#### API
+
+For users the second important feature is the usability of the API.
+Namely:
+
+- Importing components: `import ../../...` won't do it. `import @package/` will do it.
+- As less props as possible: `<Card as='thumbnail'>` is better than `<Card image={true} title='H3' excerpt={true}>`
+- Consistent props naming: `<Button as='link'>` and `<Heading level={3}>` won't do it. `<Heading as='H3'>` is better.
+
+Having a clean and consistent API is art. Probably it takes iterations to achieve simplicity. [Braid](https://seek-oss.github.io/braid-design-system/) to check since they offer this feature as one of their unique selling point:
+
+> We’re aggressively focused on the simplicity and composability of its API.
+
+#### Example apps
+
+Show, don't tell. An example worth thousands of words.
+
+After browsing the docs a common practice is to check the source code to get a glimpse about the quality of the work done.
+
+Yet half of the examined systems have no example apps. Or the code quality rings alarms.
+
+#### Naming conventions
+
+For devs an important factor is to feel the structure of the system familiar.
+
+Finding parts of the system should be intuitive with as less cognitive load as possible. From the big picture&mdash;tokens, hooks, components, themes&mdash;to the details&mdash;button variations.
+
+The vertical integration of the layers should be clear and well-thought.
+The `token -> theme -> hook -> component` path when extending the system should be easy to follow.
+
+#### Guidelines
+
+Design decisions make or break a product.
+Yet documenting these decisions is often missing.
+
+Guidelines explaining design decisions reduce development time.
+Once devs understand the structure of the system and the theory behind they can use it as it's their own.
