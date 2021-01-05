@@ -179,7 +179,7 @@ From the analysis [IBM's Carbon](https://www.carbondesignsystem.com/) turned out
 - Integrated: All docs (API, Guide) integrated into a single application.
 - Generated: Entries generated from JSDoc, MDX, tests instead of written separately.
 - Searchable.
-- Props clearly explained.
+- Well-explained props.
 - Every prop comes with its own example.
 - Live editor for examples.
 
@@ -221,7 +221,7 @@ Yet documenting these decisions is often missing.
 Guidelines explaining design decisions reduce development time.
 Once devs understand the structure of the system and the theory behind they can use it as it's their own.
 
-## Finally
+## Summing up
 
 Let's go back to Somenage and sum up the findings.
 
@@ -262,3 +262,191 @@ Let's go back to Somenage and sum up the findings.
   - Clean API
   - Naming conventions
   - Guidelines for design decisions
+
+## The takeaway
+
+Creating a design system or a component library starts with analysis and planning. The goal of the process is to prepare the implementation.
+
+<table>
+<thead>
+	<tr>
+		<th>Input</th>
+		<th>Output</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Purpose<br/>Audience<br/>Best practices</td>
+		<td>Features<br/>Technologies<br/>Deliverables<br/>Theory</td>
+	</tr>
+</tbody>
+</table>
+
+The findings for the Somenage exercise sums up in the following tables.
+
+<table>
+<thead>
+	<tr>
+		<th>Technology</th>
+		<th>Feature</th>
+		<th>Best practice</th>
+		<th>Notes</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td><code>react</code></td>
+		<td>Highly interactive components</td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>react-aria<code></td>
+		<td>Streaming content</td>
+		<td></td>
+		<td>Virtual lists</td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>Gestures</td>
+		<td></td>
+		<td>A11y</td>
+	</tr>
+	<tr>
+		<td><code>next.js</code></td>
+		<td>Static sites</td>
+		<td></td>
+		<td>Server side rendering</td>
+	</tr>
+	<tr>
+		<td><code>Semantic HTML5</code></td>
+		<td>Optimized for search engines</td>
+		<td></td>
+		<td>It's the first step. <code>JSON-LD</code> is the next.</td>
+	</tr>
+	<tr>
+		<td><code>typescript</code></td>
+		<td>Stable API</td>
+		<td>✅</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>emotion</code></td>
+		<td>CSS-in-JS</td>
+		<td>✅</td>
+		<td>Better support for object notation than <code>styled-components</code>.</td>
+	</tr>
+	<tr>
+		<td><code>ts-jest</code></td>
+		<td>Unit tests</td>
+		<td>✅</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>testing-library/react</code></td>
+		<td>Unit tests</td>
+		<td>✅</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>cypress</code></td>
+		<td>Integration tests</td>
+		<td>✅</td>
+		<td>Storybook goes after tests, docs but none in a perfect way.</td>
+	</tr>
+	<tr>
+		<td><code>jsdoc</code></td>
+		<td>Live, generated documentation</td>
+		<td>✅</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>Module path aliases</code></td>
+		<td>Easy imports</td>
+		<td>✅</td>
+		<td><code>import '@somenage/*'</code></td>
+	</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+	<tr>
+		<th>Deliverable</th>
+		<th>Features</th>
+		<th>Best practice</th>
+		<th>Notes</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Documentation</td>
+		<td>Integrated<br/>Searchable<br/>Props<br/>Playground</td>
+		<td>✅</td>
+		<td>One single app with impeccable UX.</td>
+	</tr>
+	<tr>
+		<td>Example apps</td>
+		<td>High quality source code</td>
+		<td>✅</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td>Guidelines</td>
+		<td>For design decisions</td>
+		<td>✅</td>
+		<td>Perhaps integrated into Documentation</td>
+	</tr>
+</tbody>
+</table>
+
+<table>
+<thead>
+	<tr>
+		<th>Theory</th>
+		<th>Features</th>
+		<th>Best practice</th>
+		<th>Notes</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Single Source of Truth (SST)</td>
+		<td>All settings in one single place.</td>
+		<td>✅</td>
+		<td><strong>Specific for design systems</strong></td>
+	</tr>
+	<tr>
+		<td>Single Responsibility Principle (SRP)</td>
+		<td>Functional compositions<br/>Modular architecture</td>
+		<td>✅</td>
+		<td>Functional Reactive Programming</td>
+	</tr>
+	<tr>
+		<td>The base / variant pattern (BEM)</td>
+		<td>Scalability and simplicity</td>
+		<td>✅</td>
+		<td>An old best practice</td>
+	</tr>
+	<tr>
+		<td>Clean API</td>
+		<td>Minimal props with uniform naming</td>
+		<td>✅</td>
+		<td>The hardest to achieve</td>
+	</tr>
+	<tr>
+		<td>Folder structure</td>
+		<td>Find anything in no time</td>
+		<td>✅</td>
+		<td>Reduce cognitive load</td>
+	</tr>
+</tbody>
+</table>
+
+Et voilà. After a long journey Somenage tends to be a design system rather a component library.
+
+In theory. Practice always puts constraints on a beautiful theory.
+
+For example: while each element of the tech stack works fine on its own they break when combined.
+
+Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers. This is where stack building implies Herculean efforts often with trade-offs forcing change on the original theory.
