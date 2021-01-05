@@ -3,7 +3,7 @@ title: 'On design systems'
 date: '2021-01-03'
 ---
 
-Theory and practice.
+Theory for now.
 
 <!--more-->
 
@@ -175,11 +175,11 @@ For users the first important feature is the documentation. This is the entry po
 
 From the analysis [IBM's Carbon](https://www.carbondesignsystem.com/) turned out the most complete, offering the following features:
 
-- Impecable UX of the documentation site.
+- Impeccable UX of the documentation site.
 - Integrated: All docs (API, Guide) integrated into a single application.
 - Generated: Entries generated from JSDoc, MDX, tests instead of written separately.
-- Searcheable.
-- Props throughfully explained.
+- Searchable.
+- Props clearly explained.
 - Every prop comes with its own example.
 - Live editor for examples.
 
@@ -189,7 +189,7 @@ For users the second important feature is the usability of the API.
 Namely:
 
 - Importing components: `import ../../...` won't do it. `import @package/` will do it.
-- As less props as possible: `<Card as='thumbnail'>` is better than `<Card image={true} title='H3' excerpt={true}>`
+- Fewer props: `<Card as='thumbnail'>` is better than `<Card image={true} title='H3' excerpt={true}>`
 - Consistent props naming: `<Button as='link'>` and `<Heading level={3}>` won't do it. `<Heading as='H3'>` is better.
 
 Having a clean and consistent API is art. Probably it takes iterations to achieve simplicity. [Braid](https://seek-oss.github.io/braid-design-system/) to check since they offer this feature as one of their unique selling point:
@@ -220,3 +220,45 @@ Yet documenting these decisions is often missing.
 
 Guidelines explaining design decisions reduce development time.
 Once devs understand the structure of the system and the theory behind they can use it as it's their own.
+
+## Finally
+
+Let's go back to Somenage and sum up the findings.
+
+- **Purpose**: A tool for building interactive design websites.
+- **Target audience**: An internal tool first, then later published for wider audience.
+- **Type**: Not yet decided. More a design system than a component library.
+- **Features**:
+  - Highly interactive components (React)
+  - Streaming content (Virtual lists)
+  - Gestures (A11y)
+  - Static websites (SSR)
+  - Optimized for search engines (SEO)
+  - No NPM publishing. No monorepo (Internal audience)
+- **Technology**:
+  - `react-aria` for virtual lists and A11y
+  - `Next.js` for SSR
+  - `Semantic HTML5` elements for SEO
+  - `Typescript`
+  - `CSS-in-JS`
+  - `ts-jest` and `React Testing Library` for unit tests
+  - Some kind of integration testing. `Cypress`, or `Storybook`
+  - `JSDoc` to generate the documentation instead of writing it by hand
+  - Easy imports. Something like [module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
+- **Documentation**:
+
+  - Integrated, all-in-one documentation
+  - Searchable
+  - Props properly displayed
+  - Props showcased by examples
+  - Live editor / playground for examples
+
+- **Example apps**
+  - High quality source code
+- **Theory**
+  - Single Source of Truth (SST)
+  - Single Responsibility Principle (SRP)
+  - The base / variant pattern (BEM)
+  - Clean API
+  - Naming conventions
+  - Guidelines for design decisions
