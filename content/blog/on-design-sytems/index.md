@@ -445,8 +445,10 @@ The findings for the Somenage exercise sums up in the following tables.
 
 Et voilà. After a long journey Somenage tends to be a design system rather a component library.
 
-In theory. Practice always puts constraints on a beautiful theory.
+In theory. Practice always puts constraints on theory.
 
-For example: while each element of the tech stack works fine on its own they break when combined.
+In tech stacks while each part works fine on its own they often break when combined.
 
-Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers. This is where stack building implies Herculean efforts often with trade-offs forcing change on the original theory.
+Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers.
+
+This is where stack building implies Herculean efforts often resulting in trade-offs forcing change on the original theory.
