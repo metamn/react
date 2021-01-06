@@ -49,65 +49,65 @@ Design systems are more expensive to create, and easier to use later. [Braid's P
 
 ## Features
 
-Purpose and audience defines a design systems' type and features.
+Purpose and audience defines a design system's features.
 
-Material Design goes full circle. From top-bottom connects designers and their tools with developers of all platforms and technologies. From Figma to React and native apps everything is in a system.
+While purpose, audience and type overlap, features differentiate and define the unique characteristics of a design system.
+
+Material Design goes full circle. From top-bottom connects designers and their tools with developers of all platforms and technologies. From Figma to web and native apps everything is in a system.
 
 [Radix](https://radix-ui.com/primitives/docs/overview/introduction) from Modulz is bare bones to that level of not offering any styling.
 
 [Spectrum](https://react-spectrum.adobe.com/index.html) from Adobe offers support for server side rendering, virtual lists, state management and accessibility for anybody building design systems.
 
-While purpose, audience and type overlap, features differentiate and define the unique characteristics of a design system.
-
 ## Example
 
-Design systems hang on a purpose. Purpose then defines everything else down to the technology stack.
+Complex systems are better understood via examples. And design systems are complex.
 
-Let's play with this idea further by analysing how to approach creating a tool for building interactive design websites.
+Let's play. And see how to create a design system (component library?) for building interactive design websites.
 
 ### Interactive design
 
 > Interactive design is a user-oriented field of study that focuses on meaningful communication of media through cyclical and collaborative processes between people and technology. [Wikipedia](https://en.wikipedia.org/wiki/Interactive_design)
 
-This definition is vague. The principles clear the picture:
+This definition is vague. The principles are clear:
 
 - Interactive design deals with meaningful content.
-- Interacting with content is again meaningful.
+- Interacting with content is&mdash;again&mdash;meaningful.
 - Content is changing continuously upon interaction.
-- External sources continuously transforms and updates the content.
+- External events transform and update the content on a regular basis.
 
-On web interactive design is young. Started as storytelling today it goes as [interactive articles](https://idyll-lang.org/), [explorable explanations](https://explorabl.es/), or [data-driven journalism](https://pudding.cool/). [Amelia Wattenberger](https://wattenberger.com/) leads the pack.
+Interactive design is neither the classic web (links, buttons, menus, inputs) nor the apps (scrolls and likes).
 
-In short, interactive design deals with a stream of content and lets users explore it in meaningful, playful ways.
+It deals with a stream of content (semantic, multidimensional) and lets users explore it in meaningful, playful, novel ways&mdash;like gestures.
 
-Comparing to apps interaction is through gestures&mdash;new, creative ways&mdash;versus classic input boxes.
+Interactive design on the web is in infancy. Started as storytelling years ago, today goes as [interactive articles](https://idyll-lang.org/), [explorable explanations](https://explorabl.es/), or [data-driven journalism](https://pudding.cool/). [Amelia Wattenberger](https://wattenberger.com/) to watch.
 
 ### Somenage
 
-Let's call this example tool Somenage, from _some_ and _nage_ (Japanese for _throw_), depicting the attempt(s) to structure the unknown.
+Let's call this example system Somenage, from _some_ and _nage_ (Japanese for _throw_), depicting the attempts, trials and erros, to structure something complex.
 
 The **purpose** is clear: A tool for building interactive design websites.
 
-The **audience** is modest: Let it be an internal tool first, then after a while make it available for the public.
+The **audience** is modest: Let it be an internal tool first, then after a while available to the public.
 
 Now let's see how purpose and audience defines the rest.
 
 ### Features
 
 1. Interaction design employs gestures. Like [updating the site on cursor movement](https://violuk.com/). For that we need a web framework supporting real-time interface updates. Like **React**.
-2. Gestures involve input devices like keyboard, mouse, touchpad, touchscreen, camera for now and glasses, gloves in the future. **Accessibility (A11y)** libraries offer the best available cross-browser and cross-device gesture management tools today.
-3. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **SEO** and **Server Side Rendering (SSR)**.
-4. Content is continuously updated and transformed. This can result in thousands of content pieces on a single page, which requires **virtual lists** for performant rendering.
-5. Internal audience requires to packaging. Registries like **[NPM](https://www.npmjs.com/)** are not required to publish the code.
+2. Novel interactions require support for all existing input devices: keyboard, mouse, touchpad, touchscreen, camera for now and glasses, gloves, sound control in the future. For all these, **Accessibility (A11y)** libraries offer the best integration.
+3. Interaction design deals with meaningful content. If the content is meaningful for humans it should be meaningful for machines too. This means **Search Engine Optimisation (SEO)** and **Server Side Rendering (SSR)**.
+4. Content is continuously updated and transformed. This can result in hundreds of content pieces on a single page, which requires **virtual lists** for performant rendering.
+5. Internal audience requires no packaging. Registries like **[NPM](https://www.npmjs.com/)** are not required to publish the code.
 
-Using common terms the main features become:
+Simplifying, the features are:
 
-- Highly interactive components (React)
+- Highly interactive user interface (React)
 - Streaming content (Virtual lists)
-- Gestures (A11y)
+- Gesture support (A11y)
 - Static websites. (SSR)
 - Optimized for search engines. (SEO)
-- No NPM publishing. No monorepo. (Internal audience)
+- No packaging and publishing. (Internal audience)
 
 ### Technology
 
@@ -115,29 +115,35 @@ Using common terms the main features become:
 2. [Next.js](https://nextjs.org/) for SSR.
 3. [Semantic HTML5 elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML) for SEO.
 
-The list is short for now. Best practices will complete the missing parts.
+The list is short for now. Common practices will complete the missing parts.
 
-## Best practices
+## Common practices
 
 This quick [design systems analysis](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) reveals common practices covering theory, technology and usability.
 
 ### Theory
 
-Design systems have no clear theory behind yet. Everybody rolls their own following or not existing design patterns.
-
-The patterns below come from the analysed systems. Shopify's Polaris and Adobe's Spectrum are implementing all these patterns to a certain extent. The rest implements none, or part of them.
-
 Theory is important. Drives design decisions. It's good to have solid foundation and principles enduring years.
+
+Design systems have no common theoretical foundation yet. Everybody rolls their own following&mdash;or not&mdash;design patterns.
+
+The patterns listed below are compiled from the analysed systems.
+
+[Shopify Polaris](https://polaris.shopify.com/) and [Adobe Spectrum](https://react-spectrum.adobe.com/index.html) are implementing all these patterns to a certain extent. The rest implements none, or part of them.
 
 #### Single Source of Truth (SST)
 
-Design systems collect settings under a common place. Any later change goes into this single source of truth and reflects across the system automatically. Devs are not required to spend their attention searching for settings locations.
+Design systems collect settings under a common place. Any later change goes into this single source of truth and reflects across the system automatically.
+
+This reduces the cognitive load to manage and extend the system.
 
 #### Single Responsibility Principle (SRP)
 
-Design systems contain dozens, hundreds of tokens and components.
+Design systems contain dozens, hundreds of tokens and components. Wiring them into a system is not a trivial task.
 
-Independent components&mdash;contained; capable to exist on their own, in isolation&mdash; compose better and provide modular architecture.
+[Functional programming](http://metamn.io/react/the-reactive-fuctional-nature-of-react/) advocates the idea of composing up a system from smaller parts is best possible when the underlying components behave predictably.
+
+Independent components&mdash;self-contained, with stable interfaces&mdash; compose better and provide modular architecture.
 
 #### The base / variant pattern (BEM)
 
@@ -155,11 +161,13 @@ Testing isn't fully satisfactory. The majority does **unit testing** using **ts-
 
 Often times **Storybook** complements missing unit tests and mocks integration tests with visual tests.
 
-Storybook mocks also documentation. [Bold](https://bold.bridge.ufsc.br/en/) alone managed to come up with a good-looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience.
+Storybook mocks also documentation.
 
-The big players, again, managed to come up with an **in-house, integrated documentation** tool reaching UX excellence.
+[Bold](https://bold.bridge.ufsc.br/en/) alone managed to come up with a good-looking Storybook for their API docs. The rest uses Storybook to complement their documentation suite which results in scattered user experience&mdash;two separate apps with different look-and-feel.
 
-What's missing from the majority of solutions is **generated documentation (JSDoc)**. Manual documentation&mdash;no matter what&mdash;breaks from the source code's reality.
+The big players&mdash;again&mdash;managed to come up with an **in-house, integrated documentation** tool reaching UX excellence.
+
+What's missing from the majority of solutions is **generated documentation (JSDoc)**. , hand-written documentation&mdash;no matter what&mdash;breaks from the source code's reality.
 
 ### Usability
 
@@ -276,7 +284,7 @@ Creating a design system or a component library starts with analysis and plannin
 </thead>
 <tbody>
 	<tr>
-		<td>Purpose<br/>Audience<br/>Best practices</td>
+		<td>Purpose<br/>Audience<br/>Common practices</td>
 		<td>Features<br/>Technologies<br/>Deliverables<br/>Theory</td>
 	</tr>
 </tbody>
@@ -289,7 +297,7 @@ The findings for the Somenage exercise sums up in the following tables.
 	<tr>
 		<th>Technology</th>
 		<th>Feature</th>
-		<th>Best practice</th>
+		<th>Common practice</th>
 		<th>Notes</th>
 	</tr>
 </thead>
@@ -374,7 +382,7 @@ The findings for the Somenage exercise sums up in the following tables.
 	<tr>
 		<th>Deliverable</th>
 		<th>Features</th>
-		<th>Best practice</th>
+		<th>Common practice</th>
 		<th>Notes</th>
 	</tr>
 </thead>
@@ -405,7 +413,7 @@ The findings for the Somenage exercise sums up in the following tables.
 	<tr>
 		<th>Theory</th>
 		<th>Features</th>
-		<th>Best practice</th>
+		<th>Common practice</th>
 		<th>Notes</th>
 	</tr>
 </thead>
@@ -426,7 +434,7 @@ The findings for the Somenage exercise sums up in the following tables.
 		<td>The base / variant pattern (BEM)</td>
 		<td>Scalability and simplicity</td>
 		<td>✅</td>
-		<td>An old best practice</td>
+		<td>An old Common practice</td>
 	</tr>
 	<tr>
 		<td>Clean API</td>
