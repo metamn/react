@@ -127,7 +127,7 @@ Theory is important. Drives design decisions. It's good to have solid foundation
 
 Design systems have no common theoretical foundation yet. Everybody rolls their own following&mdash;or not&mdash;design patterns.
 
-The patterns listed below are compiled from the analysed systems.
+The patterns listed below come compiled from the analysed systems.
 
 [Shopify Polaris](https://polaris.shopify.com/) and [Adobe Spectrum](https://react-spectrum.adobe.com/index.html) are implementing all these patterns to a certain extent. The rest implements none, or part of them.
 
