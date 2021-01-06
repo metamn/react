@@ -196,11 +196,11 @@ From the analysis [IBM's Carbon](https://www.carbondesignsystem.com/) turned out
 For users the second important feature is the usability of the API.
 Namely:
 
-- Importing components: `import ../../...` won't do it. `import @package/` will do it.
-- Fewer props: `<Card as='thumbnail'>` is better than `<Card image={true} title='H3' excerpt={true}>`
-- Consistent props naming: `<Button as='link'>` and `<Heading level={3}>` won't do it. `<Heading as='H3'>` is better.
+- Importing components.<p>`import ../../...` won't do it. `import @package/` will do it.</p>
+- Fewer props.<p>`<Card as='thumbnail'>` is better than `<Card image={true} title='H3' excerpt={true}>`</p>
+- Consistent naming.<p>`<Button as='link'>` and `<Heading level={3}>` won't do it. `<Heading as='H3'>` is better.</p>
 
-Having a clean and consistent API is art. Probably it takes iterations to achieve simplicity. [Braid](https://seek-oss.github.io/braid-design-system/) to check since they offer this feature as one of their unique selling point:
+Having a clean and consistent API is art. It takes iterations to achieve simplicity. [Braid](https://seek-oss.github.io/braid-design-system/) offers this feature as an unique selling point:
 
 > We’re aggressively focused on the simplicity and composability of its API.
 
@@ -208,41 +208,41 @@ Having a clean and consistent API is art. Probably it takes iterations to achiev
 
 Show, don't tell. An example worth thousands of words.
 
-After browsing the docs a common practice is to check the source code to get a glimpse about the quality of the work done.
+After browsing the docs a common practice is to check the examples to get a glimpse about the quality of the code.
 
 Yet half of the examined systems have no example apps. Or the code quality rings alarms.
 
 #### Naming conventions
 
-For devs an important factor is to feel the structure of the system familiar.
+For developers the `It Just Works!` factor is perhaps the most important.
 
 Finding parts of the system should be intuitive with as less cognitive load as possible. From the big picture&mdash;tokens, hooks, components, themes&mdash;to the details&mdash;button variations.
 
 The vertical integration of the layers should be clear and well-thought.
-The `token -> theme -> hook -> component` path when extending the system should be easy to follow.
+The `token -> theme -> hook -> component` path should be easy to follow when extending the system.
 
-#### Guidelines
+#### Guidelines for design principles
 
 Design decisions make or break a product.
 Yet documenting these decisions is often missing.
 
 Guidelines explaining design decisions reduce development time.
-Once devs understand the structure of the system and the theory behind they can use it as it's their own.
+Once developers understand the theory behind they'll use the system as their own.
 
 ## Summing up
 
-Let's go back to Somenage and sum up the findings.
+Let's go back to Somenage and sum up the unique parts with the common practices.
 
 - **Purpose**: A tool for building interactive design websites.
 - **Target audience**: An internal tool first, then later published for wider audience.
 - **Type**: Not yet decided. More a design system than a component library.
 - **Features**:
-  - Highly interactive components (React)
+  - Highly interactive user interface (React)
   - Streaming content (Virtual lists)
-  - Gestures (A11y)
-  - Static websites (SSR)
-  - Optimized for search engines (SEO)
-  - No NPM publishing. No monorepo (Internal audience)
+  - Gesture support (A11y)
+  - Static websites. (SSR)
+  - Optimized for search engines. (SEO)
+  - No packaging and publishing. (Internal audience)
 - **Technology**:
   - `react-aria` for virtual lists and A11y
   - `Next.js` for SSR
@@ -339,10 +339,10 @@ The findings for the Somenage exercise sums up in the following tables.
 		<td></td>
 	</tr>
 	<tr>
-		<td><code>emotion</code></td>
+		<td><code>emotion, styled-components</code></td>
 		<td>CSS-in-JS</td>
 		<td>✅</td>
-		<td>Better support for object notation than <code>styled-components</code>.</td>
+		<td></td>
 	</tr>
 	<tr>
 		<td><code>ts-jest</code></td>
@@ -360,7 +360,7 @@ The findings for the Somenage exercise sums up in the following tables.
 		<td><code>cypress</code></td>
 		<td>Integration tests</td>
 		<td>✅</td>
-		<td>Storybook goes after tests, docs but none in a perfect way.</td>
+		<td>Storybook goes after both tests and docs but none in a perfect way.</td>
 	</tr>
 	<tr>
 		<td><code>jsdoc</code></td>
@@ -380,7 +380,7 @@ The findings for the Somenage exercise sums up in the following tables.
 <table>
 <thead>
 	<tr>
-		<th>Deliverable</th>
+		<th>Other deliverables</th>
 		<th>Features</th>
 		<th>Common practice</th>
 		<th>Notes</th>
@@ -434,7 +434,7 @@ The findings for the Somenage exercise sums up in the following tables.
 		<td>The base / variant pattern (BEM)</td>
 		<td>Scalability and simplicity</td>
 		<td>✅</td>
-		<td>An old Common practice</td>
+		<td>A common practice</td>
 	</tr>
 	<tr>
 		<td>Clean API</td>
@@ -444,22 +444,24 @@ The findings for the Somenage exercise sums up in the following tables.
 	</tr>
 	<tr>
 		<td>Folder structure</td>
-		<td>Find anything in no time</td>
-		<td>✅</td>
 		<td>Reduce cognitive load</td>
+		<td>✅</td>
+		<td>Find anything in no time</td>
 	</tr>
 </tbody>
 </table>
 
-Et voilà. After a long journey Somenage tends to be a design system rather a component library.
+Et voilà.
 
-In theory. Practice always puts constraints on theory.
+After a long journey Somenage shows signs to be a design system rather a component library.
 
-In tech stacks while each part works fine on its own they often break when combined.
+In theory&mdash;Practice always distorts theory.
+
+While each part of a tech stack works fine on its own they often break when combined.
 
 Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers.
 
-This is where stack building implies Herculean efforts often resulting in trade-offs forcing change on the original theory.
+This is where stack building implies Herculean efforts. Resulting in trade-offs forcing change on the original theory.
 
 ## Resources
 
