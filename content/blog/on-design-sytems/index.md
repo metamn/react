@@ -84,7 +84,7 @@ Interactive design on the web is in infancy. Started as storytelling years ago, 
 
 ### Somenage
 
-Let's call this example system Somenage, from _some_ and _nage_ (Japanese for _throw_), depicting the attempts, trials and erros, to structure something complex.
+Let's call this example system Somenage, from _some_ and _nage_ (Japanese for _throw_), depicting the attempts, trials and errors, to structure something complex.
 
 The **purpose** is clear: A tool for building interactive design websites.
 
@@ -141,7 +141,7 @@ This reduces the cognitive load to manage and extend the system.
 
 Design systems contain dozens, hundreds of tokens and components. Wiring them into a system is not a trivial task.
 
-[Functional programming](http://metamn.io/react/the-reactive-fuctional-nature-of-react/) advocates the idea of composing up a system from smaller parts is best possible when the underlying components behave predictably.
+[Functional programming](http://metamn.io/react/the-reactive-fuctional-nature-of-react/) advocates the idea of composing up a system from smaller parts is the best possible when the underlying components behave predictably.
 
 Independent components&mdash;self-contained, with stable interfaces&mdash; compose better and provide modular architecture.
 
@@ -167,7 +167,7 @@ Storybook mocks also documentation.
 
 The big players&mdash;again&mdash;managed to come up with an **in-house, integrated documentation** tool reaching UX excellence.
 
-What's missing from the majority of solutions is **generated documentation (JSDoc)**. , hand-written documentation&mdash;no matter what&mdash;breaks from the source code's reality.
+What's missing from the majority of solutions is **generated documentation (JSDoc)**. Manual, hand-written documentation&mdash;no matter what&mdash;breaks from the source code's reality.
 
 ### Usability
 
@@ -200,7 +200,7 @@ Namely:
 - Fewer props.<p>`<Card as='thumbnail'>` is better than `<Card image={true} title='H3' excerpt={true}>`</p>
 - Consistent naming.<p>`<Button as='link'>` and `<Heading level={3}>` won't do it. `<Heading as='H3'>` is better.</p>
 
-Having a clean and consistent API is art. It takes iterations to achieve simplicity. [Braid](https://seek-oss.github.io/braid-design-system/) offers this feature as an unique selling point:
+Having a clean and consistent API is art. It takes iterations to achieve simplicity. [Braid](https://seek-oss.github.io/braid-design-system/) offers this feature as a unique selling point:
 
 > We’re aggressively focused on the simplicity and composability of its API.
 
@@ -455,7 +455,7 @@ Et voilà.
 
 After a long journey Somenage shows signs to be a design system rather a component library.
 
-In theory&mdash;Practice always distorts theory.
+In theory. Well, practice distorts theory.
 
 While each part of a tech stack works fine on its own they often break when combined.
 
