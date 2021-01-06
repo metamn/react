@@ -1,9 +1,9 @@
 ---
 title: 'On design systems'
-date: '2021-01-03'
+date: '2021-01-06'
 ---
 
-Theory for now.
+An overview.
 
 <!--more-->
 
@@ -452,3 +452,11 @@ In tech stacks while each part works fine on its own they often break when combi
 Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers.
 
 This is where stack building implies Herculean efforts often resulting in trade-offs forcing change on the original theory.
+
+## Resources
+
+- [Adele / UXPin - A repository of publicly available design systems and pattern libraries](https://adele.uxpin.com/)
+- [A quick analysis of design systems and component libraries](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing)
+- [Building (and Re-Building) the Airbnb Design System ](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system)
+- [Mark Dalgleish: Rethinking Design Practices](https://www.youtube.com/watch?v=jnV1u67_yVg&feature=youtu.be)
+- [idyll - A toolkit for creating data-driven stories and explorable explanations](https://idyll-lang.org/)
