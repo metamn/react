@@ -7,6 +7,8 @@ An overview.
 
 <!--more-->
 
+> NOTE: This article is still in progress. The "Theory" and "Naming conventions" parts are under revision. For the curious: https://system-ui.com/
+
 ---
 
 ## A short history
