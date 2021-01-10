@@ -1,6 +1,6 @@
 ---
 title: 'A little CSS history'
-date: '2021-01-10'
+date: '2021-01-09'
 ---
 
 All the buzzwords in a single post.
@@ -11,7 +11,7 @@ All the buzzwords in a single post.
 
 ## Jxnblk
 
-Brent Jackson is a popular figure in the CSS frameworks and design systems landscape.
+Brent Jackson&mdash;Jxnblk&mdash;is a popular figure in the CSS frameworks and design systems landscape.
 
 His [Two Steps Forward, One Step Back](https://jxnblk.com/blog/two-steps-forward/) article offers clues how to classify&mdash;and understand the purpose of&mdash;these tools.
 
@@ -59,7 +59,9 @@ Defines how CSS connects to HTML:
 
 ```js
 // Constraints-based
-// The API needs modification to understand the 'border' prop.
+
+// The API needs modification to understand the new 'border' prop.
+
 <Box border="solid" padding={3} fontWeight="bold" color="white" bg="blue">
   Hello
 </Box>
