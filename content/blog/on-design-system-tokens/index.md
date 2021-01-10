@@ -57,7 +57,7 @@ h1: {
 },
 ```
 
-The token system must have a `responsive` key to enable responsive styles.
+The token system must have a `responsive` key to enable responsive values.
 
 [My own (humble)](https://github.com/metamn/gust/blob/master/code/framework/design/typography/text-style/text-style.json) token system demonstrates the idea:
 
@@ -73,7 +73,7 @@ The token system must have a `responsive` key to enable responsive styles.
           "mixins": [
             {
               "name": "color",
-              "value": "red-on-white"
+              "value": "red"
             }
           ]
         },
@@ -85,11 +85,11 @@ The token system must have a `responsive` key to enable responsive styles.
 
 I've used my design system since 2015 to create dozens of websites.
 
-The theory behind&mdash;recursive, responsive JSON token definitions&mdash;scaled well all the time in a [template-based](http://metamn.io/react/a-little-css-history) environment.
+The theory behind&mdash;recursive, responsive JSON token definitions&mdash;scaled well in [template-based](http://metamn.io/react/a-little-css-history) environments.
 
 In recent component-based environments (React, CSS-in-JS) developers build with types. A feature not supported by the JSON notation.
 
-Types make code scalable. They offer syntax checking during development time to ensure no such errors will occur execution time.
+Types make code scalable. They offer syntax checking during development time to ensure no syntax errors will occur execution time.
 
 Taking the first example, with JS/JSON notation, what if there is no `heading` font family defined? Or a `primary` color?
 
@@ -106,4 +106,4 @@ h1: {
 
 The result will be unknown.
 
-In contrast, with type checking the result is always guaranteed. Such errors aren't possible to make.
+In contrast, with type checking the result is always guaranteed. Such errors aren't possible to make. Undefined values cannot take part of the source code.
