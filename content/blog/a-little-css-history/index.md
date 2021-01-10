@@ -1,6 +1,6 @@
 ---
 title: 'A little CSS history'
-date: '2021-01-09'
+date: '2021-01-08'
 ---
 
 All the buzzwords in a single post.

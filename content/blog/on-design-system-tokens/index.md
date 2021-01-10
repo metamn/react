@@ -1,6 +1,6 @@
 ---
 title: 'On design system tokens'
-date: '2021-01-10'
+date: '2021-01-09'
 ---
 
 Theory.
@@ -94,6 +94,7 @@ Types make code scalable. They offer syntax checking during development time to 
 Taking the first example, with JS/JSON notation, what if there is no `heading` font family defined? Or a `primary` color?
 
 ```
+// The JS/JSON notation is not able to check for missing values
 h1: {
   fontSize: 32,
   fontFamily: 'heading',
