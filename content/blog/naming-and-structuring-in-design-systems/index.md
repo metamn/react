@@ -21,7 +21,7 @@ Computer science is exact science. Except naming, where the subjective slips in.
 
 Good naming conventions reduce cognitive load.
 
-First, they make easy to _learn_ the system. Then to _use_ the system.
+First, they make easy to **learn** the system. Then to **use** the system.
 
 When a system becomes second nature for its users their attention will spend on improving it, build with it.
 
@@ -33,4 +33,15 @@ Naming and structuring breaks or makes.
 
 Design systems shine when the folder structure&mdash;and&mdash;the component and prop names shine.
 
-They together form the API of the system.
+They together form the **API** of a design system.
+
+No wonder the idea of a [Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXYqLG8) is on the agenda in web development. With success. To achieve such peaks we've got help.
+
+- [Theme Specification](https://system-ui.com/theme) shows a folder structure for tokens.
+- [CSS Layout](https://csslayout.io/) and [UI Guideline](https://www.uiguideline.com/components) offer decent hints for naming and structuring components.
+- [Brent Jackson](https://jxnblk.com/blog/defining-component-apis-in-react/) of the JXNBLK fame tells us about naming props.
+- [The Deno Style Guide](https://deno.land/manual@v1.6.3/contributing/style_guide) tells us about reducing the number of props.
+
+Keep calm and let's dive in. Following common sense and subjective mindset.
+
+No pressure. The outcome, for sure, will be another humble take. But at least we'll learn the current practices.
