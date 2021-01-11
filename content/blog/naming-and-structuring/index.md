@@ -208,15 +208,18 @@ Applying BEM (Block&mdash;Element&mdash;Modifier) to the Header and Button examp
 
 ```bash
 # __ denotes Elements
+# Elements are components
 __Title
 __Subtitle
 __Description
-# A standalone component (Block)
+# Block
+# Blocks are components
 Header
 ```
 
 ```bash
 # -- denotes Modifiers
+# Modifiers are style declarations
 --Large
 --Primary
 --Secondary
@@ -224,7 +227,7 @@ Header
 # __ denotes Elements
 __Icon
 __Text
-# A standalone component (Block)
+# Block
 Button
 ```
 
@@ -247,9 +250,10 @@ Composing the buttons:
 </Button>
 ```
 
-Styling the buttons:
+Composing the button styles:
 
 ```js
+// Remember, Modifiers are not components but style declarations
 const largePrimary = {
   ...buttonLarge,
   ...buttonPrimary,
