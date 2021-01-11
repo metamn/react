@@ -68,19 +68,118 @@ In this natural, pure spirit let's see where no abstractions might lead us.
 	<thead>
 		<tr>
 			<th>Folder</th>
-			<th>Subfolder</th>
-			<th>Notes</th></tr>
+			<th>Contents</th>
+		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>Breakpoints</td>
 			<td></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>Colors</td>
 			<td></td>
-			<td></td>
+		</tr>
+		<tr>
+			<td>Typography</td>
+			<td>
+				Fonts<br/>
+				Scale</br/>
+				Elements<br/>
+				Grid<br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Decorations</td>
+			<td>
+				Links<br/>
+				Buttons<br/>
+				Borders<br/>
+				Icons<br/>
+				Background images<br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Navigation</td>
+			<td>
+				Menu<br/>
+				Pagination</br/>
+				Breadcrumbs<br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Forms</td>
+			<td>
+				Button<br/>
+				Checkbox</br/>
+				Radio<br/>
+				Select<br/>
+				Chip<br/>
+				Input<br/>
+				Label<br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Layout</td>
+			<td>
+				Header<br/>
+				Footer</br/>
+				Sidebar<br/>
+				Holy grail<br/>
+				Horizontal<br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Media</td>
+			<td>
+				Image<br/>
+				Video</br/>
+				Audio<br/>
+				Canvas<br/>
+				SVG<br/>
+				WebGL<br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Content</td>
+			<td>
+				Card<br/>
+				Table</br/>
+				List<br/>
+				Carousel<br/>
+				Accordion<br/>
+				Timeline<br/>
+				Tab<br/>
+				Avatar</br>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Notifications</td>
+			<td>
+				Alert<br/>
+				Toast</br/>
+				...
+			</td>
+		</tr>
+		<tr>
+			<td>Overlays</td>
+			<td>
+				Modal<br/>
+				Tooltip</br/>
+				Popover<br/>
+				...
+			</td>
 		</tr>
 	</tbody>
 </table>
+
+The list freely expands when new elements like VR, AR come to the browser.
+
+## Component names
