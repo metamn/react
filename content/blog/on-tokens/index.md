@@ -121,7 +121,7 @@ In contrast, with type checking the result is always guaranteed. Such errors are
 
 ## An up-to-date solution
 
-Theme Specification's naming conventions are a great foundation to build upon. They don't follow any abstraction&mdash;they are pure and natural.
+Theme Specification's naming conventions are a great foundation to build upon. They don't follow any abstraction&mdash;they are pure and natural&mdash;easy to remember.
 
 Instead of Javascript / JSON definitions, Typescript should be used. To make token settings error-proof.
 
