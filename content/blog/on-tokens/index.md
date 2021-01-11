@@ -13,17 +13,17 @@ For design systems.
 
 Tokens are the base layer of design systems and component libraries.
 
-This is where typography, color, scaling, spacing, etc. settings goes together with other primitives like backgrounds, icons, borders and other decorations.
+This is where typography, color, scaling, spacing, backgrounds, icons, borders and any other settings go.
 
 ## Fragmentation
 
 Everybody rolls their own design system and component library without a common theory behind.
 
-This leads to lack of interoperability between them.
+This leads to a lack of interoperability.
 
-Every design system / component library has to be learnt from scratch. In spite they offer the same functionality.
+Every tool has to be learnt from scratch. In spite they offer the same functionality.
 
-At least the common base&mdash;tokens&mdash;should be the same.
+Reusable design systems would reduce the cognitive load. Learn once, use everywhere.
 
 ## Theme Specification
 
@@ -93,11 +93,11 @@ It was JSON based, recursive (reusable tokens aka. mixins), and responsive.
     },
 ```
 
+And scaled well in [template-based](http://metamn.io/react/a-little-css-history) environments.
+
 ## Type checking
 
-I've used my design system to create dozens of websites. It scaled well in [template-based](http://metamn.io/react/a-little-css-history) environments.
-
-In recent component-based environments (React, CSS-in-JS) developers started to build with types.
+In recent component-based environments (React, CSS-in-JS) developers started to build with types instead of plain Javascript or JSON.
 
 Types make code scalable. They offer syntax checking during development time to ensure no syntax errors will occur later during execution time.
 
@@ -119,8 +119,33 @@ The result will be unknown.
 
 In contrast, with type checking the result is always guaranteed. Such errors aren't possible to make. Undefined values cannot take part of the source code.
 
-## Summing up
+## An up-to-date solution
 
-A standard theory is possible for token definitions. Both in template and component-based environments.
+Theme Specification's naming conventions are a great foundation to build upon. They don't follow any abstraction&mdash;they are pure and natural.
 
-The technology of choice should be Typescript to make tokens error-proof and consistent.
+Instead of Javascript / JSON definitions, Typescript should be used. To make token settings error-proof.
+
+Instead of recursive declarations (`fontFamily: 'heading'`), composition, from the Functional Programming paradigm should be used. To put tokens on a complete modular architecture.
+
+The first example, on this new stack, would look like:
+
+```ts
+const fontSize = useFontSize(32)
+const fontFamily = useFontFamily('heading')
+const fontWeight = useFontWeight('heading')
+const color = useColor('primary')
+const spacing = useSpacing({ mt: 4, mb: 2 })
+
+// NOTE: Every `useXXX()` function is a Typescript function.
+// This makes sure invalid arguments cannot be passed.
+
+const h1 = {
+  ...fontSize,
+  ...fontFamily,
+  ...fontWeight,
+  ...color,
+  ...spacing,
+}
+```
+
+Isn't this beautiful?

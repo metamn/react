@@ -23,7 +23,9 @@ Good naming conventions reduce cognitive load.
 
 First, they make easy to **learn** the system. Then to **use** the system.
 
-When a system is able to become second nature for its users their attention will spend on improving it, build with it. Rather than on finding the way&mdash;again and again&mdash;how to do it.
+When a system is able to become second nature for its users their attention will spend on improving it, build with it.
+
+Rather than on finding the way&mdash;again and again&mdash;how to do it.
 
 Naming and structuring&mdash;breaks or makes a system.
 
