@@ -17,17 +17,15 @@ This [cliche](https://skeptics.stackexchange.com/questions/19836/has-phil-karlto
 
 Computer science is exact science. Except naming, where the subjective slips in.
 
-## Cognitive load
+## Naming conventions
 
 Good naming conventions reduce cognitive load.
 
 First, they make easy to **learn** the system. Then to **use** the system.
 
-When a system becomes second nature for its users their attention will spend on improving it, build with it.
+When a system is able to become second nature for its users their attention will spend on improving it, build with it. Rather than on finding the way&mdash;again and again&mdash;how to do it.
 
-Not on finding its parts, or, in worst case, locate different parts required to perform a single task.
-
-Naming and structuring&mdash;breaks or makes.
+Naming and structuring&mdash;breaks or makes a system.
 
 ## In design systems
 
@@ -35,13 +33,11 @@ Design systems shine when their folder structure&mdash;and&mdash;their component
 
 They together form the **API** of a design system.
 
-No wonder the idea of a [Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXYqLG8) is on the agenda in web development. With success. To achieve such peaks we've got help.
+The idea of a [Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXYqLG8) is on the web development agenda. With results pooring in.
 
-- [Theme Specification](https://system-ui.com/theme) shows a folder structure for tokens.
+- [Theme Specification](https://system-ui.com/theme) shows a way to name and structure tokens.
 - [CSS Layout](https://csslayout.io/) and [UI Guideline](https://www.uiguideline.com/components) offer decent hints for naming and structuring components.
-- [Brent Jackson](https://jxnblk.com/blog/defining-component-apis-in-react/) of the JXNBLK fame tells us about naming props.
+- [Brent Jackson](https://jxnblk.com/blog/defining-component-apis-in-react/) tells us about naming props.
 - [The Deno Style Guide](https://deno.land/manual@v1.6.3/contributing/style_guide) tells us about reducing the number of props.
 
-The list might be endless. For now, keep calm and let's dive in. Following common sense and subjective mindset.
-
-No pressure. The outcome, for sure, will be another humble take. But at least we'll learn some of the current best practices.
+The list is not complete. Will never be. It's good enough to take another humble take on naming and structuring a design system.
