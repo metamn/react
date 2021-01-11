@@ -77,3 +77,5 @@ Defines how CSS connects to HTML:
 A CSS-in-JS framework becomes constraints-based when the usage of `style` and `className` props on components is disabled.
 
 This feature breaks the landscape into design systems (constraints-based) and component libraries (open-ended).
+
+![A little CSS history](css-history.png)
