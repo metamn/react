@@ -19,7 +19,7 @@ The article is a journey in CSS history. It goes from the first CSS frameworks t
 
 ## Classification
 
-Jxnblk classifies CSS frameworks by their **usage** and **API** shape.
+Jxnblk classifies CSS frameworks by their **usage**, and **API** shape.
 
 ### Usage
 

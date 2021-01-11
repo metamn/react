@@ -13,17 +13,17 @@ For design systems.
 
 Tokens are the base layer of design systems and component libraries.
 
-This is where typography, color, scaling, spacing settings goes together with other primitives like background patterns, borders and other decorations.
+This is where typography, color, scaling, spacing, etc. settings goes together with other primitives like backgrounds, icons, borders and other decorations.
 
 ## Fragmentation
 
 Everybody rolls their own design system and component library without a common theory behind.
 
-This led to lack of interoperability between them at basic, token level.
+This leads to lack of interoperability between them.
 
-While tokens define the same settings, the different naming conventions make them unique.
+Every design system / component library has to be learnt from scratch. In spite they offer the same functionality.
 
-Tokens from a design system are not compatible with tokens from another design system.
+At least the common base&mdash;tokens&mdash;should be the same.
 
 ## Theme Specification
 
@@ -31,11 +31,11 @@ Tokens from a design system are not compatible with tokens from another design s
 
 Github, Artsy, Gatsby and others embrace this theory and build their design systems upon.
 
-While the naming conventions might work the implementations&mdash;[Styled system](https://styled-system.com/), [Theme UI](https://theme-ui.com/)&mdash;are certainly not meeting all token requirements.
+While the naming conventions In Theme Specification might work the implementations&mdash;[Styled system](https://styled-system.com/), [Theme UI](https://theme-ui.com/)&mdash;are certainly not meeting all token requirements.
 
 ## Token requirements
 
-A token system must meet the following requirements:
+Any token system must meet the following requirements:
 
 1. Full support for the CSS specification.
 2. Including media queries.
@@ -45,7 +45,7 @@ Media query support is where current Theme Specification implementations fail. N
 
 For example, it's impossible to find out from the [documentation](https://theme-ui.com/theming/#styles) how to use different colors for different viewports.
 
-```
+```js
 // How to make h1 color red on mobile phones?
 h1: {
   fontSize: 32,
@@ -59,14 +59,26 @@ h1: {
 
 The token system must have a `responsive` key to enable responsive values.
 
-[My own (humble)](https://github.com/metamn/gust/blob/master/code/framework/design/typography/text-style/text-style.json) token system demonstrates the idea:
+Back in 2015 [I've managed](https://github.com/metamn/gust/blob/master/code/framework/design/typography/text-style/text-style.json) to come up with a token system fulfilling all requirements.
 
-```
+It was JSON based, recursive (reusable tokens aka. mixins), and responsive.
+
+```json
 {
       "name": "Body text",
       "description": "Settings for text blocks.",
       "based_on": "Nimbus Sans",
-      ...
+	  "mixins": [
+        {
+          "name": "p"
+        }
+      ],
+      "properties": [
+        {
+          "name": "max-width",
+          "value": "25em"
+        }
+      ],
       "responsive": [
         {
           "breakpoint": "mobile",
@@ -81,20 +93,18 @@ The token system must have a `responsive` key to enable responsive values.
     },
 ```
 
-## The outdated JS/JSON notation
+## Type checking
 
-I've used my design system since 2015 to create dozens of websites.
+I've used my design system to create dozens of websites. It scaled well in [template-based](http://metamn.io/react/a-little-css-history) environments.
 
-The theory behind&mdash;recursive, responsive JSON token definitions&mdash;scaled well in [template-based](http://metamn.io/react/a-little-css-history) environments.
+In recent component-based environments (React, CSS-in-JS) developers started to build with types.
 
-In recent component-based environments (React, CSS-in-JS) developers build with types. A feature not supported by the JSON notation.
+Types make code scalable. They offer syntax checking during development time to ensure no syntax errors will occur later during execution time.
 
-Types make code scalable. They offer syntax checking during development time to ensure no syntax errors will occur execution time.
+Taking the first example, from Styled system / Theme UI, what if there is no `heading` font family defined? Or a `primary` color?
 
-Taking the first example, with JS/JSON notation, what if there is no `heading` font family defined? Or a `primary` color?
-
-```
-// The JS/JSON notation is not able to check for missing values
+```js
+// This notation is not able to check for undefined values
 h1: {
   fontSize: 32,
   fontFamily: 'heading',
@@ -108,3 +118,9 @@ h1: {
 The result will be unknown.
 
 In contrast, with type checking the result is always guaranteed. Such errors aren't possible to make. Undefined values cannot take part of the source code.
+
+## Summing up
+
+A standard theory is possible for token definitions. Both in template and component-based environments.
+
+The technology of choice should be Typescript to make tokens error-proof and consistent.
