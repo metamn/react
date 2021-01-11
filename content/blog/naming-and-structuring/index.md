@@ -51,3 +51,36 @@ The idea of a [Minimal API Surface Area](https://www.youtube.com/watch?v=4anAwXY
 - [The Deno Style Guide](https://deno.land/manual@v1.6.3/contributing/style_guide) tells us about reducing the number of props.
 
 The list is not complete. It will never be. But it's good enough to take another humble attempt on naming and structuring a design system.
+
+## Folder structure
+
+The attempt to [organize CSS](https://css-tricks.com/methods-organize-css/) failed spectacularly in recent years. OOCSS, SMACSS, Atomic CSS and co&mdash;once a silver bullet&mdash;are long gone now.
+
+The reason of their failure was unnecessary abstraction. They've tried to force external concepts&mdash;from biology in case of Atomic CSS&mdash;on web development.
+
+It turned out organizing CSS doesn't require any additional abstraction. The abstraction is already present, and it is _natural_.
+
+We all know what typography, colors, navigation, layout and forms mean. Let's do not hide these abstractions under obscure folders like atoms, molecules and organism.
+
+In this natural, pure spirit let's see where no abstractions might lead us.
+
+<table>
+	<thead>
+		<tr>
+			<th>Folder</th>
+			<th>Subfolder</th>
+			<th>Notes</th></tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Breakpoints</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Colors</td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
