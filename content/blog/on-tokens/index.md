@@ -1,9 +1,9 @@
 ---
-title: 'On design system tokens'
+title: 'On tokens'
 date: '2021-01-09'
 ---
 
-Theory.
+For design systems.
 
 <!--more-->
 

@@ -1,9 +1,9 @@
 ---
-title: 'Naming and structuring in design systems'
+title: 'Naming and structuring'
 date: '2021-01-10'
 ---
 
-A humble take.
+For design systems.
 
 <!--more-->
 
@@ -27,11 +27,11 @@ When a system becomes second nature for its users their attention will spend on 
 
 Not on finding its parts, or, in worst case, locate different parts required to perform a single task.
 
-Naming and structuring breaks or makes.
+Naming and structuring&mdash;breaks or makes.
 
 ## In design systems
 
-Design systems shine when the folder structure&mdash;and&mdash;the component and prop names shine.
+Design systems shine when their folder structure&mdash;and&mdash;their component and prop names shine.
 
 They together form the **API** of a design system.
 
@@ -42,6 +42,6 @@ No wonder the idea of a [Minimal API Surface Area](https://www.youtube.com/watch
 - [Brent Jackson](https://jxnblk.com/blog/defining-component-apis-in-react/) of the JXNBLK fame tells us about naming props.
 - [The Deno Style Guide](https://deno.land/manual@v1.6.3/contributing/style_guide) tells us about reducing the number of props.
 
-Keep calm and let's dive in. Following common sense and subjective mindset.
+The list might be endless. For now, keep calm and let's dive in. Following common sense and subjective mindset.
 
-No pressure. The outcome, for sure, will be another humble take. But at least we'll learn the current practices.
+No pressure. The outcome, for sure, will be another humble take. But at least we'll learn some of the current best practices.

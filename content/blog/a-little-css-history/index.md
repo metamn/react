@@ -15,18 +15,18 @@ Brent Jackson&mdash;Jxnblk&mdash;is a popular figure in the CSS frameworks and d
 
 His [Two Steps Forward, One Step Back](https://jxnblk.com/blog/two-steps-forward/) article offers clues how to classify&mdash;and understand the purpose of&mdash;these tools.
 
-The article offers a little history. It goes from the first frameworks to today's latest CSS-in-JS solutions.
+The article is a journey in CSS history. It goes from the first CSS frameworks to the latest CSS-in-JS solutions used in design systems.
 
 ## Classification
 
-Jxnblk classifies CSS frameworks by their usage and API shape.
+Jxnblk classifies CSS frameworks by their **usage** and **API** shape.
 
 ### Usage
 
 Defines how CSS connects to HTML:
 
-- In **Template-based UI frameworks** like Rails, PHP, plain HTML they connect via the `class` or `style` HTML attribute.
-- In **Component-based UI frameworks** like React, Vue, Web components they connect via props.
+- In **Template-based UI frameworks** like Rails, PHP, plain HTML&mdash;they connect via the `class` or `style` HTML attribute.
+- In **Component-based UI frameworks** like React, Vue, Web components&mdash;they connect via props.
 
 ```js
 // Template based
@@ -40,7 +40,7 @@ Defines how CSS connects to HTML:
 </Box>
 ```
 
-### API shape
+### API
 
 - **Open-ended** - Free to extend the API anytime, anywhere by anybody.
 - **Constraints-based** - The API extends following a standard procedure executed by developers.
@@ -67,11 +67,13 @@ Defines how CSS connects to HTML:
 </Box>
 ```
 
-## Buzzwords
+## Examples
 
-- **Utility / Atomic / Functional CSS** frameworks are: Tailwind, Bootstrap, Tachyons et all. They classify as _template-based_ and _open-ended_.
-- **CSS-in-JS** frameworks are: Styled components, Emotion, Material UI et all. They classify as _component-based_.
+- Tailwind, Bootstrap, Tachyons et all are **Utility / Atomic / Functional CSS** frameworks. They classify as _template-based_ and _open-ended_.
+- Styled components, Emotion, Material UI et all are **CSS-in-JS** frameworks. They classify as _component-based_ and both _open-ended_ and _constraints-based_.
 
-## Constraints-based CSS-in-JS
+## Design systems and component libraries
 
-To achieve the constraints-based state with a CSS-in-JS framework developers should disable the usage of `style` and `className` props on components.
+A CSS-in-JS framework becomes constraints-based when the usage of `style` and `className` props on components is disabled.
+
+This feature breaks the landscape into design systems (constraints-based) and component libraries (open-ended).
