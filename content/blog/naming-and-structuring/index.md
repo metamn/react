@@ -21,7 +21,7 @@ Naming is hard because it's subjective. However, with time, consensus is possibl
 
 Good naming conventions reduce cognitive load and enable interoperability.
 
-### Cognitive load
+#### Cognitive load
 
 First, they make easy to _learn_ the system. Then to _use_ the system.
 
@@ -31,7 +31,7 @@ Rather than on finding the way&mdash;again and again&mdash;how to do it.
 
 Naming and structuring&mdash;breaks or makes a system.
 
-### Interoperability.
+#### Interoperability.
 
 Once a great naming convention pops up&mdash;it's adapted en masse. This leads to the `learn once, use everywhere` phenomena.
 
@@ -157,6 +157,7 @@ In this natural, pure spirit let's see where no abstractions might lead us.
 				Timeline<br/>
 				Tab<br/>
 				Avatar</br>
+				Hero<br/>
 				...
 			</td>
 		</tr>
@@ -183,3 +184,135 @@ In this natural, pure spirit let's see where no abstractions might lead us.
 The list freely expands when new elements like VR, AR come to the browser.
 
 ## Component names
+
+Naming components is as easy as naming folders.
+
+This is true&mdash;unfortunatelly&mdash;only for high level components.
+
+Header, Button, Menu, List. These names are all, again, _natural_.
+
+In reality high level components are composed up from smaller parts (elements) and reflect different states (modifiers).
+
+For example, a Header is composed up from a Title, Subtitle and Description. A Button might be Large and a large button can be red&mdash;Primary, blue&mdash;Secondary or grey&mdash;Disabled. A button can or cannot have an Icon associated.
+
+The elements and modifiers of a component complicates naming to a level hard to manage.
+
+![Buttons](buttons.png)
+Source: [BitSrc](https://blog.bitsrc.io/design-systems-react-buttons-with-the-base-variant-pattern-c56a3b394aaf)
+
+#### The Base / Variant Pattern (BEM)
+
+It took four years for [AirBnB](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system) to solve this problem. They come up with the Base / Variant pattern, which is nothing else than the good old [BEM methodology](http://getbem.com/introduction/).
+
+Applying BEM (Block&mdash;Element&mdash;Modifier) to the Header and Button examples results in the following naming conventions and folder structure:
+
+```bash
+# __ denotes Elements
+__Title
+__Subtitle
+__Description
+# A standalone component (Block)
+Header
+```
+
+```bash
+# -- denotes Modifiers
+--Large
+--Primary
+--Secondary
+--Disabled
+# __ denotes Elements
+__Icon
+__Text
+# A standalone component (Block)
+Button
+```
+
+Composing up the Header goes:
+
+```jsx
+<Header>
+  <HeaderTitle />
+  <HeaderSubtitle />
+  <HeaderDescription />
+</Header>
+```
+
+Composing the buttons:
+
+```jsx
+<Button variant="largePrimary">
+  <ButtonIcon variant="hidden"/>
+  <ButtonText ...props/>
+</Button>
+```
+
+Styling the buttons:
+
+```js
+const largePrimary = {
+  ...buttonLarge,
+  ...buttonPrimary,
+}
+```
+
+BEM scales well.
+
+It's been around from 2015 and unlike its peers&mdash;OOCSS, SMACSS, SUITCSS, Atomic CSS&mdash;survived the [template-to-component](https://metamn.io/react/a-little-css-history) transition period and proved to be successful at an organization of AirBnB scale.
+
+#### The Single Responsibility Principle (SRP)
+
+Since a scalable naming convention is available splitting components into small parts is [encouraged](https://jxnblk.com/blog/defining-component-apis-in-react/).
+
+To illustrate [SRP](https://en.wikipedia.org/wiki/Single-responsibility_principle) let's use Brent Jackson's [Items example](https://jxnblk.com/blog/defining-component-apis-in-react/) where one monolithic component is split into standalone (micro) components&mdash;if one can borrow from [Microservices](https://en.wikipedia.org/wiki/Microservices).
+
+```js
+// Instead of this
+class Items extends React.Component {
+  renderItems ({ items }) {
+    return items.map(item => (
+      <li key={item.id}>
+        {renderItem(item)}
+      </li>
+    ))
+  }
+  renderItem (item) {
+    return (
+      <div>
+        {item.name}
+      </div>
+    )
+  }
+  render () {
+    return (
+      <ul>
+        {renderItems(this.props)
+      </ul>
+    )
+  }
+}
+
+// Do this
+const ItemList = ({ items }) =>
+  <ul>
+    {items.map(item => (
+      <li key={item.id}>
+        <Item {...item} />
+      </li>
+    )}
+  </ul>
+
+const Item = ({ name }) =>
+  <div>{item.name}</div>
+
+class Items extends React.Component {
+  render () {
+    const { items } = this.props
+    return <ItemList items={items} />
+  }
+}
+```
+
+A good note from Jackson is to use the [rule of three](<https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)>) when splitting up components to avoid premature optimization.
+
+## Component props
