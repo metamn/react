@@ -21,7 +21,7 @@ Naming is hard because it's subjective. However, with time, consensus is possibl
 
 Good naming conventions reduce cognitive load and enable interoperability.
 
-#### Cognitive load
+### Cognitive load
 
 First, they make easy to _learn_ the system. Then to _use_ the system.
 
@@ -31,7 +31,7 @@ Rather than on finding the way&mdash;again and again&mdash;how to do it.
 
 Naming and structuring&mdash;breaks or makes a system.
 
-#### Interoperability.
+### Interoperability.
 
 Once a great naming convention pops up&mdash;it's adapted en masse. This leads to the `learn once, use everywhere` phenomena.
 
@@ -200,7 +200,7 @@ The elements and modifiers of a component complicates naming to a level hard to 
 ![Buttons](buttons.png)
 Source: [BitSrc](https://blog.bitsrc.io/design-systems-react-buttons-with-the-base-variant-pattern-c56a3b394aaf)
 
-#### The Base / Variant Pattern (BEM)
+### The Base / Variant Pattern (BEM)
 
 It took four years for [AirBnB](https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system) to solve this problem. They come up with the Base / Variant pattern, which is nothing else than the good old [BEM methodology](http://getbem.com/introduction/).
 
@@ -260,11 +260,13 @@ const largePrimary = {
 }
 ```
 
+Remove `__` and `--`.
+
 BEM scales well.
 
 It's been around from 2015 and unlike its peers&mdash;OOCSS, SMACSS, SUITCSS, Atomic CSS&mdash;survived the [template-to-component](https://metamn.io/react/a-little-css-history) transition period and proved to be successful at an organization of AirBnB scale.
 
-#### The Single Responsibility Principle (SRP)
+### The Single Responsibility Principle (SRP)
 
 Since a scalable naming convention is available splitting components into small parts is [encouraged](https://jxnblk.com/blog/defining-component-apis-in-react/).
 
@@ -317,6 +319,16 @@ class Items extends React.Component {
 }
 ```
 
-A good note from Jackson is to use the [rule of three](<https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)>) when splitting up components to avoid premature optimization.
+### Rule of Three
+
+SRP tends to increase the number of components affecting developer experience. At a scale of hundreds of components working with the system offers less joy.
+
+A solution, from Jackson, is to use the [rule of three](<https://en.wikipedia.org/wiki/Rule_of_three_(computer_programming)>) when splitting up components to avoid premature optimization.
+
+Taking the examples above and applying the rule of three we have:
+
+- Header: needs splitting into 3 elements
+- Button: doesn't need splitting into 2 elements; needs splitting into 4 variants
+- Items: needs splitting into 3 elements
 
 ## Component props
