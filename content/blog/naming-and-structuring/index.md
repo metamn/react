@@ -332,3 +332,28 @@ Taking the examples above and applying the rule of three we have:
 - Items: needs splitting into 3 elements
 
 ## Component props
+
+Structuring folders and naming components follow design patterns. Such exact theory is not available for component props.
+
+What's left is to come up with ideas, rules in the _spirit_ of the existing theory for the previous parts of the API. And combine these with industry's common practices.
+
+The problem to solve is naming props and reducing their numbers.
+
+#### Inconsistency
+
+Poorly written APIs use different names for props sharing the same semantic meaning, or functionality.
+
+As the API grows this phenomena grows&mdash;introducing cognitive load on its users.
+
+```jsx
+// Inconsistent prop naming
+<Font name="Nimbus Sans">
+<Text type="body">
+<Button variant="small">
+```
+
+What if instead of `name` and `type` only `variant` would be used? That would mean consistency. Accross the entire API.
+
+And less cognitive load: Learn once use it everywhere.
+
+Why `variant`? Because the Component naming part of the API relies on the Base / Variant pattern.
