@@ -356,4 +356,28 @@ What if instead of `name` and `type` only `variant` would be used? That would me
 
 And less cognitive load: Learn once use it everywhere.
 
-Why `variant`? Because the Component naming part of the API relies on the Base / Variant pattern.
+Why `variant`? Because the Component naming part of the API relies on the Base / Variant pattern. No need to reinvent a new term to describe an existing concept.
+
+#### Not following the existing API
+
+Underlying technologies (HTML, CSS, React, Typescript) come with an API. It's great to use that API instead of reinventing new terms.
+
+For example, the HTML API provides an `onclick` prop. It would be nice to call `onClick` all props handling clicks.
+
+Going further, the CSS API provides a `padding` property. It should be used instead of renaming it to `spacing`.
+
+#### Numerosity
+
+Deno&mdash;the upcoming web stack replacing Node&mdash;in its [style guide](https://deno.land/manual@v1.6.3/contributing/style_guide) proposes max. 2 standalone props. The rest, if necessary, should go into an `options` object.
+
+At first, this sounds an impossible idea. Then, one should remember Deno resembles a bright and proven team. They can't really go wrong.
+
+After a quick analysis this `max. 2 props` idea sounds viable. In a design system I'm working on the two most used props are `as` and `variant`.
+
+With these two props a very fast development is possible. Only in special cases other props are required.
+
+Going with `variant`, `as`, `options` is worth a try.
+
+More, it would be ideal. The folder structure, the component name, and these 2+1 props should be enough to _uniquely_ identify an API endpoint.
+
+Such a cognitive load reducement! One-third less to remeber.
