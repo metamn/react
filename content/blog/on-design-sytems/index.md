@@ -7,8 +7,6 @@ An overview.
 
 <!--more-->
 
-> NOTE: This article is still in progress. The "Theory" and "Naming conventions" parts are under revision. For the curious: https://system-ui.com/
-
 ---
 
 ## A short history
@@ -464,6 +462,10 @@ While each part of a tech stack works fine on its own they often break when comb
 Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers.
 
 This is where stack building implies Herculean efforts. Resulting in trade-offs forcing change on the original theory.
+
+## Updates
+
+This short study is just the beginning. For the latest news please visit [Os Equi](https://osequi.com) my studio focussing on design systems.
 
 ## Resources
 
