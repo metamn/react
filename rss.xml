@@ -1,8 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 07 Jan 2021 17:47:42 GMT</lastBuildDate><item><title><![CDATA[On design systems]]></title><description><![CDATA[An overview.]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;An overview.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Mar 2021 11:36:02 GMT</lastBuildDate><item><title><![CDATA[On design systems]]></title><description><![CDATA[An overview.]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;An overview.&lt;/p&gt;
 &lt;!--more--&gt;
-&lt;blockquote&gt;
-&lt;p&gt;NOTE: This article is still in progress. The “Theory” and “Naming conventions” parts are under revision. For the curious: &lt;a href=&quot;https://system-ui.com/&quot;&gt;https://system-ui.com/&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2&gt;A short history&lt;/h2&gt;
 &lt;p&gt;Design systems have been around since 2013-2014.&lt;/p&gt;
@@ -388,6 +385,8 @@ Once developers understand the theory behind they’ll use the system as their o
 &lt;p&gt;While each part of a tech stack works fine on its own they often break when combined.&lt;/p&gt;
 &lt;p&gt;Where two parts meet, a grey zone forms. Bugs in the grey zones doesn’t belong to any of the maintainers.&lt;/p&gt;
 &lt;p&gt;This is where stack building implies Herculean efforts. Resulting in trade-offs forcing change on the original theory.&lt;/p&gt;
+&lt;h2&gt;Updates&lt;/h2&gt;
+&lt;p&gt;This short study is just the beginning. For the latest news please visit &lt;a href=&quot;https://osequi.com&quot;&gt;Os Equi&lt;/a&gt; my studio focussing on design systems.&lt;/p&gt;
 &lt;h2&gt;Resources&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://adele.uxpin.com/&quot;&gt;Adele / UXPin - A repository of publicly available design systems and pattern libraries&lt;/a&gt;&lt;/li&gt;
