@@ -3,7 +3,7 @@ title: 'How I write React code in 2021'
 date: '2021-05-29'
 ---
 
-Optimized for less cognitive load.
+I optimize for less cognitive load.
 
 <!--more-->
 
@@ -82,16 +82,16 @@ export * from './Button'
 
 ## Component structure
 
-To make code understandable I keep it simple and slim.
+To make component code understandable I keep it simple and slim.
+
 Less code, less cognitive load &mdash; leads to better maintenance.
 
-I focus not only on small code size but predictable structure.
-
-Every component has three sections:
+I focus not only on small code size but on a predictable structure.
+Every component should have three logical sections:
 
 - Imports
 - Type and data definitions
-- Component code
+- Component logic
 
 ```js
 // Button.tsx
@@ -116,7 +116,7 @@ export const button: TButton = {
 export const buttonQuery = `` // GraphQL
 
 /**
- * Component code
+ * Component logic
  */
 export function Button(props: TButton) {
   const props2 = defaultsDeep({ ...props }, button)
@@ -147,9 +147,9 @@ In `tsconfig.json` one can set up aliases, `paths` pointing to common folders in
 }
 ```
 
-Then in components, project-related `imports` use these aliases vs. relative paths.
+Then in components, project-related `imports` use these aliases vs. figuring out relative paths.
 
-`import { edoStyle } from '@tokens'` is easier to write than `import { edoStyle } from '../../design-system/tokens'`.
+`import { edoStyle } from '@tokens'` is easier to remember than `import { edoStyle } from '../../design-system/tokens'`.
 
 Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
 
@@ -157,7 +157,7 @@ Sparing attention with little tricks add up. The less attention needed for non-c
 
 Programming is about transformation. The problem comes in, it gets solved, and the solution goes out.
 
-It's good practice to start the component code with defining the problem in terms of data.
+It's good practice to start the component with defining the problem in terms of data.
 
 For that we have PropTypes, TypeScript and optionally, when the data comes from an API, GraphQL or JSON.
 
@@ -169,9 +169,9 @@ At first it seems definition duplication but the scope differs.
 Type definitions assure the transformations (the functions) won't break.
 Data definitions assure the front-end is in sync with the back-end.
 
-When no data comes from the API type definitions help to lay out a front-end API.
+When no data comes from the API, type definitions help to lay out a front-end API.
 
-Yes, front-end needs an API too. Otherwise how do you build a design system, or component library, with dozens of components and tokens with no back-end?
+Yes, front-end needs an API too. Otherwise how do you build a design system, or component library, with dozens of components and another dozens tokens with no back-end dictating a data structure?
 
 ### Single-responsibility Principle
 
@@ -278,6 +278,8 @@ They key is standard code / standard problem solving technique.
 
 Clojure offers a vast standard library capable to manipulate all kind of sequences. The task of a developer reduces to _use_ the library vs. writing her own code. This way the solution is better: approved, used and reused by a community vs the brainchild of a single individual.
 
+The Clojure way simplifies problem solving to a single task: find the best sequences. The rest is handled by previous wisdom.
+
 I use the same approach in writing React component functions.
 
 I start with the data (props), then create sequences from props, where I apply &mdash; ideally &mdash; standard functions.
@@ -315,7 +317,9 @@ It's nothing extraordinary in the code above. It looks natural, and should look 
 
 The advantage shows in time. A standard library grows along the projects offering reliability and faster development time for its users.
 
-On another hand this technique offers uniform thinking across a team. It reduces cognitive load both for newcomers and long-term maintainers.
+On another hand this technique offers uniform thinking across a team. It reduces the process to:
+
+`problem === data -> sequences -> solutions -> composition === solution`.
 
 ## Functional style
 
