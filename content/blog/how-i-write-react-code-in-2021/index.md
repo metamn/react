@@ -7,7 +7,7 @@ xxx
 
 <!--more-->
 
-## 1. Generators
+## Generators
 
 To make code look uniform I use generators.
 
@@ -80,7 +80,7 @@ export function Button(props: TButton) {
 export * from './Button'
 ```
 
-## 2. Component structure
+## Component structure
 
 To make code understandable I keep it simple and slim.
 Less code, less cognitive load &mdash; leads to better maintenance.
@@ -128,7 +128,7 @@ export function Button(props: TButton) {
 }
 ```
 
-### 2.1 Imports
+## Imports
 
 [Absolute imports and module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases) is a Typescript feature making project imports better comprehensible and easier to write.
 
@@ -153,13 +153,47 @@ Then in components, project-related `imports` use these aliases vs. relative pat
 
 Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
 
-### 2.2 Type and data requirements
+## Type and data requirements
 
 Programming is about transformation. The problem comes in, it gets solved, and the solution goes out.
 
 It's good practice to start the component code with defining the problem in terms of data.
 
 For that we have PropTypes, TypeScript and optionally, when the data comes from an API, GraphQL or JSON.
+
+In any case I use type definitions.
+
+Even when the data comes from the API.
+At first it seems definition duplication but the scope differs.
+
+Type definitions assure the transformations (the functions) won't break.
+Data definitions assure the front-end is in sync with the back-end.
+
+When no data comes from the API type definitions help to lay out a front-end API.
+
+Yes, front-end needs an API too. Otherwise how do you build a design system, or component library, with dozens of components and tokens with no back-end?
+
+### Single-responsibility Principle
+
+In addition, type definitions make sure the component is minimal, follows the [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle).
+
+More than one type definitions inside a component is a code smell. It means the component should split. It does more than a well-defined singular task.
+
+```js
+// This is a code smell.
+// `projects` should be merged into a single interface.
+export interface TProjectSlugPage extends TComponent<null> {
+  seo: TSeo;
+  project: TProjects;
+  error: TError;
+}
+
+export interface TProjectList {
+  projects: TProjects;
+}
+```
+
+## Default values
 
 - imports
 - type definition
@@ -204,3 +238,4 @@ For that we have PropTypes, TypeScript and optionally, when the data comes from 
 - [VSCode Folder Templates](https://github.com/Huuums/vscode-folder-templates)
 - [New Component](https://github.com/osequi/new-component)
 - [Absolute Imports and Module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
+- [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)
