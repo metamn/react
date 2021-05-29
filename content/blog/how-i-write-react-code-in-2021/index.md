@@ -369,53 +369,18 @@ With Ramda I think more about the problem &mdash; in time, in depth &mdash; and 
 
 The end result feels compact. Even if I use only a small subset of the functional programming toolset &mdash; immutable data, curried functions, and compositions.
 
-## XX
+## Summing up
 
----
+Unlike its counterparts &mdash; Elm, Ruby on Rails &mdash; React is a less-opinionated framework.
 
-No matter the approach and the editor, a hover on a function never gives full info on props, their type and default values.
+It leaves what to optimize for on the developer.
 
-It gives hints to start using the function. For details click and loading the file is necessary. (Tried in VSCode and Atom).
+I choose to optimize for simplicity &mdash; as less cognitive load as possible.
 
----
+Why? React sitting in the middle, between the user interface and the back-end, requires multiple domain knowledge. HTML, CSS, GraphQL, REST API, Design Systems / Component Libraries.
 
-- imports
-- type definition
-- default value
-- gql
-- main function
-  - props
-  - transformations
-  - rendering
-- functions file
-  - ramda
-
-## 3. Default values
-
-- function signature
-- merging
-
-## 4. Functional abstraction
-
-- data (immutable)
-- transformations (pure)
-- rule of three
-
-## 5. Simple rendering
-
-- no logic
-- no complex props
-
-## 6. Testing
-
-- tsx
-- ts
-
-## 7. Documentation
-
-- API doc
-- Better docs
-- Custom docs
+A lightweight approach on React spares attention for the other domains.
+When React is a simple glue I can focus on the other parts of the stack.
 
 ## Resources
 
