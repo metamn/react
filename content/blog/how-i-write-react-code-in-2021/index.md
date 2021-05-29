@@ -82,6 +82,85 @@ export * from './Button'
 
 ## 2. Component structure
 
+To make code understandable I keep it simple and slim.
+Less code, less cognitive load &mdash; leads to better maintenance.
+
+I focus not only on small code size but predictable structure.
+
+Every component has three sections:
+
+- Imports
+- Type and data requirements
+- Component code
+
+```js
+// Button.tsx
+
+/**
+ * Imports
+ */
+import React from 'react'
+import { TComponent, component } from '@components'
+import { edoStyle } from '@tokens'
+import { defaultsDeep } from 'lodash'
+
+/**
+ * Type and data requirements
+ */
+export interface TButton extends TComponent<null> {}
+
+export const button: TButton = {
+  ...component,
+}
+
+export const buttonQuery = `` // GraphQL
+
+/**
+ * Component code
+ */
+export function Button(props: TButton) {
+  const props2 = defaultsDeep({ ...props }, button)
+  const { className } = props2
+
+  const style = edoStyle(className, 'Button')
+
+  return <p {...style}>Button</p>
+}
+```
+
+### 2.1 Imports
+
+[Absolute imports and module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases) is a Typescript feature making project imports better comprehensible and easier to write.
+
+In `tsconfig.json` one can set up aliases, `paths` pointing to common folders in the project.
+
+```json
+{
+  "compilerOptions": {
+    "paths": {
+      "@data": ["data/"],
+      "@apps/*": ["apps/*"],
+      "@components": ["components"],
+      "@tokens": ["tokens/"]
+    }
+  }
+}
+```
+
+Then in components, project-related `imports` use these aliases vs. relative paths.
+
+`import { edoStyle } from '@tokens'` is easier to write than `import { edoStyle } from '../../design-system/tokens'`.
+
+Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
+
+### 2.2 Type and data requirements
+
+Programming is about transformation. The problem comes in, it gets solved, and the solution goes out.
+
+It's good practice to start the component code with defining the problem in terms of data.
+
+For that we have PropTypes, TypeScript and optionally, when the data comes from an API, GraphQL or JSON.
+
 - imports
 - type definition
 - default value
@@ -124,3 +203,4 @@ export * from './Button'
 
 - [VSCode Folder Templates](https://github.com/Huuums/vscode-folder-templates)
 - [New Component](https://github.com/osequi/new-component)
+- [Absolute Imports and Module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
