@@ -3,7 +3,7 @@ title: 'How I write React code in 2021'
 date: '2021-05-29'
 ---
 
-xxx
+Optimized for less cognitive load.
 
 <!--more-->
 
@@ -90,7 +90,7 @@ I focus not only on small code size but predictable structure.
 Every component has three sections:
 
 - Imports
-- Type and data requirements
+- Type and data definitions
 - Component code
 
 ```js
@@ -105,7 +105,7 @@ import { edoStyle } from '@tokens'
 import { defaultsDeep } from 'lodash'
 
 /**
- * Type and data requirements
+ * Type and data definitions
  */
 export interface TButton extends TComponent<null> {}
 
@@ -153,7 +153,7 @@ Then in components, project-related `imports` use these aliases vs. relative pat
 
 Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
 
-## Type and data requirements
+## Type and data definitions
 
 Programming is about transformation. The problem comes in, it gets solved, and the solution goes out.
 
@@ -181,7 +181,8 @@ More than one type definitions inside a component is a code smell. It means the 
 
 ```js
 // This is a code smell.
-// `projects` should be merged into a single interface.
+// `project`, `projects` should merge into a single interface.
+
 export interface TProjectSlugPage extends TComponent<null> {
   seo: TSeo;
   project: TProjects;
@@ -193,7 +194,103 @@ export interface TProjectList {
 }
 ```
 
-## Default values
+## Default values and function signatures
+
+There are ways to define component props and associate default values to them.
+
+A common approach is to destructure props in the function signature. Another approach is to destructure them in the function body.
+
+```js
+// Destructuring in function signature
+function Video({prop1, prop2}: TVideo) {...}
+
+// Destructuring in function body
+function Video(props: TVideo) {
+  const {prop1, prop2} = props
+}
+```
+
+Which approach is better? It turns out there is no _best_ approach.
+After all, it boils down to personal taste, use case or school of thought.
+
+What makes an approach better than another? Criterias help to attempt a shallow comparision.
+
+### Code duplication is inevitable
+
+Assuming type definitions are always in place:
+
+```js
+interface TVideo {
+   prop1: string,
+   prop2: string
+}
+
+// Duplication in function signature
+function Video({prop1, prop2}: TVideo)
+
+// Duplication in function body
+function Video(props: TVideo) {
+   const {prop1, prop2} = props
+   // If not all props are destructured, this approach contains less duplication
+   const {prop1} = props
+}
+```
+
+The advantage goes to the `function body` approach.
+
+### Usage info on hover
+
+Editors try to offer as much information as possible on hovering a function name, or type declaration.
+
+This comes handy when trying to use a function. It gives hints on usage and return value.
+
+Editors vary in capability to display information on hover.
+In my experience VSCode performs better in this area than Atom. Or I might not found a better plugin to Atom.
+
+After playing with various scenarios in VSCode I found:
+
+```js
+// Gives the prop list information on hover
+function Video({prop1, prop2}: TVideo) {..}
+
+// Gives no information on hover
+function Video(props: TVideo) {..}
+
+// When a function return type is present the information on hover disappears
+// On `ctrl+hover` slightly better information is displayed, but still incomplete
+function Video({prop1, prop2}: TVideo): JSXElement {..}
+```
+
+## Functional abstraction
+
+React plays the [functional and reactive](http://metamn.io/react/the-reactive-fuctional-nature-of-react/) game.
+
+It borrows often from Clojure/ClojureScript, a language built on a grand abstraction.
+
+![The Grand Abstraction](the-grand-abstraction.png)
+_From Alex Miller's screencast [Clojure Enemy of the State](https://youtu.be/qe60zwUAOqE)_
+
+The idea is to transform initial data into a series of sequences and apply standard code upon the sequences.
+
+This is how Clojure solves problems. Divides a problem into subproblems &mdash; small sequences &mdash; and applies standard problem solving techniques on each sequence.
+
+They key is standard code / standard problem solving technique.
+
+Clojure offers a vast standard library capable to manipulate all kind of sequences. The task of a developer reduces to _use_ the library vs. writing her own code. This way the solution is better: approved, used and reused by a community vs the brainchild of a single individual.
+
+I use the same approach in writing React component functions.
+
+I start with the data (props) then create sequences from props where I apply, ideally, standard functions.
+
+## XX
+
+---
+
+No matter the approach and the editor, a hover on a function never gives full info on props, their type and default values.
+
+It gives hints to start using the function. For details click and loading the file is necessary. (Tried in VSCode and Atom).
+
+---
 
 - imports
 - type definition
@@ -239,3 +336,5 @@ export interface TProjectList {
 - [New Component](https://github.com/osequi/new-component)
 - [Absolute Imports and Module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
 - [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)
+- [The reactive, functional nature of React](http://metamn.io/react/the-reactive-fuctional-nature-of-react/)
+- [Clojure Enemy of the State](https://youtu.be/qe60zwUAOqE)
