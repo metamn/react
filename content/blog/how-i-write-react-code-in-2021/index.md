@@ -280,7 +280,40 @@ Clojure offers a vast standard library capable to manipulate all kind of sequenc
 
 I use the same approach in writing React component functions.
 
-I start with the data (props) then create sequences from props where I apply, ideally, standard functions.
+I start with the data (props), then create sequences from props, where I apply &mdash; ideally &mdash; standard functions.
+
+```jsx
+export function Video(props: TVideo) {
+  /**
+   * Start with the data
+   */
+  const props2 = defaultsDeep({ ...props }, video)
+  const { className, hosted, served } = props2
+
+  /**
+   * Chopped sequences: `hosted`, `served`
+   * Apply function on sequences
+   */
+  const url = getVideoUrl(hosted, served)
+  if (!url) return null
+
+  /**
+   * Chopped sequence: `className`
+   * Apply function on sequence
+   */
+  const style = edoStyle(className, 'Video')
+
+  /**
+   * When all the subproblems are solved ...
+   * ... return the result
+   */
+  return <ReactPlayer url={url} {...style} />
+}
+```
+
+It's nothing extraordinary in the code above. It looks natural, and should look natural.
+
+The advantage shows in time. A standard library grows along the projects offering reliability and faster development time.
 
 ## XX
 
