@@ -313,7 +313,61 @@ export function Video(props: TVideo) {
 
 It's nothing extraordinary in the code above. It looks natural, and should look natural.
 
-The advantage shows in time. A standard library grows along the projects offering reliability and faster development time.
+The advantage shows in time. A standard library grows along the projects offering reliability and faster development time for its users.
+
+On another hand this technique offers uniform thinking across a team. It reduces cognitive load both for newcomers and long-term maintainers.
+
+## Functional style
+
+A key approach in functional programming is to create atomic sequences / subproblems and atomic solutions for them.
+
+An atomic problem / solution is not further reduceable. It is pure, it exists in a canonical state.
+
+Practice shows systems compose up better when the underlying constructs, components are atomic / pure.
+
+In the example above both `defaultsDeep`, `getVideoUrl`, `edoStyle` and `ReactPlayer` are atomic. They can't be further reduced. And they return predictable results which compose up nicely.
+
+If we look deeper, let's say into the `getVideoUrl` code, we should see pure / atomic code, again.
+
+```js
+export function getVideoUrl(hosted, served): string[] | string | null {
+  if (!hosted && !served) return null
+  return hosted && hosted?.videoUrl
+    ? getHostedUrl(hosted)
+    : getServedUrl(served)
+}
+```
+
+And so on.
+
+```js
+export function getHostedUrl(hosted): string | null {
+  return hosted?.videoUrl
+    ? canPlayUrl(hosted?.videoUrl)
+      ? hosted?.videoUrl
+      : null
+    : null
+}
+```
+
+## Functional programming with Ramda
+
+[Functional programming](https://github.com/MostlyAdequate/mostly-adequate-guide) is not a silver bullet. And it's hard to learn when one is coming from object-oriented, imperative programming &mdash; as majority of us do.
+
+Understanding its principles and applying its style is often enough in a React environment. A short learning assures immediate better code.
+
+I often find myself in front of a problem more complex than mapping and reducing data.
+In such cases I appeal to [Ramda](https://ramdajs.com/), a functional library for JavaScript.
+
+Ramda is transparent to React. No matter if you write `getVideoUrl` with Ramda or JavaScript. React can't sense the difference.
+
+The difference is in the cognitive load of the developer.
+
+Writing slightly complex algorithms in the imperative way I found to take a larger toll on my attention and patience than writing the same algorithm with Ramda.
+
+With Ramda I think more about the problem &mdash; in time, in depth &mdash; and write less code.
+
+The end result feels compact. Even if I use only a small subset of the functional programming toolset &mdash; immutable data, curried functions, and compositions.
 
 ## XX
 
@@ -371,3 +425,5 @@ It gives hints to start using the function. For details click and loading the fi
 - [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)
 - [The reactive, functional nature of React](http://metamn.io/react/the-reactive-fuctional-nature-of-react/)
 - [Clojure Enemy of the State](https://youtu.be/qe60zwUAOqE)
+- [Professor Frisby's Mostly Adequate Guide to Functional Programming](https://github.com/MostlyAdequate/mostly-adequate-guide)
+- [Ramda JS](https://ramdajs.com/)
