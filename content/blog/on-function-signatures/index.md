@@ -124,8 +124,10 @@ const numbers = prop2a?.map(item => item).join(',')
 
 Optional chaining handles missing props. Destructuring fails with `Unhandled Runtime Error`.
 
+When `prop1` is `null`:
+
 ```js
-// Returns `Undefined`
+// Returns value `undefined`
 const text = prop1?.prop1a
 ```
 
