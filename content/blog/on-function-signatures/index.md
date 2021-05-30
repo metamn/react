@@ -9,7 +9,7 @@ How to define default props and where to destructure them?
 
 ---
 
-This is an interesting topic affecting developer experience: code readability and developer cognitive load.
+This is an interesting topic affecting developer experience: code readability and cognitive load.
 
 There are ways to define component props and associate default values to them.
 
@@ -23,7 +23,11 @@ function Video({prop1, prop2}: TVideo) {...}
 function Video(props: TVideo) {
   const {prop1, prop2} = props
 }
+```
 
+Associating default props, again, comes with different approaches.
+
+```js
 // Associating default props in function signature
 function Video({prop1, prop2}: TVideo = video) {...}
 
