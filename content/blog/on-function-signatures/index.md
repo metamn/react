@@ -98,4 +98,62 @@ In both cases the hint information is incomplete. There is o type information on
 
 ## Default props
 
-Default props prevent errors when destructuring props.
+Default props prevent errors when destructuring undefined props.
+
+Destructuring is inevitable in nested props, and nested props will be present in your code sooner or later.
+
+One can circumvent destructuring by using optional chaining.
+
+```js
+const text = prop1?.prop1a
+const numbers = prop2?.prop2a?.map(item => item).join(',')
+```
+
+On long term, when nesting goes deeper, destructuring scales better.
+
+```js
+// Destructuring scales better.
+// No trainwreck like prop1?.prop1a?.prop1aX?.prop1aX...
+const { prop1, prop2 } = props
+const { prop1a } = prop1
+const { prop2a } = prop2
+const numbers = prop2a?.map(item => item).join(',')
+```
+
+### Full depth
+
+Optional chaining handles missing props. Destructuring fails with `Unhandled Runtime Error`.
+
+```js
+// Returns `Undefined`
+const text = prop1?.prop1a
+```
+
+```js
+const { prop1, prop2 } = props
+// Breaks with an error
+const { prop1a } = prop1
+```
+
+To make destructuring error proof, default values covering full depth must exist.
+
+```js
+export interface TNested {
+  prop1?: {
+    prop1a: string,
+  };
+}
+
+export const nested: TNested = {
+  // This doesn't goes full depth.
+  // It will give an error on destructuring.
+  prop1: null,
+}
+
+export const nestedFullDepth: TNested = {
+  // This is ok.
+  prop1: {
+    prop1a: null,
+  },
+}
+```
