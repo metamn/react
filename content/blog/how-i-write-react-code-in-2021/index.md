@@ -23,6 +23,18 @@ On the other hand, optimizing for a goal helps decision making.
 
 Stack building and creating a coding style guide is about decision making. When the goal is clear making decisions is easy.
 
+## Less cognitive load
+
+It sounds vague but reducing cognitive load is a viable task at every phase in React developemnt.
+
+Creating a new component? Use a generator. No need to remember component structure and write boilerplate code.
+
+Importing a component? Use module path aliases. No need to remember project folder structure.
+
+Defining function signature? Use a single composite prop. Then deal with the details later. No need to worry prematurely about data structures when thinking about business logic.
+
+Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
+
 ## Generators
 
 To make code look uniform I use generators.
@@ -166,8 +178,6 @@ In `tsconfig.json` one can set up aliases, `paths` pointing to common folders in
 Then in components, project-related `imports` use these aliases vs. figuring out relative paths.
 
 `import { edoStyle } from '@tokens'` is easier to remember than `import { edoStyle } from '../../design-system/tokens'`.
-
-Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
 
 ## Type and data definitions
 
@@ -389,7 +399,25 @@ With Ramda I think more about the problem &mdash; in time, in depth &mdash; and 
 
 The end result feels compact. Even if I use only a small subset of the functional programming toolset &mdash; immutable data, curried functions, and compositions.
 
-## Summing up
+## Co-location
+
+In pursuing simplicity larger blocks decompose into smaller parts.
+
+The component model, and React, achieves decomposition via co-location.
+
+The component folder co-locates files specialized in single tasks: component code, component logic, style, tests, dev notes, specifications and anything else.
+
+When the developer opens a file reduces the focus, thus the cognitive load, to a single aspect of the problem.
+
+```bash
+Video.tsx
+Video.test.tsx
+Video.functions.ts
+Video.functions.test.ts
+Video.style.ts
+Video.md
+...
+```
 
 ## Resources
 
