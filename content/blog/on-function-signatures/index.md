@@ -168,10 +168,18 @@ In JavaScript `props = defaultProps` works only with flat objects.
 Nested objects need a special function to perform the same task.
 Lodash offers such a function: `defaultsDeep`, to recursively assign default properties.
 
-Associating default props in function signature would look like:
+Associating default props in function signature is not straightforward, or may be impossible, or require expert knowledge.
 
 ```js
-function Video({prop1, prop2}: TVideo = defaultsDeep({prop1, prop2}, video)) {...}
+// This gives the error:
+// Parameter '{ prop1, prop2 }' cannot reference identifier 'prop1' declared after it.ts(2373)
+function Video({prop1, prop2}: TVideo = defaultsDeep({prop1, prop2}, nestedFullDepth)) {...}
+```
+
+```js
+// This gives the error:
+// No value exists in scope for the shorthand property 'prop1'. Either declare one or provide an initializer.
+function Video({...defaultsDeep({ prop1, prop2 }, nestedFullDepth)}: TNested) {...}
 ```
 
 Associating default props in function body would look like:
@@ -182,6 +190,12 @@ function Video(props: TVideo) {
 }
 ```
 
-The advantage goes to the `function body` approach. It leads to readable code.
+The advantage goes to the `function body` approach. It works as is.
 
-### Usage info on hover
+## Summing up
+
+Where to destructure props, and assign default values to them is a question only while props are simple.
+
+Nested props and the requirement to use a deep merging function gives advantage on the `function body` approach.
+
+Fortunatelly both approaches offer the same developer experience in terms of displaying hints on hover in editors like VSCode.
