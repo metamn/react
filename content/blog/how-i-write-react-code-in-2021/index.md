@@ -236,10 +236,7 @@ function Video(props: TVideo) {
 }
 ```
 
-Which approach is better? It turns out there is no _best_ approach.
-After all, it boils down to personal taste, use case or school of thought.
-
-What makes an approach better than another? Criterias help to attempt a shallow comparision.
+Which approach is better? What makes an approach better than another? A few use cases and criterias help to attempt a shallow comparision.
 
 ### Code duplication is inevitable
 
@@ -257,35 +254,38 @@ function Video({prop1, prop2}: TVideo)
 // Duplication in function body
 function Video(props: TVideo) {
    const {prop1, prop2} = props
-   // If not all props are destructured, this approach contains less duplication
+   // When not all props are needed ...
+   // ... this approach contains less duplication
    const {prop1} = props
 }
 ```
 
-The advantage goes to the `function body` approach.
+The advantage goes to the `function body` approach. It can lead to less duplication.
 
 ### Usage info on hover
 
-Editors try to offer as much information as possible on hovering a function name, or type declaration.
+Editors try to offer as much information as possible on hovering, clicking on a function name, or type declaration.
 
 This comes handy when trying to use a function. It gives hints on usage and return value.
 
 Editors vary in capability to display information on hover.
-In my experience VSCode performs better in this area than Atom. Or I might not found a better plugin to Atom.
+In my experience VSCode performs better in this area than Atom.
+Or I might find a better plugin to Atom.
 
-After playing with various scenarios in VSCode I found:
+Differences in editor capabilities reduce the importance of this criteria.
 
-```js
-// Gives the prop list information on hover
-function Video({prop1, prop2}: TVideo) {..}
+For curiosity, and pursuing a better development experience, after playing with various scenarios in VSCode I found:
 
-// Gives no information on hover
-function Video(props: TVideo) {..}
+1. Hover simply returns the function signature, as is, and the function return type.
+2. When the return type is not defined it is inferred.
+3. The inferred return type hint is more complete than the defined one.
+4. `ctrl+hover` return the first 10 lines of the function, as is.
 
-// When a function return type is present the information on hover disappears
-// On `ctrl+hover` slightly better information is displayed, but still incomplete
-function Video({prop1, prop2}: TVideo): JSXElement {..}
-```
+Based on the above there is no difference between the two destructuring approaches.
+
+A hover when destructuring is in function signature gives the same information as a `ctrl+hover` when destructuring is in function body.
+
+### Default parameters
 
 ## Functional abstraction
 
