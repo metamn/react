@@ -7,6 +7,22 @@ I optimize for less cognitive load.
 
 <!--more-->
 
+---
+
+Unlike its counterparts &mdash; Elm, Ruby on Rails, re:frame of ClojureScript &mdash; React is a less-opinionated framework.
+
+It leaves what to optimize for on the developer.
+
+I choose to optimize for simplicity, for as less cognitive load as possible.
+
+Why? React is a glue. Sits in the middle, between the user interface and the back-end, connecting multiple domains. When React becomes a second nature it leaves room for acquiring expertise in the connected domains.
+
+[Responsive web design](https://web.dev/new-responsive/?utm_source=CSS-Weekly&utm_campaign=Issue-461&utm_medium=email), [screen typography](https://maxkoehler.com/posts/continuous-typography/), HTML and CSS is changing after a decade of stagnation; creating scalable design systems and component libraries is a [challenge](http://metamn.io/react/on-design-sytems/); event-driven architectures, reactive and functional programming are skills to learn.
+
+On the other hand, optimizing for a goal helps decision making.
+
+Stack building and creating a coding style guide is about decision making. When the goal is clear making decisions is easy.
+
 ## Generators
 
 To make code look uniform I use generators.
@@ -375,19 +391,11 @@ The end result feels compact. Even if I use only a small subset of the functiona
 
 ## Summing up
 
-Unlike its counterparts &mdash; Elm, Ruby on Rails &mdash; React is a less-opinionated framework.
-
-It leaves what to optimize for on the developer.
-
-I choose to optimize for simplicity &mdash; as less cognitive load as possible.
-
-Why? React sitting in the middle, between the user interface and the back-end, requires multiple domain knowledge. HTML, CSS, GraphQL, REST API, Design Systems / Component Libraries.
-
-A lightweight approach on React spares attention for the other domains.
-When React is a simple glue I can focus on the other parts of the stack.
-
 ## Resources
 
+- [The new responsive: Web design in a component-driven world](https://web.dev/new-responsive/)
+- [Continuous Typography](https://maxkoehler.com/posts/continuous-typography/)
+- [On design systems](http://metamn.io/react/on-design-sytems/)
 - [VSCode Folder Templates](https://github.com/Huuums/vscode-folder-templates)
 - [New Component](https://github.com/osequi/new-component)
 - [Absolute Imports and Module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
