@@ -94,7 +94,7 @@ Based on the above there is no difference between the two destructuring approach
 
 A hover when destructuring is in function signature gives the same information as a `ctrl+hover` when destructuring is in function body.
 
-In both cases the hint information is incomplete. There is o type information on `prop1`, `prop2`.
+In both cases the hint information is incomplete. There is no type information on `prop1`, `prop2`.
 
 ## Default props
 
@@ -159,3 +159,29 @@ export const nestedFullDepth: TNested = {
   },
 }
 ```
+
+### Assigment
+
+Once error-proof, nested default values are set up &mdash; they should assign to props.
+
+In JavaScript `props = defaultProps` works only with flat objects.
+Nested objects need a special function to perform the same task.
+Lodash offers such a function: `defaultsDeep`, to recursively assign default properties.
+
+Associating default props in function signature would look like:
+
+```js
+function Video({prop1, prop2}: TVideo = defaultsDeep({prop1, prop2}, video)) {...}
+```
+
+Associating default props in function body would look like:
+
+```js
+function Video(props: TVideo) {
+  const { prop1, prop2 } = defaultsDeep({ ...props }, video)
+}
+```
+
+The advantage goes to the `function body` approach. It leads to readable code.
+
+### Usage info on hover
