@@ -1,6 +1,822 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Mar 2021 11:36:02 GMT</lastBuildDate><item><title><![CDATA[On design systems]]></title><description><![CDATA[An overview.]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;An overview.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 31 May 2021 13:11:09 GMT</lastBuildDate><item><title><![CDATA[How I write React code in 2021]]></title><description><![CDATA[I optimize for less cognitive load.]]></description><link>http://metamn.io/react/how-i-write-react-code-in-2021/</link><guid isPermaLink="false">http://metamn.io/react/how-i-write-react-code-in-2021/</guid><pubDate>Sat, 29 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;I optimize for less cognitive load.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;hr&gt;
+&lt;p&gt;Unlike its counterparts — Elm, Ruby on Rails, re:frame of ClojureScript — React is a less-opinionated framework.&lt;/p&gt;
+&lt;p&gt;It leaves what to optimize for on the developer.&lt;/p&gt;
+&lt;p&gt;I choose to optimize for simplicity, for as little cognitive load as possible.&lt;/p&gt;
+&lt;p&gt;Why? React is a glue. Sits in the middle, between the user interface and the back-end, connecting multiple domains. When React becomes a second nature it leaves room for acquiring expertise in the connected domains.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://web.dev/new-responsive/?utm_source=CSS-Weekly&amp;#x26;utm_campaign=Issue-461&amp;#x26;utm_medium=email&quot;&gt;Responsive web design&lt;/a&gt;, &lt;a href=&quot;https://maxkoehler.com/posts/continuous-typography/&quot;&gt;screen typography&lt;/a&gt;, HTML and CSS is changing after a decade of stagnation; creating scalable design systems and component libraries is a &lt;a href=&quot;http://metamn.io/react/on-design-sytems/&quot;&gt;challenge&lt;/a&gt;; event-driven architectures, reactive and functional programming are skills to learn.&lt;/p&gt;
+&lt;p&gt;On the other hand, optimizing for a goal helps decision making.&lt;/p&gt;
+&lt;p&gt;Stack building and creating a coding style guide is about decision making. When the goal is clear, making decisions is easy.&lt;/p&gt;
+&lt;h2&gt;Less cognitive load&lt;/h2&gt;
+&lt;p&gt;It sounds vague but reducing cognitive load is a viable task at every phase in React development.&lt;/p&gt;
+&lt;p&gt;Creating a new component? Use a generator. No need to remember component structure and write boilerplate code.&lt;/p&gt;
+&lt;p&gt;Importing a component? Use module path aliases. No need to remember project folder structure.&lt;/p&gt;
+&lt;p&gt;Defining function signature? Use a single composite prop. Then deal with the details later. No need to worry prematurely about data structures when thinking about business logic.&lt;/p&gt;
+&lt;p&gt;Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing &lt;em&gt;real&lt;/em&gt; code.&lt;/p&gt;
+&lt;h2&gt;Generators&lt;/h2&gt;
+&lt;p&gt;To make code look uniform I use generators.&lt;/p&gt;
+&lt;p&gt;Instead of manually creating project files, folders — and writing boilerplate code — I generate them.&lt;/p&gt;
+&lt;p&gt;For VSCode I use &lt;a href=&quot;https://github.com/Huuums/vscode-folder-templates&quot;&gt;VSCode Folder Templates&lt;/a&gt;. In a project where team members use different editors we go for a command line generator like &lt;a href=&quot;https://github.com/osequi/new-component&quot;&gt;New Component&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The generator generates all files a component needs: the main component file, test and documentation files, style and data declarations, or anything else specific to the project.&lt;/p&gt;
+&lt;p&gt;Inside every file the generator generates boilerplate code. The final result is uniform, and is ready in seconds vs. minutes when code and structure duplicates by hand.&lt;/p&gt;
+&lt;p&gt;A simple component generator example:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// [FTName].tsx&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; TComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; component &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@components&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; edoStyle &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;@tokens&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; defaultsDeep &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;lodash&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TComponent&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; lowerCase&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;component
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; props2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; lowerCase&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;className&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props2&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; style &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;edoStyle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;className&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;[FTName]&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;FTName&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// index.ts&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./[FTName]&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;After generating a &lt;code class=&quot;language-text&quot;&gt;Button&lt;/code&gt; component the result becomes:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Button.tsx&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; TComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; component &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@components&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; edoStyle &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@tokens&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; defaultsDeep &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;lodash&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TButton&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TComponent&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; button&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TButton &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;component&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TButton&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; props2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; button&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; className &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props2
+
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; style &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;edoStyle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;className&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Button&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// index.ts&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;./Button&apos;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Component structure&lt;/h2&gt;
+&lt;p&gt;To make component code understandable I keep it simple and slim.&lt;/p&gt;
+&lt;p&gt;Less code, less cognitive load — leads to better maintenance.&lt;/p&gt;
+&lt;p&gt;I focus not only on small code size but on a predictable structure.
+Every component should have three logical sections:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Imports&lt;/li&gt;
+&lt;li&gt;Type and data definitions&lt;/li&gt;
+&lt;li&gt;Component logic&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Button.tsx&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Imports
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;react&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; TComponent&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; component &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@components&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; edoStyle &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;@tokens&apos;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; defaultsDeep &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;lodash&apos;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Type and data definitions
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TButton&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TComponent&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; button&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TButton &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;component&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; buttonQuery &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// GraphQL&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;/**
+ * Component logic
+ */&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TButton&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; props2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; button&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; className &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props2
+
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; style &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;edoStyle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;className&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Button&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;p &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;Button&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;/&lt;/span&gt;p&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Imports&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://nextjs.org/docs/advanced-features/module-path-aliases&quot;&gt;Absolute imports and module path aliases&lt;/a&gt; is a Typescript feature making project imports better comprehensible and easier to write.&lt;/p&gt;
+&lt;p&gt;In &lt;code class=&quot;language-text&quot;&gt;tsconfig.json&lt;/code&gt; one can set up aliases, &lt;code class=&quot;language-text&quot;&gt;paths&lt;/code&gt; pointing to common folders in the project.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;compilerOptions&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;paths&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;@data&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;data/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;@apps/*&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;apps/*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;@components&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;components&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;token property&quot;&gt;&quot;@tokens&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;tokens/&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then in components, project-related &lt;code class=&quot;language-text&quot;&gt;imports&lt;/code&gt; use these aliases vs. figuring out relative paths.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;import { edoStyle } from &amp;#39;@tokens&amp;#39;&lt;/code&gt; is easier to remember than &lt;code class=&quot;language-text&quot;&gt;import { edoStyle } from &amp;#39;../../design-system/tokens&amp;#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Type and data definitions&lt;/h2&gt;
+&lt;p&gt;Programming is about transformation. The problem comes in, it gets solved, and the solution goes out.&lt;/p&gt;
+&lt;p&gt;It’s good practice to start the component with defining the problem in terms of data.&lt;/p&gt;
+&lt;p&gt;For that we have PropTypes, TypeScript and optionally, when the data comes from an API, GraphQL or JSON.&lt;/p&gt;
+&lt;p&gt;In any case I use type definitions.&lt;/p&gt;
+&lt;p&gt;Even when the data comes from the API.
+At first it seems definition duplication but the scope differs.&lt;/p&gt;
+&lt;p&gt;Type definitions assure the transformations (the functions) won’t break.
+Data definitions assure the front-end is in sync with the back-end.&lt;/p&gt;
+&lt;p&gt;When no data comes from the API, type definitions help to lay out a front-end API.&lt;/p&gt;
+&lt;p&gt;Yes, the front-end needs an API too. Otherwise how do you build a design system, or component library, with dozens of components and another dozen tokens with no back-end dictating a data structure?&lt;/p&gt;
+&lt;h3&gt;Single-responsibility Principle&lt;/h3&gt;
+&lt;p&gt;In addition, type definitions make sure the component is minimal, following the &lt;a href=&quot;https://en.wikipedia.org/wiki/Single-responsibility_principle&quot;&gt;Single-responsibility Principle&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;More than one type definition inside a component is a code smell. It means the component should split. It does more than a well-defined singular task.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// This is a code smell.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// `project`, `projects` should merge into a single interface.&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TProjectSlugPage&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TComponent&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  seo&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TSeo&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  project&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TProjects&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  error&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TError&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TProjectList&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  projects&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TProjects&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Default values and function signatures&lt;/h2&gt;
+&lt;p&gt;There are ways to define component props and associate default values to them.&lt;/p&gt;
+&lt;p&gt;A common approach is to destructure props in the function signature. Another approach is to destructure them in the function body.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Destructuring in function signature&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Destructuring in function body&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Associating default props comes with at least three different approaches.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Associating default props in function signature&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Associating default props in function signature at destructuring&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Associating default props in function body&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; video&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which approach is better? Which approach is complete? What makes an approach better than another?&lt;/p&gt;
+&lt;p&gt;A &lt;a href=&quot;http://metamn.io/react/on-function-signatures/&quot;&gt;quick analysis&lt;/a&gt; shows where to destructure props, and assign default values to them depends on the shape of the props.&lt;/p&gt;
+&lt;p&gt;When props are a flat object and small in number, destructuring in function signature + assigning default values at destructuring, wins. In a capable editor &lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; over the function name displays good enough usage information.&lt;/p&gt;
+&lt;p&gt;Nested props require a special deep merging function to associate with the default props. This implies destructuring in the function body.&lt;/p&gt;
+&lt;p&gt;The developer experience with &lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; over the function name is less pleasant: the default values, helping to infer the prop type, are not shown.&lt;/p&gt;
+&lt;h2&gt;Functional abstraction&lt;/h2&gt;
+&lt;p&gt;React plays the &lt;a href=&quot;http://metamn.io/react/the-reactive-fuctional-nature-of-react/&quot;&gt;functional and reactive&lt;/a&gt; game.&lt;/p&gt;
+&lt;p&gt;It borrows often from Clojure/ClojureScript, a language built on a grand abstraction.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/87b15/the-grand-abstraction.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.15657620041753%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAACTElEQVQozz2TaY/aMBCG8/9/0krtfuhK3YtjIYSAYxvft+MQoF87SbaVXo0maB7PSWWCcknbqC04UbtkvpUXa33vfHbg2GT+Cz5N1JXyCjGsgxZWaKdmR3ItuJU2WR2N8sYkG0pYFIcQrzEMAfjKJbs9tS2j1IgDxQfcEclOlMCPR4LrDrWUNKQDoNz7/pbzLeUxpSF6gOGNVELvRDZ8UvH5XvolbpwETn/rwUnAgK4pXKMvAYqvfFCs+WIcc81dNBq3rm2iU3FMkA1Cv5l/ZAR4iC57N8EXRDlmVmDeMcOgpHhB/ZggeZmUwQ6zyi2XqYo8xZQwwe6COkkvkhCJJZR9y14zq1n5UyBogcujlMcw9fLo871P1wgwLAjgcycwU5QIjFnnegfkkHSn+GddAwB19tmWZEq2mZ4z6/KjwNhhx5Wjp6lgzTqGQDa70QkdzPPbhwzGG+4oMoIs0hwreg4cB7gLmLa3HNdbAgOznAiicJu9fPr9drEqaNjS19wRwWAVhRpP9EQYUujgLK98752TnmNQlFTKy4/X9yPF45jgITyTdBY0BTl0UNILOC9H2gpOD7aS79MaoUOTPWI0wVSj1mIiCe+mccx2aQ3RM4Wh0nM1X6+PQ1yU5ksy2QWvGDps290RNU3XNKgBmE4iADPDLT5W0wFNayxlWeyt7+GqxgTzhLcxOkASLDDkV07AeuC/ILy0F+QVrQ6nfd3u9+1uf9yBrY+zTvvdcbfZrV6fnz5efm7r9aZer3er9X612ryvX57Xr78+vj7/AoE+JXxFA/owAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;The Grand Abstraction&quot;
+        title=&quot;The Grand Abstraction&quot;
+        src=&quot;/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/5cc77/the-grand-abstraction.png&quot;
+        srcset=&quot;/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/72cd8/the-grand-abstraction.png 192w,
+/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/45483/the-grand-abstraction.png 384w,
+/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/5cc77/the-grand-abstraction.png 768w,
+/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/04090/the-grand-abstraction.png 1152w,
+/react/static/a9f159d36bb3398b06c1cd92b2b45c5d/87b15/the-grand-abstraction.png 1437w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;em&gt;From Alex Miller’s screencast &lt;a href=&quot;https://youtu.be/qe60zwUAOqE&quot;&gt;Clojure Enemy of the State&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The idea is to transform initial data into a series of sequences and apply standard code upon the sequences.&lt;/p&gt;
+&lt;p&gt;This is how Clojure solves problems. Divides a problem into subproblems — small sequences — and applies standard problem solving techniques on each sequence.&lt;/p&gt;
+&lt;p&gt;The key is standard code / standard problem solving technique.&lt;/p&gt;
+&lt;p&gt;Clojure offers a vast standard library capable of manipulating all kinds of sequences. The task of a developer reduces to &lt;em&gt;using&lt;/em&gt; the library vs. writing her own code. This way the solution is better: approved, used and reused by a community vs the brainchild of a single individual.&lt;/p&gt;
+&lt;p&gt;The Clojure way simplifies problem solving to a single task: find the best sequences. The rest is handled by previous wisdom.&lt;/p&gt;
+&lt;p&gt;I use the same approach in writing React component functions.&lt;/p&gt;
+&lt;p&gt;I start with the data (props), then create sequences from props, where I apply — ideally — standard functions.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Start with the data
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; props2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; video&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; className&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; hosted&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; served &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props2
+
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Chopped sequences: `hosted`, `served`
+   * Apply function on sequences
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; url &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getVideoUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hosted&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; served&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * Chopped sequence: `className`
+   * Apply function on sequence
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; style &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;edoStyle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;className&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;Video&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * When all the subproblems are solved ...
+   * ... return the result
+   */&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token tag&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;ReactPlayer&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token attr-name&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;token script language-javascript&quot;&gt;&lt;span class=&quot;token script-punctuation punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;url&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token spread&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token attr-value&quot;&gt;style&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;/&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;There’s nothing extraordinary in the code above. It looks natural, and should look natural.&lt;/p&gt;
+&lt;p&gt;The advantage shows in time. A standard library grows along the projects offering reliability and faster development time for its users.&lt;/p&gt;
+&lt;p&gt;On another hand this technique offers uniform thinking across a team. It reduces the process to:&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;problem === data -&amp;gt; sequences -&amp;gt; solutions -&amp;gt; composition === solution&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Functional style&lt;/h2&gt;
+&lt;p&gt;A key approach in functional programming is to create atomic sequences / subproblems and atomic solutions for them.&lt;/p&gt;
+&lt;p&gt;An atomic problem / solution is not further reducible. It is pure, it exists in a canonical state.&lt;/p&gt;
+&lt;p&gt;Practice shows systems compose up better when the underlying constructs, components are atomic / pure.&lt;/p&gt;
+&lt;p&gt;In the example above both &lt;code class=&quot;language-text&quot;&gt;defaultsDeep&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;getVideoUrl&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;edoStyle&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;ReactPlayer&lt;/code&gt; are atomic. They can’t be further reduced. And they return predictable results which compose up nicely.&lt;/p&gt;
+&lt;p&gt;If we look deeper, let’s say into the &lt;code class=&quot;language-text&quot;&gt;getVideoUrl&lt;/code&gt; code, we should see pure / atomic code, again.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getVideoUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;hosted&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; served&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; string &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;hosted &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!&lt;/span&gt;served&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; hosted &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; hosted&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;videoUrl
+    &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getHostedUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hosted&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getServedUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;served&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And so on.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;getHostedUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;hosted&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string &lt;span class=&quot;token operator&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; hosted&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;videoUrl
+    &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;canPlayUrl&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;hosted&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;videoUrl&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; hosted&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;videoUrl
+      &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Functional programming with Ramda&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/MostlyAdequate/mostly-adequate-guide&quot;&gt;Functional programming&lt;/a&gt; is not a silver bullet. And it’s hard to learn when one is coming from object-oriented, imperative programming — as the majority of us do.&lt;/p&gt;
+&lt;p&gt;Understanding its principles and applying its style is often enough in a React environment. A short learning assures immediate better code.&lt;/p&gt;
+&lt;p&gt;I often find myself in front of a problem more complex than mapping and reducing data.
+In such cases I appeal to &lt;a href=&quot;https://ramdajs.com/&quot;&gt;Ramda&lt;/a&gt;, a functional library for JavaScript.&lt;/p&gt;
+&lt;p&gt;Ramda is transparent to React. No matter if you write &lt;code class=&quot;language-text&quot;&gt;getVideoUrl&lt;/code&gt; with Ramda or JavaScript. React can’t sense the difference.&lt;/p&gt;
+&lt;p&gt;The difference is in the cognitive load of the developer.&lt;/p&gt;
+&lt;p&gt;Writing slightly complex algorithms in the imperative way I found to take a larger toll on my attention and patience than writing the same algorithm with Ramda.&lt;/p&gt;
+&lt;p&gt;With Ramda I think more about the problem — in time, in depth — and write less code.&lt;/p&gt;
+&lt;p&gt;The end result feels compact. Even if I use only a small subset of the functional programming toolset — immutable data, curried functions, and compositions.&lt;/p&gt;
+&lt;h2&gt;Co-location&lt;/h2&gt;
+&lt;p&gt;In pursuing simplicity larger blocks decompose into smaller parts.&lt;/p&gt;
+&lt;p&gt;The component model, and React, achieves decomposition via co-location.&lt;/p&gt;
+&lt;p&gt;The component folder co-locates files specialized in single tasks: component code, component logic, style, tests, dev notes, specifications and anything else.&lt;/p&gt;
+&lt;p&gt;When the developer opens a file reduces the focus, thus the cognitive load, to a single aspect of the problem.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;Video.tsx
+Video.test.tsx
+Video.functions.ts
+Video.functions.test.ts
+Video.style.ts
+Video.md
+&lt;span class=&quot;token punctuation&quot;&gt;..&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://web.dev/new-responsive/&quot;&gt;The new responsive: Web design in a component-driven world&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://maxkoehler.com/posts/continuous-typography/&quot;&gt;Continuous Typography&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-design-sytems/&quot;&gt;On design systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/Huuums/vscode-folder-templates&quot;&gt;VSCode Folder Templates&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/osequi/new-component&quot;&gt;New Component&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://nextjs.org/docs/advanced-features/module-path-aliases&quot;&gt;Absolute Imports and Module path aliases&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-function-signatures/&quot;&gt;On function signatures&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Single-responsibility_principle&quot;&gt;Single-responsibility Principle&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/the-reactive-fuctional-nature-of-react/&quot;&gt;The reactive, functional nature of React&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://youtu.be/qe60zwUAOqE&quot;&gt;Clojure Enemy of the State&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/MostlyAdequate/mostly-adequate-guide&quot;&gt;Professor Frisby’s Mostly Adequate Guide to Functional Programming&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ramdajs.com/&quot;&gt;Ramda JS&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[On function signatures]]></title><description><![CDATA[Where to destructure props, and assign default values to them.]]></description><link>http://metamn.io/react/on-function-signatures/</link><guid isPermaLink="false">http://metamn.io/react/on-function-signatures/</guid><pubDate>Fri, 28 May 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Where to destructure props, and assign default values to them.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;hr&gt;
+&lt;p&gt;This is an interesting topic affecting developer experience: code duplication, code readability and cognitive load.&lt;/p&gt;
+&lt;p&gt;There are ways to define component props and associate default values to them.&lt;/p&gt;
+&lt;p&gt;A common approach is to destructure props in the function signature. Another approach is to destructure them in the function body.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Destructuring in function signature&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Destructuring in function body&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Associating default props comes with at least three different approaches.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Associating default props in function signature&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Associating default props in function signature at destructuring&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Associating default props in function body&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; video&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which approach is better? Which approach is complete? What makes an approach better than another?&lt;/p&gt;
+&lt;p&gt;To answer the questions let’s focus first on where to destructure. Then on how to associate default props. Then combine the findings into a verdict.&lt;/p&gt;
+&lt;h2&gt;Destructuring&lt;/h2&gt;
+&lt;p&gt;Destructuring leads to code duplication.
+In the case of a large number of props might lead to code readability problems.
+And depending on the scenario may take a toll on cognitive load.&lt;/p&gt;
+&lt;h3&gt;Code duplication (Is inevitable)&lt;/h3&gt;
+&lt;p&gt;Assuming type definitions are in place, destructuring leads inevitably to code duplication:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TVideo&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   prop1&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   prop2&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Duplication in function signature&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// Duplication in function body&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;// The same amount of duplication as above&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props
+   &lt;span class=&quot;token comment&quot;&gt;// When not all props are needed ...&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;// ... this approach contains less duplication&lt;/span&gt;
+   &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The advantage goes to the &lt;code class=&quot;language-text&quot;&gt;function body&lt;/code&gt; approach. It can lead to less duplication.&lt;/p&gt;
+&lt;h3&gt;Usage info on hover (Is incomplete)&lt;/h3&gt;
+&lt;p&gt;Editors try to offer information about functions on hovering or clicking their name.&lt;/p&gt;
+&lt;p&gt;This comes handy when trying to use a function. It gives hints on usage and return value.&lt;/p&gt;
+&lt;p&gt;Editors vary in capability to display information on hover.
+In my experience VSCode performs better than Atom.
+Or Atom just needs a better plugin.
+Other editors might perform better than VSCode.&lt;/p&gt;
+&lt;p&gt;Differences in editor capabilities reduce the importance of this criteria.&lt;/p&gt;
+&lt;p&gt;For curiosity, and pursuing a better development experience, after playing with various scenarios in VSCode I found:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hover simply returns the function signature, as is, and the function return type.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/351ce/hover.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.491935483870968%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVQI1yXN0Q6CMAwFUP7/F900BjaB0XZt1AV4uJb50NzepDkd9uPAfp5oreHD1MfEIPQGU4WIgIg82XODqYKLgYqiiu+bedfeL2P4sqAVPyyCMazIjxfymBHDhDTNCDEipYT0XHC/ZSzz6sgf0KoQto6SP7nAHwlUlwdqtiJtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/5cc77/hover.png&quot;
+        srcset=&quot;/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/72cd8/hover.png 192w,
+/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/45483/hover.png 384w,
+/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/5cc77/hover.png 768w,
+/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/351ce/hover.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;When the return type is not defined it is inferred.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/662508fe66db151ab295a36587789ea5/351ce/hover3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 21.27016129032258%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzElEQVQY01WPS27EIBAFff/zRVEWmciTGbAB82mMY7yqtC1lpCyaJ0CqVz2ERXi7C8YXzGjw35ZgHJ8fTx53i3MOYy3zPGOMJcWIt4X5mYjLwtoax3HQe79ykJiZQqAtibVkxttNQQ9GK7x/eZz35JyvSSkhIpRcyUmQUih6/4OdOZxHPzo/26afBTtNuNMmiEIjUY2aWrS20rbGuq6vqbXq2/aCXcA9F7qORF3ZFEKoRDVZ1LqqsXNejdROC8IsWpCugk1BZ+77/m/lX+ZcL5T2auSDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/662508fe66db151ab295a36587789ea5/5cc77/hover3.png&quot;
+        srcset=&quot;/react/static/662508fe66db151ab295a36587789ea5/72cd8/hover3.png 192w,
+/react/static/662508fe66db151ab295a36587789ea5/45483/hover3.png 384w,
+/react/static/662508fe66db151ab295a36587789ea5/5cc77/hover3.png 768w,
+/react/static/662508fe66db151ab295a36587789ea5/351ce/hover3.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;3&quot;&gt;
+&lt;li&gt;The inferred return type hint is more complete than the defined one.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/c8374161743ebe5e33f836da45ac3bac/351ce/hover4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.491935483870968%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVQI1zWMyxLCIBAE8///GKRMQKKwS4gmEA8tpeVhDtPzGNp50t4nx7HzEmHPStENTU/WXJDOVBXtXFUoayHL1lV+eey+92uttNYY9iTUPsgPZR4XgvX4yWPNDTcHjDF457jagB09cYnMF2EykRSFdF+/p//DDys0l1IlAiafAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/c8374161743ebe5e33f836da45ac3bac/5cc77/hover4.png&quot;
+        srcset=&quot;/react/static/c8374161743ebe5e33f836da45ac3bac/72cd8/hover4.png 192w,
+/react/static/c8374161743ebe5e33f836da45ac3bac/45483/hover4.png 384w,
+/react/static/c8374161743ebe5e33f836da45ac3bac/5cc77/hover4.png 768w,
+/react/static/c8374161743ebe5e33f836da45ac3bac/351ce/hover4.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol start=&quot;4&quot;&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; return the first 10 lines of the function, as is.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/918c804b4bd6ff5df43b94bb78898385/0324b/chover.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.589285714285715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVQY011R2U7DMBDM//8WfAJCgibkcOLb8REnVC3SMG0FEjyMvFrvzuzsNufLBce+Y/MBNWfsIeAzReS1EBs88zFGbHlHcAVxTdhZ/x+11jua67ZhLwVrPyBOAmJUGEaDUQSc+gAhJLq2xTjMsCoi+BWRgiVTkAPkklHYv5HnhqYfLHIqKEojTTPehEM3e6hFk8TAMe5bgbbrYKSEUYoiMyTzUhpoazh1xEoXKSU0hhYLVYOxKNbBOBZ4C71IWGOQnWPjAk0i55jn/63RMm+shfP+vhZtHnFz+bpyhxzXStTVk6zA6gzLYkv14BmrxJd2XYLTiZOutPuwebP7x/LZKEwfGc9PO15fNE7vJ5gloH+zmAYN7wJyrNgKG0olUeX+6v0Qx3H84uc431aoxA7dGfLyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Ctrl+Hover&quot;
+        title=&quot;Ctrl+Hover&quot;
+        src=&quot;/react/static/918c804b4bd6ff5df43b94bb78898385/5cc77/chover.png&quot;
+        srcset=&quot;/react/static/918c804b4bd6ff5df43b94bb78898385/72cd8/chover.png 192w,
+/react/static/918c804b4bd6ff5df43b94bb78898385/45483/chover.png 384w,
+/react/static/918c804b4bd6ff5df43b94bb78898385/5cc77/chover.png 768w,
+/react/static/918c804b4bd6ff5df43b94bb78898385/0324b/chover.png 1120w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Based on the above there is no difference between the two destructuring approaches.&lt;/p&gt;
+&lt;p&gt;A hover when destructuring is in the function signature gives the same information as a &lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; when destructuring is in the function body.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/351ce/hover.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.491935483870968%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAeElEQVQI1yXN0Q6CMAwFUP7/F900BjaB0XZt1AV4uJb50NzepDkd9uPAfp5oreHD1MfEIPQGU4WIgIg82XODqYKLgYqiiu+bedfeL2P4sqAVPyyCMazIjxfymBHDhDTNCDEipYT0XHC/ZSzz6sgf0KoQto6SP7nAHwlUlwdqtiJtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/5cc77/hover.png&quot;
+        srcset=&quot;/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/72cd8/hover.png 192w,
+/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/45483/hover.png 384w,
+/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/5cc77/hover.png 768w,
+/react/static/4cdc61cfbb7cc94f2608d91b3d8f0b8a/351ce/hover.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/918c804b4bd6ff5df43b94bb78898385/0324b/chover.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 27.589285714285715%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsTAAALEwEAmpwYAAABLElEQVQY011R2U7DMBDM//8WfAJCgibkcOLb8REnVC3SMG0FEjyMvFrvzuzsNufLBce+Y/MBNWfsIeAzReS1EBs88zFGbHlHcAVxTdhZ/x+11jua67ZhLwVrPyBOAmJUGEaDUQSc+gAhJLq2xTjMsCoi+BWRgiVTkAPkklHYv5HnhqYfLHIqKEojTTPehEM3e6hFk8TAMe5bgbbrYKSEUYoiMyTzUhpoazh1xEoXKSU0hhYLVYOxKNbBOBZ4C71IWGOQnWPjAk0i55jn/63RMm+shfP+vhZtHnFz+bpyhxzXStTVk6zA6gzLYkv14BmrxJd2XYLTiZOutPuwebP7x/LZKEwfGc9PO15fNE7vJ5gloH+zmAYN7wJyrNgKG0olUeX+6v0Qx3H84uc431aoxA7dGfLyAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Ctrl+Hover&quot;
+        title=&quot;Ctrl+Hover&quot;
+        src=&quot;/react/static/918c804b4bd6ff5df43b94bb78898385/5cc77/chover.png&quot;
+        srcset=&quot;/react/static/918c804b4bd6ff5df43b94bb78898385/72cd8/chover.png 192w,
+/react/static/918c804b4bd6ff5df43b94bb78898385/45483/chover.png 384w,
+/react/static/918c804b4bd6ff5df43b94bb78898385/5cc77/chover.png 768w,
+/react/static/918c804b4bd6ff5df43b94bb78898385/0324b/chover.png 1120w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;In both cases the hint information is incomplete. There is no type information on &lt;code class=&quot;language-text&quot;&gt;prop1&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;prop2&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Default props&lt;/h2&gt;
+&lt;p&gt;Before assigning default props to function props they should be set up to catch missing function props.&lt;/p&gt;
+&lt;p&gt;On assigning them, the prop structure defines which method to use. In case of a small number of flat props a pretty good usability can be reached.&lt;/p&gt;
+&lt;h3&gt;Defining default props&lt;/h3&gt;
+&lt;p&gt;Default props prevent errors when destructuring undefined props and trying to use them.&lt;/p&gt;
+&lt;p&gt;Destructuring is inevitable in nested props, and nested props will be present in your code sooner or later.&lt;/p&gt;
+&lt;p&gt;One can circumvent destructuring by using optional chaining.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Optional chaining&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// - On deeply nested props leads to trainwreck:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// prop1?.prop1a?.prop1aX?.prop1aX...&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop1&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prop1a
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; numbers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop2&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prop2a&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; item&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In the long term, when nesting goes deeper, destructuring scales better.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Destructuring&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// - On deeply nested props works fine&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1a &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop1
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop2a &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop2
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; numbers &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop2a&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;item&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; item&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;,&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Missing props&lt;/h3&gt;
+&lt;p&gt;Optional chaining handles missing props. Destructuring fails with &lt;code class=&quot;language-text&quot;&gt;Unhandled Runtime Error&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;When &lt;code class=&quot;language-text&quot;&gt;prop1&lt;/code&gt; is &lt;code class=&quot;language-text&quot;&gt;null&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Returns value `undefined`&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; text &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop1&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prop1a&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; props
+&lt;span class=&quot;token comment&quot;&gt;// Breaks with an error&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1a &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; prop1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To make destructuring error proof, default values must cover the full depth.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;TNested&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  prop1&lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    prop1a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; nested&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TNested &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// This doesn&apos;t go into full depth.&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// It will give an error on destructuring.&lt;/span&gt;
+  prop1&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; nestedFullDepth&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TNested &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// This is ok.&lt;/span&gt;
+  prop1&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    prop1a&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Default prop assignment&lt;/h3&gt;
+&lt;p&gt;Once error-proof and nested default props are set up — they should be assigned to function props.&lt;/p&gt;
+&lt;p&gt;In JavaScript object assignment works only with flat objects.
+Nested objects need a special function to perform the same task.
+Lodash offers such a function: &lt;code class=&quot;language-text&quot;&gt;defaultsDeep&lt;/code&gt;, to recursively assign arbitrarily nested default props to function props.&lt;/p&gt;
+&lt;p&gt;Associating default props to props in function signature is not straightforward, might be impossible, or might require expert knowledge I don’t have at the moment.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// This gives the error:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// Parameter &apos;{ prop1, prop2 }&apos; cannot reference identifier &apos;prop1&apos; declared after it.ts(2373)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nestedFullDepth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// This gives the error:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// No value exists in scope for the shorthand property &apos;prop1&apos;. Either declare one or provide an initializer.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; nestedFullDepth&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TNested&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Associating default props in function body just works:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; video&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The advantage goes to the &lt;code class=&quot;language-text&quot;&gt;function body&lt;/code&gt; approach. It works as is.&lt;/p&gt;
+&lt;h3&gt;Usage info on hover&lt;/h3&gt;
+&lt;p&gt;It’s time to revisit how editors display hover hints on functions now with default prop assignments.&lt;/p&gt;
+&lt;h4&gt;Associating default props in function signature&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/51096cf79f74eba831e5c9386ded5f82/351ce/hover5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.491935483870968%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAd0lEQVQI1y2Myw6DMAwE+f9fRBwahfAoLbZDIMllGlAPq7F219uVWii1knPmNCWpcmhE9oi2W0QwM7RlqsJhEZOEqSGtl9JJKeX5v9ldoly7EL+K7wPry/OeVoL/EMYJ51zjzNB75saleUM/MoeNZRPEEvU/eOsHZpqYEePKlxUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/51096cf79f74eba831e5c9386ded5f82/5cc77/hover5.png&quot;
+        srcset=&quot;/react/static/51096cf79f74eba831e5c9386ded5f82/72cd8/hover5.png 192w,
+/react/static/51096cf79f74eba831e5c9386ded5f82/45483/hover5.png 384w,
+/react/static/51096cf79f74eba831e5c9386ded5f82/5cc77/hover5.png 768w,
+/react/static/51096cf79f74eba831e5c9386ded5f82/351ce/hover5.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; displays the same amount of information.&lt;/p&gt;
+&lt;h4&gt;Associating default props in function signature at destructuring&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/0963716c2d32b83de0b3c5dcd8ec673c/351ce/hover6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.491935483870968%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAdklEQVQI1x2MQRKEIBDE/P8f9yQrCDOAuILoIYueuroqydSvi37ftNY4ovJTZYsbUXZUIyJCSmmsjq+UXIhhJw1GUqEO73oavXOeJ1MdUntAycwfj58dYQ24Rd/IbA1eAsZ8cdaRc2axAQmKdZHVFra8U+vxRv89lJfmb9l1dgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/0963716c2d32b83de0b3c5dcd8ec673c/5cc77/hover6.png&quot;
+        srcset=&quot;/react/static/0963716c2d32b83de0b3c5dcd8ec673c/72cd8/hover6.png 192w,
+/react/static/0963716c2d32b83de0b3c5dcd8ec673c/45483/hover6.png 384w,
+/react/static/0963716c2d32b83de0b3c5dcd8ec673c/5cc77/hover6.png 768w,
+/react/static/0963716c2d32b83de0b3c5dcd8ec673c/351ce/hover6.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; displays better information:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/525112256ecf0aba05cb1b0188a01e61/40872/chover1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 22.999157540016853%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA4klEQVQY011QW27DMAzL/Q+3XaEosMQvybLsZCsygGPcfmz7IEhJlixqeZwndnd4jOiiGGQvghwachKEGKCMxQSbRhQpiCGgNcMqrJmiloa4VuYcy6dSiMBSnixFYcxVbVCyKONqqI26srlW5pXNjZ+wxsFmbb6fA4v6LFoqaLlgE2puvO/jhR1jDKLP+NI74d4xekf/h+Xr/MZww0grB2aUYEhRsK7bxEZ7kbYlG8KHUgui8P3gIv5cxn/x8tCC+63j7X2w6Wm5mSNpnhYL73dZNOdNVVhrSMHnjS+7x3H8wQ83M3u42D41jAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Ctrl+Hover&quot;
+        title=&quot;Ctrl+Hover&quot;
+        src=&quot;/react/static/525112256ecf0aba05cb1b0188a01e61/5cc77/chover1.png&quot;
+        srcset=&quot;/react/static/525112256ecf0aba05cb1b0188a01e61/72cd8/chover1.png 192w,
+/react/static/525112256ecf0aba05cb1b0188a01e61/45483/chover1.png 384w,
+/react/static/525112256ecf0aba05cb1b0188a01e61/5cc77/chover1.png 768w,
+/react/static/525112256ecf0aba05cb1b0188a01e61/04090/chover1.png 1152w,
+/react/static/525112256ecf0aba05cb1b0188a01e61/40872/chover1.png 1187w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;Associating default props in function body&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;merge&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;props&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; video&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/5f4f0d456a304e1c828b435e5c032dca/351ce/hover7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 11.491935483870968%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAa0lEQVQI13WMyw6CMBQF+f9vRCQClhjLvb0U+9iMhZUbF5NJTjKnK7VyklLiUOGjSgwRlYiIoG2zsLN5azY23bF4UEoh53z5ly616MS8stxW3DAxjxPPh+feO4Z+RLzwWkOz4t4BtUj9c/gFgceZBIyMgRwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Hover&quot;
+        title=&quot;Hover&quot;
+        src=&quot;/react/static/5f4f0d456a304e1c828b435e5c032dca/5cc77/hover7.png&quot;
+        srcset=&quot;/react/static/5f4f0d456a304e1c828b435e5c032dca/72cd8/hover7.png 192w,
+/react/static/5f4f0d456a304e1c828b435e5c032dca/45483/hover7.png 384w,
+/react/static/5f4f0d456a304e1c828b435e5c032dca/5cc77/hover7.png 768w,
+/react/static/5f4f0d456a304e1c828b435e5c032dca/351ce/hover7.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; displays better information:&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/af96b7bcba4719a563441dbd0640298e/351ce/chover3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 21.875%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzUlEQVQY0z2OXXODIBRE8///YycqgvLl5QKm0j5sNkmnDzuLMns4t0srhioe7LJaqNtQGLEOec+wRrAaB7MsiP6AWxgbUEqBcqevHc+tNYwxcNM9Yd8OVP4UH6AExRAxrQk+CO5rweYT4h6wmQM74+YMYyycc/DczHxMRD7A72vg8fOL8zyhOaLJARVFzhUpZXaigeJIylFB5p3wu9b6Z/jJv+HVO8bZadhhviL8ZBGcp41guW+Yp4UwgbeEJRoSnKTi5K61jv7u9u4X8AnV8i5b2VeoawAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Ctrl+Hover&quot;
+        title=&quot;Ctrl+Hover&quot;
+        src=&quot;/react/static/af96b7bcba4719a563441dbd0640298e/5cc77/chover3.png&quot;
+        srcset=&quot;/react/static/af96b7bcba4719a563441dbd0640298e/72cd8/chover3.png 192w,
+/react/static/af96b7bcba4719a563441dbd0640298e/45483/chover3.png 384w,
+/react/static/af96b7bcba4719a563441dbd0640298e/5cc77/chover3.png 768w,
+/react/static/af96b7bcba4719a563441dbd0640298e/351ce/chover3.png 992w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Summing up&lt;/h2&gt;
+&lt;p&gt;Where to destructure props, and assign default values to them depends on the shape of the props.&lt;/p&gt;
+&lt;p&gt;When props are flat and small in number, destructuring in function signature + assigning default values at destructuring, wins. &lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; over the function name displays good enough usage information.&lt;/p&gt;
+&lt;p&gt;Nested props and the requirement to use a deep merging function implies destructuring in the function body.&lt;/p&gt;
+&lt;p&gt;The developer experience with &lt;code class=&quot;language-text&quot;&gt;ctrl+hover&lt;/code&gt; over the function name is less pleasant: the default values, helping to infer the prop type, are not shown.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Props are flat and small in number.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// This approach is recommended.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// This approach gives the best developer experience:&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// On `ctrl+hover` the type of the props can be inferred from their default value.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;prop1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Props are flat but large in number.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// This approach is not recommended.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  prop1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop1&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  prop2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop2&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  prop3 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop3&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+  &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;
+  prop10 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;prop10&apos;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Props are flat but large in number.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// This approach is recommended for better code readability.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// On `ctrl+hover` this approach doesn&apos;t give hints about the type of the props.&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; propsMerged &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; defaultProps&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; propsMerged
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// Props are nested.&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// This approach is recommended (perhaps the only viable option).&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Video&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;props&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; TVideo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; propsMerged &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;defaultsDeep&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;props &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; defaultProps&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; prop1&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; prop2 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; propsMerged
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[On design systems]]></title><description><![CDATA[An overview. (Work in progress)]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;An overview. (Work in progress)&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;hr&gt;
+&lt;h2&gt;Work in progress&lt;/h2&gt;
+&lt;p&gt;This article is not yet finished. A better version is in the making.&lt;/p&gt;
 &lt;h2&gt;A short history&lt;/h2&gt;
 &lt;p&gt;Design systems have been around since 2013-2014.&lt;/p&gt;
 &lt;p&gt;Lonely Planet’s &lt;a href=&quot;https://github.com/lonelyplanet/rizzo&quot;&gt;Rizzo&lt;/a&gt; was the early bird then followed by the well-known &lt;a href=&quot;https://github.com/mui-org/material-ui&quot;&gt;Material UI&lt;/a&gt; implementing Google’s &lt;a href=&quot;https://material.io/&quot;&gt;Material Design&lt;/a&gt;.&lt;/p&gt;
