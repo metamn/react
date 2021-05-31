@@ -32,7 +32,7 @@ Associating default props comes with at least three different approaches.
 function Video({prop1, prop2}: TVideo = video) {...}
 
 // Associating default props in function signature at destructuring
-function Video({prop1: 'prop1', prop2: 'prop2'}: TVideo) {...}
+function Video({prop1 = 'prop1', prop2 = 'prop2'}: TVideo) {...}
 
 // Associating default props in function body
 function Video(props: TVideo) {
@@ -46,7 +46,9 @@ To answer the questions let's focus first on where to destructure. Then on how t
 
 ## Destructuring
 
-tbd.
+Destructuring leads to code duplication.
+In the case of a large number of props might lead to code readability problems.
+And depending on the scenario may take a toll on cognitive load.
 
 ### Code duplication (Is inevitable)
 
@@ -127,6 +129,12 @@ A hover when destructuring is in the function signature gives the same informati
 In both cases the hint information is incomplete. There is no type information on `prop1`, `prop2`.
 
 ## Default props
+
+Before assigning default props to function props they should be set up to catch missing function props.
+
+On assigning them, the prop structure defines which method to use. In case of a small number of flat props a pretty good usability can be reached.
+
+### Defining default props
 
 Default props prevent errors when destructuring undefined props and trying to use them.
 
@@ -242,7 +250,7 @@ function Video({prop1, prop2}: TVideo = video) {...}
 #### Associating default props in function signature at destructuring
 
 ```js
-function Video({prop1: 'prop1', prop2: 'prop2'}: TVideo) {...}
+function Video({prop1 = 'prop1', prop2 = 'prop2'}: TVideo) {...}
 ```
 
 ![Hover](hover6.png)
@@ -269,8 +277,50 @@ function Video(props: TVideo) {
 
 Where to destructure props, and assign default values to them depends on the shape of the props.
 
-When props are flat, destructuring in function signature + assigning default values at destructuring, wins. `ctrl+hover` over the function name displays good enough usage information.
+When props are flat and small in number, destructuring in function signature + assigning default values at destructuring, wins. `ctrl+hover` over the function name displays good enough usage information.
 
-Nested props and the requirement to use a deep merging function requires destructuring in the function body.
+Nested props and the requirement to use a deep merging function implies destructuring in the function body.
 
 The developer experience with `ctrl+hover` over the function name is less pleasant: the default values, helping to infer the prop type, are not shown.
+
+```js
+// Props are flat and small in number.
+// This approach is recommended.
+//
+// This approach gives the best developer experience:
+// On `ctrl+hover` the type of the props can be inferred from their default value.
+function Video({prop1 = 'prop1', prop2 = 'prop2'}: TVideo) {...}
+```
+
+```js
+// Props are flat but large in number.
+// This approach is not recommended.
+function Video({
+  prop1 = 'prop1',
+  prop2 = 'prop2',
+  prop3 = 'prop3',
+  ...
+  ...
+  prop10 = 'prop10'
+  }: TVideo) {...}
+```
+
+```js
+// Props are flat but large in number.
+// This approach is recommended for better code readability.
+//
+// On `ctrl+hover` this approach doesn't give hints about the type of the props.
+function Video(props: TVideo) {
+  const propsMerged = defaultsDeep({ ...props }, defaultProps)
+  const { prop1, prop2 } = propsMerged
+}
+```
+
+```js
+// Props are nested.
+// This approach is recommended (perhaps the only viable option).
+function Video(props: TVideo) {
+  const propsMerged = defaultsDeep({ ...props }, defaultProps)
+  const { prop1, prop2 } = propsMerged
+}
+```
