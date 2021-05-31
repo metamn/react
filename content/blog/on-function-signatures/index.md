@@ -92,17 +92,25 @@ For curiosity, and pursuing a better development experience, after playing with 
 
 ![Hover](hover.png)
 
+---
+
 2. When the return type is not defined it is inferred.
 
 ![Hover](hover3.png)
+
+---
 
 3. The inferred return type hint is more complete than the defined one.
 
 ![Hover](hover4.png)
 
+---
+
 4. `ctrl+hover` return the first 10 lines of the function, as is.
 
 ![Ctrl+Hover](chover.png)
+
+---
 
 Based on the above there is no difference between the two destructuring approaches.
 
@@ -110,7 +118,11 @@ A hover when destructuring is in function signature gives the same information a
 
 ![Hover](hover.png)
 
+---
+
 ![Ctrl+Hover](chover.png)
+
+---
 
 In both cases the hint information is incomplete. There is no type information on `prop1`, `prop2`.
 

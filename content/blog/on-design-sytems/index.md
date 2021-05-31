@@ -3,11 +3,15 @@ title: 'On design systems'
 date: '2021-01-06'
 ---
 
-An overview.
+An overview. (Work in progress)
 
 <!--more-->
 
 ---
+
+## Work in progress
+
+This article is not yet finished. A better version is in the making.
 
 ## A short history
 

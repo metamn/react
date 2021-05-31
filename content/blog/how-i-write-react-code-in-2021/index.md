@@ -236,56 +236,30 @@ function Video(props: TVideo) {
 }
 ```
 
-Which approach is better? What makes an approach better than another? A few use cases and criterias help to attempt a shallow comparision.
-
-### Code duplication is inevitable
-
-Assuming type definitions are always in place:
+Associating default props comes with at least three different approaches.
 
 ```js
-interface TVideo {
-   prop1: string,
-   prop2: string
-}
+// Associating default props in function signature
+function Video({prop1, prop2}: TVideo = video) {...}
 
-// Duplication in function signature
-function Video({prop1, prop2}: TVideo)
+// Associating default props in function signature at destructuring
+function Video({prop1: 'prop1', prop2: 'prop2'}: TVideo) {...}
 
-// Duplication in function body
+// Associating default props in function body
 function Video(props: TVideo) {
-   const {prop1, prop2} = props
-   // When not all props are needed ...
-   // ... this approach contains less duplication
-   const {prop1} = props
+  const {prop1, prop2} = merge(props, video)
 }
 ```
 
-The advantage goes to the `function body` approach. It can lead to less duplication.
+Which approach is better? Which approach is complete? What makes an approach better than another?
 
-### Usage info on hover
+A [quick analysys](http://metamn.io/react/on-function-signatures/) shows where to destructure props, and assign default values to them depends on the shape of the props.
 
-Editors try to offer as much information as possible on hovering, clicking on a function name, or type declaration.
+When props are a flat object and small in number, destructuring in function signature + assigning default values at destructuring, wins. In a capable editor `ctrl+hover` over the function name displays good enough usage information.
 
-This comes handy when trying to use a function. It gives hints on usage and return value.
+Nested props require a special deep merging function to associate with the default props. This implies destructuring in the function body.
 
-Editors vary in capability to display information on hover.
-In my experience VSCode performs better in this area than Atom.
-Or I might find a better plugin to Atom.
-
-Differences in editor capabilities reduce the importance of this criteria.
-
-For curiosity, and pursuing a better development experience, after playing with various scenarios in VSCode I found:
-
-1. Hover simply returns the function signature, as is, and the function return type.
-2. When the return type is not defined it is inferred.
-3. The inferred return type hint is more complete than the defined one.
-4. `ctrl+hover` return the first 10 lines of the function, as is.
-
-Based on the above there is no difference between the two destructuring approaches.
-
-A hover when destructuring is in function signature gives the same information as a `ctrl+hover` when destructuring is in function body.
-
-### Default parameters
+The developer experience with `ctrl+hover` over the function name is less pleasant: the default values, helping to infer the prop type, are not shown.
 
 ## Functional abstraction
 
@@ -427,6 +401,7 @@ Video.md
 - [VSCode Folder Templates](https://github.com/Huuums/vscode-folder-templates)
 - [New Component](https://github.com/osequi/new-component)
 - [Absolute Imports and Module path aliases](https://nextjs.org/docs/advanced-features/module-path-aliases)
+- [On function signatures](http://metamn.io/react/on-function-signatures/)
 - [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle)
 - [The reactive, functional nature of React](http://metamn.io/react/the-reactive-fuctional-nature-of-react/)
 - [Clojure Enemy of the State](https://youtu.be/qe60zwUAOqE)
