@@ -3,7 +3,7 @@ title: 'On function signatures'
 date: '2021-05-28'
 ---
 
-How to define props, assign default values, and where to do the destructuring.
+Where to destructure props, and assign default values to them.
 
 <!--more-->
 
@@ -197,10 +197,16 @@ function Video(props: TVideo) {
 
 The advantage goes to the `function body` approach. It works as is.
 
+### Usage info on hover
+
+It's time to revisit how editors display hover hints on functions with default prop assignments.
+
 ## Summing up
 
-Where to destructure props, and assign default values to them is a question only when props are simple.
+Where to destructure props, and assign default values to them depends on the shape of the props.
 
-Nested props and the requirement to use a deep merging function gives advantage on the `function body` approach.
+When props are flat, destructuring in function signature + assigning default values at destructuring, wins.
 
-Fortunatelly both approaches offer the same developer experience in terms of displaying hints on hover in editors like VSCode.
+Nested props and the requirement to use a deep merging function requires the `function body` approach.
+
+??? Fortunatelly both approaches offer the same developer experience in terms of displaying hints on hover in editors like VSCode.
