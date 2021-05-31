@@ -13,7 +13,7 @@ Unlike its counterparts &mdash; Elm, Ruby on Rails, re:frame of ClojureScript &m
 
 It leaves what to optimize for on the developer.
 
-I choose to optimize for simplicity, for as less cognitive load as possible.
+I choose to optimize for simplicity, for as little cognitive load as possible.
 
 Why? React is a glue. Sits in the middle, between the user interface and the back-end, connecting multiple domains. When React becomes a second nature it leaves room for acquiring expertise in the connected domains.
 
@@ -21,11 +21,11 @@ Why? React is a glue. Sits in the middle, between the user interface and the bac
 
 On the other hand, optimizing for a goal helps decision making.
 
-Stack building and creating a coding style guide is about decision making. When the goal is clear making decisions is easy.
+Stack building and creating a coding style guide is about decision making. When the goal is clear, making decisions is easy.
 
 ## Less cognitive load
 
-It sounds vague but reducing cognitive load is a viable task at every phase in React developemnt.
+It sounds vague but reducing cognitive load is a viable task at every phase in React development.
 
 Creating a new component? Use a generator. No need to remember component structure and write boilerplate code.
 
@@ -197,13 +197,13 @@ Data definitions assure the front-end is in sync with the back-end.
 
 When no data comes from the API, type definitions help to lay out a front-end API.
 
-Yes, front-end needs an API too. Otherwise how do you build a design system, or component library, with dozens of components and another dozens tokens with no back-end dictating a data structure?
+Yes, the front-end needs an API too. Otherwise how do you build a design system, or component library, with dozens of components and another dozen tokens with no back-end dictating a data structure?
 
 ### Single-responsibility Principle
 
-In addition, type definitions make sure the component is minimal, follows the [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle).
+In addition, type definitions make sure the component is minimal, following the [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle).
 
-More than one type definitions inside a component is a code smell. It means the component should split. It does more than a well-defined singular task.
+More than one type definition inside a component is a code smell. It means the component should split. It does more than a well-defined singular task.
 
 ```js
 // This is a code smell.
@@ -253,7 +253,7 @@ function Video(props: TVideo) {
 
 Which approach is better? Which approach is complete? What makes an approach better than another?
 
-A [quick analysys](http://metamn.io/react/on-function-signatures/) shows where to destructure props, and assign default values to them depends on the shape of the props.
+A [quick analysis](http://metamn.io/react/on-function-signatures/) shows where to destructure props, and assign default values to them depends on the shape of the props.
 
 When props are a flat object and small in number, destructuring in function signature + assigning default values at destructuring, wins. In a capable editor `ctrl+hover` over the function name displays good enough usage information.
 
@@ -274,9 +274,9 @@ The idea is to transform initial data into a series of sequences and apply stand
 
 This is how Clojure solves problems. Divides a problem into subproblems &mdash; small sequences &mdash; and applies standard problem solving techniques on each sequence.
 
-They key is standard code / standard problem solving technique.
+The key is standard code / standard problem solving technique.
 
-Clojure offers a vast standard library capable to manipulate all kind of sequences. The task of a developer reduces to _use_ the library vs. writing her own code. This way the solution is better: approved, used and reused by a community vs the brainchild of a single individual.
+Clojure offers a vast standard library capable of manipulating all kinds of sequences. The task of a developer reduces to _using_ the library vs. writing her own code. This way the solution is better: approved, used and reused by a community vs the brainchild of a single individual.
 
 The Clojure way simplifies problem solving to a single task: find the best sequences. The rest is handled by previous wisdom.
 
@@ -313,7 +313,7 @@ export function Video(props: TVideo) {
 }
 ```
 
-It's nothing extraordinary in the code above. It looks natural, and should look natural.
+There's nothing extraordinary in the code above. It looks natural, and should look natural.
 
 The advantage shows in time. A standard library grows along the projects offering reliability and faster development time for its users.
 
@@ -325,7 +325,7 @@ On another hand this technique offers uniform thinking across a team. It reduces
 
 A key approach in functional programming is to create atomic sequences / subproblems and atomic solutions for them.
 
-An atomic problem / solution is not further reduceable. It is pure, it exists in a canonical state.
+An atomic problem / solution is not further reducible. It is pure, it exists in a canonical state.
 
 Practice shows systems compose up better when the underlying constructs, components are atomic / pure.
 
@@ -356,7 +356,7 @@ export function getHostedUrl(hosted): string | null {
 
 ## Functional programming with Ramda
 
-[Functional programming](https://github.com/MostlyAdequate/mostly-adequate-guide) is not a silver bullet. And it's hard to learn when one is coming from object-oriented, imperative programming &mdash; as majority of us do.
+[Functional programming](https://github.com/MostlyAdequate/mostly-adequate-guide) is not a silver bullet. And it's hard to learn when one is coming from object-oriented, imperative programming &mdash; as the majority of us do.
 
 Understanding its principles and applying its style is often enough in a React environment. A short learning assures immediate better code.
 

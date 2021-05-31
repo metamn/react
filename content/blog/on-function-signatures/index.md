@@ -9,7 +9,7 @@ Where to destructure props, and assign default values to them.
 
 ---
 
-This is an interesting topic affecting developer experience: code readability and cognitive load.
+This is an interesting topic affecting developer experience: code duplication, code readability and cognitive load.
 
 There are ways to define component props and associate default values to them.
 
@@ -50,7 +50,7 @@ tbd.
 
 ### Code duplication (Is inevitable)
 
-Assuming type definitions are in place, destructuring leads to code duplication:
+Assuming type definitions are in place, destructuring leads inevitably to code duplication:
 
 ```js
 interface TVideo {
@@ -114,7 +114,7 @@ For curiosity, and pursuing a better development experience, after playing with 
 
 Based on the above there is no difference between the two destructuring approaches.
 
-A hover when destructuring is in function signature gives the same information as a `ctrl+hover` when destructuring is in function body.
+A hover when destructuring is in the function signature gives the same information as a `ctrl+hover` when destructuring is in the function body.
 
 ![Hover](hover.png)
 
@@ -128,7 +128,7 @@ In both cases the hint information is incomplete. There is no type information o
 
 ## Default props
 
-Default props prevent errors when destructuring undefined props.
+Default props prevent errors when destructuring undefined props and trying to use them.
 
 Destructuring is inevitable in nested props, and nested props will be present in your code sooner or later.
 
@@ -142,7 +142,7 @@ const text = prop1?.prop1a
 const numbers = prop2?.prop2a?.map(item => item).join(',')
 ```
 
-On long term, when nesting goes deeper, destructuring scales better.
+In the long term, when nesting goes deeper, destructuring scales better.
 
 ```js
 // Destructuring
@@ -180,7 +180,7 @@ export interface TNested {
 }
 
 export const nested: TNested = {
-  // This doesn't goes full depth.
+  // This doesn't go into full depth.
   // It will give an error on destructuring.
   prop1: null,
 }
@@ -193,11 +193,11 @@ export const nestedFullDepth: TNested = {
 }
 ```
 
-### Default prop assigment
+### Default prop assignment
 
-Once error-proof, nested default props are set up &mdash; they should assign to function props.
+Once error-proof and nested default props are set up &mdash; they should be assigned to function props.
 
-In JavaScript object assigment works only with flat objects.
+In JavaScript object assignment works only with flat objects.
 Nested objects need a special function to perform the same task.
 Lodash offers such a function: `defaultsDeep`, to recursively assign arbitrarily nested default props to function props.
 
