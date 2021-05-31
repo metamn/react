@@ -89,13 +89,28 @@ Differences in editor capabilities reduce the importance of this criteria.
 For curiosity, and pursuing a better development experience, after playing with various scenarios in VSCode I found:
 
 1. Hover simply returns the function signature, as is, and the function return type.
+
+![Hover](hover.png)
+
 2. When the return type is not defined it is inferred.
+
+![Hover](hover3.png)
+
 3. The inferred return type hint is more complete than the defined one.
+
+![Hover](hover4.png)
+
 4. `ctrl+hover` return the first 10 lines of the function, as is.
+
+![Ctrl+Hover](chover.png)
 
 Based on the above there is no difference between the two destructuring approaches.
 
 A hover when destructuring is in function signature gives the same information as a `ctrl+hover` when destructuring is in function body.
+
+![Hover](hover.png)
+
+![Ctrl+Hover](chover.png)
 
 In both cases the hint information is incomplete. There is no type information on `prop1`, `prop2`.
 
@@ -109,7 +124,8 @@ One can circumvent destructuring by using optional chaining.
 
 ```js
 // Optional chaining
-// - On deeply nested props leads to trainwreck: prop1?.prop1a?.prop1aX?.prop1aX...
+// - On deeply nested props leads to trainwreck:
+// prop1?.prop1a?.prop1aX?.prop1aX...
 const text = prop1?.prop1a
 const numbers = prop2?.prop2a?.map(item => item).join(',')
 ```
@@ -201,12 +217,44 @@ The advantage goes to the `function body` approach. It works as is.
 
 It's time to revisit how editors display hover hints on functions now with default prop assignments.
 
+#### Associating default props in function signature
+
+```js
+function Video({prop1, prop2}: TVideo = video) {...}
+```
+
+![Hover](hover5.png)
+
+`ctrl+hover` displays the same amount of information.
+
+#### Associating default props in function signature at destructuring
+
+```js
+function Video({prop1: 'prop1', prop2: 'prop2'}: TVideo) {...}
+```
+
+![Hover](hover6.png)
+
+`ctrl+hover` displays better information:
+
+![Ctrl+Hover](chover1.png)
+
+#### Associating default props in function body
+
+```js
+function Video(props: TVideo) {
+  const { prop1, prop2 } = merge(props, video)
+}
+```
+
+![Hover](hover7.png)
+
+`ctrl+hover` displays the same amount of information.
+
 ## Summing up
 
 Where to destructure props, and assign default values to them depends on the shape of the props.
 
-When props are flat, destructuring in function signature + assigning default values at destructuring, wins.
+When props are flat, destructuring in function signature + assigning default values at destructuring, wins. `ctrl+hover` over the function name displays good enough usage information.
 
 Nested props and the requirement to use a deep merging function requires destructuring in the function body.
-
-??? Fortunatelly both approaches offer the same developer experience in terms of displaying hints on hover in editors like VSCode.
