@@ -249,7 +249,9 @@ function Video(props: TVideo) {
 
 ![Hover](hover7.png)
 
-`ctrl+hover` displays the same amount of information.
+`ctrl+hover` displays better information:
+
+![Ctrl+Hover](chover3.png)
 
 ## Summing up
 
@@ -258,3 +260,5 @@ Where to destructure props, and assign default values to them depends on the sha
 When props are flat, destructuring in function signature + assigning default values at destructuring, wins. `ctrl+hover` over the function name displays good enough usage information.
 
 Nested props and the requirement to use a deep merging function requires destructuring in the function body.
+
+The developer experience with `ctrl+hover` over the function name is less pleasant: the default values, helping to infer the prop type, are not shown.
