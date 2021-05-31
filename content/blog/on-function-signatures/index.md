@@ -102,13 +102,13 @@ For curiosity, and pursuing a better development experience, after playing with 
 
 ---
 
-3. The inferred return type hint is more complete than the defined one.
+3. The defined return type hint is less complete than the inferred one.
 
 ![Hover](hover4.png)
 
 ---
 
-4. `ctrl+hover` return the first 10 lines of the function, as is.
+4. `ctrl+hover` returns the first 10 lines of the function, as is.
 
 ![Ctrl+Hover](chover.png)
 
@@ -226,6 +226,7 @@ function Video({...defaultsDeep({ prop1, prop2 }, nestedFullDepth)}: TNested) {.
 Associating default props in function body just works:
 
 ```js
+// This works.
 function Video(props: TVideo) {
   const { prop1, prop2 } = defaultsDeep({ ...props }, video)
 }
