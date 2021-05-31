@@ -199,7 +199,7 @@ The advantage goes to the `function body` approach. It works as is.
 
 ### Usage info on hover
 
-It's time to revisit how editors display hover hints on functions with default prop assignments.
+It's time to revisit how editors display hover hints on functions now with default prop assignments.
 
 ## Summing up
 
@@ -207,6 +207,6 @@ Where to destructure props, and assign default values to them depends on the sha
 
 When props are flat, destructuring in function signature + assigning default values at destructuring, wins.
 
-Nested props and the requirement to use a deep merging function requires the `function body` approach.
+Nested props and the requirement to use a deep merging function requires destructuring in the function body.
 
 ??? Fortunatelly both approaches offer the same developer experience in terms of displaying hints on hover in editors like VSCode.
