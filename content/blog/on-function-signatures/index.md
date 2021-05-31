@@ -3,7 +3,7 @@ title: 'On function signatures'
 date: '2021-05-28'
 ---
 
-How to define default props and where to destructure them?
+How to define props, assign default values, and where to do the destructuring.
 
 <!--more-->
 
@@ -25,7 +25,7 @@ function Video(props: TVideo) {
 }
 ```
 
-Associating default props, again, comes with different approaches.
+Associating default props comes with at least three different approaches.
 
 ```js
 // Associating default props in function signature
@@ -40,15 +40,17 @@ function Video(props: TVideo) {
 }
 ```
 
-Which approach is better? Which approach is complete? What makes an approach better than another? A few use cases and criterias help to attempt a shallow comparision.
+Which approach is better? Which approach is complete? What makes an approach better than another?
 
-Let's first focus on where to destructure then how to associate default props.
+To answer the questions let's focus first on where to destructure. Then on how to associate default props. Then combine the findings into a verdict.
 
 ## Destructuring
 
+tbd.
+
 ### Code duplication (Is inevitable)
 
-Assuming type definitions are always in place:
+Assuming type definitions are in place, destructuring leads to code duplication:
 
 ```js
 interface TVideo {
@@ -61,6 +63,7 @@ function Video({prop1, prop2}: TVideo)
 
 // Duplication in function body
 function Video(props: TVideo) {
+   // The same amount of duplication as above
    const {prop1, prop2} = props
    // When not all props are needed ...
    // ... this approach contains less duplication
@@ -72,13 +75,13 @@ The advantage goes to the `function body` approach. It can lead to less duplicat
 
 ### Usage info on hover (Is incomplete)
 
-Editors try to offer as much information as possible on hovering, clicking on a function name, or type declaration.
+Editors try to offer information about functions on hovering or clicking their name.
 
 This comes handy when trying to use a function. It gives hints on usage and return value.
 
 Editors vary in capability to display information on hover.
-In my experience VSCode performs better in this area than Atom.
-Or I might find a better plugin to Atom.
+In my experience VSCode performs better than Atom.
+Or Atom just needs a better plugin.
 Other editors might perform better than VSCode.
 
 Differences in editor capabilities reduce the importance of this criteria.
@@ -105,6 +108,8 @@ Destructuring is inevitable in nested props, and nested props will be present in
 One can circumvent destructuring by using optional chaining.
 
 ```js
+// Optional chaining
+// - On deeply nested props leads to trainwreck: prop1?.prop1a?.prop1aX?.prop1aX...
 const text = prop1?.prop1a
 const numbers = prop2?.prop2a?.map(item => item).join(',')
 ```
@@ -112,15 +117,15 @@ const numbers = prop2?.prop2a?.map(item => item).join(',')
 On long term, when nesting goes deeper, destructuring scales better.
 
 ```js
-// Destructuring scales better.
-// No trainwreck like prop1?.prop1a?.prop1aX?.prop1aX...
+// Destructuring
+// - On deeply nested props works fine
 const { prop1, prop2 } = props
 const { prop1a } = prop1
 const { prop2a } = prop2
 const numbers = prop2a?.map(item => item).join(',')
 ```
 
-### Full depth
+### Missing props
 
 Optional chaining handles missing props. Destructuring fails with `Unhandled Runtime Error`.
 
@@ -137,7 +142,7 @@ const { prop1, prop2 } = props
 const { prop1a } = prop1
 ```
 
-To make destructuring error proof, default values covering full depth must exist.
+To make destructuring error proof, default values must cover the full depth.
 
 ```js
 export interface TNested {
@@ -160,15 +165,15 @@ export const nestedFullDepth: TNested = {
 }
 ```
 
-### Assigment
+### Default prop assigment
 
-Once error-proof, nested default values are set up &mdash; they should assign to props.
+Once error-proof, nested default props are set up &mdash; they should assign to function props.
 
-In JavaScript `props = defaultProps` works only with flat objects.
+In JavaScript object assigment works only with flat objects.
 Nested objects need a special function to perform the same task.
-Lodash offers such a function: `defaultsDeep`, to recursively assign default properties.
+Lodash offers such a function: `defaultsDeep`, to recursively assign arbitrarily nested default props to function props.
 
-Associating default props in function signature is not straightforward, or may be impossible, or require expert knowledge.
+Associating default props to props in function signature is not straightforward, might be impossible, or might require expert knowledge I don't have at the moment.
 
 ```js
 // This gives the error:
@@ -182,7 +187,7 @@ function Video({prop1, prop2}: TVideo = defaultsDeep({prop1, prop2}, nestedFullD
 function Video({...defaultsDeep({ prop1, prop2 }, nestedFullDepth)}: TNested) {...}
 ```
 
-Associating default props in function body would look like:
+Associating default props in function body just works:
 
 ```js
 function Video(props: TVideo) {
@@ -194,7 +199,7 @@ The advantage goes to the `function body` approach. It works as is.
 
 ## Summing up
 
-Where to destructure props, and assign default values to them is a question only while props are simple.
+Where to destructure props, and assign default values to them is a question only when props are simple.
 
 Nested props and the requirement to use a deep merging function gives advantage on the `function body` approach.
 
