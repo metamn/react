@@ -260,6 +260,50 @@ Nested props require a special deep merging function to associate with the defau
 
 The developer experience with `ctrl+hover` over the function name is less pleasant: the default values, helping to infer the prop type, are not shown.
 
+A practice to follow should be:
+
+```js
+// Props are flat and small in number.
+// This approach is recommended.
+//
+// This approach gives the best developer experience:
+// On `ctrl+hover` the type of the props can be inferred from their default value.
+function Video({prop1 = 'prop1', prop2 = 'prop2'}: TVideo) {...}
+```
+
+```js
+// Props are flat but large in number.
+// This approach is not recommended.
+function Video({
+  prop1 = 'prop1',
+  prop2 = 'prop2',
+  prop3 = 'prop3',
+  ...
+  ...
+  prop10 = 'prop10'
+  }: TVideo) {...}
+```
+
+```js
+// Props are flat but large in number.
+// This approach is recommended for better code readability.
+//
+// On `ctrl+hover` this approach doesn't give hints about the type of the props.
+function Video(props: TVideo) {
+  const propsMerged = defaultsDeep({ ...props }, defaultProps)
+  const { prop1, prop2 } = propsMerged
+}
+```
+
+```js
+// Props are nested.
+// This approach is recommended (perhaps the only viable option).
+function Video(props: TVideo) {
+  const propsMerged = defaultsDeep({ ...props }, defaultProps)
+  const { prop1, prop2 } = propsMerged
+}
+```
+
 ## Functional abstraction
 
 React plays the [functional and reactive](http://metamn.io/react/the-reactive-fuctional-nature-of-react/) game.
@@ -378,7 +422,7 @@ The end result feels compact. Even if I use only a small subset of the functiona
 
 In pursuing simplicity &mdash; applying the 'rules' above &mdash; components decompose into smaller parts.
 
-Often times they decompose into multiple files. React calls this phenomena co-location.
+Oftentimes they decompose into multiple files. React calls this phenomenon co-location.
 
 The component folder co-locates files specialized in single tasks: component code, component logic, style, tests, dev notes, specifications and anything else.
 
@@ -396,6 +440,73 @@ Video.style.ts
 Video.md
 ...
 ```
+
+## Summary
+
+Reducing cognitive load should pay off.
+
+Little things and tricks can spare attention &mdash; preserve it for solving the bulk of the problem.
+
+Hopefully, this approach scales beyond individuals enabling faster and more concise development for teams.
+
+After all, it is about simplifying structures and models.
+
+<table>
+<thead>
+	<tr>
+		<th>Structure, model</th>
+		<th>Simplifying technique</th>
+		<th>Reduces cognitive load on / to</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>Folders</td>
+    <td>Generators</td>
+    <td>Boilerplate code</td>
+  </tr>
+  <tr>
+		<td></td>
+    <td>Path aliases</td>
+    <td>Locating of components</td>
+  </tr>
+  <tr>
+		<td></td>
+    <td>Co-location</td>
+    <td>Aspects</td>
+  </tr>
+  <tr>
+		<td>Components</td>
+    <td>Logical sections</td>
+    <td>Locating parts of the component</td>
+  </tr>
+  <tr>
+		<td>Data</td>
+    <td>Always have an API</td>
+    <td>Thinking about correctness</td>
+  </tr>
+  <tr>
+		<td>Main function</td>
+    <td>Simple function signature</td>
+    <td>Thinking prematurely about non-significant aspects</td>
+  </tr>
+  <tr>
+		<td></td>
+    <td>The Grand Abstraction</td>
+    <td>Thinking in sequences, don't worrying about the rest</td>
+  </tr>
+  <tr>
+		<td>Other functions</td>
+    <td>Pure, atomic, Single-responsibility Principle</td>
+    <td>Solve simple problems at once</td>
+  </tr>
+  <tr>
+		<td>Programming</td>
+    <td>Functional, with Ramda</td>
+    <td>Composing up, declaring a solution</td>
+  </tr>
+</tbody>
+</table>
 
 ## Resources
 
