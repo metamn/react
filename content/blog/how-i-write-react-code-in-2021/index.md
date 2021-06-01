@@ -11,27 +11,31 @@ I optimize for less cognitive load.
 
 Unlike its counterparts &mdash; Elm, Ruby on Rails, re:frame of ClojureScript &mdash; React is a less-opinionated framework.
 
-It leaves what to optimize for on the developer.
+It leaves what to optimize for on the developer. I choose simplicity, as little cognitive load as possible.
 
-I choose to optimize for simplicity, for as little cognitive load as possible.
+React is a glue. Sits in the middle, between the user interface and the back-end, connecting multiple domains.
 
-Why? React is a glue. Sits in the middle, between the user interface and the back-end, connecting multiple domains. When React becomes a second nature it leaves room for acquiring expertise in the connected domains.
+When React becomes a second nature it leaves room for acquiring expertise in the connected domains. It's better to focus on the domains than getting stuck with a framework connecting them.
 
 [Responsive web design](https://web.dev/new-responsive/?utm_source=CSS-Weekly&utm_campaign=Issue-461&utm_medium=email), [screen typography](https://maxkoehler.com/posts/continuous-typography/), HTML and CSS is changing after a decade of stagnation; creating scalable design systems and component libraries is a [challenge](http://metamn.io/react/on-design-sytems/); event-driven architectures, reactive and functional programming are skills to learn.
 
 On the other hand, optimizing for a goal helps decision making.
 
-Stack building and creating a coding style guide is about decision making. When the goal is clear, making decisions is easy.
+Coding is decision making. When the goal is clear, making decisions is easy.
 
 ## Less cognitive load
 
-It sounds vague but reducing cognitive load is a viable task at every phase in React development.
+It sounds vague but reducing cognitive load is possible, desirable at every phase in React development.
 
-Creating a new component? Use a generator. No need to remember component structure and write boilerplate code.
+Creating a new component? Use a generator. No need to remember component structure and to write boilerplate code.
 
 Importing a component? Use module path aliases. No need to remember project folder structure.
 
-Defining function signature? Use a single composite prop. Then deal with the details later. No need to worry prematurely about data structures when thinking about business logic.
+Defining function signature? Use a single composite prop. Then deal with the details later. No need to worry prematurely about data structures.
+
+Writing logic? Use a general abstraction to tackle every problem in the same way.
+
+Too much code inside a file? Split into atomic, standalone, small units responsible for a single aspect of the problem. Focus on a single aspect at once, iterate all aspects, then compose up the final result.
 
 Sparing attention with little tricks add up. The less attention needed for non-creative code the more attention stays available for writing _real_ code.
 
@@ -110,12 +114,9 @@ export * from './Button'
 
 ## Component structure
 
-To make component code understandable I keep it simple and slim.
+To make component code better understandable, to enable a common structure, I use logical units.
 
-Less code, less cognitive load &mdash; leads to better maintenance.
-
-I focus not only on small code size but on a predictable structure.
-Every component should have three logical sections:
+Every component is built on three sections:
 
 - Imports
 - Type and data definitions
@@ -183,9 +184,7 @@ Then in components, project-related `imports` use these aliases vs. figuring out
 
 Programming is about transformation. The problem comes in, it gets solved, and the solution goes out.
 
-It's good practice to start the component with defining the problem in terms of data.
-
-For that we have PropTypes, TypeScript and optionally, when the data comes from an API, GraphQL or JSON.
+The problem comes in as data. To describe it I use PropTypes, TypeScript and optionally, when the data comes from an API, GraphQL or JSON.
 
 In any case I use type definitions.
 
@@ -201,7 +200,7 @@ Yes, the front-end needs an API too. Otherwise how do you build a design system,
 
 ### Single-responsibility Principle
 
-In addition, type definitions make sure the component is minimal, following the [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle).
+In addition, type definitions make sure the component is minimal in scope, following the [Single-responsibility Principle](https://en.wikipedia.org/wiki/Single-responsibility_principle).
 
 More than one type definition inside a component is a code smell. It means the component should split. It does more than a well-defined singular task.
 
@@ -317,7 +316,7 @@ There's nothing extraordinary in the code above. It looks natural, and should lo
 
 The advantage shows in time. A standard library grows along the projects offering reliability and faster development time for its users.
 
-On another hand this technique offers uniform thinking across a team. It reduces the process to:
+On another hand this technique offers uniform thinking across a team. It reduces the problem solving process to:
 
 `problem === data -> sequences -> solutions -> composition === solution`.
 
@@ -354,6 +353,8 @@ export function getHostedUrl(hosted): string | null {
 }
 ```
 
+I tend to write pure / atomic functions. Not in the strict but the logical sense.
+
 ## Functional programming with Ramda
 
 [Functional programming](https://github.com/MostlyAdequate/mostly-adequate-guide) is not a silver bullet. And it's hard to learn when one is coming from object-oriented, imperative programming &mdash; as the majority of us do.
@@ -375,15 +376,18 @@ The end result feels compact. Even if I use only a small subset of the functiona
 
 ## Co-location
 
-In pursuing simplicity larger blocks decompose into smaller parts.
+In pursuing simplicity &mdash; applying the 'rules' above &mdash; components decompose into smaller parts.
 
-The component model, and React, achieves decomposition via co-location.
+Often times they decompose into multiple files. React calls this phenomena co-location.
 
 The component folder co-locates files specialized in single tasks: component code, component logic, style, tests, dev notes, specifications and anything else.
 
-When the developer opens a file reduces the focus, thus the cognitive load, to a single aspect of the problem.
+When the developer opens a folder it gets the big picture. What libraries, techniques this project is built on, how complex and complete the component is, where to start the work.
+
+Then opens a file, reduces the focus, thus the cognitive load, to a single aspect of the problem. And works in peace.
 
 ```bash
+# A sample component folder structure
 Video.tsx
 Video.test.tsx
 Video.functions.ts
