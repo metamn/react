@@ -84,3 +84,39 @@ Open APIs let developers bind freely, arbitrarily structure, presentation and be
 As bindings, web UI APIs are important. They define common concepts like CSS frameworks, component libraries, design systems.
 
 ## CSS frameworks
+
+They sport class-based bindings and an open API approach.
+
+Class-based bindings makes CSS frameworks semi-programmable. HTML and CSS are not programming languages, JavaScript is the only programming language in this stack.
+
+The open API approach makes CSS frameworks to likely produce non-unform user interfaces.
+
+Developers can freely assign artifacts offered by a CSS framework to any HTML element.
+
+This approach doesn't scale. It requires developers to keep the entire design in a mental model and make sure the model isn't distorted. Few humans are capable to perform such task.
+
+In spite being primitive constructs CSS frameworks are popular and widespread. Atomic CSS, Bootstrap, Foundation, Semantic UI, Tachyons, Tailwind, Bulma &mdash; just to name a few of them.
+
+Their popularity comes from the status quo. During decades they were the only standard.
+
+## Component libraries
+
+They are prop-based and follow the open API approach.
+
+Prop-based bindings make component libraries fully programmable.
+
+They mix HTML, CSS into JavaScript resulting in a single component written in a programming language. Components are not limited anymore by a markup or style language, constructs inferior to programming langauges.
+
+The open API approach makes component libraries not necessarily producing uniform user interfaces.
+
+Again, developers can assign any number of props in any combination to components, which doesn't scale for the same reasons as presented above: Integrity and uniformity is not programmed but left to the developer to handle with a mental model.
+
+## Design systems
+
+Prop-based and with a closed API.
+
+They are fully programmable and produce uniform user interfaces.
+
+They resrict the developer to arbitrarily use the system. Developers must follow rules preserving integrity and uniformity.
+
+Changes distorting uniformity and integrity are allowed to be introduced at special entry points, perhaps by specialized devs.
