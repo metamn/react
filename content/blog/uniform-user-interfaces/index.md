@@ -70,3 +70,17 @@ Web components represent a shift of a similar magnitude like the previous shift 
 Components make uniform user interfaces possible more than ever.
 
 ## API
+
+The acronym stands for Application Programming Interface.
+
+All programmable systems expose an API &mdash; a general software artifact with common theory behind. APIs are important. They scale.
+
+Class and prop-based user interfaces are programmable. The expose an API and they scale.
+
+It turns out with scale some APIs / UIs loose their uniformity. Namely, open APIs tend to produce non-uniform UIs, closed APIs guarantee uniform UIs.
+
+Open APIs let developers bind freely, arbitrarily structure, presentation and behavior. Close APIs impose constraints over the binding assuring integrity an uniformity.
+
+As bindings, web UI APIs are important. They define common concepts like CSS frameworks, component libraries, design systems.
+
+## CSS frameworks
