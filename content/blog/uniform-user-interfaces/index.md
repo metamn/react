@@ -11,7 +11,7 @@ A short study.
 
 Uniform user interfaces eliminate visual and logical glitches providing a seamless experience.
 
-An user interface, when it is uniform it **feels** complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
+An user interface, when it is uniform it _feels_ complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
 
 Uniform UIs talk about the intent and the mastery of its creators. They persuade. They deliver an important message.
 
@@ -36,3 +36,37 @@ I can answer the first question, for sure. Yes, it is possible to make perfect w
 The journey is long, the technologies are young. The process takes discipline and grit.
 
 The next sections will present user interfaces, web technologies to display user interfaces, how they work together to create non-uniform or uniform user interfaces.
+
+It will be a quick and precise study.
+
+## User interfaces
+
+User interfaces display information enhanced with structure, presentation style and behavior.
+
+Structure and presentation is familiar from graphic and print design. It defines layout and style.
+
+Behavior is specific to interactive environments. This dynamic context requires the user interface to handle change &mdash; to behave on change.
+
+## Web user interfaces
+
+Web user interfaces rely on a specific technology &mdash; the browser &mdash; to display information.
+
+The browser, on its own, uses diverse technologies to deal with structure (HTML), presentation (CSS), and behavior (JavaScript).
+
+These technologies are standalone yet result in web sites and apps when combined.
+
+## Binding
+
+The method of binding HTML, CSS and JavaScript together is important.
+
+Every method defines an era in web design and development.
+
+**Classless** (No) binding, from the beginning, makes no bounds between HTML, CSS and JavaScript. It leaves content as is, with little manual styling.
+
+**Class-based** binding, a next iteration, connects the parts via HTML attributes (class names, class ids, data attributes). This paradigm is programmable and successful. Google, Facebook, Twitter and everything else was built on it.
+
+**Props**, the web component model, the third iteration, integrates natively all parts into a single standalone component. And composes up components via props.
+
+Web components represent a shift of a similar magnitude like the previous shift from classless to class-based binding.
+
+With components uniform user interfaces are possible.
