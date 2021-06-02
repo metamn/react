@@ -35,9 +35,7 @@ I can answer the first question, for sure. Yes, it is possible to make perfect w
 
 The journey is long, the technologies are young. The process takes discipline and grit.
 
-The next sections will present user interfaces, web technologies to display user interfaces, how they work together to create non-uniform or uniform user interfaces.
-
-It will be a quick and precise study.
+The theory is simple. It takes a couple of minutes and a few concepts to master &mdash; then ready.
 
 ## User interfaces
 
@@ -69,4 +67,6 @@ Every method defines an era in web design and development.
 
 Web components represent a shift of a similar magnitude like the previous shift from classless to class-based binding.
 
-With components uniform user interfaces are possible.
+Components make uniform user interfaces possible more than ever.
+
+## API
