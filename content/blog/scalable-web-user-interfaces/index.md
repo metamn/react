@@ -1,5 +1,5 @@
 ---
-title: 'Scalable web user interfaces'
+title: 'Scalable, uniform web user interfaces'
 date: '2021-06-03'
 ---
 
@@ -20,8 +20,12 @@ The parts of tech stack should be carefully picked during trials and experimenta
 Narrowing down scalability to web user interfaces reduces the complexity of the problem.
 Hopefuly to a level one can comprehend, can study, and present the findings in a compact way.
 
-## Scalability in web user interfaces
+## Scalability in _uniform_ web user interfaces
 
-This special context renders a few general scalability issues pointless.
+Web design and development started thirty years ago. Since then it went through three major iterations.
 
-For example, on product speed
+The last iteration &mdash; web components &mdash; is pretty recent, widespread and production ready. Among other advantages, web components help creating uniform web interfaces, aka. design systems.
+
+This study will focus on scalable design systems. General web user interface scalability, or scalability of component libraries is left for another occasion.
+
+## Design systems
