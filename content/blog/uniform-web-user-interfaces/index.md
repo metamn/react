@@ -69,7 +69,7 @@ Every method defines an era in web design and development.
 
 **Class-based** binding, a next iteration, connects the parts via HTML attributes (class names, class ids, data attributes). This paradigm is programmable and successful. Google, Facebook, Twitter and co. was built on it.
 
-**Props**, the third iteration, integrates natively all separate parts &mdash; HTML, CSS, JavaScript &mdash; into a single standalone component. And composes up components via props.
+**Props**, the third iteration, natively integrates all separate parts &mdash; HTML, CSS, JavaScript &mdash; into a single standalone component. And composes up components via props.
 
 The component model represents a shift of a similar magnitude like the previous shift from classless to class-based binding.
 
@@ -79,9 +79,9 @@ Components make uniform user interfaces possible more than ever.
 
 The web is led by W3C, a consortium defining the web standards through a lengthy process.
 
-The market is faster, innovates on its own, and oftentimes packages the results into frameworks, a collection of HTML, CSS, and JavaScript features meant to enhace web design and development.
+The market is faster, innovates on its own, and oftentimes packages the results into frameworks, a collection of HTML, CSS, and JavaScript features meant to enhance web design and development.
 
-Frameworks are important. Very few web sites are created without a framework, not to mention web apps, where using a framework is mandatory.
+Frameworks are important. Very few websites are created without a framework, not to mention web apps, where using a framework is mandatory.
 
 Web standards and frameworks go hand-in-hand. The eras above defined by the binding methods translate into UI frameworks.
 
@@ -89,7 +89,7 @@ Web standards and frameworks go hand-in-hand. The eras above defined by the bind
 
 Templates are enhancements over HTML adding a pinch of programmability. Otherwise, HTML is a plain simple markup language inferior to a programming language.
 
-Before components template-based UI frameworks were ubiquiotus. Django (Python), Rails (Ruby), WordPress, Drupal, Laravel, Symphony (PHP), Shopify, Squarespace and co &mdash; are all web frameworks built on the temaplate model.
+Before components, template-based UI frameworks were ubiquitous. Django (Python), Rails (Ruby), WordPress, Drupal, Laravel, Symphony (PHP), Shopify, Squarespace and co &mdash; are all web frameworks built on the template model.
 
 **Component-based UI frameworks** use props to compose user interfaces.
 
