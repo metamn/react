@@ -1,5 +1,5 @@
 ---
-title: 'Uniform web user interfaces'
+title: 'Consistent web user interfaces'
 date: '2021-06-01'
 ---
 
@@ -7,13 +7,15 @@ A short study.
 
 <!--more-->
 
-## The need
+## Definition
 
-Uniform user interfaces eliminate visual and logical glitches providing a seamless user experience.
+Consistent user interfaces eliminate all &mdash; visual and logical &mdash; glitches.
 
-An user interface, when it is uniform it _feels_ complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
+An user interface, when it's consistent it _feels_ complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
 
-Uniform UIs talk about the intent and the mastery of its creators. They persuade. They deliver an important message.
+Consistent, [by definition](https://www.wordnik.com/words/consistent), it's in agreement with itself; coherent and uniform. It holds true as a group and it's not contradictory. It's harmony.
+
+Consistent UIs talk about the intent and the mastery of its creators. They persuade. They deliver an important message.
 
 ## The current landscape
 
