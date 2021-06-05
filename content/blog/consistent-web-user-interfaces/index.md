@@ -19,31 +19,13 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 ## The current landscape
 
-Few user interfaces are uniform today.
+Until recent years creating consistent user interfaces required discipline and solid mental work.
 
-If we take newspapers &mdash; the business segment living off by how successful they present and deliver content &mdash; the experience they provide is not seamless.
+There were no tools and theory ensuring consistency in an UI. Designers and developers, working in a team, had to verify consistency with mental models. A technique which doesn't scale and is error-prone.
 
-Please open Financial Times, Bloomberg, The Spectator, South China Morning Post, The Washington Post, Le Monde Diplomatique &mdash; you name it &mdash; in a desktop browser, with a regular 1920 x 1080 pixel resolution.
+Decades of innovation, three major iterations led to systems producing consistent user interfaces &mdash; at least for the web.
 
-Unless zoomed to 150-170% the experience is poor. Once the site design is adjusted manually by the user &mdash; it becomes infinitely enjoyable.
-
-A good question is why these sites don't come in full screen / at maximum usability by default.
-
-Is it technically impossible? Don't they have the resources? The necessary will perhaps?
-
-## The technical aspect
-
-I can answer the first question, for sure. Yes, it is possible to make perfect websites.
-
-The journey is long, the technologies are young. The process takes discipline and grit.
-
-The theory is simple. It takes a couple of minutes and a few concepts to master &mdash; then ready to roll uniform UIs.
-
-## The theory
-
-The following sections present this theory in a compact manner. The narrative is built on a knowledge graph to ensure logical integrity and completeness.
-
-Relevant parts of the knowledge graph are displayed alongside each slide. The textual content is kept short and precise.
+It's worth understanding the process, and the results, by using an axiomatic approach. It makes the result complete and compact, a reference point for the future.
 
 ## User interfaces
 
@@ -97,7 +79,7 @@ Before components, template-based UI frameworks were ubiquitous. Django (Python)
 
 They &mdash; React, Angular, Vue, Svelte and co. &mdash; follow and enhance the W3c web component model. They wrap CSS and HTML into JavaScript ensuring all parts of the web stack is programmable.
 
-With programmability comes uniformity and scalability.
+With programmability comes consistency and scalability.
 
 ## API
 
@@ -107,7 +89,8 @@ All programmable systems expose an API &mdash; a general software artifact with 
 
 Class and prop-based user interfaces are programmable. They expose an API and they scale.
 
-It turns out with scale some APIs / UIs lose their uniformity. Namely, open APIs tend to produce non-uniform UIs, closed APIs guarantee uniform UIs.
+It turns out with scale some APIs / UIs lose their consistency.
+Namely, open APIs tend to produce non-consistent UIs, closed APIs guarantee consistent UIs.
 
 **Open-ended APIs** let developers bind freely, arbitrarily the structure, presentation and behavior. **Constraints-based APIs** impose constraints over the binding assuring integrity and uniformity.
 
@@ -119,7 +102,7 @@ They sport class-based bindings and an open-ended API approach. They best fit wi
 
 Class-based bindings make CSS frameworks semi-programmable. HTML and CSS are not programming languages, JavaScript is the only programming language in this stack.
 
-The open-ended API approach makes CSS frameworks likely produce non-uniform user interfaces.
+The open-ended API approach makes CSS frameworks likely produce non-consistent user interfaces.
 
 Developers can freely assign artifacts offered by a CSS framework to any HTML element.
 
@@ -135,16 +118,16 @@ They are prop-based and follow the open-ended API approach.
 
 Prop-based bindings make component libraries fully programmable.
 
-The open-ended API approach makes component libraries _not necessarily_ producing uniform user interfaces.
+The open-ended API approach makes component libraries _not necessarily_ producing consistent user interfaces.
 
-Again, developers can assign any number of props in any combination to components, which doesn't scale for the same reasons as presented above: Integrity and uniformity is not programmed but left to the developer to handle with a mental model.
+Again, developers can assign any number of props in any combination to components, which doesn't scale for the same reasons as presented above: Integrity and consistency is not programmed but left to the developer to handle with a mental model.
 
 ## Design systems
 
 They are prop-based with a constraints-based API.
 
-They are fully programmable and produce uniform user interfaces.
+They are fully programmable and produce consistent user interfaces.
 
-They restrict the developer to mistreat the system. Developers must follow strict rules to preserve integrity and uniformity when building up the user interface.
+They restrict the developer to mistreat the system. Developers must follow strict rules to preserve integrity and consistency when building up the user interface.
 
 Changing, extending a design system is only possible at specific entry points. Instead of ...
