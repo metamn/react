@@ -1,5 +1,5 @@
 ---
-title: 'Consistent web user interfaces'
+title: 'Coherent and uniform web user interfaces'
 date: '2021-06-01'
 ---
 
@@ -9,11 +9,11 @@ A short study.
 
 ## Definition
 
-Consistent user interfaces eliminate all &mdash; visual and logical &mdash; glitches.
+Consistent &mdash; coherent and uniform &mdash; user interfaces eliminate all visual and logical glitches.
 
 An user interface, when it's consistent it _feels_ complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
 
-Consistent, [by definition](https://www.wordnik.com/words/consistent), it's in agreement with itself; coherent and uniform. It holds true as a group and it's not contradictory. It's harmony.
+Consistent, [by definition](https://www.wordnik.com/words/consistent), is in agreement with itself. It holds true as a group, it's not contradictory. It's marked by an orderly, logical, and aesthetically consistent relation of parts. It's unity and harmony.
 
 Consistent UIs talk about the intent and the mastery of its creators. They persuade. They deliver an important message.
 
@@ -21,11 +21,15 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 Until recent years creating consistent user interfaces required discipline and solid mental work.
 
-There were no tools and theory ensuring consistency in an UI. Designers and developers, working in a team, had to verify consistency with mental models. A technique which doesn't scale and is error-prone.
+There were no tools and theory ensuring consistency in an UI. Designers and developers, working in a team, had to verify consistency with mental efforts. An error-prone technique proven incapable to scale.
 
-Decades of innovation, three major iterations led to systems producing consistent user interfaces &mdash; at least for the web.
+After decades of innovation, three paradigm shifts today we have systems producing consistent user interfaces &mdash; at least for the web.
 
-It's worth understanding the process, and the results, by using an axiomatic approach. It makes the result complete and compact, a reference point for the future.
+It's worth understanding the process, and the results.
+
+To make it compact, usable as a reference point in the future, the rest of the document follows an axiomatic approach depicting the process and the results.
+
+It builds on glossary-like definitions and logically correct relations between them provided by a knowledge graph. Enjoy!
 
 ## User interfaces
 
