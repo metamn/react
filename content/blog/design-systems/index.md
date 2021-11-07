@@ -54,6 +54,12 @@ In short, the design system / component library I've created is capable of:
 4. **Theming** &mdash; to support design trials and errors, iterations and variations. In a fully responsive way, with history and annotated design decisions.
 5. **Generating documentation and playground** &mdash; to assure components work in isolation, are tested, and all design system tokens and components are documented.
 
-All these live, inside the browser. No 3rd parties like Figma, Sketch and co. What you see is what you've already got. Production-ready code with React, Typescript, Nextjs and CSS-in-JS.
+All these live, inside the browser.
+
+No 3rd parties like Figma, Sketch and co.
+
+What you see is what you've already got.
+
+Production-ready code with React, Typescript and CSS-in-JS on top of Nextjs, a headless CMS and GraphQL.
 
 Quite unique workflow. Quite unique results. Quite reduced timeframe and hussle.
