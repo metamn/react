@@ -25,3 +25,17 @@ One of them is Brutalist Websites &mdash; a showcase of websites created by hand
 > A reaction to the lightness, optimism, and frivolity of today's web design. &mdash; [Brutalist Websites](https://brutalistwebsites.com/)
 
 This is the line I pursue in my career, this is why I need a design system / component library built from scratch, producing unique looking websites.
+
+## You'll spend lots of time
+
+In the last year I've analyzed a dozen of existing design systems.
+
+I wrote a mini-book / technical guide on how to roll your own.
+
+I've learnt other languages and stacks to better understand the current theory and best practices.
+
+I've done four iterations on my own design system.
+
+And I've employed it in a couple of real-life applications.
+
+Yet, after a year, I'm at the beginning. One iteration left, and I'll be able to roll out &mdash; design and develop &mdash; scalable, consistent, unique looking user interfaces in no time.
