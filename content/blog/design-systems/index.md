@@ -30,7 +30,7 @@ This is the line I pursue in my career, this is why I need a design system / com
 
 In the last year I've analyzed a dozen of existing design systems.
 
-I wrote a mini-book / technical guide on how to roll your own.
+I wrote articles, a mini-book / technical guide on how to roll your own.
 
 I've learnt other languages and stacks to better understand the current theory and best practices.
 
@@ -39,3 +39,13 @@ I've done four iterations on my own design system.
 And I've employed it in a couple of real-life applications.
 
 Yet, after a year, I'm at the beginning. One iteration left, and I'll be able to roll out &mdash; design and develop &mdash; scalable, consistent, unique looking user interfaces in no time.
+
+## You'll be rewarded
+
+In short, the design system / component library I've created is capable of:
+
+1. Wireframing &mdash; to sketch up the requirement specifications and get immediate feedback on them.
+2. Mockuping &mdash; to show real-life components with test data, helping to finalize the information architecture.
+3. Inline content editing &mdash; to let editors add their content as soon as possible, to find out missing parts and inconsistencies in the original requirement specifications.
+4. Theming &mdash; to support design trials and errors, iterations and variations. In a fully responsive way.
+5. Generating documentation and playground &mdash; to assure components work in isolation, are tested, and all design system tokens and components are documented.
