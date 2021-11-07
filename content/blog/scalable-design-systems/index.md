@@ -1,6 +1,7 @@
 ---
 title: 'Scalable design systems'
 date: '2021-06-03'
+draft: true
 ---
 
 A short study.
@@ -36,7 +37,7 @@ The last iteration &mdash; the component model &mdash; is young, widespread and 
 
 This study will focus on scalable design systems.
 
-General web user interface scalability, covering component libraries and template-based UI frameworks is out of scope. They would drive this study complex and incomprehensible.
+General web user interfacee scalability, covering component libraries and template-based UI frameworks is out of scope. They would drive this study complex and incomprehensible.
 
 Even alone, scalable design systems act as a complex topic. They require a progressive approach. Mapping the problem domain, picking the critical parts to solve first, then iterating.
 

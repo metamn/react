@@ -1,6 +1,7 @@
 ---
 title: 'Coherent and uniform web user interfaces'
 date: '2021-06-01'
+draft: true
 ---
 
 A short study.
