@@ -3,9 +3,11 @@ title: 'Design systems'
 date: '2021-11-07'
 ---
 
-xxx
+Motivations, challenges, rewards.
 
 <!--more-->
+
+---
 
 ## You'll need strong motivation
 
@@ -24,11 +26,11 @@ One of them is Brutalist Websites &mdash; a showcase of websites created by hand
 
 > A reaction to the lightness, optimism, and frivolity of today's web design. &mdash; [Brutalist Websites](https://brutalistwebsites.com/)
 
-This is the line I pursue in my career, this is why I need a design system / component library built from scratch, producing unique looking websites.
+This is the line I pursue in my career, this is why I need a design system / component library built from scratch. To produce unique looking websites for progressive brands.
 
 ## You'll spend lots of time
 
-In the last year I've analyzed a dozen of existing design systems.
+In the last year I've analyzed tens of existing design systems.
 
 I wrote articles, a mini-book / technical guide on how to roll your own.
 
@@ -38,14 +40,20 @@ I've done four iterations on my own design system.
 
 And I've employed it in a couple of real-life applications.
 
-Yet, after a year, I'm at the beginning. One iteration left, and I'll be able to roll out &mdash; design and develop &mdash; scalable, consistent, unique looking user interfaces in no time.
+Yet, after a year, I'm at the beginning.
+
+One iteration left, and I'll be able to roll out &mdash; design and develop &mdash; scalable, consistent, unique looking user interfaces in no time.
 
 ## You'll be rewarded
 
 In short, the design system / component library I've created is capable of:
 
-1. Wireframing &mdash; to sketch up the requirement specifications and get immediate feedback on them.
-2. Mockuping &mdash; to show real-life components with test data, helping to finalize the information architecture.
-3. Inline content editing &mdash; to let editors add their content as soon as possible, to find out missing parts and inconsistencies in the original requirement specifications.
-4. Theming &mdash; to support design trials and errors, iterations and variations. In a fully responsive way.
-5. Generating documentation and playground &mdash; to assure components work in isolation, are tested, and all design system tokens and components are documented.
+1. **Wireframing** &mdash; to sketch up the requirement specifications and get immediate feedback on them.
+2. **Mockuping** &mdash; to show real-life components with test data, helping to finalize the information architecture.
+3. **Inline content editing** &mdash; to let editors add their content as soon as possible, to find out missing parts and inconsistencies in the original requirement specifications.
+4. **Theming** &mdash; to support design trials and errors, iterations and variations. In a fully responsive way, with history and annotated design decisions.
+5. **Generating documentation and playground** &mdash; to assure components work in isolation, are tested, and all design system tokens and components are documented.
+
+All these live, inside the browser. No 3rd parties like Figma, Sketch and co. What you see is what you've already got. Production-ready code with React, Typescript, Nextjs and CSS-in-JS.
+
+Quite unique workflow. Quite unique results. Quite reduced timeframe and hussle.
