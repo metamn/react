@@ -58,6 +58,16 @@ Beside buttons a design deals with the layout, spacing, typography, navigation, 
 
 This means a designer has to keep in her mental model all these information, details, nuances, settings, states presented above &mdash; which is impossible even at Google level with an infinite pool of designers.
 
+Design systems took on the problem via the _divide et impera_ method.
+
+They separated design into small, independent and manageable parts &mdash; style tokens, components, sections, pages, sites, apps &mdash; and enforced consistency on the entire path.
+
+Tokens are atomic, they describe style via pure data.
+
+Components build on tokens but they don't interfere with tokens in the sense they don't add any other, custom style. If a new style element is required &mdash; first is added to the tokens, then the component is able to use it.
+
+By separation of concerns and human discipline companies with resources managed to achieve consistency and scalability across thousands of tokens, components and hundreds of sites and apps.
+
 ---
 
 ## You'll need strong motivation
