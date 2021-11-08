@@ -17,7 +17,7 @@ They bring closer designers and developers, even blurring the line between these
 
 Companies with resources lead the adoption process. They augment obsolete tools and processes with mind power to achieve consistency and scalability.
 
-Smaller companies can only afford better tools to get the same results with less resources.
+Smaller companies with less resources can keep up with innovative tools and processes.
 
 ## The current landscape
 
@@ -70,7 +70,7 @@ And the list goes. Section compose up from components but they don't create new 
 
 By separation of concerns and human discipline companies with resources managed to achieve consistency and scalability across thousands of tokens, components and hundreds of sites and apps.
 
-## Tools and processes
+## Current tools and processes
 
 The systematic approach brought by design systems left untouched the tools and processes used in creating digital assets.
 
@@ -117,46 +117,23 @@ But the Figma deliverable would not be unofficial, just a temporary result.
 
 A developer first should import the Figma deliverables into a design system built on code. Her output, a living design system, would be the official design system deliverable.
 
----
+## A case study
 
----
+I'm fortunate enough to have a computer science degree and works created &mdash; designed and developed &mdash; by me featured in online galleries.
 
-## You'll need strong motivation
+In 2015 I've rolled out my portfolio site powered by a living styleguide. Since then I'm working in this novel domain.
 
-It's been a year since I've started to study design systems, with the ultimate goal to roll my own.
+It's been a year since I've started to study and work exclusively on design systems, with the ultimate goal to roll my own.
 
 Yes, something like Material UI or Adobe Spectrum taylored for presentational websites, not for web apps.
 
-And yes, one can create presentational websites with existing design systems and component libraries. But the final result &mdash; no matter the customization and theming &mdash; will not be unique-looking.
+I produce unique looking websites for progressive brands and I need a handcrafted, tailor made , built-from-scratch design system / component library for that.
 
-It will look like just another website: it will use the same basic components &mdash; hero, card, accordion, drawer, badge, chip &mdash; you name it &mdash; with slightly different styling.
-
-It's nothing wrong with that. Not all websites must stand out.
-
-I'm a designer and developer with works featured in online galleries.
-One of them is Brutalist Websites &mdash; a showcase of websites created by hand, using custom made components, experimental techniques, challenging the status quo.
-
-> A reaction to the lightness, optimism, and frivolity of today's web design. &mdash; [Brutalist Websites](https://brutalistwebsites.com/)
-
-This is the line I pursue in my career, this is why I need a design system / component library built from scratch. To produce unique looking websites for progressive brands.
-
-## You'll spend lots of time
-
-In the last year I've analyzed tens of existing design systems.
-
-I wrote articles, a mini-book / technical guide on how to roll your own.
+During the process I've analyzed tens of existing design systems. I wrote articles, a mini-book / technical guide on how to roll your own.
 
 I've learnt other languages and stacks to better understand the current theory and best practices.
 
-I've done four iterations on my own design system.
-
-And I've employed it in a couple of real-life applications.
-
-Yet, after a year, I'm at the beginning.
-
-One iteration left, and I'll be able to roll out &mdash; design and develop &mdash; scalable, consistent, unique looking user interfaces in no time.
-
-## You'll be rewarded
+I've done four iterations on my own design system. And I've employed it in a couple of real-life applications.
 
 In short, the design system / component library I've created is capable of:
 
