@@ -60,13 +60,64 @@ This means a designer has to keep in her mental model all these information, det
 
 Design systems took on the problem via the _divide et impera_ method.
 
-They separated design into small, independent and manageable parts &mdash; style tokens, components, sections, pages, sites, apps &mdash; and enforced consistency on the entire path.
+They separate design into small, independent and manageable parts &mdash; style tokens, components, sections, pages, sites, apps &mdash; and enforce consistency on the entire path.
 
 Tokens are atomic, they describe style via pure data.
 
-Components build on tokens but they don't interfere with tokens in the sense they don't add any other, custom style. If a new style element is required &mdash; first is added to the tokens, then the component is able to use it.
+Components build on tokens but they don't interfere with tokens in the sense they don't add any other, custom style. If a new style element is required &mdash; first it is added to the tokens, then the component is able to use it.
+
+And the list goes. Section compose up from components but they don't create new ones. The same way pages compose up from sections without the chance to create new sections.
 
 By separation of concerns and human discipline companies with resources managed to achieve consistency and scalability across thousands of tokens, components and hundreds of sites and apps.
+
+## Tools and processes
+
+The systematic approach brought by design systems left untouched the tools and processes used in creating digital assets.
+
+A typical workflow is the same today as it was before design systems.
+
+Designers use a visual, non-programmable tool like Figma, Sketch, Adobe Illustrator etc. to create the layers of a design system.
+
+Due to their tools' simplicity &mdash; they have to build, again, a mental model, even if that model is now small, divided into comprehensible parts.
+
+A mental model is error-prone in contrast with a software model where consistency is assured via automated tests and other proven techniques.
+
+Scaling a company's mental model capacity is only possible by adding more human resources.
+
+More, the outcome of a designer's work needs to be translated to the target medium by developers. This process is communication-heavy, error-prone, and far from being real-time.
+
+## Better tools and processes
+
+It's easy to observe: the visual, non-programmable tools are the bottleneck in the process.
+
+What if all tools in the design and development process would be programmable?
+
+What if the outcome of a design process would be a program / data instead of the current visual-to-be-translated-into-code mess?
+
+That would solve the mental model capacity problem and reduce the whole process to real-time.
+
+Imagine the design system as a database.
+
+Tokens, components, sections, pages are all quantifiable &mdash; thus correct &mdash; and queryable &mdash; thus small enough to fit into a single person's mental model.
+
+A database is capable to handle unlimited entries and reason about their more-than-unlimited relationships.
+
+A change in a database is immediate, real-time, and definitive for all its clients.
+
+Sounds like an utopia &mdash; but it can be done today, now with a little cultural shift.
+
+## Pair designing
+
+Pair programming as an age old paradigm. Two developers sit in front of a single machine. They collaborate instantly and produce a single output.
+
+Pair designing &mdash; when a designer and a developer sit in a front of machine &mdash; would transform a design system into a database, and it's singular output to pure code.
+
+More exactly, a designer still would use her own favourite tool like Figma.
+But the Figma deliverable would not be unofficial, just a temporary result.
+
+A developer first should import the Figma deliverables into a design system built on code. Her output, a living design system, would be the official design system deliverable.
+
+---
 
 ---
 
