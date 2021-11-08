@@ -40,6 +40,24 @@ They try to introduce systematic approach to a domain previously dominated by hu
 
 ## Before design systems
 
+Let's start with Google, a company with dozens of digital assets (mail, maps, search, ads, video, ...) across platforms (web, native).
+
+Before Material Design all these assets were looking almost the same, in the best case, but many times completely different.
+
+This is where a design system comes in. It makes a portfolio of digital assets to look consistent.
+
+Following unconditionally and perfectly the brand design guidelines. Whatever the asset might be, whenever platform it might running on.
+
+## How design systems work
+
+By introducing a systematic approach to reduce the cognitive load on designers.
+
+Let's take for example the buttons. In a simple use case we have 20 variations.
+
+Beside buttons a design deals with the layout, spacing, typography, navigation, responsiveness and co &mdash; all of them more complex than a button.
+
+This means a designer has to keep in her mental model all these information, details, nuances, settings, states presented above &mdash; which is impossible even at Google level with an infinite pool of designers.
+
 ---
 
 ## You'll need strong motivation
