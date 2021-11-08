@@ -3,9 +3,32 @@ title: 'Design systems'
 date: '2021-11-07'
 ---
 
-Motivations, challenges, rewards.
+An overview, and a new take.
 
 <!--more-->
+
+---
+
+## TLDR;
+
+Design systems are a paradigm shift in web/app UX/UI design and front-end development.
+
+They bring closer designers and developers, even blurring the line between these roles, to produce consistent and scalable user interfaces.
+
+Companies with resources lead the adoption process. They augment obsolete tools and processes with mind power to achieve consistency and scalability.
+
+Smaller companies can only afford better tools to get the same results with less resources.
+
+## The current landscape
+
+Design systems are new, yet old.
+
+They've been around since 2015 when Google rolled out Material Design.
+Yet only big companies can afford to have their own design system today.
+
+The rest builds on freely available component libraries and tries to transform them into their own via heavy customizations.
+
+The end result we all know: similar looking websites all around the internet.
 
 ---
 
@@ -56,7 +79,7 @@ In short, the design system / component library I've created is capable of:
 
 All these live, inside the browser.
 
-No 3rd parties like Figma, Sketch and co.
+No 3rd parties like Figma, Sketch, Storybook and co.
 
 What you see is what you've already got.
 
