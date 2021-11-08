@@ -28,7 +28,17 @@ Yet only big companies can afford to have their own design system today.
 
 The rest builds on freely available component libraries and tries to transform them into their own via heavy customizations.
 
-The end result we all know: similar looking websites all around the internet.
+The end result we all know: similar looking websites and apps all around the internet.
+
+If one goes further &mdash; and tries to roll out unique looking, yet consistent and scalable user interfaces for a progressive audience &mdash; hits the same obstacles as their predecessors.
+
+For Airbnb took several years and interations to come up with a solution which scales.
+
+Why design systems are hard?
+
+They try to introduce systematic approach to a domain previously dominated by human-driven, ad-hoc processes.
+
+## Before design systems
 
 ---
 
