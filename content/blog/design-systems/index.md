@@ -3,7 +3,7 @@ title: 'Design systems'
 date: '2021-11-07'
 ---
 
-An overview. A novel take.
+An overview. And a novel take.
 
 <!--more-->
 
