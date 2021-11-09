@@ -132,29 +132,25 @@ The developer would input the Figma deliverables into a design system built on c
 
 ## A case study
 
-I'm fortunate enough to have a computer science degree and works created &mdash; designed and developed &mdash; by me featured in online galleries.
+I'm fortunate enough to both have a computer science degree and design works featured in online galleries.
 
-In 2015 I've rolled out my portfolio site powered by a living styleguide. Since then I'm working in this novel domain.
+I'm a developer who designs. An ideal pair designer.
 
-It's been a year since I've started to study and work exclusively on design systems, with the ultimate goal to roll my own.
+In 2015 I've rolled out my portfolio powered by a living styleguide. There were no design systems at that time &mdash; by the term coined. The rest is still the same.
 
-Yes, something like Material UI or Adobe Spectrum taylored for presentational websites, not for web apps.
+Since then I'm working in this novel domain. I produce unique looking websites and apps for progressive brands and I need a handcrafted, tailor made, built-from-scratch, completely customizable design system for that.
 
-I produce unique looking websites for progressive brands and I need a handcrafted, tailor made , built-from-scratch design system / component library for that.
+The investment is considerable.
 
-During the process I've analyzed tens of existing design systems. I wrote articles, a mini-book / technical guide on how to roll your own.
+During the process I've analyzed tens of other design systems; wrote articles; a mini-book / technical guide; learnt other languages and stacks to better understand the current theory and best practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
 
-I've learnt other languages and stacks to better understand the current theory and best practices.
+In short, this custom made design system / component library combo, today offers:
 
-I've done four iterations on my own design system. And I've employed it in a couple of real-life applications.
-
-In short, the design system / component library I've created is capable of:
-
-1. **Wireframing** &mdash; to sketch up the requirement specifications and get immediate feedback on them.
-2. **Mockuping** &mdash; to show real-life components with test data, helping to finalize the information architecture.
-3. **Inline content editing** &mdash; to let editors add their content as soon as possible, to find out missing parts and inconsistencies in the original requirement specifications.
-4. **Theming** &mdash; to support design trials and errors, iterations and variations. In a fully responsive way, with history and annotated design decisions.
-5. **Generating documentation and playground** &mdash; to assure components work in isolation, are tested, and all design system tokens and components are documented.
+1. **Wireframing** &mdash; To sketch up the requirement specifications and get immediate feedback.
+2. **Mockuping** &mdash; To show real-life-like components and data, helping to finalize the information architecture.
+3. **Inline content editing** &mdash; To let editors add content at an early stage, to find out missing parts and inconsistencies in the original requirement specifications.
+4. **Theming** &mdash; To support design trials and errors, iterations and variations, rollbacks. In a fully responsive way, with annotated design decisions.
+5. **Living documentation and playground** &mdash; Generated from code, to assure the design system underpinning the app/site works, and all parts are documented.
 
 All these live, inside the browser.
 
@@ -162,6 +158,9 @@ No 3rd parties like Figma, Sketch, Storybook and co.
 
 What you see is what you've already got.
 
-Production-ready code with React, Typescript and CSS-in-JS on top of Nextjs, a headless CMS and GraphQL.
+Production-ready code with React, Typescript and CSS-in-JS.
+Statically generated pages using a headless CMS and GraphQL.
 
-Quite unique workflow. Quite unique results. Quite reduced timeframe and hussle.
+Quite unique workflow.
+Quite unique results.
+Quite reduced production time, cost and hussle.
