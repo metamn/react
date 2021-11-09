@@ -36,7 +36,7 @@ For Airbnb it took several years and interations to come up with a solution whic
 
 Design systems are hard.
 
-They introduce systematic approach to a domain previously dominated by human-driven, ad-hoc processes.
+They introduce systematic approach to a domain previously ruled by human-driven, ad-hoc processes.
 
 ## Before design systems
 
@@ -44,9 +44,9 @@ Google is a company with dozens of digital assets &mdash; email, maps, search, a
 
 Before employing a design system these assets were looking more-or-less the same, in the best case, but many times completely different.
 
-Material Design made the portfolio to look consistent.
+Material Design made the entire portfolio to look consistent.
 
-Following unconditionally and perfectly the brand design guidelines. Whatever the asset might be, whenever the platform running on.
+Following unconditionally and perfectly the brand design guidelines. Whatever the asset might be, wherever the platform might be running.
 
 ## What a design systems does?
 
@@ -64,7 +64,7 @@ Design systems solve this challenge via the _divide et impera_ method.
 
 They separate design into small, independent and manageable parts / layers &mdash; style tokens, components, sections, pages, sites, apps &mdash; and enforce consistency on the entire path, across the entire portfolio.
 
-Each layer is independent, self-contained, and acts as a single source of truth for its domain.
+Each layer is independent, self-contained, and acts as a single source of truth for its own domain.
 
 Each layer builds on the previous layer without the ability to modify it.
 
@@ -96,9 +96,9 @@ The designer's work needs to be further translated to the target medium by devel
 
 ## Better tools and processes
 
-It's easy to observe: the tools used by the designers introduce scalability and communication issues.
+It's easy to observe: the tools used by the designers introduce scalability, communication and cost issues.
 
-They are the bottleneck in the process of building consistent user interfaces at large scale.
+They are the bottleneck in the process of building consistent user interfaces affordable on any scale Even for companies with less resources.
 
 What if the tools in the design process &mdash; in the same way like in the development process &mdash; would be programmable?
 
@@ -121,7 +121,7 @@ Designing with the help of databases sounds like an utopia &mdash; but it can be
 
 Pair programming is an age old paradigm.
 
-Two developers sit in front of a single machine. They collaborate instantly and produce a single output.
+Two developers sit in the front of a single machine. They collaborate instantly and produce a single output.
 
 Pair designing would be similar. A designer and a developer sits at a single desk and produces a single output.
 
@@ -136,15 +136,15 @@ I'm fortunate enough to both have a computer science degree and design works fea
 
 I'm a developer who designs. An ideal pair designer.
 
-In 2015 I've rolled out my portfolio powered by a living styleguide. There were no design systems at that time &mdash; by the term coined. The rest is still the same.
+In 2015 I've rolled out my portfolio powered by a living styleguide. There were no design systems at that time &mdash; by the term coined. The rest was/is still the same.
 
 Since then I'm working in this novel domain. I produce unique looking websites and apps for progressive brands and I need a handcrafted, tailor made, built-from-scratch, completely customizable design system for that.
 
 The investment is considerable.
 
-During the process I've analyzed tens of other design systems; wrote articles; a mini-book / technical guide; learnt other languages and stacks to better understand the current theory and best practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
+I've analyzed tens of other design systems; wrote articles; a mini-book / technical guide; learnt other languages and stacks to better understand the current theory and best practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
 
-In short, this custom made design system / component library combo, today offers:
+But today, in short, this custom made design system / component library offers:
 
 1. **Wireframing** &mdash; To sketch up the requirement specifications and get immediate feedback.
 2. **Mockuping** &mdash; To show real-life-like components, helping to finalize the information architecture and data structure.
