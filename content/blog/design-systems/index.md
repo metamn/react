@@ -96,34 +96,39 @@ The designer's work needs to be further translated to the target medium by devel
 
 ## Better tools and processes
 
-It's easy to observe: the visual, non-programmable tools are the bottleneck in the process.
+It's easy to observe: the tools used by the designers introduce scalability and communication issues.
 
-What if all tools in the design and development process would be programmable?
+They are the bottleneck in the process of building consistent user interfaces at large scale.
 
-What if the outcome of a design process would be a program / data instead of the current visual-to-be-translated-into-code mess?
+What if the tools in the design process &mdash; in the same way like in the development process &mdash; would be programmable?
 
-That would solve the mental model capacity problem and reduce the whole process to real-time.
+What if the outcome of a design process would be a program / data instead of the current visuals-to-be-translated-into-code mess?
+
+That would solve the mental model capacity problem and reduce the design and development process to real-time.
+
+## Design systems as a database
 
 Imagine the design system as a database.
 
-Tokens, components, sections, pages are all quantifiable &mdash; thus correct &mdash; and queryable &mdash; thus small enough to fit into a single person's mental model.
+Tokens, components, sections, pages, apps, sites &mdash; all quantifiable, thus correct. All queryable to an arbitrarily small level to fit comfortably into a single person's mental model.
 
-A database is capable to handle unlimited entries and reason about their more-than-unlimited relationships.
+Databases handle billions of entries and help us reason about infinite relationships.
+They help us make correct decisions and ensure changes happen in real-time.
 
-A change in a database is immediate, real-time, and definitive for all its clients.
-
-Sounds like an utopia &mdash; but it can be done today, now with a little cultural shift.
+Designing with the help of databases sounds like an utopia &mdash; but it can be done today and requires only a minor cultural shift.
 
 ## Pair designing
 
-Pair programming as an age old paradigm. Two developers sit in front of a single machine. They collaborate instantly and produce a single output.
+Pair programming is an age old paradigm.
 
-Pair designing &mdash; when a designer and a developer sit in a front of machine &mdash; would transform a design system into a database, and it's singular output to pure code.
+Two developers sit in front of a single machine. They collaborate instantly and produce a single output.
 
-More exactly, a designer still would use her own favourite tool like Figma.
-But the Figma deliverable would not be unofficial, just a temporary result.
+Pair designing would be similar. A designer and a developer sits at a single desk and produces a single output.
 
-A developer first should import the Figma deliverables into a design system built on code. Her output, a living design system, would be the official design system deliverable.
+The designer would still use her own favourite visual tool like Figma.
+But the deliverable would not be official. Just a temporary result.
+
+The developer would input the Figma deliverables into a design system built on code, like a database. That would be the final, official deliverable &mdash; a living design system.
 
 ## A case study
 
