@@ -3,7 +3,7 @@ title: 'Design systems'
 date: '2021-11-07'
 ---
 
-An overview, and a new take.
+An overview, and a novel take.
 
 <!--more-->
 
@@ -13,30 +13,30 @@ An overview, and a new take.
 
 Design systems are a paradigm shift in web/app UX/UI design and front-end development.
 
-They bring closer designers and developers, even blurring the line between these roles, to produce consistent and scalable user interfaces.
+With a systematic approach to the design process they produce consistent and scalable user interfaces.
 
-Companies with resources lead the adoption process. They augment obsolete tools and processes with mind power to achieve consistency and scalability.
+Companies with resources lead the adoption process. They do it by augmenting old tools and processes with extensive mind power.
 
-Smaller companies with less resources can keep up with innovative tools and processes.
+Smaller companies with less resources need to innovate to keep up.
 
 ## The current landscape
 
 Design systems are new, yet old.
 
 They've been around since 2015 when Google rolled out Material Design.
-Yet only big companies can afford to have their own design system today.
+Still only big companies can afford to have their own design system today.
 
-The rest builds on freely available component libraries and tries to transform them into their own via heavy customizations.
+The rest builds on open source, freely available component libraries and design systems by employing heavy customizations.
+We all know the result: similar looking websites and apps all around the internet.
 
-The end result we all know: similar looking websites and apps all around the internet.
+If one goes further &mdash; and tries to roll out unique looking, yet consistent and scalable user interfaces for a progressive audience &mdash; hits the same obstacles as their predecessors, the big companies.
 
-If one goes further &mdash; and tries to roll out unique looking, yet consistent and scalable user interfaces for a progressive audience &mdash; hits the same obstacles as their predecessors.
+Same obstacles, less resources.
+For Airbnb it took several years and interations to come up with a solution which scales.
 
-For Airbnb took several years and interations to come up with a solution which scales.
+Design systems are hard.
 
-Why design systems are hard?
-
-They try to introduce systematic approach to a domain previously dominated by human-driven, ad-hoc processes.
+They introduce systematic approach to a domain previously dominated by human-driven, ad-hoc processes.
 
 ## Before design systems
 
