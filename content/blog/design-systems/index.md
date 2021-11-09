@@ -74,21 +74,25 @@ Components build on tokens but they don't interfere with tokens. They use tokens
 
 This separation of concerns, augmented with strong human discipline makes consistency and scalability achievable across thousands of tokens, components and hundreds of sites and apps.
 
-## Current tools and processes
+## Tools and processes
 
 The systematic approach brought by design systems left untouched the tools and processes used in creating digital assets.
 
 A typical workflow is the same today as it was before design systems.
 
-Designers use a visual, non-programmable tool like Figma, Sketch, Adobe Illustrator etc. to create the layers of a design system.
+Designers use visual, non-programmable tools like Figma, Sketch, Adobe Illustrator etc. to create the layers of a design system.
 
-Due to their tools' simplicity &mdash; they have to build, again, a mental model, even if that model is now small, divided into comprehensible parts.
+These tools are visualization tools, not decision making tools.
 
-A mental model is error-prone in contrast with a software model where consistency is assured via automated tests and other proven techniques.
+When a designer has to make a decision &mdash; to change, extend a design &mdash; again, she has to build a mental model first, even if the model is now smaller due to the design system approach.
 
-Scaling a company's mental model capacity is only possible by adding more human resources.
+The decision made cannot be proven correct in an objective way like we used to have in software development, or in other exact science.
 
-More, the outcome of a designer's work needs to be translated to the target medium by developers. This process is communication-heavy, error-prone, and far from being real-time.
+Designing with mental models is error-prone. Introduces continuous uncertainity. And requires human resources to scale.
+
+The other drawback of the visual, non-programmable design tools is the deliverables they produce.
+
+The designer's work needs to be further translated to the target medium by developers. This process is communication-heavy, error-prone again, and far from being real-time.
 
 ## Better tools and processes
 
