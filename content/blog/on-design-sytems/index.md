@@ -1,9 +1,9 @@
 ---
-title: 'On design systems'
+title: 'On design systems. The first attempt'
 date: '2021-01-06'
 ---
 
-An overview. (Work in progress)
+An overview. A work in progress.
 
 <!--more-->
 
