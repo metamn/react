@@ -147,10 +147,10 @@ During the process I've analyzed tens of other design systems; wrote articles; a
 In short, this custom made design system / component library combo, today offers:
 
 1. **Wireframing** &mdash; To sketch up the requirement specifications and get immediate feedback.
-2. **Mockuping** &mdash; To show real-life-like components and data, helping to finalize the information architecture.
+2. **Mockuping** &mdash; To show real-life-like components, helping to finalize the information architecture and data structure.
 3. **Inline content editing** &mdash; To let editors add content at an early stage, to find out missing parts and inconsistencies in the original requirement specifications.
 4. **Theming** &mdash; To support design trials and errors, iterations and variations, rollbacks. In a fully responsive way, with annotated design decisions.
-5. **Living documentation and playground** &mdash; Generated from code, to assure the design system underpinning the app/site works, and all parts are documented.
+5. **Living documentation and playground** &mdash; Generated from code, to assure the design system driving the final product works, and all its parts are documented.
 
 All these live, inside the browser.
 
