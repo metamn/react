@@ -40,35 +40,39 @@ They introduce systematic approach to a domain previously dominated by human-dri
 
 ## Before design systems
 
-Let's start with Google, a company with dozens of digital assets (mail, maps, search, ads, video, ...) across platforms (web, native).
+Google is a company with dozens of digital assets &mdash; email, maps, search, ads, video, ... &mdash; across all platforms &mdash; native, web, desktop.
 
-Before Material Design all these assets were looking almost the same, in the best case, but many times completely different.
+Before employing a design system these assets were looking more-or-less the same, in the best case, but many times completely different.
 
-This is where a design system comes in. It makes a portfolio of digital assets to look consistent.
+Material Design made the portfolio to look consistent.
 
-Following unconditionally and perfectly the brand design guidelines. Whatever the asset might be, whenever platform it might running on.
+Following unconditionally and perfectly the brand design guidelines. Whatever the asset might be, whenever the platform running on.
 
-## How design systems work
+## What a design systems does?
 
-By introducing a systematic approach to reduce the cognitive load on designers.
+It offers a systematic approach to the design process to reduce the cognitive load on designers.
 
-Let's take for example the buttons. In a simple use case we have 20 variations.
+To understand the amount of the cognitive load required to design, let's take for example the buttons. In a simple use case we have 20 variations.
 
-Beside buttons a design deals with the layout, spacing, typography, navigation, responsiveness and co &mdash; all of them more complex than a button.
+Aside buttons, a design deals with dozens of other more complex patterns and components like layout, spacing, typography, navigation, responsiveness, images, animations, accessibility and more.
 
-This means a designer has to keep in her mental model all these information, details, nuances, settings, states presented above &mdash; which is impossible even at Google level with an infinite pool of designers.
+A designer &mdash; to be able to reason about, modify, or extend a design &mdash; has to keep in her mental model all these information, details, nuances, settings, and states.
 
-Design systems took on the problem via the _divide et impera_ method.
+An impossible task even at Google level with an infinite pool of designers.
 
-They separate design into small, independent and manageable parts &mdash; style tokens, components, sections, pages, sites, apps &mdash; and enforce consistency on the entire path.
+Design systems solve this challenge via the _divide et impera_ method.
 
-Tokens are atomic, they describe style via pure data.
+They separate design into small, independent and manageable parts / layers &mdash; style tokens, components, sections, pages, sites, apps &mdash; and enforce consistency on the entire path, across the entire portfolio.
 
-Components build on tokens but they don't interfere with tokens in the sense they don't add any other, custom style. If a new style element is required &mdash; first it is added to the tokens, then the component is able to use it.
+Each layer is independent, self-contained, and acts as a single source of truth for its domain.
 
-And the list goes. Section compose up from components but they don't create new ones. The same way pages compose up from sections without the chance to create new sections.
+Each layer builds on the previous layer without the ability to modify it.
 
-By separation of concerns and human discipline companies with resources managed to achieve consistency and scalability across thousands of tokens, components and hundreds of sites and apps.
+For example, tokens &mdash; the base layer &mdash; are atomic, and their single responsibility is to describe style via pure data.
+
+Components build on tokens but they don't interfere with tokens. They use tokens for styling but they can't add new, custom styles. If a new style element is required &mdash; first it is added to the tokens, then the component is able to use it.
+
+This separation of concerns, augmented with strong human discipline makes consistency and scalability achievable across thousands of tokens, components and hundreds of sites and apps.
 
 ## Current tools and processes
 
