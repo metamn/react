@@ -41,13 +41,13 @@ They introduce a systematic approach to a domain previously ruled by human-drive
 
 ## Before design systems
 
-Google is a company with dozens of digital assets &mdash; email, maps, search, ads, video, ... &mdash; across all platforms &mdash; native, web, desktop.
+Google is a company with dozens of digital assets &mdash; email, maps, search, ads, video, and many more &mdash; across all platforms.
 
 Before employing a design system these assets were looking more-or-less the same, in the best case, but many times completely different.
 
-Material Design made the entire portfolio to look consistent.
+Material Design made the entire Google portfolio to look consistent, following unconditionally and perfectly the brand design guidelines.
 
-Following unconditionally and perfectly the brand design guidelines. Whatever the asset might be, wherever the platform might be running.
+Whatever the asset, whenever the platform might be.
 
 ## What a design system does?
 
@@ -55,9 +55,9 @@ It offers a systematic approach to the design process to reduce the cognitive lo
 
 To understand the amount of the cognitive load required to design, let's take for example the buttons. In a simple use case, we have 20 variations.
 
-Aside to buttons, a design deals with dozens of other more complex patterns and components like layout, spacing, typography, navigation, responsiveness, images, animations, accessibility and more.
+Aside to buttons, a design deals with dozens of other, more complex patterns and components like layout, spacing, typography, navigation, responsiveness, images, animations, accessibility and more.
 
-A designer &mdash; to be able to reason about, modify, or extend a design &mdash; has to keep in her mental model all this information. The details, the nuances, settings, and states.
+A designer &mdash; to be able to reason about, modify, or extend a design &mdash; has to keep in her mental model all this information. The details, the nuances, the settings, and the states.
 
 An impossible task even at Google level with an infinite pool of designers.
 
@@ -67,13 +67,15 @@ They separate design into small, independent and manageable parts / layers &mdas
 
 Each layer is independent, self-contained, and acts as a single source of truth for its own domain.
 
-Each layer builds on the previous layer without the ability to modify it.
+Each layer builds on the previous layer &mdash; without the ability to modify it.
 
 For example, tokens &mdash; the base layer &mdash; are atomic, and their single responsibility is to describe style via pure data.
 
-Components build on tokens, but they don't interfere with tokens. They use tokens for styling but they can't add new, custom styles. If a new style element is required &mdash; first it is added to the tokens, then the component is able to use it.
+Components build on tokens, but they don't interfere with tokens.
+They use tokens for styling, but they can't add new, custom styles.
+If a new style element is required &mdash; first it is added to the tokens, then the component becomes able to use it.
 
-This separation of concerns, augmented with strong human discipline, makes consistency and scalability achievable across thousands of tokens, components and hundreds of sites and apps.
+This separation of concerns, augmented with strong human discipline, makes consistency and scalability achievable across hundreds of tokens, components, sites and apps.
 
 ## Tools and processes
 
@@ -97,9 +99,9 @@ The designer's work needs to be further translated to the target medium by devel
 
 ## Better tools and processes
 
-It's easy to observe: the tools used by the designers introduce scalability, communication and cost issues.
+It's easy to observe: the tools used by designers produce side effects related to scalability, communication latency and cost.
 
-They are the bottleneck in the process of building consistent user interfaces affordable on any scale, even for companies with less resources.
+They are the bottleneck in the process of building consistent user interfaces in an affordable way, with support for companies with less resources.
 
 What if the tools in the design process &mdash; in the same way as in the development process &mdash; would be programmable?
 
@@ -111,12 +113,14 @@ That would solve the mental model capacity problem and reduce the design and dev
 
 Imagine the design system as a database.
 
-Tokens, components, sections, pages, apps, sites &mdash; all quantifiable, thus correct. All queryable to an arbitrarily small level to fit comfortably into a single person's mental model.
+Tokens, components, sections, pages, apps, sites &mdash; all quantifiable, thus correct. All queryable, to an arbitrarily small level, to fit comfortably into a single person's mental model.
 
 Databases handle billions of entries and help us reason about infinite relationships.
 They help us make correct decisions and ensure changes happen in real-time.
 
-Designing with the help of databases sounds like an utopia &mdash; but it can be done today and requires only a minor cultural shift.
+Designing with the help of databases would offer the same benefits.
+
+It sounds like utopia &mdash; but it can be done today and requires only a minor cultural shift.
 
 ## Pair designing
 
@@ -124,12 +128,14 @@ Pair programming is an age-old paradigm.
 
 Two developers sit in the front of a single machine. They collaborate instantly and produce a single output.
 
-Pair designing would be similar. A designer and a developer sit at a single desk and produces a single output.
+Pair designing would be similar. A designer and a developer would sit at a single desk and produce a single output.
 
 The designer would still use her own favourite visual tool like Figma.
-But the deliverable would not be official. Just a temporary result.
+But the deliverable would not be official &mdash; just a temporary result.
 
-The developer would input the Figma deliverables into a design system built on code, like a database. That would be the final, official deliverable &mdash; a living design system.
+The developer would instantly input the Figma deliverables into a design system built on code, like a database.
+
+That would be the final, official deliverable &mdash; a living design system.
 
 ## A case study
 
@@ -139,19 +145,21 @@ I'm a developer who designs. An ideal pair designer.
 
 In 2015, I've rolled out my portfolio powered by a living styleguide. There were no design systems at that time &mdash; by the term coined. The rest was/is still the same.
 
-Since then, I'm working in this novel domain. I produce unique looking websites and apps for progressive brands and I need a handcrafted, tailor made, built-from-scratch, completely customizable design system for that.
+Since then, I'm working in this novel domain.
 
-The investment is considerable.
+I produce unique looking websites and apps for progressive brands with the help of a handcrafted, tailor made, built-from-scratch, completely customizable design system.
 
-I've analysed tens of other design systems; wrote articles; a mini-book / technical guide; learnt other languages and stacks to better understand the current theory and best practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
+With a considerable investment yielding high rewards.
 
-But today, in short, this custom-made design system / component library offers:
+I've analysed tens of other design systems; wrote articles; a mini-book / technical guide; learnt other languages and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
+
+Today, in short, this custom-made design system / component library offers:
 
 1. **Wireframing** &mdash; To sketch up the requirement specifications and get immediate feedback.
-2. **Mockuping** &mdash; To show real-life-like components, helping to finalize the information architecture and data structure.
-3. **Inline content editing** &mdash; To let editors add content at an early stage, to find out missing parts and inconsistencies in the original requirement specifications.
+2. **Mockuping** &mdash; To show real-life-like components, helping to finalize the requirements, the information architecture and the data structure.
+3. **Inline content editing** &mdash; To let editors add content at an early stage, to find out missing parts and inconsistencies in the original requirement specification.
 4. **Theming** &mdash; To support design trials and errors, iterations and variations, rollbacks. In a fully responsive way, with annotated design decisions.
-5. **Living documentation and playground** &mdash; Generated from code, to assure the design system driving the final product works, and all its parts are documented.
+5. **Living documentation and playground** &mdash; Generated from code, to assure the design system driving the final product is tested, and all its parts are documented.
 
 All these live, inside the browser.
 
@@ -162,6 +170,7 @@ What you see is what you've already got.
 Production-ready code with React, Typescript and CSS-in-JS.
 Statically generated pages using a headless CMS and GraphQL.
 
-Quite unique workflow.
-Quite unique results.
-Quite reduced production time, cost and hustle.
+Simple, code-based tools.
+Real-time production process with verifiable, scalable deliverables.
+
+In less time, cost and hustle.
