@@ -11,11 +11,12 @@ Tools and processes.
 
 ## TLDR;
 
-Design systems are a paradigm shift in UX/UI design and front-end development targeting native and web applications, sites.
+Design systems are a paradigm shift in UX/UI design and front-end development for native and web applications, sites.
 
-With a systematic approach to the design process, they produce consistent and scalable user interfaces.
+With a systematic approach to the design process, design systems produce consistent and scalable user interfaces.
 
-Companies with resources lead the adoption process. They do it by augmenting old tools and processes with extensive mind power.
+Companies with resources lead the adoption process.
+They do it by augmenting old tools and processes with extensive mind power.
 
 Smaller companies with less resources must innovate to keep up.
 
