@@ -55,6 +55,8 @@ It offers a systematic approach to the design process to reduce the cognitive lo
 
 To understand the amount of the cognitive load required to design, let's take for example the buttons. In a simple use case, we have 20 variations.
 
+![Buttons](buttons.png)
+
 Aside to buttons, a design deals with dozens of other, more complex patterns and components like layout, spacing, typography, navigation, responsiveness, images, animations, accessibility and more.
 
 A designer &mdash; to be able to reason about, modify, or extend a design &mdash; has to keep in her mental model all this information. The details, the nuances, the settings, and the states.
@@ -143,15 +145,15 @@ I'm fortunate enough to both have a computer science degree and design works fea
 
 I'm a developer who designs. An ideal pair designer.
 
-In 2015, I've rolled out my portfolio powered by a living styleguide. There were no design systems at that time &mdash; by the term coined. The rest was/is still the same.
+In 2015, I've rolled out my portfolio powered by a [living styleguide](http://metamn.io/v1/styleguide/). There were no design systems at that time &mdash; by the term coined. The rest was / is still [the same](http://metamn.io/beat/creating-a-styleguide-with-gulp/).
 
-Since then, I'm working in this novel domain.
+Since then, [I'm working](https://osequi.com/) in this novel domain.
 
 I produce unique looking websites and apps for progressive brands with the help of a handcrafted, tailor made, built-from-scratch, completely customizable design system.
 
 With a considerable investment yielding high rewards.
 
-I've analysed tens of other design systems; wrote articles; a mini-book / technical guide; learnt other languages and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
+I've [analysed](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) other design systems; wrote [articles](http://metamn.io/beat/design-systems-are-a-cultural-challenge/); a [mini-book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing); learnt [other languages](http://metamn.io/beat/clojure/) and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
 
 Today, in short, this custom-made design system / component library offers:
 
