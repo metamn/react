@@ -3,11 +3,20 @@ title: 'On design systems — 1'
 date: '2021-01-06'
 ---
 
-An overview. A first attempt.
+Deliverables.
 
 <!--more-->
 
 ---
+
+## Update
+
+This post was heavily edited on 10th of November 2021, when [another take](http://metamn.io/react/on-design-sytems-2/) on the subject was published.
+
+The posts are complementary.
+
+This is a high level overview, focusing on deliverables.
+The second take is more technical, focusing on tools and processes.
 
 ## A short history
 
@@ -256,11 +265,6 @@ However it should be built using existing software design patterns.
 	</tr>
 </tbody>
 </table>
-
-## Finally
-
-This post was heavily edited on 10th of November 2021, when a new take on the subject was published.
-Please [continue here](http://metamn.io/react/on-design-sytems-2/).
 
 ## Resources
 
