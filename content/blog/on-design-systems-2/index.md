@@ -15,7 +15,7 @@ Design systems are a paradigm shift in UX/UI design and front-end development fo
 
 With a systematic approach to the design process, design systems produce consistent and scalable user interfaces.
 
-Companies with resources lead the adoption process.
+Companies with resources lead the adoption.
 They do it by augmenting old tools and processes with extensive mind power.
 
 Smaller companies with less resources must innovate to keep up.
