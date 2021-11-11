@@ -1,6 +1,6 @@
 ---
 title: 'On design systems — 2'
-date: '2021-11-07'
+date: '2021-11-10'
 ---
 
 Tools and processes.
@@ -153,14 +153,14 @@ I produce unique looking websites and apps for progressive brands with the help 
 
 With a considerable investment yielding high rewards.
 
-I've [analysed](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) other design systems; wrote [articles](http://metamn.io/beat/design-systems-are-a-cultural-challenge/); a [mini-book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing); learnt [other languages](http://metamn.io/beat/clojure/) and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
+I've [analysed](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) other design systems; [wrote](http://metamn.io/react/on-design-systems-1/) [articles](http://metamn.io/beat/design-systems-are-a-cultural-challenge/); a [mini-book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing); learnt [other languages](http://metamn.io/beat/clojure/) and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
 
 Today, in short, this custom-made design system / component library offers:
 
 1. **Wireframing** &mdash; To sketch up the requirement specifications and get immediate feedback.
 2. **Mockuping** &mdash; To show real-life-like components, helping to finalize the requirements, the information architecture and the data structure.
 3. **Inline content editing** &mdash; To let editors add content at an early stage, to find out missing parts and inconsistencies in the original requirement specification.
-4. **Theming** &mdash; To support design trials and errors, iterations and variations, rollbacks. In a fully responsive way, with annotated design decisions.
+4. **Theming** &mdash; To support design trials and errors, iterations and variations, rollbacks, in a fully responsive way.
 5. **Living documentation and playground** &mdash; Generated from code, to assure the design system driving the final product is tested, and all its parts are documented.
 
 All these live, inside the browser.
@@ -176,3 +176,14 @@ Simple, code-based tools.
 Real-time production process with verifiable, scalable deliverables.
 
 In less time, cost and hustle.
+
+## Resources
+
+1. [A living styleguide from 2015](http://metamn.io/v1/styleguide/)
+2. [Creating a styleguide using a database (2015)](http://metamn.io/beat/creating-a-styleguide-with-gulp/)
+3. [OsEqui, a design systems consultancy](https://osequi.com/)
+4. [Design systems are a cultural challenge](http://metamn.io/beat/design-systems-are-a-cultural-challenge/)
+5. [Design Systems Analytical Framework](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing)
+6. [On Design Systems - A min book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing)
+7. [Design Systems - Context and deliverables](http://metamn.io/react/on-design-sytems-1/)
+8. [Clojure, and the limits of the Javascript ecosystem](http://metamn.io/beat/clojure/)

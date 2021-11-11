@@ -11,7 +11,7 @@ Context and deliverables.
 
 ## Update
 
-This post was heavily edited on 10th of November 2021, when [another take](http://metamn.io/react/on-design-sytems-2/) on the subject was published.
+This post was heavily edited on 10th of November 2021, when [another take](http://metamn.io/react/on-design-systems-2/) on the subject was published.
 
 The posts are complementary.
 
