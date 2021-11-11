@@ -9,35 +9,52 @@ Consistent user interfaces in web context.
 
 ---
 
+## Consistent user interfaces
+
+Consistent &mdash; coherent and uniform &mdash; user interfaces eliminate all visual and logical glitches.
+
+An user interface, when it's consistent it _feels_ complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
+
+Consistent, [by definition](https://www.wordnik.com/words/consistent), is in agreement with itself. It holds true as a group, it's not contradictory. It's marked by an orderly, logical, and aesthetically consistent relation of parts. It's unity and harmony.
+
+Consistent UIs talk about the intent and the mastery of its creators. They persuade. They deliver an important message.
+
+## The current landscape
+
+[Until recent years](http://metamn.io/react/on-design-systems-2/) creating consistent user interfaces required discipline and solid mental work.
+
+There were no tools and theory ensuring consistency in an UI. Designers and developers, working in a team, had to verify consistency with mental efforts. An error-prone technique proven incapable to scale.
+
+After decades of innovation, paradigm shifts, today we have systems producing consistent user interfaces &mdash; at least for the web.
+
+It's worth understanding the process, and the results.
+
 ## The web context
 
-[The Design System series on this blog](http://metamn.io/react/on-design-systems/) study consistent and scalable user interfaces with the help of design systems.
-
-And implement them with React and Typescript.
-
-The study goes across disciplines &mdash; design and development &mdash; and across platforms &mdash; web and native.
-
-The implementation goes only for the web platform, for now.
-
-Let's then examine consistency in the web context using the web's technical terms.
-
-## Two charts
-
-Let's start with visual explanation then elaborate with words.
-
-The first chart maps the buzzwords.
-
-The second chart connects the buzzwords to well-know web technologies like HTML, CSS and Javascript.
-
-#### The buzzwords
+Let's start with a visual guide mapping up the buzzwords.
+Please note: the historical timeline is depicted counter-clockwise.
 
 ![The context](ds-context-black.png)
 
-#### HTML, CSS, Javascript and the bindings
+Then let's match the buzzwords with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
 
-![The flow](ui.png)
+![UI1](ui1.png)
 
-This image was generated via code. Please click on the image to enjoy it in full size. Or scroll down to see the larger, individual images composing up this big picture.
+---
+
+![UI2](ui2.png)
+
+---
+
+![UI3](ui3.png)
+
+There is more, but first let's see the big picture, enjoyable on larger screens via a click.
+
+![UI](ui.png)
+
+---
+
+And there are the details, with all the steps &mdash; from user interfaces to consistent web UIs &mdash; briefly explained.
 
 ## User interfaces
 
