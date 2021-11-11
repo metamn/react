@@ -3,7 +3,7 @@ title: 'On design systems — 3'
 date: '2021-11-11'
 ---
 
-Consistent user interfaces in web context.
+Consistent user interfaces &mdash; in web context.
 
 <!--more-->
 
@@ -32,7 +32,7 @@ It's worth understanding the process, and the results.
 ## The web context
 
 Let's start with a visual guide mapping up the buzzwords.
-Please note: the historical timeline is depicted counter-clockwise.
+Please note &mdash; the historical timeline is depicted counter-clockwise.
 
 ![The context](ds-context-black.png)
 
@@ -58,6 +58,8 @@ And there are the details, with all the steps &mdash; from user interfaces to co
 
 ## User interfaces
 
+![UI](ui1.png)
+
 User interfaces display information equipped with structure, presentation and behavior.
 
 Structure and presentation is familiar from graphic and print design. It defines layout and style.
@@ -66,9 +68,9 @@ Behavior is specific to interactive environments. This dynamic context requires 
 
 Per se, it equips information with a dynamic attribute.
 
-![UI](ui1.png)
-
 ## Web user interfaces
+
+![Web UI](ui2.png)
 
 Web user interfaces rely on a specific technology—the browser—to display information.
 
@@ -78,9 +80,9 @@ Browsers:
 - Define style via CSS.
 - Handle behavior using JavaScript.
 
-![Web UI](ui2.png)
-
 ## Binding
+
+![Binding](ui3.png)
 
 HTML, CSS and JavaScript are standalone technologies. To work together they need to bind together.
 
@@ -90,9 +92,9 @@ The way of binding, the binding methods are important. Each method defines an er
 - **Class-based binding**, a next iteration, connects parts via HTML attributes (class names).
 - **Props**, the latest advancement, integrates—binds natively—all parts into a single standalone component. And composes up components via props.
 
-![Binding](ui3.png)
-
 ## API
+
+![API](ui4.png)
 
 The acronym stands for Application Programming Interface.
 
@@ -104,9 +106,9 @@ At the beginning, in the classless era programming the web was difficult.
 
 Now with components the web is fully programmable like any other software environment.
 
-![API](ui4.png)
-
 ## Template-based UI framework
+
+![Template-based UI framework](ui5.png)
 
 Template-based UI frameworks (still) bind HTML, CSS and JavaScript via class names or other HTML attributes.
 
@@ -116,9 +118,9 @@ A HTML element can take any number of CSS styles or JavaScript interaction handl
 
 This leads to an open API. Where everything is possible, even chaotic user interfaces.
 
-![Template-based UI framework](ui5.png)
-
 ## Component-based UI framework
+
+![Component-based UI framework](ui6.png)
 
 Component-based UI frameworks natively bind HTML, CSS and JavaScript into standalone components.
 
@@ -130,11 +132,11 @@ Constraints-based composition leads to a closed API.
 
 Component frameworks, unlike Template-based frameworks are free to choose which way to go.
 
-![Component-based UI framework](ui6.png)
-
 ## Open API
 
-n an open API parts compose up freely.
+![Open API](ui7.png)
+
+In an open API parts compose up freely.
 
 There is unlimited room for experimentation and play.
 
@@ -142,17 +144,15 @@ CSS frameworks and Component libraries embrace this technique.
 
 CSS frameworks have no choice, they are open by nature. Component libraries made this choice explicit.
 
-![Open API](ui7.png)
-
 ## Closed API
+
+![Closed API](ui8.png)
 
 Closed APIs restrict the composition of the building blocks to specific rules.
 
 Systems can't build up freely but following a purpose and direction.
 
 Design systems embrace the closed API principle.
-
-![Closed API](ui8.png)
 
 ## Component library
 
