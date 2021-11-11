@@ -11,11 +11,15 @@ Consistent user interfaces in web context.
 
 ## The web context
 
-[The DS series on this blog](http://metamn.io/react/on-design-systems/) study consistent and scalable user interfaces with the help of design systems.
+[The Design System series on this blog](http://metamn.io/react/on-design-systems/) study consistent and scalable user interfaces with the help of design systems.
 
-Across disciplines &mdash; design and development &mdash; and platforms &mdash; web and native.
+And implement them with React and Typescript.
 
-Let's focus, for now, to the web platform, and examine consistency using the web's technical terms.
+The study goes across disciplines &mdash; design and development &mdash; and across platforms &mdash; web and native.
+
+The implementation goes only for the web platform, for now.
+
+Let's then examine consistency in the web context using the web's technical terms.
 
 ## Two charts
 
@@ -25,19 +29,17 @@ The first chart maps the buzzwords.
 
 The second chart connects the buzzwords to well-know web technologies like HTML, CSS and Javascript.
 
-### The buzzwords
+#### The buzzwords
 
 ![The context](ds-context-black.png)
 
-### HTML, CSS, Javascript and the bindings
+#### HTML, CSS, Javascript and the bindings
 
 ![The flow](ui.png)
 
-Please click on the image to enjoy it in full size. Or scroll down to see the larger, individual images composing up this big picture.
+This image was generated via code. Please click on the image to enjoy it in full size. Or scroll down to see the larger, individual images composing up this big picture.
 
-## And now the words
-
-### User interfaces
+## User interfaces
 
 User interfaces display information equipped with structure, presentation and behavior.
 
@@ -49,7 +51,7 @@ Per se, it equips information with a dynamic attribute.
 
 ![UI](ui1.png)
 
-### Web user interfaces
+## Web user interfaces
 
 Web user interfaces rely on a specific technology—the browser—to display information.
 
@@ -61,7 +63,7 @@ Browsers:
 
 ![Web UI](ui2.png)
 
-### Binding
+## Binding
 
 HTML, CSS and JavaScript are standalone technologies. To work together they need to bind together.
 
@@ -73,7 +75,7 @@ The way of binding, the binding methods are important. Each method defines an er
 
 ![Binding](ui3.png)
 
-### API
+## API
 
 The acronym stands for Application Programming Interface.
 
@@ -87,7 +89,7 @@ Now with components the web is fully programmable like any other software enviro
 
 ![API](ui4.png)
 
-### Template-based UI framework
+## Template-based UI framework
 
 Template-based UI frameworks (still) bind HTML, CSS and JavaScript via class names or other HTML attributes.
 
@@ -99,7 +101,7 @@ This leads to an open API. Where everything is possible, even chaotic user inter
 
 ![Template-based UI framework](ui5.png)
 
-### Component-based UI framework
+## Component-based UI framework
 
 Component-based UI frameworks natively bind HTML, CSS and JavaScript into standalone components.
 
@@ -113,7 +115,7 @@ Component frameworks, unlike Template-based frameworks are free to choose which 
 
 ![Component-based UI framework](ui6.png)
 
-### Open API
+## Open API
 
 n an open API parts compose up freely.
 
@@ -125,7 +127,7 @@ CSS frameworks have no choice, they are open by nature. Component libraries made
 
 ![Open API](ui7.png)
 
-### Closed API
+## Closed API
 
 Closed APIs restrict the composition of the building blocks to specific rules.
 
@@ -135,14 +137,14 @@ Design systems embrace the closed API principle.
 
 ![Closed API](ui8.png)
 
-### Component library
+## Component library
 
 ![Component library](ui9.png)
 
-### Design system
+## Design system
 
 ![Design system](ui10.png)
 
-### Non-consistent UI
+## Non-consistent UI
 
-### Consistent UI
+## Consistent UI
