@@ -88,9 +88,20 @@ HTML, CSS and JavaScript are standalone technologies. To work together they need
 
 The way of binding, the binding methods are important. Each method defines an era in web design and development.
 
-- **Classless**, from the beginning, makes no bounds between HTML, CSS and JavaScript. It leaves binding exclusively to the browser.
-- **Class-based binding**, a next iteration, connects parts via HTML attributes (class names).
-- **Props**, the latest advancement, integrates—binds natively—all parts into a single standalone component. And composes up components via props.
+### Classless
+
+This paradigm makes no bounds between HTML, CSS and Javascript.
+It leaves binding exclusively to the browser.
+
+HTML has no classes, styles attached. Styling comes from a separate CSS file where all HTML elements are styled by name.
+
+### Class-based binding
+
+A next iteration, which connects the separate parts &mdash; CSS, Javascript &mdash; via HTML attributes, class names.
+
+### Props
+
+The latest advancement, which integrates &mdash; binds natively &mdash; all parts into a single standalone component. And composes up components via props.
 
 ## API
 
@@ -98,55 +109,45 @@ The way of binding, the binding methods are important. Each method defines an er
 
 The acronym stands for Application Programming Interface.
 
-Systems exposing APIs are programmable.
+APIs bind together the standalone parts of a system &mdash; in our case HTML, CSS and Javascript &mdash; in a programmable way.
 
 The higher the programmability the better the system.
 
-At the beginning, in the classless era programming the web was difficult.
+At the beginning, in the classless era programming the web was difficult. It was no API.
 
-Now with components the web is fully programmable like any other software environment.
+After iterations, and now in components and props era, the web became fully programmable like any other software environment.
 
-## Template-based UI framework
+## Template and Component-based UI frameworks
 
 ![Template-based UI framework](ui5.png)
+![Component-based UI framework](ui6.png)
 
-Template-based UI frameworks (still) bind HTML, CSS and JavaScript via class names or other HTML attributes.
+Template-based UI frameworks use class names as API mechanism to bind HTML, CSS and Javascript together.
 
-This binding method is open. Parts combine freely without constraints.
+The binding is open. Parts combine freely without constraints.
 
 A HTML element can take any number of CSS styles or JavaScript interaction handlers.
 
 This leads to an open API. Where everything is possible, even chaotic user interfaces.
 
-## Component-based UI framework
+Component-based UI frameworks natively bind HTML, CSS and Javascript into standalone components.
 
-![Component-based UI framework](ui6.png)
+They compose up components into larger systems via props &mdash; another, more advanced API mechanism.
 
-Component-based UI frameworks natively bind HTML, CSS and JavaScript into standalone components.
-
-Then compose up components into larger systems via props.
-
-Arbitrary composition leads to an open API.
-
-Constraints-based composition leads to a closed API.
+Arbitrary composition leads to an open API. Constraints-based composition leads to a closed API.
 
 Component frameworks, unlike Template-based frameworks are free to choose which way to go.
 
-## Open API
+## Open and closed APIs
 
 ![Open API](ui7.png)
+![Closed API](ui8.png)
 
-In an open API parts compose up freely.
-
-There is unlimited room for experimentation and play.
+In an open API parts compose up freely. There are no constraints and there is unlimited room for experimentation and play.
 
 CSS frameworks and Component libraries embrace this technique.
 
 CSS frameworks have no choice, they are open by nature. Component libraries made this choice explicit.
-
-## Closed API
-
-![Closed API](ui8.png)
 
 Closed APIs restrict the composition of the building blocks to specific rules.
 
@@ -154,12 +155,9 @@ Systems can't build up freely but following a purpose and direction.
 
 Design systems embrace the closed API principle.
 
-## Component library
+## CSS frameworks, Component libraries, Design systems
 
 ![Component library](ui9.png)
-
-## Design system
-
 ![Design system](ui10.png)
 
 ## Non-consistent UI
