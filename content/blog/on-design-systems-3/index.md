@@ -38,7 +38,7 @@ Please note, the historical timeline &mdash; marking the paradigm shifts &mdash;
 
 The buzzwords need to connect with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
 
-It takes a journey from user interfaces to consistent UIs &mdash; almost a dozen of steps, each step further clarifying the process.
+It takes a journey from user interfaces to consistent UIs &mdash; almost a dozen of steps, each step further elaborating the process.
 
 ![UI1](ui1.png)
 
