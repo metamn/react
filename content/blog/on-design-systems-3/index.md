@@ -34,7 +34,7 @@ It's worth understanding the process, and the results.
 Let's start by mapping up the buzzwords.
 Please note, the historical timeline &mdash; marking the paradigm shifts &mdash; is depicted counter-clockwise.
 
-![The context](ds-context-black.png)
+![The context](ds-context-black-nologo.png)
 
 The buzzwords need to connect with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
 
@@ -155,6 +155,7 @@ Design systems embrace the closed API principle.
 
 ## CSS frameworks, Component libraries, Design systems
 
+![CSS framework](ui9a.png)
 ![Component library](ui9.png)
 ![Design system](ui10.png)
 
