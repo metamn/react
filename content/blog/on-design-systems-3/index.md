@@ -13,7 +13,7 @@ Consistent user interfaces &mdash; in web context.
 
 Consistent &mdash; coherent and uniform &mdash; user interfaces eliminate all visual and logical glitches.
 
-An user interface, when it's consistent it _feels_ complete. Not only has no visible errors but the experience it provides resembles enjoying an artwork.
+User interfaces, when consistent, _feel_ complete. They have no visible errors, and the experience they provide resembles enjoying an artwork.
 
 Consistent, [by definition](https://www.wordnik.com/words/consistent), is in agreement with itself. It holds true as a group, it's not contradictory. It's marked by an orderly, logical, and aesthetically consistent relation of parts. It's unity and harmony.
 
@@ -21,9 +21,9 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 ## The current landscape
 
-[Until recent years](http://metamn.io/react/on-design-systems-2/) creating consistent user interfaces required discipline and solid mental work.
+[Until recent years](http://metamn.io/react/on-design-systems-2/), creating consistent user interfaces required discipline and solid mental work.
 
-There were no tools and theory ensuring consistency in an UI. Designers and developers, working in a team, had to verify consistency with mental efforts. An error-prone technique proven incapable to scale.
+There were no tools and theory ensuring consistency in UIs. Designers and developers, working in a team, had to verify consistency with mental efforts. An error-prone technique proven incapable to scale.
 
 After decades of innovation, paradigm shifts, today we have systems producing consistent user interfaces &mdash; at least for the web.
 
@@ -31,12 +31,14 @@ It's worth understanding the process, and the results.
 
 ## The web context
 
-Let's start with a visual guide mapping up the buzzwords.
-Please note &mdash; the historical timeline is depicted counter-clockwise.
+Let's start by mapping up the buzzwords.
+Please note, the historical timeline &mdash; marking the paradigm shifts &mdash; is depicted counter-clockwise.
 
 ![The context](ds-context-black.png)
 
-Then let's match the buzzwords with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
+The buzzwords need to connect with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
+
+It takes a journey from user interfaces to consistent UIs &mdash; almost a dozen of steps, each step further clarifying the process.
 
 ![UI1](ui1.png)
 
@@ -48,23 +50,19 @@ Then let's match the buzzwords with user interfaces, and web user interface tech
 
 ![UI3](ui3.png)
 
-There is more, but first let's see the big picture, enjoyable on larger screens via a click.
+And more. A big picture is available for those in rush. It's enjoyable on larger screens via a click.
 
 ![UI](ui.png)
-
----
-
-And there are the details, with all the steps &mdash; from user interfaces to consistent web UIs &mdash; briefly explained.
 
 ## User interfaces
 
 ![UI](ui1.png)
 
-User interfaces display information equipped with structure, presentation and behavior.
+User interfaces display information equipped with structure, presentation and behaviour.
 
 Structure and presentation is familiar from graphic and print design. It defines layout and style.
 
-Behavior is specific to interactive environments. This dynamic context requires the user interface to handle change—to behave on change.
+Behaviour is specific to interactive environments. This dynamic context requires the user interface to handle change &mdash; to behave on change.
 
 Per se, it equips information with a dynamic attribute.
 
@@ -72,28 +70,28 @@ Per se, it equips information with a dynamic attribute.
 
 ![Web UI](ui2.png)
 
-Web user interfaces rely on a specific technology—the browser—to display information.
+Web user interfaces rely on a specific technology &mdash; the browser &mdash; to display information.
 
 Browsers:
 
 - Structure information with HTML.
 - Define style via CSS.
-- Handle behavior using JavaScript.
+- Handle behaviour using JavaScript.
 
 ## Binding
 
 ![Binding](ui3.png)
 
-HTML, CSS and JavaScript are standalone technologies. To work together they need to bind together.
+HTML, CSS and JavaScript are standalone technologies. To work together &mdash; they need to bind together.
 
-The way of binding, the binding methods are important. Each method defines an era in web design and development.
+The way of binding, the binding methods, are important. Each method defines an era in web design and development.
 
 ### Classless
 
 This paradigm makes no bounds between HTML, CSS and Javascript.
 It leaves binding exclusively to the browser.
 
-HTML has no classes, styles attached. Styling comes from a separate CSS file where all HTML elements are styled by name.
+HTML has no classes, styles attached. Styling comes from a separate CSS file, where all HTML elements are styled by name.
 
 ### Class-based binding
 
@@ -111,11 +109,11 @@ The acronym stands for Application Programming Interface.
 
 APIs bind together the standalone parts of a system &mdash; in our case HTML, CSS and Javascript &mdash; in a programmable way.
 
-The higher the programmability the better the system.
+The higher the programmability, the better the system.
 
 At the beginning, in the classless era programming the web was difficult. It was no API.
 
-After iterations, and now in components and props era, the web became fully programmable like any other software environment.
+After iterations, and now in the components and props era, the web became fully programmable like any other software environment.
 
 ## Template and Component-based UI frameworks
 
@@ -126,7 +124,7 @@ Template-based UI frameworks use class names as API mechanism to bind HTML, CSS 
 
 The binding is open. Parts combine freely without constraints.
 
-A HTML element can take any number of CSS styles or JavaScript interaction handlers.
+An HTML element can take any number of CSS styles or JavaScript interaction handlers.
 
 This leads to an open API. Where everything is possible, even chaotic user interfaces.
 
@@ -136,7 +134,7 @@ They compose up components into larger systems via props &mdash; another, more a
 
 Arbitrary composition leads to an open API. Constraints-based composition leads to a closed API.
 
-Component frameworks, unlike Template-based frameworks are free to choose which way to go.
+Component frameworks, unlike Template-based frameworks, are free to choose which way to go.
 
 ## Open and closed APIs
 
