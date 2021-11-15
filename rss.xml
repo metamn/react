@@ -1,4 +1,541 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 11 Nov 2021 08:30:01 GMT</lastBuildDate><item><title><![CDATA[On design systems — 2]]></title><description><![CDATA[Tools and processes.]]></description><link>http://metamn.io/react/on-design-systems-2/</link><guid isPermaLink="false">http://metamn.io/react/on-design-systems-2/</guid><pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Tools and processes.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 15 Nov 2021 18:17:41 GMT</lastBuildDate><item><title><![CDATA[On design systems — 3]]></title><description><![CDATA[Consistent user interfaces — in web context.]]></description><link>http://metamn.io/react/on-design-systems-3/</link><guid isPermaLink="false">http://metamn.io/react/on-design-systems-3/</guid><pubDate>Thu, 18 Nov 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Consistent user interfaces — in web context.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;hr&gt;
+&lt;h2&gt;Consistent user interfaces&lt;/h2&gt;
+&lt;p&gt;Consistent — coherent and uniform — user interfaces eliminate all visual and logical glitches.&lt;/p&gt;
+&lt;p&gt;User interfaces, when consistent, &lt;em&gt;feel&lt;/em&gt; complete. They have no visible errors, and the experience they provide resembles enjoying an artwork.&lt;/p&gt;
+&lt;p&gt;Consistent, &lt;a href=&quot;https://www.wordnik.com/words/consistent&quot;&gt;by definition&lt;/a&gt;, is in agreement with itself. It holds true as a group, it’s not contradictory. It’s marked by an orderly, logical, and aesthetically consistent relation of parts. It’s unity and harmony.&lt;/p&gt;
+&lt;p&gt;Consistent UIs talk about the intent and the mastery of its creators. They persuade. They deliver an important message.&lt;/p&gt;
+&lt;h2&gt;The current landscape&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://metamn.io/react/on-design-systems-2/&quot;&gt;Until recent years&lt;/a&gt;, creating consistent user interfaces required discipline and solid mental work.&lt;/p&gt;
+&lt;p&gt;There were no tools and theory ensuring consistency in UIs. Designers and developers, working in a team, had to verify consistency with mental efforts. An error-prone technique proven incapable to scale.&lt;/p&gt;
+&lt;p&gt;After decades of innovation, paradigm shifts, today we have systems producing consistent user interfaces — at least for the web.&lt;/p&gt;
+&lt;p&gt;It’s worth understanding the process, and the results.&lt;/p&gt;
+&lt;h2&gt;The web context&lt;/h2&gt;
+&lt;p&gt;Let’s start by mapping up the buzzwords.
+Please note, the historical timeline — marking the paradigm shifts — is depicted counter-clockwise.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/d455e1263037f662051560e7d9e36ccc/839e9/ds-context-black-nologo.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 112.71769947347103%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAAC4jAAAuIwF4pT92AAABxElEQVQ4y61U2W7CMBDk/78KoT6giEIfKOUoVwgBUkIpV+5sPW6cBCdOQKoly9F6M97d2dkGSSuOY35GUUS365WubPu+TwHb+HYdh8IwvPPNr4YKECDGakVbc0Oj4ZDeej36sizabbfkuu7jgGWOp9OJDodDpU9thDixkbpY+Bb2yghlp/wWNgEs38n/FwBVJSi7LwNuqF4Ck3LUIm053UKE1m5HXsLceDSiVrNJ7/1+aouT2uERsP3SapG5XqeAzu3G2U8BPycTulwu3GCx1vgYDOjMmJVrhuiWiwV/zN7vU0D4LubzDHBjmuR7HtUxrrpHX95FaNs27zVRo3x75KMTZ95H9OnxeMwA14ZBr53On6QAIAGWPhJlraRpGum6ngFCYg7TqCq9uj7FvyA2BYRGPamGqsYuWzfGMnhIAfXlkhuxViza2XRaABagRnIPVnGiTOfzmeazWQb4wwoaBAGJFuqyemLCTMZjChO76EO0lNZu87ojVdiR3XcyPApKEUxjfAGsTLuq9Ln0/kPLlcPh2WlTCvioQupmoRJQ/gFFF2O/Cqw2QjB/YS2BCdTrdjlRQvNPRZgH3DEFYLLghF69GsBfISUOe8BVJo8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;The context&quot;
+        title=&quot;The context&quot;
+        src=&quot;/react/static/d455e1263037f662051560e7d9e36ccc/5cc77/ds-context-black-nologo.png&quot;
+        srcset=&quot;/react/static/d455e1263037f662051560e7d9e36ccc/72cd8/ds-context-black-nologo.png 192w,
+/react/static/d455e1263037f662051560e7d9e36ccc/45483/ds-context-black-nologo.png 384w,
+/react/static/d455e1263037f662051560e7d9e36ccc/5cc77/ds-context-black-nologo.png 768w,
+/react/static/d455e1263037f662051560e7d9e36ccc/04090/ds-context-black-nologo.png 1152w,
+/react/static/d455e1263037f662051560e7d9e36ccc/ccc27/ds-context-black-nologo.png 1536w,
+/react/static/d455e1263037f662051560e7d9e36ccc/839e9/ds-context-black-nologo.png 2469w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The buzzwords need to connect with user interfaces, and web user interface technologies like HTML, CSS and Javascript.&lt;/p&gt;
+&lt;p&gt;It takes a journey from user interfaces to consistent UIs — almost a dozen of steps, each step further elaborating the process.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/06cdc3d407cc88d2144b557ac36f0900/922ae/ui1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.347826086956516%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABHklEQVQoz42T2aqDQAyG5/1fzgu9K1RxaW3d7eaGKV8gw+HA4Rj4GSdm+5OMk39k33f/fbvdpOs66ftexnFUPB4PvYOyLMXhcBTP51MDL8siRVHI/X7XIPM8q54ETg7Kuq6SJIls2ybTNPnqOD+fj+qbphGHIQZ/AWOcqCYIAmnbVh05Ddzrula4qqo0E4CSneD9fsv1elUnZBgGb0Mi/v8EsRzNRPI81ypAlmUSx7H2CgYMIooiOZ/PaotNmqYeJPU9pEyoWVUGq4L/UGIoBGYA6F+vl8KqIzlMnAUzg9+AJiBwGIa+V9Y76x90tYdHp0wFp9PJsyGgJeOOnlYc3kPrEQJtVohdvFwufg+Zhzv6UjhZYnspVGYvxHQM5wuaq1JUE/uVCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;UI1&quot;
+        title=&quot;UI1&quot;
+        src=&quot;/react/static/06cdc3d407cc88d2144b557ac36f0900/5cc77/ui1.png&quot;
+        srcset=&quot;/react/static/06cdc3d407cc88d2144b557ac36f0900/72cd8/ui1.png 192w,
+/react/static/06cdc3d407cc88d2144b557ac36f0900/45483/ui1.png 384w,
+/react/static/06cdc3d407cc88d2144b557ac36f0900/5cc77/ui1.png 768w,
+/react/static/06cdc3d407cc88d2144b557ac36f0900/922ae/ui1.png 874w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/27774e204741fb9e37b09650216bae56/71a9e/ui2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.87599544937429%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAABfklEQVQ4y4WT3a6CQAyEef/X0xtv0EAABUQEQfmRnnxNhmzOjZs0u3Tbzky3RNu22S/7fD42DIO9Xi/fZeH3OI42z7NF9mNRkMR1Xe18PtvtdrM0TX3P89wul4uVZWnf79f6vreIqjCYpskR2DF8GL73++0JsOCMEcOOD1uWxZlGVVX54fl8Wl3X1jSNPR4PR+u6zn33+92u1+sukxhYcY+PWOIoHJHMArEoCpfCpRaAx+PR5WpRCNkw1ALEGYJOUaxt2/2MEYSPxPCOM4r+xzlDBRIAdRksCOQMe0lVQe5DEMn3gqKMPIz+gMZC/ul0siRJdnkwzrLMH0KLol6QnnGgEEGMAkYrYKcxoSAgMIUEflSRCzvyXTJoODUistDPDGIUI0ljprFRnDNEnlBB0ZiACgO1gQlQHDGKI0Yj5wU1NvQDWZIbjs3hcLA4jv2bJLUGEPWRN3DJIYpeV+z0osjhDh934STotTFnyL8KCj1il6lv3IMcjlRYTN/q4x++YzP20RPM2QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;UI2&quot;
+        title=&quot;UI2&quot;
+        src=&quot;/react/static/27774e204741fb9e37b09650216bae56/5cc77/ui2.png&quot;
+        srcset=&quot;/react/static/27774e204741fb9e37b09650216bae56/72cd8/ui2.png 192w,
+/react/static/27774e204741fb9e37b09650216bae56/45483/ui2.png 384w,
+/react/static/27774e204741fb9e37b09650216bae56/5cc77/ui2.png 768w,
+/react/static/27774e204741fb9e37b09650216bae56/71a9e/ui2.png 879w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/eb16f3df4b64065d57192e866a013549/386eb/ui3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.40229885057471%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAA0klEQVQoz3WR6QqEQAyD5/1fUv+oeN832uUL1F1YDARLJ00zY2jb1pZlsaZpROphGOw4DgP3ff/xui5pxnG0uq41N02T4RUoQN/3IljX1eZ5tjds26ZhjMuytKIo7DxPzYWqqtT0hC5gIMsyGZMaUvviOI6VDl3XdYZPnuffhMTnALA5iiKZA4TU9NEnSSI9oO86JWSDb3XSQ8Sgvymk5oybpGn6aD0liQNCnIlMg2v5sKf9/RmeBEPeDSO477vmdGX+KGYQMYfwDRij4+u3oibMB+YWHD12xBn7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;UI3&quot;
+        title=&quot;UI3&quot;
+        src=&quot;/react/static/eb16f3df4b64065d57192e866a013549/5cc77/ui3.png&quot;
+        srcset=&quot;/react/static/eb16f3df4b64065d57192e866a013549/72cd8/ui3.png 192w,
+/react/static/eb16f3df4b64065d57192e866a013549/45483/ui3.png 384w,
+/react/static/eb16f3df4b64065d57192e866a013549/5cc77/ui3.png 768w,
+/react/static/eb16f3df4b64065d57192e866a013549/386eb/ui3.png 870w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;And more. A big picture is available for those in rush. It’s enjoyable on larger screens via a click.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/a8df8/ui.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 15.24390243902439%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAcElEQVQI102O3QpAIQiDe/9HDfovKqg8fIJwLoa66aa79wpYa8mcU2qtklKSvbe897TCofXetT/nqMbdGEM1ZuAgWmsSY1SUUnTGFA0DAA+Xc9aKOXvee51tz5FCIsf2gX1EIp+j/Q1DCLprgWZO/wFWkufB/RGvxAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;UI&quot;
+        title=&quot;UI&quot;
+        src=&quot;/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/5cc77/ui.png&quot;
+        srcset=&quot;/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/72cd8/ui.png 192w,
+/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/45483/ui.png 384w,
+/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/5cc77/ui.png 768w,
+/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/04090/ui.png 1152w,
+/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/ccc27/ui.png 1536w,
+/react/static/0dfb10145a6ad44f7aa6546823ef6e0c/a8df8/ui.png 1804w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;User interfaces&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/06cdc3d407cc88d2144b557ac36f0900/922ae/ui1.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.347826086956516%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABHklEQVQoz42T2aqDQAyG5/1fzgu9K1RxaW3d7eaGKV8gw+HA4Rj4GSdm+5OMk39k33f/fbvdpOs66ftexnFUPB4PvYOyLMXhcBTP51MDL8siRVHI/X7XIPM8q54ETg7Kuq6SJIls2ybTNPnqOD+fj+qbphGHIQZ/AWOcqCYIAmnbVh05Ddzrula4qqo0E4CSneD9fsv1elUnZBgGb0Mi/v8EsRzNRPI81ypAlmUSx7H2CgYMIooiOZ/PaotNmqYeJPU9pEyoWVUGq4L/UGIoBGYA6F+vl8KqIzlMnAUzg9+AJiBwGIa+V9Y76x90tYdHp0wFp9PJsyGgJeOOnlYc3kPrEQJtVohdvFwufg+Zhzv6UjhZYnspVGYvxHQM5wuaq1JUE/uVCQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;UI&quot;
+        title=&quot;UI&quot;
+        src=&quot;/react/static/06cdc3d407cc88d2144b557ac36f0900/5cc77/ui1.png&quot;
+        srcset=&quot;/react/static/06cdc3d407cc88d2144b557ac36f0900/72cd8/ui1.png 192w,
+/react/static/06cdc3d407cc88d2144b557ac36f0900/45483/ui1.png 384w,
+/react/static/06cdc3d407cc88d2144b557ac36f0900/5cc77/ui1.png 768w,
+/react/static/06cdc3d407cc88d2144b557ac36f0900/922ae/ui1.png 874w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;User interfaces display information equipped with structure, presentation and behaviour.&lt;/p&gt;
+&lt;p&gt;Structure and presentation is familiar from graphic and print design. It defines layout and style.&lt;/p&gt;
+&lt;p&gt;Behaviour is specific to interactive environments. This dynamic context requires the user interface to handle change — to behave on change.&lt;/p&gt;
+&lt;p&gt;Per se, it equips information with a dynamic attribute.&lt;/p&gt;
+&lt;h2&gt;Web user interfaces&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/27774e204741fb9e37b09650216bae56/71a9e/ui2.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70.87599544937429%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAABfklEQVQ4y4WT3a6CQAyEef/X0xtv0EAABUQEQfmRnnxNhmzOjZs0u3Tbzky3RNu22S/7fD42DIO9Xi/fZeH3OI42z7NF9mNRkMR1Xe18PtvtdrM0TX3P89wul4uVZWnf79f6vreIqjCYpskR2DF8GL73++0JsOCMEcOOD1uWxZlGVVX54fl8Wl3X1jSNPR4PR+u6zn33+92u1+sukxhYcY+PWOIoHJHMArEoCpfCpRaAx+PR5WpRCNkw1ALEGYJOUaxt2/2MEYSPxPCOM4r+xzlDBRIAdRksCOQMe0lVQe5DEMn3gqKMPIz+gMZC/ul0siRJdnkwzrLMH0KLol6QnnGgEEGMAkYrYKcxoSAgMIUEflSRCzvyXTJoODUistDPDGIUI0ljprFRnDNEnlBB0ZiACgO1gQlQHDGKI0Yj5wU1NvQDWZIbjs3hcLA4jv2bJLUGEPWRN3DJIYpeV+z0osjhDh934STotTFnyL8KCj1il6lv3IMcjlRYTN/q4x++YzP20RPM2QAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Web UI&quot;
+        title=&quot;Web UI&quot;
+        src=&quot;/react/static/27774e204741fb9e37b09650216bae56/5cc77/ui2.png&quot;
+        srcset=&quot;/react/static/27774e204741fb9e37b09650216bae56/72cd8/ui2.png 192w,
+/react/static/27774e204741fb9e37b09650216bae56/45483/ui2.png 384w,
+/react/static/27774e204741fb9e37b09650216bae56/5cc77/ui2.png 768w,
+/react/static/27774e204741fb9e37b09650216bae56/71a9e/ui2.png 879w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Web user interfaces rely on a specific technology — the browser — to display information.&lt;/p&gt;
+&lt;p&gt;Browsers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Structure information with HTML.&lt;/li&gt;
+&lt;li&gt;Define style via CSS.&lt;/li&gt;
+&lt;li&gt;Handle behaviour using JavaScript.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Binding&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/eb16f3df4b64065d57192e866a013549/386eb/ui3.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.40229885057471%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAA0klEQVQoz3WR6QqEQAyD5/1fUv+oeN832uUL1F1YDARLJ00zY2jb1pZlsaZpROphGOw4DgP3ff/xui5pxnG0uq41N02T4RUoQN/3IljX1eZ5tjds26ZhjMuytKIo7DxPzYWqqtT0hC5gIMsyGZMaUvviOI6VDl3XdYZPnuffhMTnALA5iiKZA4TU9NEnSSI9oO86JWSDb3XSQ8Sgvymk5oybpGn6aD0liQNCnIlMg2v5sKf9/RmeBEPeDSO477vmdGX+KGYQMYfwDRij4+u3oibMB+YWHD12xBn7AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Binding&quot;
+        title=&quot;Binding&quot;
+        src=&quot;/react/static/eb16f3df4b64065d57192e866a013549/5cc77/ui3.png&quot;
+        srcset=&quot;/react/static/eb16f3df4b64065d57192e866a013549/72cd8/ui3.png 192w,
+/react/static/eb16f3df4b64065d57192e866a013549/45483/ui3.png 384w,
+/react/static/eb16f3df4b64065d57192e866a013549/5cc77/ui3.png 768w,
+/react/static/eb16f3df4b64065d57192e866a013549/386eb/ui3.png 870w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;HTML, CSS and JavaScript are standalone technologies. To work together — they need to bind together.&lt;/p&gt;
+&lt;p&gt;The way of binding, the binding methods, are important. Each method defines an era in web design and development.&lt;/p&gt;
+&lt;h3&gt;Classless&lt;/h3&gt;
+&lt;p&gt;This paradigm makes no bounds between HTML, CSS and Javascript.
+It leaves binding exclusively to the browser.&lt;/p&gt;
+&lt;p&gt;HTML has no classes, styles attached. Styling comes from a separate CSS file, where all HTML elements are styled by name.&lt;/p&gt;
+&lt;h3&gt;Class-based binding&lt;/h3&gt;
+&lt;p&gt;A next iteration, which connects the separate parts — CSS, Javascript — via HTML attributes, class names.&lt;/p&gt;
+&lt;h3&gt;Props&lt;/h3&gt;
+&lt;p&gt;The latest advancement, which integrates — binds natively — all parts into a single standalone component. And composes up components via props.&lt;/p&gt;
+&lt;h2&gt;API&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/920a4dbbd93bd2e8755b7f49c2301323/27d9c/ui4.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.53669724770643%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABNUlEQVQoz32TV4rAMAxEff/L5S8HSCe990TLEygYdlmBiKw6IzvufV/5S5HrumRdV9m27VPOfd/Lsiy//MdxiJN/hIR939V+nkf1vm+pqkr9DDY/NkPcMAwyz7NM06QOFHscR51MU84gIMaXZtjU+X7yXdu2igAaURTpdISkoigkDEOJ41jSNJUsy9TO81zqutYvfvKaptGmzvYBCtAaYhDalxyLmeJH/Rpt2HXdF6Sp0SWJBN/vq1/j53+U4Q98gghBVhAEga6BmFGEOjShzTlJEj3rDulsCza1FWAbAzvbBfr5thZFyI3ZzXGjqN0YT4TveZ5axOIZAAgawA61N6nvkAQKSYAaRTQABTFs/NDlreGHKvnUMRw1cQTpbHtiF/Y3gMSGsTeaY5dlqchgBXIQIgz8AfRKTiX3ppJrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;API&quot;
+        title=&quot;API&quot;
+        src=&quot;/react/static/920a4dbbd93bd2e8755b7f49c2301323/5cc77/ui4.png&quot;
+        srcset=&quot;/react/static/920a4dbbd93bd2e8755b7f49c2301323/72cd8/ui4.png 192w,
+/react/static/920a4dbbd93bd2e8755b7f49c2301323/45483/ui4.png 384w,
+/react/static/920a4dbbd93bd2e8755b7f49c2301323/5cc77/ui4.png 768w,
+/react/static/920a4dbbd93bd2e8755b7f49c2301323/27d9c/ui4.png 872w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;The acronym stands for Application Programming Interface.&lt;/p&gt;
+&lt;p&gt;APIs bind together the standalone parts of a system — in our case HTML, CSS and Javascript — in a programmable way.&lt;/p&gt;
+&lt;p&gt;The higher the programmability, the better the system.&lt;/p&gt;
+&lt;p&gt;At the beginning, in the classless era programming the web was difficult. It was no API.&lt;/p&gt;
+&lt;p&gt;After iterations, and now in the components and props era, the web became fully programmable like any other software environment.&lt;/p&gt;
+&lt;h2&gt;Template and Component-based UI frameworks&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/61a1f3a5f778e116935a76c8191f5e59/27d9c/ui5.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 14.3348623853211%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAb0lEQVQI1z2OWQoAIQxDvf8JPYH7jvrb4RWcQkjaplEz55QxhuLp3rsCvdaS1prce4VKKf0e/M8Laq1iSinivRc4hKCMMeesiDGqkSBrrYZTBLCnP+fobO8tBjMLgh4zg9+MMB7hl8451e8OJhTQfxLh40ptEwtNAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Template-based UI framework&quot;
+        title=&quot;Template-based UI framework&quot;
+        src=&quot;/react/static/61a1f3a5f778e116935a76c8191f5e59/5cc77/ui5.png&quot;
+        srcset=&quot;/react/static/61a1f3a5f778e116935a76c8191f5e59/72cd8/ui5.png 192w,
+/react/static/61a1f3a5f778e116935a76c8191f5e59/45483/ui5.png 384w,
+/react/static/61a1f3a5f778e116935a76c8191f5e59/5cc77/ui5.png 768w,
+/react/static/61a1f3a5f778e116935a76c8191f5e59/27d9c/ui5.png 872w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/95089c54302daea7cb2b4c9d9f6f2011/27d9c/ui6.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 29.357798165137616%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAAAsSAAALEgHS3X78AAAAtklEQVQY05WRSQ6FQAhE+/53dGlsp3aeNfXzSPhxaycECoEqMOjDu65LTdNoGAallMwc47dtU5jnWcuyyL3HbzxNk87zVJ7nhnlVVdnAtm3/ZOu6KjC96zq5x8ZxVN/31kBc17XFRVHYdyfBnJT64zgUKI4xWlNZltbk65AnhzLPUcdQBkBGDkx+33cFZL6NOzirY9Zn5SzLTNXzPEbiAqhBHT3hy0+579uOjzJuR4xCzoVCBPwAHzfOCn5a9OEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Component-based UI framework&quot;
+        title=&quot;Component-based UI framework&quot;
+        src=&quot;/react/static/95089c54302daea7cb2b4c9d9f6f2011/5cc77/ui6.png&quot;
+        srcset=&quot;/react/static/95089c54302daea7cb2b4c9d9f6f2011/72cd8/ui6.png 192w,
+/react/static/95089c54302daea7cb2b4c9d9f6f2011/45483/ui6.png 384w,
+/react/static/95089c54302daea7cb2b4c9d9f6f2011/5cc77/ui6.png 768w,
+/react/static/95089c54302daea7cb2b4c9d9f6f2011/27d9c/ui6.png 872w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Template-based UI frameworks use class names as API mechanism to bind HTML, CSS and Javascript together.&lt;/p&gt;
+&lt;p&gt;The binding is open. Parts combine freely without constraints.&lt;/p&gt;
+&lt;p&gt;An HTML element can take any number of CSS styles or JavaScript interaction handlers.&lt;/p&gt;
+&lt;p&gt;This leads to an open API. Where everything is possible, even chaotic user interfaces.&lt;/p&gt;
+&lt;p&gt;Component-based UI frameworks natively bind HTML, CSS and Javascript into standalone components.&lt;/p&gt;
+&lt;p&gt;They compose up components into larger systems via props — another, more advanced API mechanism.&lt;/p&gt;
+&lt;p&gt;Arbitrary composition leads to an open API. Constraints-based composition leads to a closed API.&lt;/p&gt;
+&lt;p&gt;Component frameworks, unlike Template-based frameworks, are free to choose which way to go.&lt;/p&gt;
+&lt;h2&gt;Open and closed APIs&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/f57abfc6763a97d6f753d1b83f48cc63/922ae/ui7.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 35.58352402745996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAYAAAAIy204AAAACXBIWXMAAAsSAAALEgHS3X78AAAA1UlEQVQoz42RhwrDQAxD7///LvmCkEn23sPlGVxKodADceQsS4rt5M9zXZdkWSZt2yq6rpO+79+o61ryPBcHcd/3nziOQwXv+5ZlWWSaJonjWAWSJJE0TRXnecowDOKqqpJxHNUF8jzPWrDvoii02fM8FcLEatxwwbqu0jSNOOJznueRIAhUANg7BiQjYVmWKg4Iwo0It/Vowm3btAkn0iICeLdG3/fVEJ7VwScfQ0eT/eo32d5JBw9hmsIwfM+PZFEU6UIYgft3y4giyKzMyELYsqi/AMckGmbcuK+iAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Open API&quot;
+        title=&quot;Open API&quot;
+        src=&quot;/react/static/f57abfc6763a97d6f753d1b83f48cc63/5cc77/ui7.png&quot;
+        srcset=&quot;/react/static/f57abfc6763a97d6f753d1b83f48cc63/72cd8/ui7.png 192w,
+/react/static/f57abfc6763a97d6f753d1b83f48cc63/45483/ui7.png 384w,
+/react/static/f57abfc6763a97d6f753d1b83f48cc63/5cc77/ui7.png 768w,
+/react/static/f57abfc6763a97d6f753d1b83f48cc63/922ae/ui7.png 874w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/af85b43ac8c05a898bf1c59eaed626d2/47573/ui8.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.818181818181817%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAhklEQVQI11WPWwrFIAxE3f/yXIForfigtuIDoZrL5KNwA0PI5GREcd83oWqtdBwHee9ZIQT2n+dhSSkppURzTlJKMXNdF9845z5W5Jx5AIjQ1hr13mmMQXtvwh47dAS870ulFBY4dNyttZgRMUbSWvNL1tpPmI0x3BGMgg/vPM8/FkIGfvUDS2DjJiZ3cRkAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Closed API&quot;
+        title=&quot;Closed API&quot;
+        src=&quot;/react/static/af85b43ac8c05a898bf1c59eaed626d2/5cc77/ui8.png&quot;
+        srcset=&quot;/react/static/af85b43ac8c05a898bf1c59eaed626d2/72cd8/ui8.png 192w,
+/react/static/af85b43ac8c05a898bf1c59eaed626d2/45483/ui8.png 384w,
+/react/static/af85b43ac8c05a898bf1c59eaed626d2/5cc77/ui8.png 768w,
+/react/static/af85b43ac8c05a898bf1c59eaed626d2/47573/ui8.png 880w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;In an open API parts compose up freely. There are no constraints and there is unlimited room for experimentation and play.&lt;/p&gt;
+&lt;p&gt;CSS frameworks and Component libraries embrace this technique.&lt;/p&gt;
+&lt;p&gt;CSS frameworks have no choice, they are open by nature. Component libraries made this choice explicit.&lt;/p&gt;
+&lt;p&gt;Closed APIs restrict the composition of the building blocks to specific rules.&lt;/p&gt;
+&lt;p&gt;Systems can’t build up freely but following a purpose and direction.&lt;/p&gt;
+&lt;p&gt;Design systems embrace the closed API principle.&lt;/p&gt;
+&lt;h2&gt;CSS frameworks, Component libraries, Design systems&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/6b1776aff30f2e7cb87c25d422295c4b/47573/ui9a.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.818181818181817%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAiUlEQVQI12WOWQ6EIBBEvf/1vIAKImAAN5SQYE2qE7+mk5feqpdu33e01qCUgrVWWJZF8ud5cJ4nqOn7Xnree6zrKhhjMM+z1I7jwLZt6GKMqLXiui6BDcIlpRSEEMRTzJhHcs7CN3Pft+xIKaGjkB/xinNO/Ac/Yu19X9C01hjHEdM0/TEMg2h/sZribJ1fyggAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;CSS framework&quot;
+        title=&quot;CSS framework&quot;
+        src=&quot;/react/static/6b1776aff30f2e7cb87c25d422295c4b/5cc77/ui9a.png&quot;
+        srcset=&quot;/react/static/6b1776aff30f2e7cb87c25d422295c4b/72cd8/ui9a.png 192w,
+/react/static/6b1776aff30f2e7cb87c25d422295c4b/45483/ui9a.png 384w,
+/react/static/6b1776aff30f2e7cb87c25d422295c4b/5cc77/ui9a.png 768w,
+/react/static/6b1776aff30f2e7cb87c25d422295c4b/47573/ui9a.png 880w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/acec4e914312fec2bbcfbbef64d49d87/47573/ui9.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.818181818181817%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAg0lEQVQI122PWQrEIBBEvf/1vIBbJComkk30wxpKmPzMNBSN3a8fKPZ9RykF67piWRZ475FSmu8QAnLOOI4DUso5izHOPUOWN5yRoUdQ2HvHdV04z3P253lw3/fMtm1orYEc5bXWd0f2y9NBRtCulIK1dsYY85MxBljOOWit/zJ08EcfTxjhfD4J5kMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Component library&quot;
+        title=&quot;Component library&quot;
+        src=&quot;/react/static/acec4e914312fec2bbcfbbef64d49d87/5cc77/ui9.png&quot;
+        srcset=&quot;/react/static/acec4e914312fec2bbcfbbef64d49d87/72cd8/ui9.png 192w,
+/react/static/acec4e914312fec2bbcfbbef64d49d87/45483/ui9.png 384w,
+/react/static/acec4e914312fec2bbcfbbef64d49d87/5cc77/ui9.png 768w,
+/react/static/acec4e914312fec2bbcfbbef64d49d87/47573/ui9.png 880w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/react/static/462a0ba557c67dfd7ab9ddbed0f8e8c3/47573/ui10.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 16.818181818181817%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAhklEQVQI11WOWwrFIBBD3f/y3IBaC4oitdQnReeSgX7cAZkYjonivm/CnOdJx3HQdV3knOP7nJOe5yEwUkoKITDrvWcGfIyRUkrsgxMIWGtRrZVyzrwRgvO+L3tjDC7Cw703tdaolMIMdO+dfTACrUopbrPW8v60MYY1YAw8rfUf82lk4Oc//q3iZiubVX8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Design system&quot;
+        title=&quot;Design system&quot;
+        src=&quot;/react/static/462a0ba557c67dfd7ab9ddbed0f8e8c3/5cc77/ui10.png&quot;
+        srcset=&quot;/react/static/462a0ba557c67dfd7ab9ddbed0f8e8c3/72cd8/ui10.png 192w,
+/react/static/462a0ba557c67dfd7ab9ddbed0f8e8c3/45483/ui10.png 384w,
+/react/static/462a0ba557c67dfd7ab9ddbed0f8e8c3/5cc77/ui10.png 768w,
+/react/static/462a0ba557c67dfd7ab9ddbed0f8e8c3/47573/ui10.png 880w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2&gt;Non-consistent UI&lt;/h2&gt;
+&lt;h2&gt;Consistent UI&lt;/h2&gt;</content:encoded></item><item><title><![CDATA[On design systems — 2]]></title><description><![CDATA[Tools and processes.]]></description><link>http://metamn.io/react/on-design-systems-2/</link><guid isPermaLink="false">http://metamn.io/react/on-design-systems-2/</guid><pubDate>Wed, 10 Nov 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Tools and processes.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;hr&gt;
 &lt;h2&gt;TLDR;&lt;/h2&gt;
@@ -10,12 +547,10 @@ They do it by augmenting old tools and processes with extensive mind power.&lt;/
 &lt;h2&gt;The current landscape&lt;/h2&gt;
 &lt;p&gt;Design systems are new, yet old.&lt;/p&gt;
 &lt;p&gt;They’ve been around since 2015 when Google rolled out Material Design.
-Still, only big companies can afford to have their own design system today.&lt;/p&gt;
-&lt;p&gt;The rest builds on open source, freely available component libraries and design systems by employing heavy customizations.
-We all know the result: similar looking websites and apps all around the internet.&lt;/p&gt;
-&lt;p&gt;If one goes further — and tries to roll out unique looking, yet consistent and scalable user interfaces for a progressive audience — hits the same obstacles as their predecessors, the big companies.&lt;/p&gt;
-&lt;p&gt;Same obstacles, less resources.
-For Airbnb, it took several years and iterations to come up with a solution which scales.&lt;/p&gt;
+Still, only dedicated companies can afford to have their own design system today.&lt;/p&gt;
+&lt;p&gt;The rest builds on open source, freely available component libraries and design systems by employing heavy customizations.&lt;/p&gt;
+&lt;p&gt;If one goes further — and tries to roll out a hand-made design system for its own audience — hits the same obstacles as their predecessors.&lt;/p&gt;
+&lt;p&gt;For Airbnb, it took several years and iterations to come up with a solution which scales.&lt;/p&gt;
 &lt;p&gt;Design systems are hard.&lt;/p&gt;
 &lt;p&gt;They introduce a systematic approach to a domain previously ruled by human-driven, ad-hoc processes.&lt;/p&gt;
 &lt;h2&gt;Before design systems&lt;/h2&gt;
@@ -24,8 +559,8 @@ For Airbnb, it took several years and iterations to come up with a solution whic
 &lt;p&gt;Material Design made the entire Google portfolio to look consistent, following unconditionally and perfectly the brand design guidelines.&lt;/p&gt;
 &lt;p&gt;Whatever the asset, whenever the platform might be.&lt;/p&gt;
 &lt;h2&gt;What a design system does?&lt;/h2&gt;
-&lt;p&gt;It offers a systematic approach to the design process to reduce the cognitive load on designers.&lt;/p&gt;
-&lt;p&gt;To understand the amount of the cognitive load required to design, let’s take for example the buttons. In a simple use case, we have 20 variations.&lt;/p&gt;
+&lt;p&gt;It offers a systematic approach to the design process to reduce the cognitive load on designers. Less load, more consistent interfaces.&lt;/p&gt;
+&lt;p&gt;To understand the amount of the cognitive load on designers, let’s take for example the buttons. In a simple use case, we have 20 variations.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 768px;&quot;
@@ -58,8 +593,7 @@ For Airbnb, it took several years and iterations to come up with a solution whic
   &lt;/a&gt;
     &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;Aside to buttons, a design deals with dozens of other, more complex patterns and components like layout, spacing, typography, navigation, responsiveness, images, animations, accessibility and more.&lt;/p&gt;
-&lt;p&gt;A designer — to be able to reason about, modify, or extend a design — has to keep in her mental model all this information. The details, the nuances, the settings, and the states.&lt;/p&gt;
-&lt;p&gt;An impossible task even at Google level with an infinite pool of designers.&lt;/p&gt;
+&lt;p&gt;A designer — to be able to reason about, modify, or extend a design — has to keep in her mental model an uncomfortable amount of information. The details, the nuances, the settings, the states.&lt;/p&gt;
 &lt;p&gt;Design systems solve this challenge via the &lt;em&gt;divide et impera&lt;/em&gt; method.&lt;/p&gt;
 &lt;p&gt;They separate design into small, independent and manageable parts / layers — style tokens, components, sections, pages, sites, apps — and enforce consistency on the entire path, across the entire portfolio.&lt;/p&gt;
 &lt;p&gt;Each layer is independent, self-contained, and acts as a single source of truth for its own domain.&lt;/p&gt;
@@ -70,18 +604,18 @@ They use tokens for styling, but they can’t add new, custom styles.
 If a new style element is required — first it is added to the tokens, then the component becomes able to use it.&lt;/p&gt;
 &lt;p&gt;This separation of concerns, augmented with strong human discipline, makes consistency and scalability achievable across hundreds of tokens, components, sites and apps.&lt;/p&gt;
 &lt;h2&gt;Tools and processes&lt;/h2&gt;
-&lt;p&gt;The systematic approach brought by design systems left untouched the tools and processes used in creating digital assets.&lt;/p&gt;
-&lt;p&gt;A typical workflow is the same today as it was before design systems.&lt;/p&gt;
+&lt;p&gt;The systematic approach brought by design systems left untouched the tools and the workflow.&lt;/p&gt;
+&lt;p&gt;They are the same today as they were before design systems.&lt;/p&gt;
 &lt;p&gt;Designers use visual, non-programmable tools like Figma, Sketch, Adobe Illustrator etc. to create the layers of a design system.&lt;/p&gt;
 &lt;p&gt;These tools are visualization tools, not decision-making tools.&lt;/p&gt;
 &lt;p&gt;When a designer has to make a decision — to change, extend a design — again, she has to build a mental model first, even if the model is now smaller due to the design system approach.&lt;/p&gt;
 &lt;p&gt;The decision made cannot be proven correct in an objective way like we used to have in software development, or in other exact science.&lt;/p&gt;
-&lt;p&gt;Designing with mental models is error-prone. Introduces continuous uncertainty. And requires human resources to scale.&lt;/p&gt;
+&lt;p&gt;Designing with mental models is error-prone. Introduces continuous uncertainty. And, for scaling, requires human resources.&lt;/p&gt;
 &lt;p&gt;The other drawback of the visual, non-programmable design tools is the deliverables they produce.&lt;/p&gt;
 &lt;p&gt;The designer’s work needs to be further translated to the target medium by developers. This process is communication-heavy, error-prone again, and far from being real-time.&lt;/p&gt;
 &lt;h2&gt;Better tools and processes&lt;/h2&gt;
 &lt;p&gt;It’s easy to observe: the tools used by designers produce side effects related to scalability, communication latency and cost.&lt;/p&gt;
-&lt;p&gt;They are the bottleneck in the process of building consistent user interfaces in an affordable way, with support for companies with less resources.&lt;/p&gt;
+&lt;p&gt;They are the bottleneck in the process of building consistent user interfaces in a scalable way, affordable for companies with less resources.&lt;/p&gt;
 &lt;p&gt;What if the tools in the design process — in the same way as in the development process — would be programmable?&lt;/p&gt;
 &lt;p&gt;What if the outcome of a design process would be a program / data instead of the current visuals-to-be-translated-into-code mess?&lt;/p&gt;
 &lt;p&gt;That would solve the mental model capacity problem and reduce the design and development process to real-time.&lt;/p&gt;
@@ -107,7 +641,7 @@ But the deliverable would not be official — just a temporary result.&lt;/p&gt;
 &lt;p&gt;Since then, &lt;a href=&quot;https://osequi.com/&quot;&gt;I’m working&lt;/a&gt; in this novel domain.&lt;/p&gt;
 &lt;p&gt;I produce unique looking websites and apps for progressive brands with the help of a handcrafted, tailor made, built-from-scratch, completely customizable design system.&lt;/p&gt;
 &lt;p&gt;With a considerable investment yielding high rewards.&lt;/p&gt;
-&lt;p&gt;I’ve &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing&quot;&gt;analysed&lt;/a&gt; other design systems; &lt;a href=&quot;http://metamn.io/react/on-design-systems-1/&quot;&gt;wrote&lt;/a&gt; &lt;a href=&quot;http://metamn.io/beat/design-systems-are-a-cultural-challenge/&quot;&gt;articles&lt;/a&gt;; a &lt;a href=&quot;https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing&quot;&gt;mini-book / technical guide&lt;/a&gt;; learnt &lt;a href=&quot;http://metamn.io/beat/clojure/&quot;&gt;other languages&lt;/a&gt; and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.&lt;/p&gt;
+&lt;p&gt;I’ve &lt;a href=&quot;https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing&quot;&gt;analysed&lt;/a&gt; design systems and implementations; &lt;a href=&quot;http://metamn.io/react/on-design-systems-1/&quot;&gt;wrote&lt;/a&gt; &lt;a href=&quot;http://metamn.io/beat/design-systems-are-a-cultural-challenge/&quot;&gt;articles&lt;/a&gt;; a &lt;a href=&quot;https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing&quot;&gt;mini-book / technical guide&lt;/a&gt;; learnt &lt;a href=&quot;http://metamn.io/beat/clojure/&quot;&gt;other languages&lt;/a&gt; and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.&lt;/p&gt;
 &lt;p&gt;Today, in short, this custom-made design system / component library offers:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;&lt;strong&gt;Wireframing&lt;/strong&gt; — To sketch up the requirement specifications and get immediate feedback.&lt;/li&gt;
@@ -1236,7 +1770,16 @@ However it should be built using existing software design patterns.&lt;/p&gt;
 &lt;li&gt;&lt;a href=&quot;https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing&quot;&gt;A quick analysis of design systems and component libraries&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.slideshare.net/MajaWichrowska/building-and-rebuilding-the-airbnb-design-system&quot;&gt;Building (and Re-Building) the Airbnb Design System &lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=jnV1u67_yVg&amp;#x26;feature=youtu.be&quot;&gt;Mark Dalgleish: Rethinking Design Practices&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[My current stack]]></title><description><![CDATA[For highly interactive, static websites without API.]]></description><link>http://metamn.io/react/my-current-stack/</link><guid isPermaLink="false">http://metamn.io/react/my-current-stack/</guid><pubDate>Mon, 21 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;For highly interactive, static websites without API.&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[On design systems]]></title><description><![CDATA[A series of articles.]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Wed, 06 Jan 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A series of articles.&lt;/p&gt;
+&lt;!--more--&gt;
+&lt;hr&gt;
+&lt;p&gt;This is a series of articles about design systems.&lt;/p&gt;
+&lt;p&gt;Hopefully, the list will grow.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-design-sytems-1/&quot;&gt;Context and deliverables&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-design-systems-2/&quot;&gt;Tools and processes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://metamn.io/react/on-design-sytems-3/&quot;&gt;Consistent user interfaces in web context&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[My current stack]]></title><description><![CDATA[For highly interactive, static websites without API.]]></description><link>http://metamn.io/react/my-current-stack/</link><guid isPermaLink="false">http://metamn.io/react/my-current-stack/</guid><pubDate>Mon, 21 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;For highly interactive, static websites without API.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;hr&gt;
 &lt;p&gt;React &lt;a href=&quot;http://metamn.io/react/things-ive-learnt-in-2020/&quot;&gt;works&lt;/a&gt; for a list of use cases.&lt;/p&gt;
