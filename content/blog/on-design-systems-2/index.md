@@ -25,14 +25,12 @@ Smaller companies with less resources must innovate to keep up.
 Design systems are new, yet old.
 
 They've been around since 2015 when Google rolled out Material Design.
-Still, only big companies can afford to have their own design system today.
+Still, only dedicated companies can afford to have their own design system today.
 
 The rest builds on open source, freely available component libraries and design systems by employing heavy customizations.
-We all know the result: similar looking websites and apps all around the internet.
 
-If one goes further &mdash; and tries to roll out unique looking, yet consistent and scalable user interfaces for a progressive audience &mdash; hits the same obstacles as their predecessors, the big companies.
+If one goes further &mdash; and tries to roll out a hand-made design system for its own audience &mdash; hits the same obstacles as their predecessors.
 
-Same obstacles, less resources.
 For Airbnb, it took several years and iterations to come up with a solution which scales.
 
 Design systems are hard.
@@ -51,17 +49,15 @@ Whatever the asset, whenever the platform might be.
 
 ## What a design system does?
 
-It offers a systematic approach to the design process to reduce the cognitive load on designers.
+It offers a systematic approach to the design process to reduce the cognitive load on designers. Less load, more consistent interfaces.
 
-To understand the amount of the cognitive load required to design, let's take for example the buttons. In a simple use case, we have 20 variations.
+To understand the amount of the cognitive load on designers, let's take for example the buttons. In a simple use case, we have 20 variations.
 
 ![Buttons](buttons.png)
 
 Aside to buttons, a design deals with dozens of other, more complex patterns and components like layout, spacing, typography, navigation, responsiveness, images, animations, accessibility and more.
 
-A designer &mdash; to be able to reason about, modify, or extend a design &mdash; has to keep in her mental model all this information. The details, the nuances, the settings, and the states.
-
-An impossible task even at Google level with an infinite pool of designers.
+A designer &mdash; to be able to reason about, modify, or extend a design &mdash; has to keep in her mental model an uncomfortable amount of information. The details, the nuances, the settings, the states.
 
 Design systems solve this challenge via the _divide et impera_ method.
 
@@ -81,9 +77,9 @@ This separation of concerns, augmented with strong human discipline, makes consi
 
 ## Tools and processes
 
-The systematic approach brought by design systems left untouched the tools and processes used in creating digital assets.
+The systematic approach brought by design systems left untouched the tools and the workflow.
 
-A typical workflow is the same today as it was before design systems.
+They are the same today as they were before design systems.
 
 Designers use visual, non-programmable tools like Figma, Sketch, Adobe Illustrator etc. to create the layers of a design system.
 
@@ -93,7 +89,7 @@ When a designer has to make a decision &mdash; to change, extend a design &mdash
 
 The decision made cannot be proven correct in an objective way like we used to have in software development, or in other exact science.
 
-Designing with mental models is error-prone. Introduces continuous uncertainty. And requires human resources to scale.
+Designing with mental models is error-prone. Introduces continuous uncertainty. And, for scaling, requires human resources.
 
 The other drawback of the visual, non-programmable design tools is the deliverables they produce.
 
@@ -103,7 +99,7 @@ The designer's work needs to be further translated to the target medium by devel
 
 It's easy to observe: the tools used by designers produce side effects related to scalability, communication latency and cost.
 
-They are the bottleneck in the process of building consistent user interfaces in an affordable way, with support for companies with less resources.
+They are the bottleneck in the process of building consistent user interfaces in a scalable way, affordable for companies with less resources.
 
 What if the tools in the design process &mdash; in the same way as in the development process &mdash; would be programmable?
 
@@ -153,7 +149,7 @@ I produce unique looking websites and apps for progressive brands with the help 
 
 With a considerable investment yielding high rewards.
 
-I've [analysed](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) other design systems; [wrote](http://metamn.io/react/on-design-systems-1/) [articles](http://metamn.io/beat/design-systems-are-a-cultural-challenge/); a [mini-book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing); learnt [other languages](http://metamn.io/beat/clojure/) and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
+I've [analysed](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing) design systems and implementations; [wrote](http://metamn.io/react/on-design-systems-1/) [articles](http://metamn.io/beat/design-systems-are-a-cultural-challenge/); a [mini-book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing); learnt [other languages](http://metamn.io/beat/clojure/) and stacks to better understand the current theory and common practices; done four complete iterations on the code base; employed the result in a couple of real-life applications.
 
 Today, in short, this custom-made design system / component library offers:
 
