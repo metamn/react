@@ -99,7 +99,7 @@ The designer's work needs to be further translated to the target medium by devel
 
 It's easy to observe: the tools used by designers produce side effects related to scalability, communication latency and cost.
 
-They are the bottleneck in the process of building consistent user interfaces in a scalable way, affordable for companies with less resources.
+They are the bottleneck in the process of building consistent user interfaces in a scalable way, and, affordable for companies with less resources.
 
 What if the tools in the design process &mdash; in the same way as in the development process &mdash; would be programmable?
 
@@ -175,11 +175,12 @@ In less time, cost and hustle.
 
 ## Resources
 
-1. [A living styleguide from 2015](http://metamn.io/v1/styleguide/)
-2. [Creating a styleguide using a database (2015)](http://metamn.io/beat/creating-a-styleguide-with-gulp/)
-3. [OsEqui, a design systems consultancy](https://osequi.com/)
-4. [Design systems are a cultural challenge](http://metamn.io/beat/design-systems-are-a-cultural-challenge/)
-5. [Design Systems Analytical Framework](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing)
-6. [On Design Systems - A min book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing)
-7. [Design Systems - Context and deliverables](http://metamn.io/react/on-design-sytems-1/)
-8. [Clojure, and the limits of the Javascript ecosystem](http://metamn.io/beat/clojure/)
+1. [Building (and Re-Building) the Airbnb Design System](https://www.infoq.com/news/2020/02/airbnb-design-system-react-conf/)
+2. [A living styleguide from 2015](http://metamn.io/v1/styleguide/)
+3. [Creating a styleguide using a database (2015)](http://metamn.io/beat/creating-a-styleguide-with-gulp/)
+4. [OsEqui, a design systems consultancy](https://osequi.com/)
+5. [Design systems are a cultural challenge](http://metamn.io/beat/design-systems-are-a-cultural-challenge/)
+6. [Design Systems Analytical Framework](https://docs.google.com/spreadsheets/d/1Yn-fzRIfXcpFilQwjv62MC4yRCTQFaS2qhhtbnfohhg/edit?usp=sharing)
+7. [On Design Systems - A mini book / technical guide](https://docs.google.com/document/d/1ukf5kDq7pHGnnExUstssu5Xtl-2yT3KxUp4XU8vvpzE/edit?usp=sharing)
+8. [Design Systems - Context and deliverables](http://metamn.io/react/on-design-sytems-1/)
+9. [Clojure, and the limits of the Javascript ecosystem](http://metamn.io/beat/clojure/)
