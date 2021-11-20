@@ -169,12 +169,8 @@ Systems can not build up freely only by abiding the rules.
 
 Classless HTML frameworks and Design systems embrace this closed API principle.
 
-## CSS frameworks, Component libraries, Design systems
+## Finally
 
 ![CSS framework](ui9a.png)
 ![Component library](ui9.png)
 ![Design system](ui10.png)
-
-## Non-consistent UI
-
-## Consistent UI
