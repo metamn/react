@@ -174,3 +174,10 @@ Classless HTML frameworks and Design systems embrace this closed API principle.
 ![CSS framework](ui9a.png)
 ![Component library](ui9.png)
 ![Design system](ui10.png)
+
+Framework- and API-type &mdash; combined together &mdash; defines if a paradigm will produce consistent user interfaces, or not.
+
+A good example is Classless HTML.
+
+Being constraints based, it is capable to produce coherent and uniform interfaces.
+Having no API, being not programmable means it can produce only a reduced set of user interfaces.
