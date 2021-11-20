@@ -180,4 +180,4 @@ Framework- and API-type &mdash; combined together &mdash; defines if a paradigm 
 A good example is Classless HTML.
 
 Being constraints based, it is capable to produce coherent and uniform interfaces.
-Having no API, being not programmable, it can't produce user interfaces for any, arbitrary use cases.
+Having no API &mdash; being not programmable &mdash; it can't produce user interfaces for any, arbitrary use case.
