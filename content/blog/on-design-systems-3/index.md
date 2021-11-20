@@ -3,7 +3,7 @@ title: 'On design systems — 3'
 date: '2021-11-20'
 ---
 
-Consistent user interfaces in web context.
+Consistent user interfaces in web context. A theory.
 
 <!--more-->
 
@@ -61,25 +61,17 @@ In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling o
 
 **CSS Frameworks** are ubiquoitus. Bootstrap, Foundation, Tachyons, Bulma, Tailwind. Perhaps they style 90% or more of all webpages today.
 
-**Component libraries** and **design systems** are new. The line between them is blurry for the novice. But &mdash; it turns out in this article &mdash; this line defines if a UI is consistent or not.
+**Component libraries** and **design systems** are new. The line between them is blurry for the novice. But &mdash; it turns out in the next chapters &mdash; this line defines if a UI is consistent or not.
 
-The buzzwords need to connect with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
+## Consistent user interfaces in web context
 
-It takes a journey from user interfaces to consistent UIs &mdash; almost a dozen of steps, each step further elaborating the process.
+It takes a journey from user interfaces to consistent web UIs &mdash; a dozen of steps, some steps depicting an era in front-end development.
 
-![UI1](ui1.png)
-
----
-
-![UI2](ui2.png)
-
----
-
-![UI3](ui3.png)
-
-And more. A big picture is available for those in rush. It's enjoyable on larger screens via a click.
+For those on the rush there is a big picture. It's enjoyable on larger screens via a click.
 
 ![UI](ui.png)
+
+For the rest, there is a breakdown. A step-by-step overview of the process where a consistent UI theory unfolds.
 
 ## User interfaces
 
