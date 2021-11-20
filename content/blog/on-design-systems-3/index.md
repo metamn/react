@@ -1,9 +1,9 @@
 ---
 title: 'On design systems — 3'
-date: '2021-11-18'
+date: '2021-11-20'
 ---
 
-Consistent user interfaces &mdash; in web context.
+Consistent user interfaces in web context.
 
 <!--more-->
 
@@ -21,20 +21,47 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 ## The current landscape
 
-[Until recent years](http://metamn.io/react/on-design-systems-2/), creating consistent user interfaces required discipline and solid mental work.
+Until recent years, creating consistent user interfaces were an almost impossible task.
 
-There were no tools and theory ensuring consistency in UIs. Designers and developers, working in a team, had to verify consistency with mental efforts. An error-prone technique proven incapable to scale.
+With design systems &mdash; introducing a novel design process &mdash; it became possible.
 
-After decades of innovation, paradigm shifts, today we have systems producing consistent user interfaces &mdash; at least for the web.
+Design systems ain't a silver bullet. Success isn't guaranteed out of the box. It still requires team discipline and solid mental work. Or, [better tooling](http://metamn.io/react/on-design-systems-2/).
 
-It's worth understanding the process, and the results.
+But at least, creating consistent user interfaces is now possible with design systems. Across platforms.
+
+## The contexts
+
+Current tools and processes in UX/UI design and development, even with design systems, produce two separate, independent deliverables.
+
+First, a visual design, not related at all to code. Then the code, the translation of the design to a platform, via code.
+
+This article examines the web context. How to create consistent UIs with web technologies.
 
 ## The web context
 
-Let's start by mapping up the buzzwords.
-Please note, the historical timeline &mdash; marking the paradigm shifts &mdash; is depicted counter-clockwise.
+The core web platform &mdash; we all know very well &mdash; is the browser.
+
+Using technologies like HTML, CSS, Javascript, WebGL, and more, it manages to display interactive information across devices.
+
+Consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript, and run it in the browser.
+
+## The buzzwords
+
+Let's start by mapping up the web buzzwords related to design systems.
 
 ![The context](ds-context-black-nologo.png)
+
+The quadrants put design systems into a historical context &mdash; each quadrant representing an era in web development. The historical timeline is depicted counter-clockwise.
+
+The axes put web development into a larger &mdash; software development &mdash; context: APIs and frameworks.
+
+And the buzzwords, in short:
+
+In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling on websites. Hence HTML was not linked to CSS via class names. However this paradigm lately became a [trend](https://css-tricks.com/no-class-css-frameworks/) again due to it's simplicity and scalability.
+
+**CSS Frameworks** are ubiquoitus. Bootstrap, Foundation, Tachyons, Bulma, Tailwind. Perhaps they style 90% or more of all webpages today.
+
+**Component libraries** and **design systems** are new. The line between them is blurry for the novice. But &mdash; it turns out in this article &mdash; this line defines if a UI is consistent or not.
 
 The buzzwords need to connect with user interfaces, and web user interface technologies like HTML, CSS and Javascript.
 
