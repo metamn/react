@@ -77,12 +77,13 @@ For the rest, there is a breakdown. A step-by-step overview of the process where
 
 ![UI](ui1.png)
 
-User interfaces display information equipped with structure, presentation and behaviour.
+User interfaces display information. A special information: equipped with structure, presentation and behaviour.
 
 Structure and presentation is familiar from graphic and print design. It defines layout and style.
 
-Behaviour is specific to interactive environments. This dynamic context requires the user interface to handle change &mdash; to behave on change.
+Behaviour is specific to interactive environments like the web.
 
+This dynamic context requires the user interface to handle change &mdash; to behave on change.
 Per se, it equips information with a dynamic attribute.
 
 ## Web user interfaces
@@ -93,17 +94,17 @@ Web user interfaces rely on a specific technology &mdash; the browser &mdash; to
 
 Browsers:
 
-- Structure information with HTML.
-- Define style via CSS.
-- Handle behaviour using JavaScript.
+- Structure information with **HTML**.
+- Define style via **CSS**.
+- Handle behaviour using **Javascript**.
 
 ## Binding
 
 ![Binding](ui3.png)
 
-HTML, CSS and JavaScript are standalone technologies. To work together &mdash; they need to bind together.
+HTML, CSS and Javascript are standalone technologies. To work together &mdash; they need to be merged, bound together.
 
-The way of binding, the binding methods, are important. Each method defines an era in web design and development.
+The way of binding &mdash; the binding methods &mdash; are important. Each method defines an era in front-end development.
 
 ### Classless
 
@@ -114,63 +115,59 @@ HTML has no classes, styles attached. Styling comes from a separate CSS file, wh
 
 ### Class-based binding
 
-A next iteration, which connects the separate parts &mdash; CSS, Javascript &mdash; via HTML attributes, class names.
+The next paradigm connects the separate parts &mdash; HTML, CSS, Javascript &mdash; via class names, a special HTML attribute.
+
+So far this was the longest standing paradigm &mdash; the era of CSS frameworks &mdash; and turned out to be fragile on scaling, composition.
 
 ### Props
 
-The latest advancement, which integrates &mdash; binds natively &mdash; all parts into a single standalone component. And composes up components via props.
+The latest advancement, which integrates &mdash; binds natively &mdash; all parts: HTML, CSS, Javascript into a single standalone component.
+
+And manages scaling via props.
+
+This era is characterised by component libraries and design systems.
 
 ## API
 
 ![API](ui4.png)
 
-The acronym stands for Application Programming Interface.
+The acronym stands for Application Programming Interface and comes from general software development theory.
 
-APIs bind together the standalone parts of a system &mdash; in our case HTML, CSS and Javascript &mdash; in a programmable way.
+APIs bind together standalone parts of a software system &mdash; in our case HTML, CSS and Javascript &mdash; in a programmable way.
 
-The higher the programmability, the better the system.
+The higher the programmability of the bindings, the better the scalability of the system.
 
-At the beginning, in the classless era programming the web was difficult. It was no API.
-
-After iterations, and now in the components and props era, the web became fully programmable like any other software environment.
-
-## Template and Component-based UI frameworks
+## Template- and Component-based UI frameworks
 
 ![Template-based UI framework](ui5.png)
 ![Component-based UI framework](ui6.png)
 
-Template-based UI frameworks use class names as API mechanism to bind HTML, CSS and Javascript together.
+**Template-based UI frameworks** use class names as API mechanism to bind together HTML, CSS and Javascript.
 
-The binding is open. Parts combine freely without constraints.
+The binding is always open. An HTML element can take any number of CSS styles or JavaScript interaction handlers.
 
-An HTML element can take any number of CSS styles or JavaScript interaction handlers.
+This leads to an open API, where everything is possible, even chaotic user interfaces.
 
-This leads to an open API. Where everything is possible, even chaotic user interfaces.
+**Component-based UI frameworks** use props as API mechanism to bind together HTML, CSS and Javascript into standalone components.
 
-Component-based UI frameworks natively bind HTML, CSS and Javascript into standalone components.
-
-They compose up components into larger systems via props &mdash; another, more advanced API mechanism.
-
-Arbitrary composition leads to an open API. Constraints-based composition leads to a closed API.
-
-Component frameworks, unlike Template-based frameworks, are free to choose which way to go.
+Props, being more advanced than class names, let component frameworks to freely choose if they go with an open or closed API.
 
 ## Open and closed APIs
 
 ![Open API](ui7.png)
 ![Closed API](ui8.png)
 
-In an open API parts compose up freely. There are no constraints and there is unlimited room for experimentation and play.
+In **open APIs** parts compose up freely.
 
-CSS frameworks and Component libraries embrace this technique.
+There are no constraints and there is unlimited room for experimentation and play.
 
-CSS frameworks have no choice, they are open by nature. Component libraries made this choice explicit.
+CSS frameworks and Component libraries offer &mdash; by their nature, and without any other choice &mdash; open APIs.
 
-Closed APIs restrict the composition of the building blocks to specific rules.
+**Closed APIs** restrict the arbitrary composition of the parts with specific rules.
 
-Systems can't build up freely but following a purpose and direction.
+Systems can not build up freely only by abiding the rules.
 
-Design systems embrace the closed API principle.
+Classless HTML frameworks and Design systems embrace this closed API principle.
 
 ## CSS frameworks, Component libraries, Design systems
 
