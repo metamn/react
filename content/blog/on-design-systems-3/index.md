@@ -175,9 +175,15 @@ Classless HTML frameworks and Design systems embrace this closed API principle.
 ![Component library](ui9.png)
 ![Design system](ui10.png)
 
-Framework- and API-type &mdash; combined together &mdash; defines if a paradigm will produce consistent user interfaces, or not.
+Framework-type and API-type &mdash; combined together &mdash; defines if a paradigm will produce consistent user interfaces, or not.
 
-A good example is Classless HTML.
+**CSS frameworks** are Template-based (class) UI frameworks which come mandatory with an open-ended API. Guaranteeing consistency in such environment is possible, but perhaps only on a small scale, with considerable efforts.
 
-Being constraints based, it is capable to produce coherent and uniform interfaces.
-Having no API &mdash; being not programmable &mdash; it can't produce user interfaces for any, arbitrary use case.
+**Component libraries** are Component-based UI frameworks which come with both constraints-based and open-ended APIs. However component libraries choose the open-ended approach vs. aiming for consistency.
+
+**Design systems** &mdash; Component-based &mdash; choose the constraints-based API approach to deliver consistency.
+
+An interesting example is **Classless HTML**.
+
+Being constraints-based, they are capable to produce coherent and uniform interfaces.
+Having no API &mdash; being not programmable &mdash; they can't produce user interfaces for any &mdash; arbitrary &mdash; use case.
