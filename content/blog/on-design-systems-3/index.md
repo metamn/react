@@ -180,3 +180,13 @@ Guaranteeing consistency in such environment is possible, but perhaps only on a 
 Again, guaranteeing consistency is possible, with efforts.
 
 **Design systems** &mdash; Component-based UI frameworks &mdash; choose the constraints-based API approach to deliver consistency.
+
+## Finally
+
+Creating consistent user interfaces in web context is possible.
+
+To achieve this, one should move away from hacking &mdash; binding with classnames &mdash; to programming &mdash; binding with props.
+
+And from non-programming languages &mdash; HTML, CSS &mdash; to programming languages &mdash; JSX, CSS-in-JS.
+
+Once everything becomes programmable it becomes classic software development. Where theory and practice &mdash; API &mdash; apply, where consistency and scalability is solved.
