@@ -57,7 +57,7 @@ And the story, in short, follows.
 
 In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling on websites. HTML was not linked to CSS via class names &mdash; hence the name. However this paradigm lately became a [trend](https://css-tricks.com/no-class-css-frameworks/) due to its simplicity and scalability.
 
-**CSS Frameworks** are the longest reigning paradigm. They are ubiquitous. Perhaps they are responsible for styling 90% or more of all webpages today. CSS frameworks are all well-known. Bootstrap, Foundation, Tachyons, Bulma, Tailwind &mdash; just to name a few of them.
+**CSS Frameworks** are the longest reigning paradigm. They are ubiquitous. Perhaps they are responsible for styling 90% or more of all webpages today. CSS frameworks are all household names: Bootstrap, Foundation, Tachyons, Bulma, Tailwind &mdash; just to name a few of them.
 
 **Component libraries** and **design systems** are new. The line between them is blurry &mdash; for the novice &mdash; but very important in making a UI consistent or not.
 
@@ -108,15 +108,17 @@ This paradigm makes no explicit bounds between HTML, CSS and Javascript.
 
 HTML has no classes, thus styles and behaviour attached. Styling comes from a separate CSS file, behaviour comes from a separate JavaScript file, and everything is bound together via naming conventions.
 
+Naming conventions are the last thing to scale.
+
 #### Class-based binding
 
 The next paradigm connects the separate parts &mdash; HTML, CSS, Javascript &mdash; via class names, a special HTML attribute.
 
-In spite of being the longest reigning paradigm &mdash; CSS frameworks &mdash; it's fragile on scaling, composition.
+In spite of being the longest reigning paradigm &mdash; CSS frameworks &mdash; are fragile in scaling, composition.
 
 #### Props
 
-The latest advancement &mdash; component libraries and design systems &mdash; integrate &mdash; bind natively &mdash; all parts of the displayable information &mdash; structure, style, behaviour &mdash; into a single standalone component.
+The latest advancement specific for component libraries and design systems &mdash; integrate, bind natively all parts of the displayable information &mdash; structure, style, behaviour &mdash; into a single standalone component.
 
 Scaling and composition now relates to one single item &mdash; the component &mdash; vs. three items &mdash; HTML, CSS, and JavaScript &mdash; as it were before.
 
