@@ -3,7 +3,7 @@ title: 'On design systems — 3'
 date: '2021-11-20'
 ---
 
-Consistent user interfaces in web context. A theory.
+Consistent user interfaces in web context.
 
 <!--more-->
 
@@ -21,31 +21,27 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 ## The current landscape
 
-Until recent years, creating consistent user interfaces were an almost impossible task.
+Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces were an almost impossible task.
 
-With design systems &mdash; introducing a novel design process &mdash; it became possible.
+With [design systems thinking](http://metamn.io/react/on-design-systems-2/) and by introducing a novel design process &mdash; now it is possible to _design_ them.
 
-Design systems ain't a silver bullet. Success isn't guaranteed out of the box. It still requires team discipline and solid mental work. Or, [better tooling](http://metamn.io/react/on-design-systems-2/).
+But is it possible to implement them?
 
-But at least, creating consistent user interfaces is now possible with design systems. Across platforms.
+Stil, current UX/UI design tools and processes, even with design systems, produce visual deliverables which later must be translated to code &mdash; implemented on target platforms, in specific context.
 
-## The contexts
+This article examines the web context.
 
-Current tools and processes in UX/UI design and development, even with design systems, produce two separate, independent deliverables.
+How to develop consistent UIs with web technologies. How to implement a consistently designed UI on the web platform.
 
-First, a visual design, not related at all to code. Then the code, the translation of the design to a platform, via code.
+## The web
 
-This article examines the web context. How to create consistent UIs with web technologies.
+The web platform &mdash; we all know very well &mdash; is the browser.
 
-## The web context
+By using technologies like HTML, CSS, Javascript, WebGL, and more, it manages to display interactive information across different devices and operating systems.
 
-The core web platform &mdash; we all know very well &mdash; is the browser.
+Developing consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript, and run it in the browser.
 
-Using technologies like HTML, CSS, Javascript, WebGL, and more, it manages to display interactive information across devices.
-
-Consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript, and run it in the browser.
-
-## The buzzwords
+## The context
 
 Let's start by mapping up the web buzzwords related to design systems.
 
