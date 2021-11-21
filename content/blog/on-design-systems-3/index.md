@@ -23,27 +23,27 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces were an almost impossible task.
 
-With [design systems thinking](http://metamn.io/react/on-design-systems-2/) and by introducing a novel design process &mdash; now it is possible to _design_ them.
+With [design systems thinking](http://metamn.io/react/on-design-systems-2/) &mdash; by introducing a novel design process &mdash; now it is possible to _design_ in a consistent way.
 
-But is it possible to implement them?
+The question is still open for the implementation part. Can consistently designed UIs be implemented in the same consistent way, preserving the original consistency?
 
-Stil, current UX/UI design tools and processes, even with design systems, produce visual deliverables which later must be translated to code &mdash; implemented on target platforms, in specific context.
+This separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables, which later must be translated to code &mdash; implemented on target platforms, in specific context.
 
-This article examines the web context.
+This article examines this translation in the web context.
 
-How to develop consistent UIs with web technologies. How to implement a consistently designed UI on the web platform.
+How to develop consistent UIs with web technologies? How to implement a consistently designed UI on the web platform?
 
-## The web
+## The web context
 
 The web platform &mdash; we all know very well &mdash; is the browser.
 
 By using technologies like HTML, CSS, Javascript, WebGL, and more, it manages to display interactive information across different devices and operating systems.
 
-Developing consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript, and run it in the browser.
+Developing consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript &mdash; and run it in the browser.
 
-## The context
+## The historical context
 
-Web design and development has a long history. Through decades it evolved from one paradigm to another.
+Web front-end development has a long history. Through decades it evolved from one paradigm to another.
 
 Let's put design systems into a historical context. Each quadrant representing an era in web development.
 
@@ -51,15 +51,15 @@ Let's put design systems into a historical context. Each quadrant representing a
 
 The historical timeline is depicted counter-clockwise.
 
-The axes connect web development to general software development terms and context: APIs and frameworks.
+The axes connect web development to general software development terms and theory: APIs and frameworks.
 
 And the story, in short, follows.
 
 In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling on websites. HTML was not linked to CSS via class names &mdash; hence the name. However this paradigm lately became a [trend](https://css-tricks.com/no-class-css-frameworks/) due to it's simplicity and scalability.
 
-**CSS Frameworks** are the longest reigning paradigm. They are ubiquoitus. Perhaps they style 90% or more of all webpages today. Just to name a few of them: Bootstrap, Foundation, Tachyons, Bulma, Tailwind.
+**CSS Frameworks** are the longest reigning paradigm. They are ubiquoitus. Perhaps they are responsible for styling 90% or more of all webpages today. CSS frameworks are all well-known. Bootstrap, Foundation, Tachyons, Bulma, Tailwind &mdash; just to name a few of them.
 
-**Component libraries** and **design systems** are new. The line between them is blurry &mdash; for the novice &mdash; but very important. It makes a UI consistent or not.
+**Component libraries** and **design systems** are new. The line between them is blurry &mdash; for the novice &mdash; but very important in making an UI consistent or not.
 
 ## The journey
 
@@ -69,7 +69,7 @@ For those on the run, there is a big picture. It's enjoyable on larger screens v
 
 ![UI](ui.png)
 
-For the rest, there is a breakdown. A step-by-step guide where at the end a consistent UI unfolds.
+For the rest, there is a breakdown. A step-by-step guide where at the end a consistent UI technology unfolds.
 
 ## User interfaces
 
@@ -104,10 +104,9 @@ The way of binding &mdash; the binding methods &mdash; are important. Each metho
 
 #### Classless
 
-This paradigm makes no bounds between HTML, CSS and Javascript.
-It leaves binding exclusively to the browser.
+This paradigm makes no explicit bounds between HTML, CSS and Javascript.
 
-HTML has no classes, styles attached. Styling comes from a separate CSS file, where all HTML elements are styled by name.
+HTML has no classes, thus styles and behaviour attached. Styling comes from a separate CSS file, behaviour comes from a separate JavaScript file, and everuthing is bound together via naming conventions.
 
 #### Class-based binding
 
@@ -119,7 +118,7 @@ In spite being the longest reigning paradigm &mdash; CSS frameworks &mdash; it's
 
 The latest advancement &mdash; component libraries and design systems &mdash; integrate &mdash; bind natively &mdash; all parts of the displayable information &mdash; structure, style, behaviour &mdash; into a single standalone component.
 
-This is where hope lies to build consistent UIs.
+Scaling and composition now relates to one single item &mdash; the component &mdash; vs. three items &mdash; HTML, CSS, and JavaScript &mdash; as it were before.
 
 ## API
 
@@ -175,7 +174,7 @@ Framework-type and API-type &mdash; combined together &mdash; defines if a parad
 
 Guaranteeing consistency in such environment is possible, but perhaps only on a small scale, with considerable efforts.
 
-**Component libraries** are Component-based UI frameworks with props-based bindings choosing the open-ended approach for fredom vs. the closed aiming for consistency.
+**Component libraries** are Component-based UI frameworks with props-based bindings capable to choose between the open-ended approach, for fredom, vs. the closed approach, aiming for consistency.
 
 Again, guaranteeing consistency is possible, with efforts.
 
@@ -185,8 +184,8 @@ Again, guaranteeing consistency is possible, with efforts.
 
 Creating consistent user interfaces in web context is possible.
 
-To achieve this, one should move away from hacking &mdash; binding with classnames &mdash; to programming &mdash; binding with props.
+To achieve this feature, one should move away from hacking &mdash; binding with classnames &mdash; to programming &mdash; binding with props.
 
-And from non-programming languages &mdash; HTML, CSS &mdash; to programming languages &mdash; JSX, CSS-in-JS.
+And to move from non-programming languages &mdash; HTML, CSS &mdash; to programming languages &mdash; JSX, CSS-in-JS.
 
-Once everything becomes programmable it becomes classic software development. Where theory and practice &mdash; API &mdash; apply, where consistency and scalability is solved.
+Once everything is programmable, it becomes standard, classic software development. Where well-known, battle-tested theory and practice &mdash; API &mdash; apply, and where consistency and scalability is solved.
