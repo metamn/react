@@ -43,43 +43,43 @@ Developing consistent UIs in web context, thus, translates into implementing a d
 
 ## The context
 
-Let's start by mapping up the web buzzwords related to design systems.
+Web design and development has a long history. Through decades it evolved from one paradigm to another.
+
+Let's put design systems into a historical context. Each quadrant representing an era in web development.
 
 ![The context](ds-context-black-nologo.png)
 
-The quadrants put design systems into a historical context &mdash; each quadrant representing an era in web development. The historical timeline is depicted counter-clockwise.
+The historical timeline is depicted counter-clockwise.
 
-The axes put web development into a larger &mdash; software development &mdash; context: APIs and frameworks.
+The axes connect web development to general software development terms and context: APIs and frameworks.
 
-And the buzzwords, in short:
+And the story, in short, follows.
 
-In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling on websites. Hence HTML was not linked to CSS via class names. However this paradigm lately became a [trend](https://css-tricks.com/no-class-css-frameworks/) again due to it's simplicity and scalability.
+In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling on websites. HTML was not linked to CSS via class names &mdash; hence the name. However this paradigm lately became a [trend](https://css-tricks.com/no-class-css-frameworks/) due to it's simplicity and scalability.
 
-**CSS Frameworks** are ubiquoitus. Bootstrap, Foundation, Tachyons, Bulma, Tailwind. Perhaps they style 90% or more of all webpages today.
+**CSS Frameworks** are the longest reigning paradigm. They are ubiquoitus. Perhaps they style 90% or more of all webpages today. Just to name a few of them: Bootstrap, Foundation, Tachyons, Bulma, Tailwind.
 
-**Component libraries** and **design systems** are new. The line between them is blurry for the novice. But &mdash; it turns out in the next chapters &mdash; this line defines if a UI is consistent or not.
+**Component libraries** and **design systems** are new. The line between them is blurry &mdash; for the novice &mdash; but very important. It makes a UI consistent or not.
 
-## Consistent user interfaces in web context
+## The journey
 
-It takes a journey from user interfaces to consistent web UIs &mdash; a dozen of steps, some steps depicting an era in front-end development.
+It takes a journey from the term `user interfaces` to `consistent web user interfaces`. A dozen of steps, some steps depicting an era in front-end development.
 
-For those on the rush there is a big picture. It's enjoyable on larger screens via a click.
+For those on the run, there is a big picture. It's enjoyable on larger screens via a click.
 
 ![UI](ui.png)
 
-For the rest, there is a breakdown. A step-by-step overview of the process where a consistent UI theory unfolds.
+For the rest, there is a breakdown. A step-by-step guide where at the end a consistent UI unfolds.
 
 ## User interfaces
 
 ![UI](ui1.png)
 
-User interfaces display information. A special information: equipped with structure, presentation and behaviour.
+User interfaces display a certain type of information. Information equipped with structure, presentation and behaviour.
 
 Structure and presentation is familiar from graphic and print design. It defines layout and style.
 
-Behaviour is specific to interactive environments like the web.
-
-This dynamic context requires the user interface to handle change &mdash; to behave on change.
+Behaviour is specific to interactive environments like the web. This dynamic context requires the user interface to handle change &mdash; to behave on change.
 Per se, it equips information with a dynamic attribute.
 
 ## Web user interfaces
@@ -102,26 +102,24 @@ HTML, CSS and Javascript are standalone technologies. To work together &mdash; t
 
 The way of binding &mdash; the binding methods &mdash; are important. Each method defines an era in front-end development.
 
-### Classless
+#### Classless
 
 This paradigm makes no bounds between HTML, CSS and Javascript.
 It leaves binding exclusively to the browser.
 
 HTML has no classes, styles attached. Styling comes from a separate CSS file, where all HTML elements are styled by name.
 
-### Class-based binding
+#### Class-based binding
 
 The next paradigm connects the separate parts &mdash; HTML, CSS, Javascript &mdash; via class names, a special HTML attribute.
 
-So far this was the longest standing paradigm &mdash; the era of CSS frameworks &mdash; and turned out to be fragile on scaling, composition.
+In spite being the longest reigning paradigm &mdash; CSS frameworks &mdash; it's fragile on scaling, composition.
 
-### Props
+#### Props
 
-The latest advancement, which integrates &mdash; binds natively &mdash; all parts: HTML, CSS, Javascript into a single standalone component.
+The latest advancement &mdash; component libraries and design systems &mdash; integrate &mdash; bind natively &mdash; all parts of the displayable information &mdash; structure, style, behaviour &mdash; into a single standalone component.
 
-And manages scaling via props.
-
-This era is characterised by component libraries and design systems.
+This is where hope lies to build consistent UIs.
 
 ## API
 
@@ -131,7 +129,7 @@ The acronym stands for Application Programming Interface and comes from general 
 
 APIs bind together standalone parts of a software system &mdash; in our case HTML, CSS and Javascript &mdash; in a programmable way.
 
-The higher the programmability of the bindings, the better the scalability of the system.
+The higher the programmability of the bindings, the better the quality and scalability of the system.
 
 ## Template- and Component-based UI frameworks
 
@@ -146,7 +144,7 @@ This leads to an open API, where everything is possible, even chaotic user inter
 
 **Component-based UI frameworks** use props as API mechanism to bind together HTML, CSS and Javascript into standalone components.
 
-Props, being more advanced than class names, let component frameworks to freely choose if they go with an open or closed API.
+Props-based binding gives a choice. It's up to the framework to decide if it goes with an open or closed API.
 
 ## Open and closed APIs
 
@@ -157,15 +155,15 @@ In **open APIs** parts compose up freely.
 
 There are no constraints and there is unlimited room for experimentation and play.
 
-CSS frameworks and Component libraries offer &mdash; by their nature, and without any other choice &mdash; open APIs.
+CSS frameworks &mdash; by their nature &mdash; and Component libraries &mdash; by choice &mdash; offer open APIs.
 
 **Closed APIs** restrict the arbitrary composition of the parts with specific rules.
 
 Systems can not build up freely only by abiding the rules.
 
-Classless HTML frameworks and Design systems embrace this closed API principle.
+Classless HTML frameworks &mdash; by their nature &mdash; and Design systems &mdash; by choice &mdash; embrace this closed API principle.
 
-## Finally
+## Consistent and non-consistent UIs
 
 ![CSS framework](ui9a.png)
 ![Component library](ui9.png)
@@ -173,13 +171,12 @@ Classless HTML frameworks and Design systems embrace this closed API principle.
 
 Framework-type and API-type &mdash; combined together &mdash; defines if a paradigm will produce consistent user interfaces, or not.
 
-**CSS frameworks** are Template-based (class) UI frameworks which come mandatory with an open-ended API. Guaranteeing consistency in such environment is possible, but perhaps only on a small scale, with considerable efforts.
+**CSS frameworks** are Template-based UI frameworks with class-based bindings resulting, involuntarily and by definition, in an open-ended API.
 
-**Component libraries** are Component-based UI frameworks which come with both constraints-based and open-ended APIs. However component libraries choose the open-ended approach vs. aiming for consistency.
+Guaranteeing consistency in such environment is possible, but perhaps only on a small scale, with considerable efforts.
 
-**Design systems** &mdash; Component-based &mdash; choose the constraints-based API approach to deliver consistency.
+**Component libraries** are Component-based UI frameworks with props-based bindings choosing the open-ended approach for fredom vs. the closed aiming for consistency.
 
-An interesting example is **Classless HTML**.
+Again, guaranteeing consistency is possible, with efforts.
 
-Being constraints-based, they are capable to produce coherent and uniform interfaces.
-Having no API &mdash; being not programmable &mdash; they can't produce user interfaces for any &mdash; arbitrary &mdash; use case.
+**Design systems** &mdash; Component-based UI frameworks &mdash; choose the constraints-based API approach to deliver consistency.
