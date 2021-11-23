@@ -3,7 +3,7 @@ title: 'On design systems — 1'
 date: '2021-01-06'
 ---
 
-Context and deliverables.
+Workflow, practices and deliverables.
 
 <!--more-->
 
