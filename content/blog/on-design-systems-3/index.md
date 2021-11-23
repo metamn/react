@@ -21,11 +21,11 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 ## The current landscape
 
-Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces were an almost impossible task.
+Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces at a relative large scale were an almost impossible task.
 
 With [design systems thinking](http://metamn.io/react/on-design-systems-2/) &mdash; by introducing a novel design process &mdash; now it is possible to _design_ consistently.
 
-The question is still open for the implementation part. Can consistently-designed UIs be implemented in the same consistent way, preserving the original consistency, without distorting it with coding?
+The question is still open for the implementation part. Can consistently-designed UIs be implemented in the same consistent way, preserving the original consistency, while coding?
 
 The design / development separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables, which later must be translated to code &mdash; implemented on target platforms, in a specific context.
 
