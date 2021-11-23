@@ -1,12 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 23 Nov 2021 10:32:31 GMT</lastBuildDate><item><title><![CDATA[On design systems]]></title><description><![CDATA[A series of articles.]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Tue, 23 Nov 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A series of articles.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[:heart: React]]></title><description><![CDATA[To React with best practices.]]></description><link>http://metamn.io/react</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 23 Nov 2021 10:49:10 GMT</lastBuildDate><item><title><![CDATA[On design systems]]></title><description><![CDATA[A series of articles.]]></description><link>http://metamn.io/react/on-design-sytems/</link><guid isPermaLink="false">http://metamn.io/react/on-design-sytems/</guid><pubDate>Tue, 23 Nov 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;A series of articles.&lt;/p&gt;
 &lt;!--more--&gt;
 &lt;hr&gt;
-&lt;p&gt;Design systems bring a complex and novel approach to UI/UX design and development — to solve its inherent UI consistency and scalability problems.&lt;/p&gt;
-&lt;p&gt;So far, only dedicated companies with resources could afford a design system.&lt;/p&gt;
+&lt;p&gt;Design systems bring a complex and novel approach to UI/UX design and development — to solve its inherent consistency and scalability problems.&lt;/p&gt;
+&lt;p&gt;As of today, only dedicated companies with resources can afford a design system.&lt;/p&gt;
 &lt;p&gt;The series walks-through the problem in-depth, and from the viewpoint of all stakeholders.&lt;/p&gt;
 &lt;p&gt;And proposes simple solutions, of recent origin, for companies with less resources — to be able to roll their own.&lt;/p&gt;
 &lt;h2&gt;1. Workflow, practices and deliverables&lt;/h2&gt;
-&lt;p&gt;An introductory article — based on extensive analysis — for all stakeholders, focusing on common &lt;a href=&quot;http://metamn.io/react/on-design-sytems-1/&quot;&gt;workflow, practices and deliverables&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://metamn.io/react/on-design-sytems-1/&quot;&gt;This is an&lt;/a&gt; introductory article — based on extensive analysis — for all stakeholders, focusing on common workflow, practices and deliverables.&lt;/p&gt;
 &lt;h2&gt;2. Design tools and processes&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;http://metamn.io/react/on-design-systems-2/&quot;&gt;This article&lt;/a&gt; examines design systems from the designer viewpoint.&lt;/p&gt;
 &lt;p&gt;Offers novel ideas — design systems as database (code), pair designing — to reduce the cost of rolling out design systems.&lt;/p&gt;
@@ -16,7 +16,7 @@
 &lt;p&gt;It presents current front-end development paradigms and examines why they lead, or not, to consistent user interfaces.&lt;/p&gt;
 &lt;p&gt;And comes to the conclusion, that hacking and non-programming languages must be replaced with standard software development tools and patterns to end fragility in front-end development.&lt;/p&gt;
 &lt;h2&gt;4. Implementing a design system in React and Typescript&lt;/h2&gt;
-&lt;p&gt;A work in progress. A complete example for developers to apply the findings from the previous articles.&lt;/p&gt;
+&lt;p&gt;A work in progress. A complete example for developers where the findings above merge into a real-life project.&lt;/p&gt;
 &lt;hr&gt;
 &lt;hr&gt;
 &lt;hr&gt;
