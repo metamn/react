@@ -1,6 +1,6 @@
 ---
 title: 'On design systems — 3'
-date: '2021-11-20'
+date: '2021-11-23'
 ---
 
 Consistent user interfaces in web context.
@@ -69,7 +69,7 @@ It takes a journey from the term `user interface` to `consistent web user interf
 
 For those on the run, there is a big picture. It's enjoyable on larger screens via a click.
 
-![UI](ui.png)
+![Uniform UI](uniform-ui.png)
 
 For the rest, there is a breakdown. A step-by-step guide where at the end a consistent UI approach unfolds.
 
