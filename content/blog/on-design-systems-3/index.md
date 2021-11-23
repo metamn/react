@@ -39,7 +39,7 @@ The web platform &mdash; we all know very well &mdash; is the browser.
 
 By using technologies like HTML, CSS, and Javascript &mdash; it manages to display interactive information across different devices and operating systems.
 
-Developing consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript &mdash; and run it in the browser.
+Developing consistent UIs in web context, thus, translates into implementing a design system with HTML, CSS, and Javascript &mdash; and running it in the browser.
 
 ## The historical context
 
@@ -57,7 +57,7 @@ Let's put design systems into this historical context.
 
 And the story, in short, follows.
 
-In the beginning &mdash; **Classless HTML** &mdash; there weren't much styling and interactivity on websites. HTML was not linked to CSS and Javascript via class names &mdash; hence the name.
+In the beginning &mdash; **Classless HTML** &mdash; there wasn't much styling and interactivity on websites. HTML was not linked to CSS and Javascript via class names &mdash; hence the name.
 
 **CSS Frameworks** are the longest reigning paradigm. They are ubiquitous. Perhaps they are responsible for styling 90% or more of all webpages today. CSS frameworks are all household names: Bootstrap, Foundation, Tachyons, Bulma, Tailwind &mdash; just to name a few of them.
 
@@ -116,7 +116,7 @@ Naming conventions are the last thing to scale.
 
 The next paradigm connects the separate parts &mdash; HTML, CSS, Javascript &mdash; via class names, a special HTML attribute.
 
-In spite of being the longest reigning paradigm &mdash; CSS frameworks &mdash; are fragile in scaling, composition.
+In spite of being the longest reigning paradigm &mdash; CSS frameworks &mdash; are [fragile](https://www.oreilly.com/library/view/enduring-css/9781787282803/ch02.html) in scaling, composition.
 
 #### Props
 
@@ -176,11 +176,11 @@ API-type and framework-type &mdash; combined &mdash; defines if a paradigm will 
 
 **CSS frameworks** are Template-based UI frameworks with class-based API bindings resulting, involuntarily and by definition, in an open-ended API.
 
-Guaranteeing consistency in such environment is possible, but perhaps only on a small scale, with considerable efforts.
+Guaranteeing consistency in such an environment is possible, but perhaps only on a small scale, with considerable efforts.
 
 **Component libraries** are Component-based UI frameworks with props-based API bindings who choose the open-ended approach.
 
-Again, guaranteeing consistency is possible, with efforts.
+Again, guaranteeing consistency is possible, with effort.
 
 **Design systems** &mdash; Component-based UI frameworks &mdash; choose the constraints-based API approach to deliver consistency.
 
@@ -197,3 +197,7 @@ Once everything is programmable, it becomes standard, classic software developme
 Where well-known, battle-tested theory and practice &mdash; API, Framework &mdash; apply, and where consistency and scalability is solved.
 
 ## Resources
+
+1. [Consistent — Definitions](https://www.wordnik.com/words/consistent)
+2. [On design systems — 2: Tools and processes](http://metamn.io/react/on-design-systems-2/)
+3. [The Problems of CSS at Scale](https://www.oreilly.com/library/view/enduring-css/9781787282803/ch02.html)
