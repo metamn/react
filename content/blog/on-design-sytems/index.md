@@ -9,9 +9,9 @@ A series of articles.
 
 ---
 
-Design systems bring a complex and novel approach to UI/UX design and development &mdash; to solve its inherent UI consistency and scalability problems.
+Design systems bring a complex and novel approach to UI/UX design and development &mdash; to solve its inherent consistency and scalability problems.
 
-So far, only dedicated companies with resources could afford a design system.
+As of today, only dedicated companies with resources can afford a design system.
 
 The series walks-through the problem in-depth, and from the viewpoint of all stakeholders.
 
@@ -19,7 +19,7 @@ And proposes simple solutions, of recent origin, for companies with less resourc
 
 ## 1. Workflow, practices and deliverables
 
-An introductory article &mdash; based on extensive analysis &mdash; for all stakeholders, focusing on common [workflow, practices and deliverables](http://metamn.io/react/on-design-sytems-1/).
+[This is an](http://metamn.io/react/on-design-sytems-1/) introductory article &mdash; based on extensive analysis &mdash; for all stakeholders, focusing on common workflow, practices and deliverables.
 
 ## 2. Design tools and processes
 
@@ -39,7 +39,7 @@ And comes to the conclusion, that hacking and non-programming languages must be 
 
 ## 4. Implementing a design system in React and Typescript
 
-A work in progress. A complete example for developers to apply the findings from the previous articles.
+A work in progress. A complete example for developers where the findings above merge into a real-life project.
 
 ---
 
