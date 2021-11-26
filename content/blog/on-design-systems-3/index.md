@@ -21,7 +21,7 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 ## The current landscape
 
-Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces at a relative large scale were an almost impossible task.
+Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces were a herculean task.
 
 With [design systems thinking](http://metamn.io/react/on-design-systems-2/) &mdash; by introducing a novel design process &mdash; now it is possible to _design_ consistently.
 
@@ -29,7 +29,7 @@ The question is still open for the implementation part. Can consistently-designe
 
 The design / development separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables, which later must be translated to code &mdash; implemented on target platforms, in a specific context.
 
-This article examines the translation in the web context.
+This article examines implementation in the web context.
 
 How to develop consistent UIs with web technologies? How to implement a consistently designed UI on the web platform?
 
@@ -49,11 +49,7 @@ Let's put design systems into this historical context.
 
 ![The context](ds-context-black-nologo.png)
 
-- Each quadrant represents an era in web development.
-
-- The historical timeline is depicted counter-clockwise.
-
-- The axes connect web development to general software development terms and theory: APIs and frameworks.
+Each quadrant represents an era in web development; the historical timeline is depicted counter-clockwise; the axes connect web development to general software development practice: APIs and frameworks.
 
 And the story, in short, follows.
 
