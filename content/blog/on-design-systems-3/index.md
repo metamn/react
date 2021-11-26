@@ -11,7 +11,7 @@ Consistent user interfaces in web context.
 
 ## Consistent user interfaces
 
-Consistent &mdash; coherent and uniform &mdash; user interfaces eliminate all visual and logical glitches.
+Consistent &mdash; coherent and uniform &mdash; user interfaces display no visual and logical glitches.
 
 User interfaces, when consistent, _feel_ complete. They have no visible errors, and the experience they provide resembles enjoying an artwork.
 
@@ -23,19 +23,17 @@ Consistent UIs talk about the intent and the mastery of its creators. They persu
 
 Until recent years, creating &mdash; designing and developing &mdash; consistent user interfaces were a herculean task.
 
-With [design systems thinking](http://metamn.io/react/on-design-systems-2/) &mdash; by introducing a novel design process &mdash; now it is possible to _design_ consistently.
+With [design systems thinking](http://metamn.io/react/on-design-systems-2/) &mdash; by introducing a novel design process &mdash; now consitent _design_ is possible.
 
-The question is still open for the implementation part. Can consistently-designed UIs be implemented in the same consistent way, preserving the original consistency, while coding?
+The question is still open for the implementation part. Is consistent implementation possible?
 
-The design / development separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables, which later must be translated to code &mdash; implemented on target platforms, in a specific context.
+The design / development separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables. Artifacts requiring translation to computing platforms via code.
 
-This article examines implementation in the web context.
-
-How to develop consistent UIs with web technologies? How to implement a consistently designed UI on the web platform?
+This article examines the web context. How to develop consistent UIs with web technologies?
 
 ## The web context
 
-The web platform &mdash; we all know very well &mdash; is the browser.
+The web platform &mdash; we all know well &mdash; is the browser.
 
 By using technologies like HTML, CSS, and Javascript &mdash; it manages to display interactive information across different devices and operating systems.
 
@@ -49,15 +47,15 @@ Let's put design systems into this historical context.
 
 ![The context](ds-context-black-nologo.png)
 
-Each quadrant represents an era in web development; the historical timeline is depicted counter-clockwise; the axes connect web development to general software development practice: APIs and frameworks.
+Each quadrant represents an era in web development; the historical timeline reads counter-clockwise; the axes connect web development to general software development practice: APIs and frameworks.
 
 And the story, in short, follows.
 
 In the beginning &mdash; **Classless HTML** &mdash; there wasn't much styling and interactivity on websites. HTML was not linked to CSS and Javascript via class names &mdash; hence the name.
 
-**CSS Frameworks** are the longest reigning paradigm. They are ubiquitous. Perhaps they are responsible for styling 90% or more of all webpages today. CSS frameworks are all household names: Bootstrap, Foundation, Tachyons, Bulma, Tailwind &mdash; just to name a few of them.
+**CSS Frameworks** are the longest reigning paradigm. They are ubiquitous. Perhaps they are responsible for styling 90% or more of all webpages today. CSS frameworks are all household names: Bootstrap, Foundation, Tachyons, Bulma, Tailwind.
 
-**Component libraries** and **design systems** are new. The line between them is blurry &mdash; for the novice &mdash; but very important in making a UI consistent or not.
+**Component libraries** and **design systems** are new. The line between them is blurry &mdash; for the novice &mdash; but important in making a UI consistent or not.
 
 ## The journey
 
@@ -73,7 +71,7 @@ For the rest, there is a breakdown. A step-by-step guide where at the end a cons
 
 ![UI](ui1.png)
 
-User interfaces display a certain type of information. Information equipped with structure, presentation and behaviour.
+User interfaces display information. Information equipped with structure, presentation and behaviour.
 
 Structure and presentation is familiar from graphic and print design. It defines layout and style.
 
@@ -96,7 +94,7 @@ Browsers:
 
 ![Binding](ui3.png)
 
-HTML, CSS and Javascript are standalone technologies. To work together &mdash; they need to be merged, bound together.
+HTML, CSS and Javascript are standalone technologies. To work together &mdash; they must merge, bind together.
 
 The way of binding &mdash; the binding methods &mdash; are important. Each method defines a paradigm, an era in front-end development.
 
@@ -104,7 +102,7 @@ The way of binding &mdash; the binding methods &mdash; are important. Each metho
 
 This paradigm makes no explicit bounds between HTML, CSS and Javascript.
 
-HTML has no classes, thus styles and behaviour attached. Styling comes from a separate CSS file, behaviour comes from a separate JavaScript file, and everything is bound together via naming conventions.
+HTML has no classes, thus styles and behaviour attached. Styling comes from a separate CSS file, behaviour comes from a separate JavaScript file, and everything binds together via naming conventions.
 
 Naming conventions are the last thing to scale.
 
@@ -150,15 +148,11 @@ Props-based binding gives a choice. Either go with an open, or a closed API.
 ![Open API](ui7.png)
 ![Closed API](ui8.png)
 
-In **open APIs**, parts compose up freely.
-
-There are no constraints on how parts bind together, and there is unlimited room for experimentation and play.
+In **Open APIs**, parts compose up freely without constraints. No rules offer unlimited room for experimentation and play.
 
 CSS frameworks &mdash; by their nature &mdash; and Component libraries &mdash; by choice &mdash; offer open APIs.
 
-**Closed APIs** restrict the arbitrary composition of the parts with specific rules.
-
-Systems can not build up freely, only by following the rules.
+**Closed APIs** restrict the arbitrary composition of the parts with rules. Rules offer consistency and scalability.
 
 Classless HTML frameworks &mdash; by their nature &mdash; and design systems &mdash; by choice &mdash; embrace the closed API principle.
 
@@ -172,15 +166,15 @@ API-type and framework-type &mdash; combined &mdash; defines if a paradigm will 
 
 **CSS frameworks** are Template-based UI frameworks with class-based API bindings resulting, involuntarily and by definition, in an open-ended API.
 
-Guaranteeing consistency in such an environment is possible, but perhaps only on a small scale, with considerable efforts.
+Guaranteeing consistency in such an environment is possible, on a small scale, with considerable efforts.
 
 **Component libraries** are Component-based UI frameworks with props-based API bindings who choose the open-ended approach.
 
-Again, guaranteeing consistency is possible, with effort.
+Guaranteeing consistency is possible, again, with restrictions and effort.
 
 **Design systems** &mdash; Component-based UI frameworks &mdash; choose the constraints-based API approach to deliver consistency.
 
-## Finally
+## A new take
 
 Creating consistent user interfaces in web context is possible.
 
@@ -190,7 +184,7 @@ And to move from non-programming languages &mdash; HTML, CSS &mdash; to programm
 
 Once everything is programmable, it becomes standard, classic software development.
 
-Where well-known, battle-tested theory and practice &mdash; API, Framework &mdash; apply, and where consistency and scalability is solved.
+Where well-known, battle-tested theory and practice &mdash; API, Framework &mdash; apply, to solve consistency and scalability.
 
 ## Resources
 
