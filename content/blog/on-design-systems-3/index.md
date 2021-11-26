@@ -27,9 +27,9 @@ With [design systems thinking](http://metamn.io/react/on-design-systems-2/) &mda
 
 The question is still open for the implementation part. Is consistent implementation possible?
 
-The design / development separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables. Artifacts requiring translation to computing platforms via code.
+The design / development separation exists because current UX/UI design tools and processes, even following the design systems paradigm, produce visual deliverables. Artifacts requiring further translation to a computing platform via code.
 
-This article examines the web context. How to develop consistent UIs with web technologies?
+This article examines the web platform. How to develop consistent UIs with web technologies?
 
 ## The web context
 

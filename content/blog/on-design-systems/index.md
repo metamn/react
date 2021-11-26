@@ -11,11 +11,11 @@ A series of articles.
 
 Design systems bring a novel approach to UI/UX design and development &mdash; to solve its inherent consistency and scalability problems.
 
-As of today, dedicated companies &mdash; with resources &mdash; can afford their own custom design system. This must change.
+As of today, dedicated companies &mdash; with resources &mdash; can afford their own custom design system. Others copy or innovate.
 
 The series walks-through the problem in-depth, from the viewpoint of all stakeholders.
 
-And proposes a simple solution, of recent origin, for companies with less resources to roll their own.
+And proposes a solution &mdash; of recent origin &mdash; to help companies with less resources to roll their own.
 
 ## 1. Workflow, practices and deliverables
 
