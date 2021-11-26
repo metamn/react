@@ -11,7 +11,7 @@ A series of articles.
 
 Design systems bring a novel approach to UI/UX design and development &mdash; to solve its inherent consistency and scalability problems.
 
-However, as of today, only dedicated companies &mdash; with resources &mdash; can afford their own custom design system. This must change.
+As of today, dedicated companies &mdash; with resources &mdash; can afford their own custom design system. This must change.
 
 The series walks-through the problem in-depth, from the viewpoint of all stakeholders.
 
@@ -27,7 +27,7 @@ And proposes a simple solution, of recent origin, for companies with less resour
 
 Offers novel ideas &mdash; design systems as database (code), pair designing &mdash; to reduce the cost of rolling out design systems.
 
-Finally, it presents an ideal and working use case where a rare species &mdash; a developer who designs &mdash; creates a design system, and more, in the browser.
+It presents an ideal and working use case where a rare species &mdash; a developer who designs &mdash; creates a design system, and more, in the browser.
 
 ## 3. Consistent user interfaces in web context
 
@@ -35,7 +35,7 @@ Finally, it presents an ideal and working use case where a rare species &mdash; 
 
 It presents past and current front-end development paradigms and examines why they lead, or not, to consistent user interfaces.
 
-And comes to the conclusion, that hacking and non-programming languages must be replaced with standard software development tools and patterns to end fragility in front-end development.
+And comes to the conclusion: to end fragility in front-end development &mdash; standard software development patterns and practices should replace the current hacking mindset and non-programming languages.
 
 ## 4. Implementing a design system in React and Typescript
 
