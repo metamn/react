@@ -40,3 +40,11 @@ date: '2022-11-22'
 - https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec04-types/lec04.html
 - https://rescript-lang.org/docs/manual/latest/variant
 - https://itnext.io/practical-introduction-to-algebraic-datatypes-adts-in-typescript-1cb6952e4c6d
+
+6 - How it solves real-world problems? (Is it true for real world problems?)
+
+- Edo2 + NFTDEB => edo3, solving ~15 major issues
+
+7 - Is it future proof? (check scalability)
+
+- New CSS additions should work (container queries, etc) with edo3 and the theory + implementation above
