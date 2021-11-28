@@ -14,6 +14,7 @@ date: '2022-11-22'
 2 - DS from programming perspective
 
 - What is a system? Hickey: = Language (API) + Stack (Tokens, CL, DS)
+- https://www.youtube.com/watch?v=ROor6_NGIWU
 
 3 - What is scalable?
 
