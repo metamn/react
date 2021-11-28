@@ -60,8 +60,27 @@ Scalable and consistent UIs.
 
 - Back to API, CL and DS + scalability
   => CL = open API + standalone components => scalable
-  => DS = closed API + standalone components => scalable inside the app context
+  => DS = closed API + standalone components => scalable inside the app context, following the app rules
   => every app builds on a DS for consistency, which builds on a CL for scalability
+
+- In other words:
+  - App => Rules => DS (closed API, API based on rules)
+  - CL => No rules, or API theory for components
+  - Tokens => no rules, or API theory for software (functions)
+
+=> API theory must be checked
+
+### API theory
+
+- Deno: 0-2, then a props / object
+- 0: DS
+- 1: variant
+- 1+: extensibility (HARD PROBLEM) + cognitive load
+
+```JS
+const spacing = edoSpacing('margin', 'all', 'default', Object)
+const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: 'double', returnValueVariant: Object})
+```
 
 ## 5 - For web specific technology (how to do it with web tech?)
 
