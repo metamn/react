@@ -9,6 +9,19 @@ Scalable and consistent UIs.
 
 ---
 
+## TLDR
+
+- scalability is growth but has many facets (network, db, software, ...)
+- scalable UI = composable + extensible + usable (learnable, less cognitive load)
+
+  - composable is relative easy, goes down to open and closed APIs
+  - extensibility is hard; it was impossible (?) before FP and ADT, but now it might be the silver bullet
+  - usability is perhahs, again hard: See Thayer2021TheoryOfRobustAPIKnowledge
+
+- scalability always relates back to the API, but that API is confusing / still unclear, it seems to have many facets
+
+- a hint / guess is that FP/ADT like API offers extensibility, and gives a pattern / paradigm for composability
+
 ## 1 - Previous:
 
 - consistent UI
@@ -70,16 +83,21 @@ Scalable and consistent UIs.
 
 => API theory must be checked
 
-### API theory
+### API theory for components
+
+- Are the same as for the software ?
+- Does FP / ADT is an API theory?
+
+### API theory or functions / software
 
 - Deno: 0-2, then a props / object
 - 0: DS
-- 1: variant
+- 1: variant => leads to algebraic data types (ADT)
 - 1+: extensibility (HARD PROBLEM) + cognitive load
 
 ```JS
-const spacing = edoSpacing('margin', 'all', 'default', Object)
-const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: 'double', returnValueVariant: Object})
+const spacing = edoSpacing('margin', 'all', 'default', Object) // Co cognitive load
+const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: 'double', returnValueVariant: Object}) // Cognitive load
 ```
 
 ## 5 - For web specific technology (how to do it with web tech?)
@@ -89,14 +107,23 @@ const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: '
 - TS: Extensibility Input<T> Process<T> Output<T>
 - React + TS = Algebraic Data Types, Effects
 
+### ADTs
+
+- mental model
+- under research => many unclear explanations
+- relates to FP, Typed languages
+- handles uncerainity: instead of endless ifs, just a switch
+- enables extensibility: <T> describes the data, metadata and the code too (the constructor) so it should be extensible (https://acko.net/blog/on-variance-and-extensibility/)
+- deals with polymorphism, which perhaps is extensibility.
+- can be implemented with React and TS, ie a DS can be made functional with ADTs (https://jrsinclair.com/articles/2020/algebraic-structure-of-functions-illustrated-with-react-components/)
+
 - https://overreacted.io/algebraic-effects-for-the-rest-of-us/
-- https://jrsinclair.com/articles/2020/algebraic-structure-of-functions-illustrated-with-react-components/
-- https://boxbase.org/entries/2020/aug/10/review-of-simple-essence-of-algebraic-subtyping/
+- https://itnext.io/practical-introduction-to-algebraic-datatypes-adts-in-typescript-1cb6952e4c6d
+- https://jrsinclair.com/articles/2020/algebraic-structure-of-functions-illustrated-with-react-components/ !!! VERY IMPORTANT, aka HOW TO MAKE A DS WITH FP AND REACT !!!
 - https://blog.reesew.io/algebraic-effects-for-react-developers
 - https://en.wikipedia.org/wiki/Algebraic_data_type
 - https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec04-types/lec04.html
 - https://rescript-lang.org/docs/manual/latest/variant
-- https://itnext.io/practical-introduction-to-algebraic-datatypes-adts-in-typescript-1cb6952e4c6d
 
 ## 6 - How it solves real-world problems? (Is it true for real world problems?)
 
