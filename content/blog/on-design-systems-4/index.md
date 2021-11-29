@@ -11,44 +11,45 @@ Scalable and consistent UIs.
 
 ## TLDR
 
-- scalability is growth but has many facets (network, db, software, ...)
-- scalable UI = composable + extensible + usable (learnable, less cognitive load)
+- scalability === growth, but has many facets (network, db, software, ...)
+- scalable UI === composable + extensible + usable (learnable, less cognitive load)
 
   - composable is relative easy, goes down to open and closed APIs
-  - extensibility is hard; it was impossible (?) before FP and ADT, but now it might be the silver bullet
+  - extensibility is hard; it was impossible(?) before FP and ADT, but now it might be the silver bullet
   - usability is perhahs, again hard: See Thayer2021TheoryOfRobustAPIKnowledge
 
-- scalability always relates back to the API, but that API is confusing / still unclear, it seems to have many facets
-
-- a hint / guess is that FP/ADT-like-API offers extensibility, and gives a pattern / paradigm for composability
+- scalability always relates to the API
+- an FP/ADT-like-API offers extensibility, and composability
 
 ## 1 - Previous:
 
-- consistent UI
-- based on a design system (design perspective)
-- scalable across protfolio
-- by using software development (API, Framework, Language)
-- plus usable for DX, UX
+- consistent UI, based on a design system (design perspective, reduced cognitive load) and scalable across protfolio
+- by using software development (API, Framework, prog. language)
 
-## 2 - DS from programming perspective
+### This article
 
-- What is a system? Hickey: = Language (API) + Stack (Tokens, CL, DS)
-- https://www.youtube.com/watch?v=ROor6_NGIWU
+- How a consistent UI scales? Aka how the implementation of a consistent UI - a design system - scales?
+
+## 2 - What is a DS? (from programming, software development, general perspective)
+
+- What is a system? Hickey: = Language (API) + Stack (Protocol/data, Simple system, Apps as services)
+- https://www.youtube.com/watch?v=ROor6_NGIWU + Gmail screenshots
+- This re-assures the Token + CL + DS / App stack
 
 ## 3 - What is scalable?
 
 - scalability = growth (wikipedia, general)
-- specific for network, db, storage, etc
+- specific for each case: network, db, storage, etc
 - specific for sofware: https://acko.net/blog/on-variance-and-extensibility/
 
-  - IMPORTANT NOTE HERE: **Extensible** software (API) where parts are arbitrarily replaceable IS NOT POSSIBLE => scalability cannot deal with extensibility, ie scalable !== extensible. Extensible is a very very different topic.
+  - IMPORTANT NOTE HERE: **Extensible** software where parts are arbitrarily replaceable IS NOT POSSIBLE => scalability cannot deal with extensibility, ie scalable !== extensible. Extensible is a very very different topic. **NOTE** This got solved since by FP/ADT.
 
 - specific for UI: https://interconnected.org/home/2021/08/12/notation
 
-  - **Composable** => shareable, degradable = parts still work
-  - composable => has semantic primitives, and a gramatics (rules to compose primitives), and not too many primitives (efficiently expressive)
+  - **Composable** === shareable, degradable = parts still work
+  - composable === has semantic primitives, and a gramatics (rules to compose primitives), and not too many primitives (efficiently expressive)
 
-  > The value of a product is the number of problems it can solve divided by the amount of complexity the user needs to keep in their head to use it.
+  > The value of a product is the number of problems it can solve divided by the amount of complexity the user needs to keep in their head to use it. {HEROKU}
 
   - HTML is scalable
   - CSS is not: specificity; parent interferes with children
@@ -81,7 +82,7 @@ Scalable and consistent UIs.
   - CL => No rules, or API theory for components
   - Tokens => no rules, or API theory for software (functions)
 
-=> API theory must be checked
+=> On CL, Tokens API theory is needed
 
 ### API theory for components
 
@@ -92,22 +93,15 @@ Scalable and consistent UIs.
 
 - Deno: 0-2, then a props / object
 - 0: DS
-- 1: variant => leads to algebraic data types (ADT)
+- 1: variant => leads to algebraic data types (ADT); it's a DB `id` key
 - 1+: extensibility (HARD PROBLEM) + cognitive load
 
 ```JS
-const spacing = edoSpacing('margin', 'all', 'default', Object) // Co cognitive load
-const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: 'double', returnValueVariant: Object}) // Cognitive load
+const spacing = edoSpacing('margin', 'all', 'default', Object) // Less cognitive load?
+const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: 'double', returnValueVariant: Object}) // More cognitive load?
 ```
 
-## 5 - For web specific technology (how to do it with web tech?)
-
-- JSX: Graphs, Functional programming
-- CSS-in-JS: No more cascade
-- TS: Extensibility Input<T> Process<T> Output<T>
-- React + TS = Algebraic Data Types, Effects
-
-### ADTs
+### FP and ADTs
 
 - mental model
 - under research => many unclear explanations
@@ -124,6 +118,13 @@ const spacing2 = edoSpacing('margin', {boxModelVariant: 'all', spacingVariant: '
 - https://en.wikipedia.org/wiki/Algebraic_data_type
 - https://www.cs.cornell.edu/courses/cs3110/2013sp/lectures/lec04-types/lec04.html
 - https://rescript-lang.org/docs/manual/latest/variant
+
+## 5 - For web specific technology (how to do it with web tech?)
+
+- JSX: Graphs, Functional programming
+- CSS-in-JS: No more cascade
+- TS: Extensibility Input<T> Process<T> Output<T>
+- React + TS = Algebraic Data Types, Effects
 
 ## 6 - How it solves real-world problems? (Is it true for real world problems?)
 
