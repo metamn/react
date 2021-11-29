@@ -191,3 +191,5 @@ Where well-known, battle-tested theory and practice &mdash; API, Framework &mdas
 1. [Consistent — Definitions](https://www.wordnik.com/words/consistent)
 2. [On design systems — 2: Tools and processes](http://metamn.io/react/on-design-systems-2/)
 3. [The Problems of CSS at Scale](https://www.oreilly.com/library/view/enduring-css/9781787282803/ch02.html)
+4. [Two Steps Forward, One Step Back](https://jxnblk.com/blog/two-steps-forward/)
+5. [Themeability](https://jxnblk.com/blog/themeability/)

@@ -20,7 +20,7 @@ Scalable and consistent UIs.
 
 - scalability always relates back to the API, but that API is confusing / still unclear, it seems to have many facets
 
-- a hint / guess is that FP/ADT like API offers extensibility, and gives a pattern / paradigm for composability
+- a hint / guess is that FP/ADT-like-API offers extensibility, and gives a pattern / paradigm for composability
 
 ## 1 - Previous:
 
