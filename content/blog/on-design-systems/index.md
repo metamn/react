@@ -19,7 +19,7 @@ And proposes a solution &mdash; of recent origin &mdash; to help companies with 
 
 ## 1. Workflow, practices and deliverables
 
-[The first article](http://metamn.io/react/on-design-sytems-1/) takes a look at existing systems and defines the workflow, practices and deliverables for all stakeholders.
+[The first article](http://metamn.io/react/on-design-systems-1/) takes a look at existing systems and defines the workflow, practices and deliverables for all stakeholders.
 
 ## 2. Design tools and processes
 
